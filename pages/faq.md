@@ -16,7 +16,7 @@ Since v2.1, this should work the exact same as normal keyboard switches.
 
 ### How do I start the aircraft? {#aircraft-startup}
 
-1. Rotor Brake Switch - OFF
+1. Rotor Brake Switch - OFF (Defaults to OFF)
 2. Battery Switch - ON
 3. Eng 1 Start Switch - Start
 4. Ng - Check 23%
@@ -61,10 +61,10 @@ Right panel below the cockpit door handle and directly behind the COM panel is t
 
 ### My HDU is "attached" but there's no symbology being displayed. {#power-hdu}
 
-On the left side of the instrument panel, below the ARMAMENT panel is the pilot VIDEO panel. Locate and click on the IHADSS BRT CONT to display HDU symbology. NOTE: The HDU symbology will only display when the APU is ON.
+You need to have APU or Engine power to show symbology.
 
 ### How do I prevent the cursor (green x) from moving while using TrackIR or other head tracking software {#headtracking-cursor-move}
-To prevent the cursor from moving go to Options > Addon Options and de-select: Allow cursor movement while in headtracking mode. Conversely if you want it to move, select this option. The cursor can be centered by pressing {% include keybind.html name="look-center" %}.
+To prevent the cursor from moving go to press {% include keybind.html name="detach-interact-cursor" %} to disable detached cursor mode and recenter it. The cursor can also be centered by pressing {% include keybind.html name="look-center" %}.
 
 ## Flight model
 

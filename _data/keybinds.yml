@@ -4,6 +4,12 @@ cockpit-interact:
   category: Common
   keys: [\]
   mod: true
+detach-interact-cursor:
+  name: Detach Interact Cursor
+  description: Allows movment of cursor seperate of head
+  category: Common
+  keys: [U]
+  mod: true
 
 waypoint-next:
   name: Next Waypoint
