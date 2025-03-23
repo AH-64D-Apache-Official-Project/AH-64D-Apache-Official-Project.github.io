@@ -32,6 +32,9 @@ entries:
     - title: Cockpit Overview
       url: cockpit.html
       output: [web]
+    - title: Logic Entities
+      url: logicentities.html
+      output: [web]
     - title: Settings
       url: Settings.html
       output: [web]
@@ -81,6 +84,9 @@ entries:
     - title: "MPD Page: WCA"
       url: mpd-wca.html
       output: [web]
+    - title: "MPD Page: DMS & DTU"
+      url: mpd-dms.html
+      output: [web]  
   - title: Mission MPDs
     output: web
     folderitems:
