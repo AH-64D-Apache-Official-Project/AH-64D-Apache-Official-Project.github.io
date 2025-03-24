@@ -11,7 +11,7 @@ folder: mpd
 
 ## Introduction
 
-The FLT page displays the attitude indicator, barometric altimeter, radar altimeter and radar height tape when applied, vertical situation indicator, heading, true airspeed, bank angle, turn/slip indicator and torque produced by each engine. During dual-engine operations, the torque produced by either engine is shown. During single-engine operation, the torque produced by the active engine is shown.
+The FLT page displays the attitude indicator, waypoint information, barometric altimeter, radar altimeter and radar height tape when applied, vertical situation indicator, heading, true airspeed, bank angle, turn/slip indicator and torque produced by each engine. During dual-engine operations, the torque produced by either engine is shown. During single-engine operation, the torque produced by the active engine is shown.
 
 Majority of this information is provided in the HDU, it is available on this page as a backup in case the HDU fails.
 
@@ -25,7 +25,7 @@ This shows the attitude of the helicopter with respect to a level horizon. The g
 
 ### Waypoint Information
 
-Displays the distance in KM, time taken to fly to the WP and the waypoint name. There is a number remaining which could be the bearing to it, but does not if flying in a straight line to the waypoint.
+Displays the distance in KM, ground speed of the helicopter, time taken to fly to the WP and the waypoint name.
 
 ### Airspeed
 
