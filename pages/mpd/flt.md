@@ -6,8 +6,8 @@ permalink: mpd-flt.html
 folder: mpd
 ---
 
-{% include image.html file="mpd/flt_numbered.png" alt="Image of the FLT page with all elements numbered" caption="Figure 1: The FLT page" %}
-
+<!-- {% include image.html file="mpd/flt_numbered.png" alt="Image of the FLT page with all elements numbered" caption="Figure 1: The FLT page" %} -->
+*ADD FLT PAGE IMAGE HERE*
 
 ## Introduction
 

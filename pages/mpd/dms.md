@@ -8,14 +8,14 @@ folder: mpd
 
 # DMS 
 
-{% include image.html file="mpd/page-util.png" alt="" caption="Figure 1: The DMS Page" %}
+*ADD DMS PAGE IMAGE HERE*
 
 ## Introdution
 This page is only used to access the DTU page, the advisories and warnings have been moved to the WCA page instead.
 
 # DTU
 
-{% include image.html file="mpd/page-util.png" alt="" caption="Figure 2: The DTU Page" %}
+*ADD DTU PAGE IMAGE HERE*
 
 ## Introduction
 This page is used for loading waypoints, targets areas and other logic entities from the Eden editor. Each Apache in the mission will load the same waypoints and control points which are specified in the Eden editor. The logic entities can be found [here](logicentities).
