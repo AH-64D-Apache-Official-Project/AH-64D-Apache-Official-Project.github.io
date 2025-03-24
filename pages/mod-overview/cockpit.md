@@ -36,7 +36,7 @@ Additionally, there are three detents for the Engine 1/2 Power Levers: OFF, IDLE
 
 ## Front Panel Description
 1. **Keyboard Unit (KU)** -  The KU is used to input data into the aircraft and can also be used as a calculator. 
-2. **IHADSS Brightness Knob/Switch** - **NO LONGER IMPLEMENTED** This control toggles the HDU symbology ON/OFF.
+2. **IHADSS Brightness Knob/Switch** - This control toggles the HDU symbology ON/OFF.
 3. **Fired Detection/Extinguishing Panel**
     1. The TEST switch allows the crew to test that the system is functioning properly.
     2. When a fire is detected, the associated ENG 1/2 or APU FIRE lights will illuminate. Pressing the illuminated button will ARM the system and cut fuel to that engine thus shutting it down and cause the DISCHARGE lights to illuminate. Pressing the PRI (Primary) or RES (Reserve) buttons will discharge that bottles fire extinguishing agent. **The bottles can be recharged by repairing the aircraft.**
