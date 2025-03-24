@@ -35,7 +35,7 @@ Additionally, there are three detents for the Engine 1/2 Power Levers: OFF, IDLE
 ![Front panel image](/images/screenshots/frontPanelCPG.png)
 
 ## Front Panel Description
-1. **Keyboard Unit (KU)** - **NOT CURRENTLY IMPLEMENTED** The KU is used to input data into the aircraft and can also be used as a calculator. 
+1. **Keyboard Unit (KU)** -  The KU is used to input data into the aircraft and can also be used as a calculator. 
 2. **IHADSS Brightness Knob/Switch** - This control toggles the HDU symbology ON/OFF.
 3. **Fired Detection/Extinguishing Panel**
     1. The TEST switch allows the crew to test that the system is functioning properly.
