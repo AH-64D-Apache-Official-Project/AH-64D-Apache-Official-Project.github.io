@@ -7,6 +7,8 @@ folder: root
 stub: true
 ---
 
+*ADD LOGIC ENTITIES EDGEN IMAGE HERE*
+
 ## Introduction
 
 This section will explain the new logic entities provided by the Apache mod and how they can be used exclusively with the helicopter for gameplay. The mission maker has access to them and should be used for a proper gameplay experince for the players.
@@ -29,6 +31,8 @@ This logic entity provides waypoints which the helicotper can use. These waypoin
 8. TU
 9. WL
 10. WS
+
+TO, TU, WL and WS are hazard points.
 
 ### Control Measure
 
