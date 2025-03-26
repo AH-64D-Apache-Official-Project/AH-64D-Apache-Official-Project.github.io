@@ -1,15 +1,17 @@
 ---
-title: SFM+
+title: helisim
 tags: [flight_model]
 sidebar: ah64d_sidebar
-permalink: flight-model-sfm-plus.html
+permalink: flight-model-helisim.html
 folder: flightmodel
 ---
 
-SFM+ is a visual simulation that presents an accurate performance model in ARMA's SFM. It also provides a force generating stabilator designed to expand the pitch range of the aircraft and allow for hands off flight for a given power setting. Another feature of SFM+ is damage modeling.
+As of version 2.2.0 SFM+ has been completely removed from the mod and replaced with Helisim.
+
+Helisim is the evolution of SFM+, written from the ground up Helisim is more accurate to a helicopters' flight model than SFM+ could ever be that presents an accurate performance model in ARMA. It also provides a force generating stabilator designed to expand the pitch range of the aircraft and allow for hands off flight for a given power setting. A new feature of Helisim from SFM+ is center of gravity shifts.
 
 ## Performance Model
-SFM+ accurately accounts for weight of the aircraft and consults several lookup tables to present accurate performance figures to the pilot. The Table below presents information for the default aircraft placed in the 3DEN editor.
+Helisim accurately accounts for weight of the aircraft and consults several lookup tables to present accurate performance figures to the pilot. The Table below presents information for the default aircraft placed in the 3DEN editor.
 
 {% include note.html content="Currently all performance data is for a PA of 0ft and 20C only!"%}
 
@@ -50,15 +52,15 @@ Go/No-Go torque represents the maximum GWT IGE/OGE as measured at a 5-foot hover
 
 {% include note.html content="* Indicates the TQ required to hover in this mode exceeds the Maximum Continuous Torque Dual Engine"%}
 
-SFM+ simulates ground effect and out of ground effect. The aircraft is considered to be operating in ground effect with less than 1 rotor diamter (~48 feet) above ground level. As the aircraft climbs in altitude, ground effect is lost and required torque to hover increases. SFM+ also simulates the effects of Effective Translational Lift and as the aircraft transitions into forward flight will benefit from an increase in rotor efficiency and a decreased power requirement. 
+Helisim simulates ground effect and out of ground effect. The aircraft is considered to be operating in ground effect with less than 1 rotor diamter (~48 feet) above ground level. As the aircraft climbs in altitude, ground effect is lost and torque required to maintain a hover increases. Helisim also simulates the effects of Effective Translational Lift and as the aircraft transitions into forward flight will benefit from an increase in rotor efficiency and a decreased power requirement. 
 
-In order to hover out of ground effect, the crew MUST reduce weight, or remain above ETL (~24 kts)! The recommended configuration is 38% fuel, 38x Rockets and 6x Hellire missiles.
+In order to hover out of ground effect, the crew MUST reduce weight, or remain above ETL (~24 kts)! To maintain a reasonable weight we recommend to leave fuel at 100% and reduce munitions to only what you need, our mindset behind this is 'its better to run out of ammo and stay on station and support friendlies with ISR than be forced off station with weapons still on the rails because you ran low on fuel'.
 
 ## Damage Modeling
 
 {% include note.html content="Currently a ROTOR RPM HIGH warning and audio indicate an impending transmission failure."%}
 
-SFM+ now features damage modeling. This is a means of enforcing proper startup procedures and enhance realism. No long will you be able to start a single engine and leave it at idle and take off. Within 30 seconds of exceeding the limits outlined below the transmission will fail and the aircraft fall out of the sky.
+Helisim features damage modeling. This is a means of enforcing proper startup procedures and enhance realism. No longer will you be able to start a single engine and leave it at idle and take off. Within 30 seconds of exceeding the limits outlined below the transmission will fail and the aircraft fall out of the sky.
 
 **During Start**
 
@@ -91,3 +93,7 @@ SFM+ now features damage modeling. This is a means of enforcing proper startup p
 ## Single Engine Sim
 
 Once the power levers are at fly, each power lever can be manipulated indpendently. Beware of your current Tq, as it WILL double, potentially exceeding the Tq limits outlined above.
+
+## Center of Gravity Shifts
+
+When deciding your loadouts make sure you have a balanced load on both sides, otherwise the heli will pull to the heavier side! you will have to trim it out if it does. Also you need to think about weapons deployment aswell, if you shoot everything off one side but not the other you will become unbalanced.

@@ -8,8 +8,6 @@ folder: mpd
 
 ![Image of WCA MPD page](images/mpd/mpd_wca.jpg)
 
-* This page is available on both MPD screens. 
-* It can only be accessed by using the "Cycle MPD" function on either side. 
 * If there is anything wrong with the helicopter, a message will appear on this screen. 
 
 The color indicates how severe the message is.
@@ -18,34 +16,39 @@ The color indicates how severe the message is.
 * GREEN = ADVISORIES = Letting you know that something needs your attention eventually.
 
 ## Warnings:
-* Engine 1 Fire
-* Engine 2 Fire
-* High Rotor RPM
-* Low Rotor RPM
-* Tail Rotor Hydraulics Failure
-* Main Transmission (XMSN) Failure 
+* Engine 1 Fire, Engine 2 Fire, APU Fire, Aft Deck Fire
+* Engine 1 Overspeed, Engine 2 Overspeed
+* Engine 1 Out, Engine 2 Out
+* High Rotor RPM, Low Rotor RPM
+* Hydraulics Failure, Tail Rotor Hydraulics Failure
 
 ## Cautions:
-* Tail Rotor Degraded
-* Main Transmission (XMSN) Degraded
-* Aft Fuel Low - (About 20 min of fuel)
-* Forward Fuel Low - (About 5 min of fuel)
+* Generator 1 Fail, Generator 2 Fail
+* Rectifier 1 Fail, Rectifier 2 Fail
+* Gearbox Vibration
+* Gearbox 1 Chips, Gearbox 2 Chips
+* Main Transmission Chips
+* Forward Fuel Low, Aft Fuel Low
+* APU On
+* Auto/Manual Stabilator Fail
+* Primary Hydraulics Pressure Low, Secondary Hydraulics Preassure Low
+* Primary Hydraulics Level Low, Secondary Hydraulics Level Low
+* BUCS Fail
 * Infrared Jammer Fail 
-* Radar Jammer Fail
-* TADS Fail 
-* PNVS Fail
-* GUN Jam
-* FCR Fail
 
 ## Advisories:
-* APU ON 
-* Canopy Open 
-* Engine 1 Start (Start switch selected)
-* Engine 2 Start (Start switch selected)
+* Canopy Open
+* Battery
+* APU Start, APU Power On, APU On, APU Stop
+* Engine 1 Starting
+* Engine 2 Starting
 * Attitude Hold (Auto-Hover turned on)
+* Hover Drift
+* Radar Altitude Hold, Barometric Altitude Hold
 * Rotor Break On 
-* IR Jammer Overheat (When left on too long)
-* Radar Jammer Overheat (When left on too long)
+* FCR Fault
+* Tail Wheel Lock Selected
+* Approching Waypoint, Passed Waypoint
 
 
 
