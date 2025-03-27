@@ -13,10 +13,10 @@ entries:
     - title: Glossary
       url: glossary.html
       output: [web]
-    - title: Initialisation
-      url: flight-model-initialisation.html
+    - title: Information
+      url: mod-Information.html
       output: [web]
-    - title: FAQ
+    - title: Frequently Asked Questions
       url: faq.html
       output: [web]
 

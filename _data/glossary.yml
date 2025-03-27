@@ -39,8 +39,8 @@ items:
   description:  Tactical situation display - an MPD page that allows for you to view waypoints and targets in a map-like environment.
 - name: WCA
   description: "Warning, Caution, Advisory - the 3 types of status messages that the Apache's systems can provide. They are visible either on the EUFD or on the WCA page on an MFD. They can range from warnings (Engine out) to smaller advisories (canopy door open.)"
-- name: RWR
-  description: "Radar Warning Receiver - A part of the ASE systems that passively detects incoming radar signals."
+- name: RLWR
+  description: "Radar Laser Warning Receiver - A part of the ASE systems that passively detects incoming radar & laser signals."
 - name: Radar altitude
   description: "The height from the ground below the aircraft."
 - name: Barometric altitude

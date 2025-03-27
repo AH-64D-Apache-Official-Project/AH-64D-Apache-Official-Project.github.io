@@ -1,72 +1,80 @@
 ---
-title: FAQ
+title: Frequently Asked	Questions
 tags: [getting_started]
 sidebar: ah64d_sidebar
 permalink: faq.html
-folder: root
+folder:	root
 ---
 ## Getting Started
 
-### How do I interact with cockpit switches? {#cockpit-switches}
+###	How	do I interact with cockpit switches? {#cockpit-switches}
 
-Use the keybind {% include keybind.html name="cockpit-interact" %} with the crosshair over the switches.
-### How do I map inputs to my HOTAS {#hotas}
+Use	the	keybind	{% include keybind.html	name="cockpit-interact"	%} with	the	crosshair over the switches.
 
-Since v2.1, this should work the exact same as normal keyboard switches.
+###	How	do I map inputs	to my HOTAS	{#hotas}
+Starting with v2.1, mapping inputs to HOTAS works the same as mapping normal keyboard switches.
 
-### How do I start the aircraft? {#aircraft-startup}
+###	How	do I start the aircraft? {#aircraft-startup}
 
-1. Rotor Brake Switch - OFF
-2. Battery Switch - ON
-3. Eng 1 Start Switch - Start
-4. Ng - Check 23%
-5. Power Lever - Idle
-When Ng stabilized at idle (~67.9%), repeat steps 3 through 5
-6. Power Levers - Advance to fly when ENG OIL PSI 70 (~1 minute after second reaches idle)
+1. Set the Rotor Brake Switch to OFF.
+2. Turn	the	Battery	Switch ON.
+3. Set Eng 1 Start Switch to Start.
+4. Wait	for	Ng to reach	23%.
+5. Move the Power Lever to Idle (Wait until Ng stabilizes at approximately 67.9%).
+6. Repeat steps 3–5 for engine	2.
+7. Advance	the	Power Levers to Fly	once ENG OIL PSI reaches 70 (approximately 1 minute	after the second engine	stabilizes).
 
 ## Weapons
-### How do I change the aircraft loadout/re-arm? {#rearm}
+###	How	do I change	the	aircraft loadout/re-arm? {#rearm}
+The legacy re-arming menu has been replaced with the ARMA 3 pylon system:
+- In Eden: Right-click the helicopter, select Attributes, and navigate to Pylon Settings.
+- In-game: Use an ammo truck or any valid Ace ammo container. Ace-interact with the aircraft to configure the pylons.
+- Using Zeus Enhanced: Zeus can edit loadouts and pylons through its interface.
 
-The legacy re-arming menu was removed and replaced with the ARMA 3 pylon system.  
-- In Eden: Right click on the helicopter and select attributes and locate Pylon Settings.
-- In-game: Use an ammo truck to rearm. Zeus Enhanced provides an interface for a zeus to edit loadouts, and pylons 
+###	What happened to the ATAS-92 Stinger? {#stinger}
+The ATAS-92 Stinger was removed due to limited open-source information. Testing integrations were initially done on the AH-64A model, but these implementations were experimental and not continued past the A model. Although later versions of the AH-64D in Japan and Korea adapted the Stinger, no detailed integration data is available.
+- The system will not be re-added.
+- Please refrain from sharing confidential information about these systems (This is not warthunder).
 
-### What happened to the ATAS-92 Stinger? {#stinger}
+###	Why	can't I	assign weapons to the pilot? {#pilot-weapons}
+- Currently, all weapons are coded for the CPG (Co-pilot/Gunner) due to ARMA’s limitations. If weapons are assigned to the PLT (Pilot), they will automatically revert to the CPG. 
+- While technically possible to make weapons available to the PLT, the current system does not support it and may behave incorrectly. Proceed at your own risk—it’s unsupported. 
+- Recent ARMA updates may allow for a multi-seat weapon system in the future, but this is still a long-term goal.
 
-The ATAS was removed since there is no open source information on its implementation in the aircraft and it had conflicts with the projects current direction. It will not be re-added.
-
-### Why can't I assign weapons to the pilot? {#pilot-weapons}
-- Currently the mod assumes all weapons are handled by the CPG. As a result if you place weapons on the PLT in the Editor, certain key functions, such as the symbology required for aiming will not be present.
 ## Targeting
-### How do I turn on the radar, the salute key doesn't work. {#radar-salute}
+###	How	do I turn on the radar.	{#radar-salute}
+The radar offers two modes: single scan and continuous scan.
+- Continuous scan: Use ARMS's default Binding (LCTRL + R)
+- Single scan: Use the mod's custom binding (LSHIFT + R)
 
-The radar now uses the ARMA 3 radar key, Default is LCtrl + R.
+###	How	do I zoom when using the Pilot Night Vision	System (PNVS) camera? {#pnvs-zoom}
+The sensor systems on the nose of the Apache include the TADS and PNVS. The pilot only has access to the PNVS, which does not have zooming capabilities. It is solely used for flying the aircraft.
 
-### How do I add waypoints to the TSD? {#tsd-waypoints}
-1. TSD button - Select
-2. NAV Phase (B2) - Verify
-3. Add (R1) - Select
-4. Go to the ARMA map screen and left click on the map, then exit ARMA map screen.
-5. XMIT (R3) - Select to save waypoints
-6. ZOOM (L1) - Select appropriate scale to verify WPs saved successfully.
+## IHADSS /	UI
+###	How	do get the Helmet Display Unit (HDU)? {#attach-hdu}
+The HDU is stored in a container located on the right panel, below the cockpit door handle, and just behind the COM panel. Click on the container to "attach" (turn on) the HDU.
 
-### How do I zoom when using the Pilot Night Vision System (PNVS) camera? {#pnvs-zoom}
+###	My HDU has no symbology	being displayed. {#power-hdu}
+The IHADSS is powered by AC and DC power. To activate it:
+1. Turn on the battery.
+2. Start the APU. Once the APU is powered up, the IHADSS will display symbology.
 
-Since this isn't a feature of the actual aircraft, it is not a feature in the mod.
-
-## IHADSS / UI
-### How do I "attach" (turn on) the Helmet Display Unit (HDU)? {#attach-hdu}
-
-Right panel below the cockpit door handle and directly behind the COM panel is the storage container for the HDU. Click on the container to "attach" (turn on) the HDU.
-
-### My HDU is "attached" but there's no symbology being displayed. {#power-hdu}
-
-On the left side of the instrument panel, below the ARMAMENT panel is the pilot VIDEO panel. Locate and click on the IHADSS BRT CONT to display HDU symbology. NOTE: The HDU symbology will only display when the APU is ON.
-
-### How do I prevent the cursor (green x) from moving while using TrackIR or other head tracking software {#headtracking-cursor-move}
-To prevent the cursor from moving go to Options > Addon Options and de-select: Allow cursor movement while in headtracking mode. Conversely if you want it to move, select this option. The cursor can be centered by pressing {% include keybind.html name="look-center" %}.
+###	How	do I prevent the cursor	(green x) from moving {#headtracking-cursor-move}
+The curor movement is attached to a keybind "U".
+To stop the cursor from moving:
+1. Go to Options > Addon Options.
+2. De-select the option: "Allow cursor movement while in head-tracking mode."
+or alternately if you accidentaly activating it you can unbind the keybind
 
 ## Flight model
 
-### I can't start the aircraft and the engine page is displaying values. {#cannot-fly}
-You need to ensure only ONE axis is mapped to Collective Raise (Analog) and Collective Lower (Analog). Due to the nature of how ARMA handles throttle input (and with the mods Simple Flight Model (SFM) enhancements), this is required for it to function correctly.
+###	I can't	Fly	the	aircraft but the engine	page is displaying values. {#cannot-fly}
+Due	to the nature of Arma inputs and how we are	handling the throttle it might need	to be set up correctly
+#### HOTAS Users:
+1. Bind your controls to "Collective Raise (Analog)" and "Collective Lower (Analog)."
+2. Select the HOTAS FM option in Addon Options.
+
+#### Keyboard and Mouse Users:
+1. Bind your collective to the normal "Raise" and "Lower" settings.
+2. Select the "Mouse" or "Keyboard" FM option in Addon Options.
+Although improvements to the control input system are planned, this is the current setup.
