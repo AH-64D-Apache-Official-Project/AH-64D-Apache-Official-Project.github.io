@@ -87,6 +87,9 @@ entries:
     - title: "MPD Page: DMS & DTU"
       url: mpd-dms.html
       output: [web]  
+    - title: "MPD Page: UFD"
+      url: ufd.html
+      output: [web]  
   - title: Mission MPDs
     output: web
     folderitems:
