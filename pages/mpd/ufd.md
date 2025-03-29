@@ -12,7 +12,7 @@ folder: mpd
 
 1. WCA section
 
-Lists various aircraft Warnings (red), Cautions (yellow) and Advisories (green). See the [WCA](wca.html) page for more info
+Lists various aircraft Warnings (red), Cautions (yellow) and Advisories (green). See the [WCA](./mpd-wca) page for more info
 
 2. Radio section
 
