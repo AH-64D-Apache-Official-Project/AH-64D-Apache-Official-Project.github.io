@@ -59,7 +59,7 @@ The MSL Subpage allows for the selection of specific missiles as well as their l
 The different types of hellfires availible
 
 | Type | SAL | Warhead | Range | 
-| :-- | :-- | :-- |
+| :-- | :-- | :-- | :-- |
 | FA | SAL 1 | 18lb Tandem HEAT w/ frag sleeve | 7km
 | K | SAL 2 | 20lb Tandem HEAT | 8km
 | K2A | SAL 2 | 20lb Tandem HEAT w/ frag sleeve | 8km
