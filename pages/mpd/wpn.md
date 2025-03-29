@@ -97,3 +97,7 @@ The RKT Subpage allows for the selection of specific rocket types from the avail
 6. When using sight select HMD or TADS, The Rocket steering cursor represents the elevation limits of the rocket pods, +4 to -15 degrees.
 
 ## CODE Subpage
+
+You can access the Code page by pressing CODE (T4). The Code page displays all current laser channels and their respective laser frequency. Laser frequenies can be changed by pressing FREQ (T5) and selecting a channel then using the KU to set the frequency. You can cycle between LRFD and LST codes by pressing (T2)
+
+[image of CODE Page]()
