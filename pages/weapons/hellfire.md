@@ -34,7 +34,7 @@ We now use the Ace laser code system allowing you to buddy laser with any other 
 
 1. Switch to the WPN page
 2. Select the missile you would like to use
-3. Check the LRFD laser codes against the hellfires laser codes
+3. Check the LRFD laser codes against the hellfires laser codes, change codes on the CODE page if needed
 4. Designate your target
 
 ### IHADSS Symbology

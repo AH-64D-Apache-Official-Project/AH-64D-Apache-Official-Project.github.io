@@ -19,7 +19,6 @@ Hydra 70 warheads fall into two categories:
 
 ### Unitary Warheads
 - High explosive (HEDP) '10 pounder'.
-- High explosive (HEDP); elongated M151 '17 pounder'.
 
 ### Cargo Warheads
 - Multi-purpose submunition (MPSM).
@@ -34,21 +33,15 @@ Hydra 70 warheads fall into two categories:
 - Contact Fuse.
 - Range 7.5km.
 
-### M229
-- High explosive (HEDP); elongated M151 '17 pounder'.
-- Penetrating Fuze.
+### M255A1
+- APERS (anti-personnel) warhead contains over 1,000 flechettes that are capable of penetrating light armor.
+- Air burst distance 200.
 - Range 7.5km.
-{% include note.html content="No longer used in the latest version."%}
 
 ### M261
 - Multi-purpose submunition (MPSM) Contaings 9 bomblets capable of penetrating light armor and include fragmentation effects for anti-infantry purposes
 - Air burst distance 500.
 - range 7.5km.
-
-### M255
-- APERS (anti-personnel) warhead contains over 1,000 flechettes that are capable of penetrating light armor.
-- Air burst distance 200.
-- Range 7.5km.
 
 ### M257
 - Parachute illumination.
