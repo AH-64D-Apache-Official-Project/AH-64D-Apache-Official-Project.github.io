@@ -6,6 +6,9 @@ permalink: mpd.html
 folder: mpd
 ---
 
+{% capture FS %}{% include badge.html content="FS"%}{% endcapture%}
+{% capture BS %}{% include badge.html content="BS"%}{% endcapture%}
+
 The MPDs, or multi-purpose-displays, are your primary method of interacting with the aircraft's avionics and weapons systems. There are two of them, the left and right side. Around them there are a series of buttons, which can be used to interact with the menus on the screen.
 
 {% capture tip_cpg_seat %}
@@ -38,3 +41,8 @@ The main menu screen has all the subpages except the DTU and WCA pages. Mission 
 The DTU page is accessed from the [DMS](./mpd-dms) page. The WCA page is accessed from the [ENG](./mpd-eng) page and the [DMS](./mpd-dms) page.
 
 Blocked pages are represented with vertical or horizontal thick lines next to their name. These pages are either not simulated or not present in the mod.
+
+## Default Pages
+
+1. For the {{BS}}, the default pages on startup are the [DMS](./mpd-dms) on the right and [ENG](./mpd-eng) on the left.
+2. For the {{FS}}, the default pages on startup are the [TSD](./mpd-tsd) on the right and [FUEL](./mpd-fuel) on the left.
