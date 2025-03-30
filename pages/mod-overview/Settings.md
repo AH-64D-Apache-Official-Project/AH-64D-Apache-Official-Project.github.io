@@ -30,23 +30,29 @@ The menu can be access by hitting
 
 ###  control
 - Head tracking mode cursor sensitivity.
-- Lock the cursor when in free look .
+- Lock the cursor when in free look.
 
 ### Flight Model 
-- Enable stabilator simulation, The stabilator provides an expanded pitch range allowing for more accurate cruise speeds during flight. The stabilator is optimized for Joysticks and may be more difficult to use with a Keyboard & Mouse.
+- Select control scheme, HOTAS is for users with Joystick, Throttle and Pedals. Keyboard is for users with a keyboard. Mouse is for users who use the Mouse as their Joystick, DO NOT select this if you intend to use the keyboard at any point to fly, this option will dampen the keyboard output.
+- Disable Cyclic Force trim, When enabled, cyclic force trim is disabled. This is for users with force feedback or springless HOTAS.
+- Disable Pedal Force Trim, When enabled, pedal force trim is disabled. This is for users with force feedback or springless pedals. This option also disables Heading Hold.
+- [EXPERIMENTAL] Enable KB Pitch Trim, When enabled, retains the position of the cyclic.
+- Mouse Sensitivity, Controls the sensitivity of the Mouse when used as a Joystick.
 - Aircraft Environmental Settings,
     - Standard day is Sea Level and 15 deg C.
     - Europe is a base altitude of 800ft, with a Summer temperature of 20 deg C and a Winter temperature of 0 deg C. 
     - The Middle East is a base altitude of 1,800ft and a temperature of 30 deg C. 
     - Central Asia is a base altitude of 5000ft, with a Summer temperature of 30 deg C and a winter temperature of -5 deg C. 
     - Asia is a base altitude of 3100ft and a temperature of 25 deg C.
-- Main Rotor Torque Simulation, Turns off main rotor torque simulation to prevent the nose from turning right when collective is increased. Meant for users who fly mouse & keyboard and do not have rudder pedals.
-- FMC Heading Hold Enabled, Turns off the FMC Heading Hold. Meant for users with pedal dampers or who prefer to physically hold their pedals in place with their feet.
+- Enable Wind Simulation, When enabled, winds are factored into the FM calculations.
+- Enable VRS Warning, When enabled, will alert the pilot to the onset of VRS.
 
 {% include tip.html content="You are not meant to fight the stabilator, if you increase collective the stabilator will point you nose up to climb, reverse it for descent, The stabilator is meant to function with the collective left at a set position for forward flight" %}
 
 ### TADS Controls
-- NV Cycle Include DTV, With this the Night vision button will also cycle through DTV and not just BHOT & WHOT
+- NV Cycle Include DTV, With this the Night vision button will also cycle through DTV and not just BHOT & WHOT.
+- NV Cycle Include DVO, With this the Night vision button will also cycle through DVO and not just BHOT & WHOT.
+- LMC Sensitivity, (LMC) Linear motion compensator input sensitivity control.
 
 ### User Interface
 - Show Popup Intro, Disabling this will hide the pop up intro which appears when you 1st get into the aircraft.

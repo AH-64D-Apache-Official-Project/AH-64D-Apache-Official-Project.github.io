@@ -1,28 +1,3 @@
-cockpit-interact:
-  name: Cockpit Interact
-  description: Interacts with the control under the cursor
-  category: Common
-  keys: [\]
-  mod: true
-detach-interact-cursor:
-  name: Detach Interact Cursor
-  description: Allows movment of cursor seperate of head
-  category: Common
-  keys: [U]
-  mod: true
-
-waypoint-next:
-  name: Next Waypoint
-  description: Sets current waypoint to the next waypoint
-  category: Navigation
-  keys: [Shift,5]
-  mod: true
-waypoint-prev:
-  name: Previous Waypoint
-  description: Sets current waypoint to the previous waypoint
-  category: Navigation
-  keys: [Ctrl,5]
-  mod: true
 
 sight-select-hmd:
   name: Sight Select HMD
@@ -50,9 +25,68 @@ sight-select-fcr:
   mod: true
 target-store:
   name: Target Store
-  description: Adds the position currently being looked as a waypoint
+  description: Adds the position currently being looked as a waypoint (NOT CURRENTLY IMPLEMENTED)
   category: Sighting
   keys: [Shift,G]
+Tads-Fov-Wide:
+  name: Tads LHG FOV Switch Wide
+  description: Sets the Tads FOV to Wide
+  category: Sighting
+  keys: [LAlt,1]
+Tads-Fov-Medium:
+  name: Tads LHG FOV Switch Medium
+  description: Sets the Tads FOV to Medium
+  category: Sighting
+  keys: [LAlt,2]
+Tads-Fov-Narrow:
+  name: Tads LHG FOV Switch Narrow
+  description: Sets the Tads FOV to Narrow
+  category: Sighting
+  keys: [LAlt,3]
+Tads-Fov-Zoom:
+  name: Tads LHG FOV Switch Zoom
+  description: Sets the Tads FOV to Zoom
+  category: Sighting
+  keys: [LAlt,4]
+Tads-Sensor-FLIR:
+  name: Tads LHG Sensor FLIR
+  description: Sets the Tads sensor to FLIR
+  category: Sighting
+  keys: [LCtrl,N]
+Tads-Sensor-DTV:
+  name: Tads LHG Sensor DTV
+  description: Sets the Tads sensor to DTV
+  category: Sighting
+  keys: [LShift,N]
+Tads-Sensor-DVO:
+  name: Tads LHG Sensor DVO
+  description: Sets the Tads sensor to DVO
+  category: Sighting
+  keys: [LAlt,N]
+Tads-LMC-Compensator:
+  name: Tads LHG LMC Compensator
+  description: Activates LMC Compensator
+  category: Sighting
+  keys: [Lctrl,T]
+
+symbology-up:
+  name: Symbology Select Up
+  description: Cycles symbology between transition and cruise
+  category: IHADSS
+  keys: [Shift,B]
+  mod: true
+symbology-down:
+  name: Symbology Select Down
+  description: Cycles symbology between hover and bobup
+  category: IHADSS
+  keys: [Ctrl,B]
+  mod: true
+symbology-select:
+  name: Symbology Select Press
+  description: Selects the FLT page on the left MPD
+  category: IHADSS
+  keys: [B]
+  mod: true
 
 was-m230:
   name: WAS M230
@@ -89,6 +123,12 @@ target-range:
   category: Weapons
   description: When in the TADS, ranges the M230 to the range looked at
   mod: false
+Deploy-Flare:
+  name: Deploys Flares
+  keys: [R]
+  category: Weapons
+  description: When the British mission equipment is used and the MAW is armed, this will deploy flares
+  mod: false
 
 radar-gtm:
   name: FCR Mode Select GTM
@@ -121,25 +161,6 @@ targeting-next:
   keys: [R]
   mod: false
 
-symbology-up:
-  name: Symbology Select Up
-  description: Cycles symbology between transition and cruise
-  category: IHADSS
-  keys: [Shift,B]
-  mod: true
-symbology-down:
-  name: Symbology Select Down
-  description: Cycles symbology between hover and bobup
-  category: IHADSS
-  keys: [Ctrl,B]
-  mod: true
-symbology-select:
-  name: Symbology Select Press
-  description: Selects the FLT page on the left MPD
-  category: IHADSS
-  keys: [B]
-  mod: true
-
 head-left:
   name: Move Head Left
   description: Moves head to the left in order to see around obstacle
@@ -164,9 +185,44 @@ head-down:
   category: View
   keys: [Ctrl,Page Down]
   mod: false
-look-center:
-  name: Look Center
-  description: Forces head to look forwards. Also re-centers the crosshair in <a href="ui-headtracking.html">head tracking mode</a>.
-  category: View
-  keys: [Num 5]
-  mod: false
+
+cockpit-interact:
+  name: Cockpit Interact
+  description: Interacts with the control under the cursor
+  category: Common
+  keys: [\]
+  mod: true
+Detach-interact-cursor:
+  name: Detach interact cursor
+  description: Detaches the cursor from the heah
+  category: Common
+  keys: [U]
+  mod: true
+  
+Force-Trim-Up:
+  name: Force Trim / Hold Mode Switch Up
+  description: Activates the force trim
+  category: Flight Controls
+  keys: []
+  mod: true
+  
+Force-Trim-Right:
+  name: Force Trim / Hold Mode Switch Right
+  description: Activates Altitude Hold
+  category: Flight Controls
+  keys: []
+  mod: true
+
+Force-Trim-Down:
+  name: Force Trim / Hold Mode Switch Down
+  description: De-Activates both Attitude and Altitude Hold
+  category: Flight Controls
+  keys: []
+  mod: true
+
+Force-Trim-Left:
+  name: Force Trim / Hold Mode Switch Left
+  description: Activates Attitude Hold
+  category: Flight Controls
+  keys: []
+  mod: true
