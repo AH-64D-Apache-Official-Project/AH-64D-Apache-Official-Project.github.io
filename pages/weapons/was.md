@@ -11,6 +11,8 @@ In-game these are the {% include keybind.html name="was-m230"%}, {% include keyb
 
 To WAS, or action, a weapon simply press its WAS button. To De-WAS, or De-action a weapon that is actioned, just press its WAS button again.
 
+Note: You can not WAS any weapons or ARM the aircraft while on the ground, to override this you must push the GND ORIDE button.
+
 {% include warning.html content="Even if a weapon is actioned, you **cannot fire it until the aircraft is armed**." %}
 
 {% include important.html content="To arm/safe the aircraft, you click the arm/safe button on the **armament panel**." %}

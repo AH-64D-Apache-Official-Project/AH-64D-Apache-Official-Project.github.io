@@ -94,7 +94,7 @@ The RKT Subpage allows for the selection of specific rocket types from the avail
 4. For each pod zone 1 is 12 rockets, zone 2 is 4 rockets and zone3 3 is 3 rockets
 4. Salvo Quantity (R1) shows the number of rockets that will be fired in a single trigger pull. This can be 1,2,4,8,12,24 or ALL.
 5. Total avalible rockets are displayed at the botom of the page.
-6. When using sight select HMD or TADS, The Rocket steering cursor represents the elevation limits of the rocket pods, +4 to -15 degrees.
+6. When using sight select HMD, TADS or FCR, The Rocket steering cursor represents the elevation limits of the rocket pods, +4 to -15 degrees.
 
 ## CODE Subpage
 
