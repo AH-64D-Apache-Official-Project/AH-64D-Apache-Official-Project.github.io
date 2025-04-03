@@ -34,6 +34,7 @@ The two sub-pages for the TSD can be changed using the `PHASE` button. For confi
 7. Planned target/threat -> By default not shown in the NAV mode.
 8. Control measures loaded in the helicopter or created by the player.
 9. Friendly and enemy units -> Not shown by default in the NAV mode.
+10. Targets detected by the FCR.
 
 ### ATK mode
 
