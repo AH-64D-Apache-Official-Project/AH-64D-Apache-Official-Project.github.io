@@ -97,3 +97,7 @@ Once the power levers are at fly, each power lever can be manipulated indpendent
 ## Center of Gravity Shifts
 
 When deciding your loadouts make sure you have a balanced load on both sides, otherwise the heli will pull to the heavier side! you will have to trim it out if it does. Also you need to think about weapons deployment aswell, if you shoot everything off one side but not the other you will become unbalanced.
+
+## Wind Simulation
+
+Wind is now simulated and can push you around. You can set the wind direction, wind speed and gust speeds per mission file in the addon options. Settings range from 0-50 knots. Headwinds will assist the aircrafts performance and tail winds will hinder the aircrafts performance.
