@@ -134,6 +134,8 @@ This is similar to adding a normal waypoint in the NAV mode. This can be done fr
 2. The possible IDENTs for the waypoints can be found [here](.mpd-dms).
 3. The FREE text box, as above only takes 3 characters should be used to describe the type of threat. For example a `SA-6` site can be represented as a `SA6`. Advised not to leave blank.
 
+## ABR
+This is a sub page of the TSD page which can be accessed from the ABR button. This sub page lists all the possible identifications for a waypoint or control measure or target point along with an explanation for each identification. The identifications are also colour coded for differentiating  types of identifications for example, friendly is light blue (cyan) and enemmy is red.
 
 <!-- #### Filtering targets
 
