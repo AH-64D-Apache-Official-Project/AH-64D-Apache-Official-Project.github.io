@@ -100,4 +100,5 @@ The RKT Subpage allows for the selection of specific rocket types from the avail
 
 You can access the Code page by pressing CODE (T4). The Code page displays all current laser channels and their respective laser frequency. You can cycle between LRFD and LST codes by pressing (T2). The currently selected channel is the channel that the selected tool in the top (T2) will use. Laser frequenies can be changed by pressing FREQ (T5) and selecting a channel then using the KU to set the frequency.
 
-[image of CODE Page]()
+{% include image.html file="mpd/page-code.png" alt="Image of code page" caption="Figure 1: The code Page" %}
+*ADD IMAGE OF CODE PAGE HERE*
