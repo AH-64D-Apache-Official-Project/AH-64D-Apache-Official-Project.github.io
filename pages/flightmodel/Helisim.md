@@ -8,7 +8,27 @@ folder: flightmodel
 
 As of version 2.2.0 SFM+ has been completely removed from the mod and replaced with Helisim.
 
-Helisim is the evolution of SFM+, written from the ground up Helisim is more accurate to a helicopters' flight model than SFM+ could ever be that presents an accurate performance model in ARMA. It also provides a force generating stabilator designed to expand the pitch range of the aircraft and allow for hands off flight for a given power setting. A new feature of Helisim from SFM+ is center of gravity shifts.
+HeliSim is a complete physics replacement and evolution of SFM+, primarily intended for helicopters, but can simulate any air vehicle. It replaces Arma's Simple and Advanced Flight Models. 
+
+**Current simulated behaviors are:**
+Effective Translational Lift
+Ground Effect
+Vortex Ring State
+Translating Tendency
+Retreating Blade Stall (planned)
+Transient Torque (planned)
+
+**Current simulated systems for the Apache are:**
+Hydraulics
+Pneumatics
+Electrical
+Flight Management Computer
+Stability Augmentation System
+Command Augmentation System
+Non-boosted flight controls
+Auxiliary Power Unit
+Turbine Engine
+Transmission
 
 ## Performance Model
 Helisim accurately accounts for weight of the aircraft and consults several lookup tables to present accurate performance figures to the pilot. The Table below presents information for the default aircraft placed in the 3DEN editor.
@@ -58,9 +78,9 @@ In order to hover out of ground effect, the crew MUST reduce weight, or remain a
 
 ## Damage Modeling
 
-{% include note.html content="Currently a ROTOR RPM HIGH warning and audio indicate an impending transmission failure."%}
+Helisim features damage modeling. This is a means of enforcing proper startup procedures to enhance realism. No longer will you be able to start a single engine and leave it at idle and take off. Within 30 seconds of exceeding the limits outlined below the transmission will fail and the aircraft fall out of the sky.
 
-Helisim features damage modeling. This is a means of enforcing proper startup procedures and enhance realism. No longer will you be able to start a single engine and leave it at idle and take off. Within 30 seconds of exceeding the limits outlined below the transmission will fail and the aircraft fall out of the sky.
+A ROTOR RPM HIGH warning and audio indicate that the collective is to low during a deceleration, Overspeeding the rotors can damage them.
 
 **During Start**
 
@@ -96,7 +116,7 @@ Once the power levers are at fly, each power lever can be manipulated indpendent
 
 ## Center of Gravity Shifts
 
-When deciding your loadouts make sure you have a balanced load on both sides, otherwise the heli will pull to the heavier side! you will have to trim it out if it does. Also you need to think about weapons deployment aswell, if you shoot everything off one side but not the other you will become unbalanced.
+When deciding your loadouts make sure you have a balanced load on both sides of the aircraft, otherwise the aircraft will pull to the heavier side. you will have to trim it out if it does. Also you need to consider weight changes during weapons deployment aswell, if you shoot everything off one side but not the other you will become unbalanced.
 
 ## Wind Simulation
 
