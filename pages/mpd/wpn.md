@@ -89,7 +89,7 @@ The RKT Subpage allows for the selection of specific rocket types from the avail
 {% include image.html file="mpd/annot_page_wpn_rkt.png"%}
 
 1. On the left is the aircraft's inventory, which shows all available rocket types. Clicking on a rocket type will select that rocket type.
-2. Rocket types cannot be mixed in the same zones for pylons 1/4, and 2/3, except for zone 3 which needs to be the same across all pylons. (Arma limitation). Ex: if you put 6PD in zone 1 for pylon 1 then zone 1 for pylon 4 needs to be either empty or 6PD.
+2. Rocket types cannot be mixed in the same zones for pylons 1/4, and 2/3, except for zone 3 which needs to be the same (or empty) across all pylons. E.g.: if you put 6PD in zone 1 for pylon 1 then zone 1 for pylon 4 needs to be either empty or 6PD.
 3. The selected rocket type is displayed on the pods holding that rocket type.
 4. For each pod zone 1 is 12 rockets, zone 2 is 4 rockets and zone3 3 is 3 rockets
 4. Salvo Quantity (R1) shows the number of rockets that will be fired in a single trigger pull. This can be 1,2,4,8,12,24 or ALL.
