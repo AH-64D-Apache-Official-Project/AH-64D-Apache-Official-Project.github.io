@@ -43,8 +43,8 @@ There are two modes of the missile that should be considered before firing : LOB
 
 | | LOBL | LOAL |
 | :-- | :-: | :-: |
-| In constraints | ![LOBL in bounds](images/tex/hdu/ah64_lobl.png) | ![LOAL out of bounds](images/tex/hdu/f16_rsc_jhmcs_targ.png)
-| Out of constraints | ![LOBL out of bounds](images/tex/hdu/ah64_lobl_nolos.png) | ![LOAL in bounds](images/tex/hdu/f16_rsc_jhmcs_targ_nolos.png)
+| In constraints | ![LOBL in bounds](/images/tex/hdu/ah64_lobl.png) | ![LOAL out of bounds](/images/tex/hdu/f16_rsc_jhmcs_targ.png)
+| Out of constraints | ![LOBL out of bounds](/images/tex/hdu/ah64_lobl_nolos.png) | ![LOAL in bounds](/images/tex/hdu/f16_rsc_jhmcs_targ_nolos.png)
 
 Once you have the correct target selected, and the missile has the correct selected trajectory and is in constraints, then you are ready to fire!
 
