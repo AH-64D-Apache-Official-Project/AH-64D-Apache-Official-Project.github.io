@@ -20,7 +20,7 @@ When you have a weapon [WAS](weapons-was.html)ed, that weapon's subpage will alw
 
 ## Common information
 
-{% include image.html file="mpd/annot_page_wpn_safe.png"%}
+![image of non armed weapons](/images/mpd/annot_page_wpn_safe.png)
 
 1. The arming indicator shows whether the aircraft is armed or safe.
 2. You can not WAS or are the aircraft while on the ground, to use weapon systems on the ground press the GND ORIDE button on the front left panel(back seat) or top left panel(front seat).
@@ -35,7 +35,7 @@ When you have a weapon [WAS](weapons-was.html)ed, that weapon's subpage will alw
 
 The GUN Subpage allows for the modification of the operating parameters of the M230 chaingun
 
-{% include image.html file="mpd/annot_page_wpn_m230.png"%}
+![Image of m230 sub-page](/images/mpd/annot_page_wpn_m230.png)
 
 1. The current burst settings on the left allow for the selection of a specific burst limit.
 2. M230 ammo remaining is visible inside the highlighted image of the M230.
@@ -44,7 +44,7 @@ The GUN Subpage allows for the modification of the operating parameters of the M
 
 The MSL Subpage allows for the selection of specific missiles as well as their launch parameters.
 
-{% include image.html file="mpd/annot_page_wpn_msl.png"%}
+![Image of missile sub-page](/images/mpd/annot_page_wpn_msl.png)
 
 1. Each hellfire has an icon specifying its seeker type. This can be used to decide which missile to shoot.
 2. The hellfire that will be the next launched will be highlighted in inverse video.
@@ -86,7 +86,7 @@ The RKT Subpage allows for the selection of specific rocket types from the avail
 | M257 | Illum flare 100 secs | 6IL
 | M278 | IR Illum flare 100 secs | 6IR
 
-{% include image.html file="mpd/annot_page_wpn_rkt.png"%}
+![Image of rocket sub-page](/images/mpd/annot_page_wpn_rkt.png)
 
 1. On the left is the aircraft's inventory, which shows all available rocket types. Clicking on a rocket type will select that rocket type.
 2. Rocket types cannot be mixed in the same zones for pylons 1/4, and 2/3, except for zone 3 which needs to be the same (or empty) across all pylons. E.g.: if you put 6PD in zone 1 for pylon 1 then zone 1 for pylon 4 needs to be either empty or 6PD.
@@ -100,5 +100,5 @@ The RKT Subpage allows for the selection of specific rocket types from the avail
 
 You can access the Code page by pressing CODE (T4). The Code page displays all current laser channels and their respective laser frequency. You can cycle between LRFD and LST codes by pressing (T2). The currently selected channel is the channel that the selected tool in the top (T2) will use. Laser frequenies can be changed by pressing FREQ (T5) and selecting a channel then using the KU to set the frequency.
 
-{% include image.html file="mpd/page-code.png" alt="Image of code page" caption="Figure 1: The code Page" %}
-*ADD IMAGE OF CODE PAGE HERE*
+![Image of CODE sub-page](/images/mpd/annot_page_wpn_code.png)
+*STILL NEED IMAGE OF CODE PAGE*
