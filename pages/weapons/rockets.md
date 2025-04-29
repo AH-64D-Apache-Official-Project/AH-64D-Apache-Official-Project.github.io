@@ -12,10 +12,6 @@ Version 2.0 introduced a more accurate rocket steering cursor which uses the cur
 
 There are two modes available to the crew when employing rockets: NORM (a.k.a. articulating) and Fixed (FXD). For both modes, the fixed point of reference for the rocket steering cursor is the aircraft centerline, also known as the Armament Datum Line (ADL). In NORM, the rocket steering cursor is dynamic and moves with the selected sight (HMD, TADS, FCR), in FXD the rocket steering cursor is fixed to the aircraft centerline. 
 
-| NORM | FXD |
-| :-: | :-: |
-| ![NORM](/images/weapons/rktCursor_NORM.png) | ![FXD](/images/weapons/rktCursor_FXD.png) 
-
 As an example, the PLT has HMD as their currently selected sight, and they have a target they wish to engage to the left. When they look to the left, the rocket steering cursor will displace to the left indicating that the pilot needs to turn left to align the nose of the aircraft with the target. As they apply left pedal or maneuver the aircraft to the left the rocket steering cursor will move right. When the rocket steering cursor is centered with the LOS, the nose is aligned with the target. The critical piece to this is that the PLT keeps the LOS on the target! Any movement of the PLT LOS will result in movement of the rocket steering cursor and add to frustrations in lining the aircraft up. A common technique which works well in ARMA since there are no winds, is to ignore the rocket steering cursor and instead use the head tracker for azimuth and then the LOS for elevation. So long as the head tracker is aligned with the target, and the LOS is correct in elevation, the rocket will hit the target. The images below illustrate this sequence.
 
 ## HMD Engagement Procedure (NORM)
