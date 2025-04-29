@@ -14,7 +14,7 @@ There are two modes available to the crew when employing rockets: NORM (a.k.a. a
 
 | NORM | FXD |
 | :-: | :-: |
-| ![NORM](images/weapons/rktCursor_NORM.png) | ![FXD](images/weapons/rktCursor_FXD.png) 
+| ![NORM](/images/weapons/rktCursor_NORM.png) | ![FXD](/images/weapons/rktCursor_FXD.png) 
 
 As an example, the PLT has HMD as their currently selected sight, and they have a target they wish to engage to the left. When they look to the left, the rocket steering cursor will displace to the left indicating that the pilot needs to turn left to align the nose of the aircraft with the target. As they apply left pedal or maneuver the aircraft to the left the rocket steering cursor will move right. When the rocket steering cursor is centered with the LOS, the nose is aligned with the target. The critical piece to this is that the PLT keeps the LOS on the target! Any movement of the PLT LOS will result in movement of the rocket steering cursor and add to frustrations in lining the aircraft up. A common technique which works well in ARMA since there are no winds, is to ignore the rocket steering cursor and instead use the head tracker for azimuth and then the LOS for elevation. So long as the head tracker is aligned with the target, and the LOS is correct in elevation, the rocket will hit the target. The images below illustrate this sequence.
 
@@ -22,10 +22,10 @@ As an example, the PLT has HMD as their currently selected sight, and they have 
 
 | Step | Image |
 | :-: | :-- |
-| Step 1 | ![1](images/weapons/rktEngage_01.png) |
-| Step 2 | ![2](images/weapons/rktEngage_02.png) |
-| Step 3 | ![3](images/weapons/rktEngage_03.png) |
-| Step 4 | ![4](images/weapons/rktEngage_04.png) |
+| Step 1 | ![1](/images/weapons/rktEngage_01.png) |
+| Step 2 | ![2](/images/weapons/rktEngage_02.png) |
+| Step 3 | ![3](/images/weapons/rktEngage_03.png) |
+| Step 4 | ![4](/images/weapons/rktEngage_04.png) |
 
 Advantages associated with the NORM mode include shallower dive angles as a result of the articulating pylons and when employed cooperatively, a more stable platform and accurate range to target. Disadvantages include a more 'complex' and 'confusing' setup, particularly when firing HMD due to the dynamic nature of the rocket steering cursor. 
 
