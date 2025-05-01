@@ -109,8 +109,8 @@ entries:
   - title: Flight Model
     output: web
     folderitems:
-    - title: SFM+
-      url: flight-model-sfm-plus.html
+    - title: Helisim
+      url: flight-model-helisim.html
       output: [web]
 
   - title: Targeting

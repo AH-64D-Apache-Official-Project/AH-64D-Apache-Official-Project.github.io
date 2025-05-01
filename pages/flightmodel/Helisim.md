@@ -1,123 +1,152 @@
 ---
-title: helisim
+title: HeliSim
 tags: [flight_model]
 sidebar: ah64d_sidebar
 permalink: flight-model-helisim.html
 folder: flightmodel
 ---
+# HeliSim – Advanced Helicopter Flight Model for Arma 3  
 
-As of version 2.2.0 SFM+ has been completely removed from the mod and replaced with Helisim.
+## Overview  
+As of **version 2.2.0**, the previous **SFM+** flight model has been completely removed and replaced with **HeliSim**.  
 
-HeliSim is a complete physics replacement and evolution of SFM+, primarily intended for helicopters, but can simulate any air vehicle. It replaces Arma's Simple and Advanced Flight Models. 
+HeliSim is a **complete physics replacement and evolution of SFM+**, designed primarily for helicopters but adaptable for other air vehicles. It replaces **Arma 3’s Simple and Advanced Flight Models**, offering a comprehensive simulation of **realistic helicopter aerodynamics**.  
 
-**Current simulated behaviors are:**
-Effective Translational Lift
-Ground Effect
-Vortex Ring State
-Translating Tendency
-Retreating Blade Stall (planned)
-Transient Torque (planned)
+### Key Simulated Effects  
+HeliSim **accurately simulates** various helicopter flight behaviors, including:  
+- **Effective Translational Lift (ETL)**  
+- **Ground Effect**  
+- **Vortex Ring State (VRS)**  
+- **Translating Tendency**  
+- **Retreating Blade Stall** *(planned)*  
+- **Transient Torque** *(planned)*  
 
-**Current simulated systems for the Apache are:**
-Hydraulics
-Pneumatics
-Electrical
-Flight Management Computer
-Stability Augmentation System
-Command Augmentation System
-Non-boosted flight controls
-Auxiliary Power Unit
-Turbine Engine
-Transmission
+### Current Simulated Systems for the Apache  
+The AH-64D Mod includes realistic **mechanical and electronic systems**, such as:  
+- **Hydraulics & Pneumatics**  
+- **Electrical Systems**  
+- **Flight Management Computer**  
+- **Stability & Command Augmentation Systems**  
+- **Non-boosted flight controls**  
+- **Auxiliary Power Unit (APU)**  
+- **Turbine Engine & Transmission**  
 
-## Performance Model
-Helisim accurately accounts for weight of the aircraft and consults several lookup tables to present accurate performance figures to the pilot. The Table below presents information for the default aircraft placed in the 3DEN editor.
+---
 
-{% include note.html content="Currently all performance data is for a PA of 0ft and 20C only!"%}
+## Flight Dynamics  
 
-The table below presents performance data for the aircraft. The gross weight of the non-FCR aircraft is 8828kg (19462lbs) and the gross weight of the FCR aircraft is 9123kg (20113lbs). This weight includes: 2x Pilots, 100% fuel, 2x M-299 Longbow Hellfire Missile Launchers, 2x M261 Rocket Pods, 1200x rounds of 30mm, 38x Rockets and 8x Hellfires.
+### Ground Effect  
+- The aircraft operates **In Ground Effect (IGE)** when hovering **within one rotor diameter** (~48 feet AGL for the AH-64D).  
+- **IGE reduces power requirements**, as rotor downwash is **restricted** by the proximity to the ground.  
+- As altitude **increases**, ground effect **dissipates**, requiring **additional power** for Out of Ground Effect (**OGE**) hovering.  
 
-| Max Tq Dual Engine | Max Tq Single Engine |
-|:--|:--|
-| 127% | 131% |
+### Effective Translational Lift (ETL)  
+- Occurs **between 16–24 knots**, improving **rotor efficiency** as the aircraft moves into **cleaner air**.  
+- Pilots will experience **a slight vertical vibration** during this transition.  
 
-Maximum Torque Dual Engine and Single engine are the maximum torque the engines can produce based on environmental conditions. This torque can best be thought of as "life torque", meaning that if the pilot finds themselves in a bad situation, this torque can be used to save the aircraft. It will exceed the drive train limits and cause damage, but it will allow the aircraft to fly another day.
+### Translating Tendency  
+- Due to the **counterclockwise main rotor rotation**, increasing collective **induces right yaw**.  
+- **Tail rotor thrust** counters yaw but causes **lateral drift to the right**.  
+- Pilots must **apply left cyclic input**, resulting in an approximate **3° left roll** at hover.  
 
-| Max Cont TQ Dual Engine | Max Cont TQ Single Engine |
-|:--|:--|
-| 100 % | 110% |
+### Main Rotor Torque Effect  
+- Applying **collective** increases rotor torque, causing **right yaw**.  
+- Pilots must **apply left pedal input** to counteract yaw.  
 
-Maximum continuous torque dual engine and single engine is the maximum torque the pilot can continuously pull during flight. These limits are determined by the drive train.
+---
 
-| Max GWT In Ground Effect | Max GWT Out of Ground Effect |
-|:--|:--|
-|20260 lbs | 18700 lbs |
+## Advanced Aerodynamic Effects  
 
-Maximum gross weight IGE and OGE are the maximum gross weights the aircraft can support when operating IGE and OGE.
+### Vortex Ring State (VRS)  
+VRS occurs when the **main rotor enters an aerodynamic stall** due to excessive vertical descent.  
+For VRS to develop, all **three conditions must be met simultaneously**:  
 
-| Go/No-Go Torque IGE | Go/No-Go Torque OGE |
-|:--|:--|
-| 88% | 80% |
+1. **Vertical descent rate** exceeding **300 fpm**.  
+2. **Power applied** between **20–100%**, but insufficient to arrest descent.  
+3. **Forward airspeed** below **ETL (<16 knots)**.  
 
-Go/No-Go torque represents the maximum GWT IGE/OGE as measured at a 5-foot hover. Exceeding Go/No-Go torque OGE while at a 5-foot hover informs the crew that they DO NOT have OGE hover power, and are restricted from performing maneuvers requiring OGE hover power. Exceeding Go/No-Go torque IGE while at a 5-foot hover informs the crew that they DO NOT have OGE or IGE power and are restricted from performing maneuvers requiring OGE hover power. 
+- The AH-64D Mod enters **fully developed VRS at ~4,800 fpm**.  
+- Recovery requires **directional movement** (forward, backward, or sideways).  
+- Early warning signs include **progressive rotor shake**.  
+- **Collective input** may worsen descent, increasing **over-torque risk and rotor droop**.  
 
-| Hover TQ In Ground Effect (Non-FCR) | Hover Torque Out of Ground Effect (Non-FCR) |
-|:--|:--|
-| 84% | *105% |
+⚠ **Pilots must monitor descent rates, especially in low-speed, high-density altitude conditions!**  
 
+### Settling With Power (SWP) *(Different from VRS!)*  
+SWP occurs when the **rate of descent exceeds available engine power**, preventing recovery.  
+This is **not the same as VRS**, though symptoms can seem similar.  
 
-| Hover TQ In Ground Effect (FCR) | Hover Torque Out of Ground Effect (FCR) |
-|:--|:--|
-| 88% | *110% |
+#### SWP Example  
+A pilot **terminates to an OGE hover after high-speed flight**, requiring **95% torque**—but the **continuous torque limit is 100%**.  
 
-{% include note.html content="* Indicates the TQ required to hover in this mode exceeds the Maximum Continuous Torque Dual Engine"%}
+- A **100 fpm descent** demands **~2% torque** to arrest.  
+- A **5% torque margin** allows a **maximum descent rate of ~250 fpm**.  
+- **Higher aircraft weight, altitude, and temperature worsen the situation.**  
 
-Helisim simulates ground effect and out of ground effect. The aircraft is considered to be operating in ground effect with less than 1 rotor diamter (~48 feet) above ground level. As the aircraft climbs in altitude, ground effect is lost and torque required to maintain a hover increases. Helisim also simulates the effects of Effective Translational Lift and as the aircraft transitions into forward flight will benefit from an increase in rotor efficiency and a decreased power requirement. 
+⚠ **Understanding helicopter performance margins is essential to prevent SWP.**  
 
-In order to hover out of ground effect, the crew MUST reduce weight, or remain above ETL (~24 kts)! To maintain a reasonable weight we recommend to leave fuel at 100% and reduce munitions to only what you need, our mindset behind this is 'its better to run out of ammo and stay on station and support friendlies with ISR than be forced off station with weapons still on the rails because you ran low on fuel'.
+---
 
-## Damage Modeling
+## Additional Flight Phenomena  
 
-Helisim features damage modeling. This is a means of enforcing proper startup procedures to enhance realism. No longer will you be able to start a single engine and leave it at idle and take off. Within 30 seconds of exceeding the limits outlined below the transmission will fail and the aircraft fall out of the sky.
+### Mushing  
+Mushing is a **temporary stall condition** occurring during **aggressive, high-speed dive recoveries**.  
 
-A ROTOR RPM HIGH warning and audio indicate that the collective is to low during a deceleration, Overspeeding the rotors can damage them.
+- The helicopter’s **momentum exceeds rotor thrust**, delaying recovery.  
+- Pilots should **apply forward cyclic** to regain control.  
+- **Pulling aft cyclic** **worsens the stall**, increasing altitude loss.  
 
-**During Start**
+### Autorotations  
+A **power-on autorotation** must be performed **between 77–107 knots**.  
 
-|Tq | Nr |
-|:--|:--|
-| <= 30% | <= 50% |
-| <= 70% | <= 90% |
+- **77 knots**: Minimum **rate of descent** speed.  
+- **107 knots**: Maximum **glide efficiency** speed.  
+- **Unsafe above 145 knots**.  
+- Reduce **collective input** until torque is **<10%** with both engines engaged.  
 
-**Single Engine Torque**
+---
 
-{% include warning.html content="Exceeding 111 - 122% single engine torque for greater than 2.5 minutes, or 123 - 125% Torque for greater than 6 seconds, or 125% torque for any amount of time will result in a catastrophic transmission failure and/or loss of aircraft and crew!"%}
+## Damage Modeling  
 
-|Tq | Time |
-|:--|:--|
-| 0 to 110% | Normal Operation|
-| 110% | Continuous |
-| 111 to 122% | 2.5 Minutes |
-| 123 to 125% | 6 Seconds |
+HeliSim **enforces realistic startup procedures**.  
+Improper startup **will result in transmission failure**, leading to **aircraft loss** within 30 seconds if limits are exceeded.  
 
-**Dual Engine Torque**
+### Engine Start Parameters  
 
-{% include warning.html content="Exceeding 100 - 115% dual engine torque for greater than 6 seconds, or 115% Torque for any amount of time will result in a catastrophic transmission failure and/or loss of aircraft and crew!"%}
+| Torque (Tq) | Rotor RPM (Nr) |  
+|:--|:--|  
+| ≤ 30% | ≤ 50% |  
+| ≤ 70% | ≤ 90% |  
 
-| Tq | Time |
-|:--|:--|
-| 0 to 100% | Normal Operation|
-| 100% | Continuous |
-| 101 to 115% | 6 Seconds |
+### Single Engine Torque Limits  
+Exceeding **critical torque levels** results in **failure**:  
 
-## Single Engine Sim
+| Tq (%) | Time Limit |  
+|:--|:--|  
+| 0–110% | Normal Operation |  
+| 111–122% | Max **2.5 Minutes** |  
+| 123–125% | Max **6 Seconds** |  
+| > 125% | Immediate Failure |  
 
-Once the power levers are at fly, each power lever can be manipulated indpendently. Beware of your current Tq, as it WILL double, potentially exceeding the Tq limits outlined above.
+### Dual Engine Torque Limits  
 
-## Center of Gravity Shifts
+| Tq (%) | Time Limit |  
+|:--|:--|  
+| 0–100% | Normal Operation |  
+| 101–115% | Max **6 Seconds** |  
+| > 115% | Immediate Failure |  
 
-When deciding your loadouts make sure you have a balanced load on both sides of the aircraft, otherwise the aircraft will pull to the heavier side. you will have to trim it out if it does. Also you need to consider weight changes during weapons deployment aswell, if you shoot everything off one side but not the other you will become unbalanced.
+---
 
-## Wind Simulation
+## Performance Model  
 
-Wind is now simulated and can push you around. You can set the wind direction, wind speed and gust speeds per mission file in the addon options. Settings range from 0-50 knots. Headwinds will assist the aircrafts performance and tail winds will hinder the aircrafts performance.
+HeliSim considers **aircraft weight and environmental factors** to ensure accurate **performance calculations**.  
+
+### Key Aircraft Performance Figures  
+
+| Metric | Dual Engine | Single Engine |  
+|:--|:--|:--|  
+| **Max Torque** | 127% | 131% |  
+| **Max Continuous Torque** | 100% | 110% |  
+| **Max Gross Weight (IGE)** | **20,260 lbs** |  
+| **Max Gross Weight (OGE)** | **18,700 lbs** |  
