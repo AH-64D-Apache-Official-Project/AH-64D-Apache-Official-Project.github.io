@@ -98,27 +98,21 @@ entries:
     - title: "MPD Page: WPN"
       url: mpd-wpn.html
       output: [web]
-    - title: "MPD Page: TSD"
-      url: mpd-tsd.html
-      output: [web]
       subfolders:
       - title: "MPD Page: TSD"
         output: [web]
         subfolderitems:
-        - title: Common Info
-          url: mpd-tsd.html
+        - title: TSD Introduction
+          url: mpd-tsd-common-info.html
           output: [web]
-        - title: NAV Page
-          url: weapons-ammo-rockets.html
+        - title: TSD Modes
+          url: mpd-tsd-modes.html
           output: [web]
-        - title: ATK Page
-          url: weapons-ammo-hellfires.html
+        - title: TSD Operations
+          url: mpd-tsd-operations.html
           output: [web]
-        - title: Waypoints
-          url: weapons-ammo-m789.html
-          output: [web]
-        - title: ABR
-          url: weapons-ammo-m789.html
+        - title: TSD Waypoints
+          url: mpd-tsd-waypoints.html
           output: [web]
 
   - title: Flight Model

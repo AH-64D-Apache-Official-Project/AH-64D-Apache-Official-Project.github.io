@@ -10,6 +10,8 @@ folder: startup
 {% capture BS %}{% include badge.html content="BS"%}{% endcapture%}
 {% capture FSBS %}{% include badge.html content="FS/BS"%}{% endcapture%}
 
+**VIDEO TUTORIAL** : [Cold Start](https://youtu.be/dOe9HWWD1k4?si=uAIp8Ar_-0mkXIlg)
+
 In the following checks, {{BS}} denotes Back Seat and {{FS}} denotes Front Seat.
 
 Use the following procedures when starting up the aircraft:

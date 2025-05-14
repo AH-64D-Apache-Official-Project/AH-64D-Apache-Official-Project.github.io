@@ -9,6 +9,8 @@ stub: true
 
 *ADD LOGIC ENTITIES EDEN IMAGE HERE*
 
+**VIDEO TUTORIAL** : [Mission Planning](https://youtu.be/Kzl0_3E4APs?si=kB1sQC195c2MuLiu)
+
 ## Introduction
 
 This section will explain the new logic entities provided by the Apache mod and how they can be used exclusively with the helicopter for gameplay. The mission maker has access to them and should be used for a proper gameplay experince for the players.

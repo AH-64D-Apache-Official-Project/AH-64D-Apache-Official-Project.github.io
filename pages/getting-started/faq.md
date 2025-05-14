@@ -7,6 +7,10 @@ folder:	root
 ---
 ## Getting Started
 
+### Are there any video tutorials?
+
+Yes there are, they can be found [here](https://www.youtube.com/playlist?list=PLBARbVopIYB17N-NDTTlstcDQ2tihPaTt). It explains waypoints, basic cold start, PERF page and so on.
+
 ###	How	do I interact with cockpit switches? {#cockpit-switches}
 
 Use	the	keybind	{% include keybind.html	name="cockpit-interact"	%} with	the	crosshair over the switches.
