@@ -7,7 +7,7 @@ folder: root
 stub: true
 ---
 
-*ADD LOGIC ENTITIES EDGEN IMAGE HERE*
+*ADD LOGIC ENTITIES EDEN IMAGE HERE*
 
 ## Introduction
 
