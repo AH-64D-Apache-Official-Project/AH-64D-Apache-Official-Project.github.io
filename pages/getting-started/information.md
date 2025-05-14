@@ -12,7 +12,7 @@ folder: flightmodel
 
 This page will explain the difference of the Apache provided by this mod and Apaches provided by RHS/CUP and DCS.
 
-## Differences
+## Important Notes
 1. Better than the DCS and RHS/CUP choppers. The flight model is more in line with the actual chopper and also the weapons work better.
 2. DCS has the AH-64D BLK II which has a digital screen (TEDAC) for the TADS while this mod is a version behind, The AH-64D, the TADS is seen through an eyepiece at least in the game.
 3. There is DVO (Colour), DTV (Black and White) and FLIR (Thermal with in-built A3TI). There is no night vision in the TADS.
@@ -22,6 +22,7 @@ This page will explain the difference of the Apache provided by this mod and Apa
 7. Uses the new mod keybinds from Arma 3 for interfacing with joysticks and other external peripherals.
 8. NO STINGERS ON THE EXTERNAL HARDPOINTS. ASK THE INFANTRY TO CLEAR THE SKY OR USE YOUR CANNON OR LASER GUIDED HELLFIRE.
 9. The pixelation of the TADS image is a feature of the mod and a representation of the actual real life TADS of the modelled version of the Apache.
+10. Reduce the sensitivity curves for your HOTAS before flying. Otherwise nearly double the inputs will be applied by the pilot.
 
 Points 1 and 5 are important, the chopper will be heavy when carrying a full load of munitions and fuel. Scarifice something to get it flying.
 
