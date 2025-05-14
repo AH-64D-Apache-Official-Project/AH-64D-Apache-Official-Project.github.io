@@ -17,7 +17,13 @@ It can be in one of two modes, either ATK or NAV. In ATK, it is going to show yo
 
 {% include important.html content="In reality in the real aircraft the distinction between the two modes is less defined, you can see most things in both situations. The information displayed can be changed via the SHOW push button." %}
 
-{% include warning.html content="The TSD can only show up to 32 targets or waypoints due to technical limitations of the engine. If you have more targets than that known to you, you may not be able to view them all. If this occurs, use the FLTR option to filter down the list of targets so it is smaller." %}
+There are the following limitations for the control measures, waypoints and target points : 
+1. 49 Control Measures
+2. 50 Waypoints
+3. 50 Target Points
+
+{% include important.html content="In NAV mode/phase the top 16 targets are shown. In the ATK mode/phase 128 FCR targets can be displayed." %}
+
 
 ## Info
 
@@ -136,7 +142,7 @@ This is similar to adding a normal waypoint in the NAV mode. This can be done fr
 3. The FREE text box, as above only takes 3 characters should be used to describe the type of threat. For example a `SA-6` site can be represented as a `SA6`. Advised not to leave blank.
 
 ## ABR
-This is a sub page of the TSD page which can be accessed from the ABR button. This sub page lists all the possible identifications for a waypoint or control measure or target point along with an explanation for each identification. The identifications are also colour coded for differentiating  types of identifications for example, friendly is light blue (cyan) and enemmy is red.
+This is a sub page of the TSD page which can be accessed from the ABR button. This sub page lists all the possible identifications for a waypoint or control measure or target point along with an explanation for each identification. The identifications are also colour coded for differentiating  types of identifications for example, friendly is light blue (cyan) and enemy is red.
 
 <!-- #### Filtering targets
 
