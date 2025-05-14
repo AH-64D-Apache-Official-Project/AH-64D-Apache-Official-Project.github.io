@@ -88,5 +88,3 @@ Although improvements to the control input system are planned, this is the curre
 
 ### With HOTAS my inputs get exaggerated:
 1. Reduce the sensitivity curves of your HOTAS. A recommended value is 25%. The initialisation document has a picture with the standard curves required.
-
-### 
