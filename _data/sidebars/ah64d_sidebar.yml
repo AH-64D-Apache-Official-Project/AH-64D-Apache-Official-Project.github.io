@@ -48,7 +48,10 @@ entries:
     - title: MPDs
       url: mpd.html
       output: [web]
-
+    - title: "UFD (Up Front Display)"
+      url: ufd.html
+      output: [web]
+    
   - title: Startup and Shutdown
     output: web
     folderitems:
@@ -62,10 +65,6 @@ entries:
   - title: Aircraft MPDs
     output: web
     folderitems:
-    # subfolders:
-    # - title: Flight and Navigation
-    #   output: web
-    #   subfolderitems:
     - title: "MPD Page: ENG"
       url: mpd-eng.html
       output: [web]
@@ -86,10 +85,7 @@ entries:
       output: [web]
     - title: "MPD Page: DMS & DTU"
       url: mpd-dms.html
-      output: [web]  
-    - title: "UFD (Up Front Display)"
-      url: ufd.html
-      output: [web]  
+      output: [web]    
   - title: Mission MPDs
     output: web
     folderitems:
@@ -105,6 +101,25 @@ entries:
     - title: "MPD Page: TSD"
       url: mpd-tsd.html
       output: [web]
+      subfolders:
+      - title: "MPD Page: TSD"
+        output: [web]
+        subfolderitems:
+        - title: Common Info
+          url: mpd-tsd.html
+          output: [web]
+        - title: NAV Page
+          url: weapons-ammo-rockets.html
+          output: [web]
+        - title: ATK Page
+          url: weapons-ammo-hellfires.html
+          output: [web]
+        - title: Waypoints
+          url: weapons-ammo-m789.html
+          output: [web]
+        - title: ABR
+          url: weapons-ammo-m789.html
+          output: [web]
 
   - title: Flight Model
     output: web
