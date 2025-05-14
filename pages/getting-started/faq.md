@@ -41,6 +41,10 @@ The ATAS-92 Stinger was removed due to limited open-source information. Testing 
 - While technically possible to make weapons available to the PLT, the current system does not support it and may behave incorrectly. Proceed at your own risk—it’s unsupported. 
 - Recent ARMA updates may allow for a multi-seat weapon system in the future, but this is still a long-term goal.
 
+## Interaction
+### Keyboard Unit(KU) has extra letters
+1. This is a byproduct of disabling keyboard input from the user so that it can be used with the in-game KU. It is suggested to backspace at least once before inputting any other keys.
+
 ## Targeting
 ###	How	do I turn on the radar.	{#radar-salute}
 The radar offers two modes: single scan and continuous scan.
@@ -68,6 +72,9 @@ or alternately if you accidentaly activating it you can unbind the keybind
 
 ## Flight model
 
+### Will there be a separate model for SFM+/SFM/AFM
+1. No, the mod will only contain HeliSim as the flight model. There are multiple uploads which have older versions, or you can build from souce via GitHub.
+
 ###	I can't	Fly	the	aircraft but the engine	page is displaying values. {#cannot-fly}
 Due	to the nature of Arma inputs and how we are	handling the throttle it might need	to be set up correctly
 #### HOTAS Users:
@@ -78,3 +85,8 @@ Due	to the nature of Arma inputs and how we are	handling the throttle it might n
 1. Bind your collective to the normal "Raise" and "Lower" settings.
 2. Select the "Mouse" or "Keyboard" FM option in Addon Options.
 Although improvements to the control input system are planned, this is the current setup.
+
+### With HOTAS my inputs get exaggerated:
+1. Reduce the sensitivity curves of your HOTAS. A recommended value is 25%. The initialisation document has a picture with the standard curves required.
+
+### 
