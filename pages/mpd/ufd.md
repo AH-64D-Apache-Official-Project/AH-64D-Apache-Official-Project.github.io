@@ -11,17 +11,16 @@ folder: mpd
 ![Image of UFD]()
 
 1. WCA section
-
 Lists various aircraft Warnings (red), Cautions (yellow) and Advisories (green). See the [WCA](./mpd-wca) page for more info
 
 2. Radio section
-
 Shows your current radio frequencies (non functional, COMM Page coming soon)
 
 3. Fuel Counter
-
 Total Internal fuel in pounds
 
 4. Clock 
-
 Tells the current time
+
+6. Hold Modes
+The UFD will show which hold mode is activated by the pilot. There are two hold modes, attitude and barometric hold.

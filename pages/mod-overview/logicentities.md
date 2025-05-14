@@ -7,7 +7,9 @@ folder: root
 stub: true
 ---
 
-*ADD LOGIC ENTITIES EDGEN IMAGE HERE*
+*ADD LOGIC ENTITIES EDEN IMAGE HERE*
+
+**VIDEO TUTORIAL** : [Mission Planning](https://youtu.be/Kzl0_3E4APs?si=kB1sQC195c2MuLiu)
 
 ## Introduction
 

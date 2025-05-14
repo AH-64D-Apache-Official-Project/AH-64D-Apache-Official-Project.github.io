@@ -8,6 +8,8 @@ folder: mpd
 
 {% include image.html file="mpd/page_perf.jpg" alt="" caption="Figure 1: The PERF MPD" %}
 
+**VIDEO TUTORIAL** : [PERF Page and Environment](https://youtu.be/Ks2JVkrtJoM?si=GKodNEl9jlA4_kAZ)
+
 ## Introduction
 
 This page will explain the PERF MPD display for the Apache helicopter. It primarily displays range, torque required for hover, maximum gross weight for flight and true air speed for various stages of flight.
