@@ -98,7 +98,8 @@
 <g class="co" data-n="1"><path d="M-339.0 193.0 L120.0 193.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 193.0 L120.0 193.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="2"><path d="M-339.0 253.0 L120.0 253.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 253.0 L120.0 253.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="3"><path d="M-339.0 313.0 L120.0 313.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 313.0 L120.0 313.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g>
+<defs><clipPath id="fmpdwca-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdwca-page)">
 <defs></defs>
 
 <path d="M496.00 174.00 L496.00 832.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>

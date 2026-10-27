@@ -1,0 +1,44 @@
+title: FCR page, GTM
+kind: mpd
+caption: FCR page in ground targeting mode, wide scan, scanning continuously. The CPG has the FCR as sight and missiles actioned.
+state:
+  page: FCR
+  src: { heading: 312 }
+  u:
+    MFD_IND_FCR_MODE: 1
+    MFD_IND_FCR_SIGHT_FCR: 1
+    MFD_IND_FCR_ARROW_L: 1
+    MFD_IND_FCR_ARROW_R: 1
+    MFD_IND_FCR_TGT_BARRIER: 0
+    MFD_IND_FCR_LINE_SHOW: 1
+    MFD_IND_FCR_ANIM: 0.4
+    MFD_IND_FCR_SCAN_TYPE: 2
+    MFD_IND_FCR_COMMAND_HEADING: 20
+    MFD_IND_FCR_CENTERLINE: 0
+    MFD_IND_FCR_PREV_CENTER: 0
+    MFD_IND_FCR_ACQ_BOX: 3
+  t:
+    MFD_TEXT_IND_FCR_SSS: C-FCR
+    MFD_TEXT_IND_FCR_RRS: R3.8
+    MFD_TEXT_IND_FCR_COUNT: '6'
+    MFD_TEXT_IND_FCR_ACQ_SRC: FXD
+    MFD_TEXT_IND_FCR_WC: CMSL
+  fcr:
+    mode: 1
+    targets:
+    - { icon: aduLOAL, a: -20, r: 4600 }
+    - { icon: trackLOBL, a: 4, r: 1300 }
+    - { icon: trackLOAL, a: 13, r: 3800, ov: nts }
+    - { icon: wheelLOAL, a: 27, r: 3300, ov: ants }
+    - { icon: wheelMOVE, a: -9, r: 5600 }
+    - { icon: unkLOAL, a: -42, r: 2900, dim: true }
+callouts:
+- { n: 1, x: 500, y: 75, side: t, label: Heading tape, text: "With the FCR centerline below the lubber line, and the next waypoint's bearing (the caret)." }
+- { n: 2, x: 957, y: 60, side: r, label: Target count, text: "How many targets the radar has found." }
+- { n: 3, x: 155, y: 300, side: l, label: Scan sector, text: "Range arcs every 2 km out to 8 km. The sector width follows the scan size." }
+- { n: 4, x: 385, y: 593, side: l, label: Scan bar, text: "Sweeps across the sector while the radar scans." }
+- { n: 5, x: 570, y: 569, side: r, label: NTS, text: "The next-to-shoot target, in the diamond. The triangle marks the alternate, the ANTS." }
+- { n: 6, x: 372, y: 518, side: l, label: Targets, text: "One symbol per target: what it is and whether it is moving. See the table below." }
+- { n: 7, x: 220, y: 940, side: b, label: Sight and range, text: "Your sight, and the range and its source." }
+- { n: 8, x: 500, y: 940, side: b, label: Sensor window, text: "Where the TADS looks (the box) and where your acquisition source points (the diamond)." }
+- { n: 9, x: 780, y: 940, side: b, label: Weapon, text: "The weapon actioned." }

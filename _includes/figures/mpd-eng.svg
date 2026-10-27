@@ -105,7 +105,8 @@
 <g class="co" data-n="8"><path d="M1339.0 418.0 L808.0 418.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 418.0 L808.0 418.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="9"><path d="M1339.0 735.0 L688.0 735.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 735.0 L688.0 735.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="10"><path d="M1339.0 800.0 L983.0 800.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 800.0 L983.0 800.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g>
+<defs><clipPath id="fmpdeng-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdeng-page)">
 <defs></defs>
 
 <path d="M299.25 10.00 L347.75 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>

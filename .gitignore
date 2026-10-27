@@ -6,3 +6,5 @@ _pdf
 .idea
 vendor/
 .bundle/
+_tools/figures/.cache/
+__pycache__/
