@@ -1,0 +1,32 @@
+title: ASE page
+kind: mpd
+caption: ASE page with US equipment, everything on and no threats detected. Autopage at ACQ.
+state:
+  page: ASE
+  src: { heading: 312 }
+  u:
+    MFD_IND_ASE_AMERICAN: 1
+    MFD_IND_ASE_RLWR_PWR: 0
+    MFD_IND_ASE_IRJAM_PWR: 0
+    MFD_IND_ASE_IRJAM_STATE: 2
+    MFD_IND_ASE_AUTOPAGE: 2
+    MFD_IND_ASE_CHAFF_STATE: 1
+    MFD_IND_ASE_01_AZ: -1
+    MFD_IND_ASE_02_AZ: -1
+    MFD_IND_ASE_03_AZ: -1
+    MFD_IND_ASE_04_AZ: -1
+    MFD_IND_ASE_05_AZ: -1
+    MFD_IND_ASE_06_AZ: -1
+    MFD_IND_ASE_07_AZ: -1
+  t:
+    MFD_TEXT_IND_WPN_CMS_QTY: '30'
+    MFD_TEXT_IND_ASE_RLWR_COUNT: '0'
+callouts:
+- { n: 1, x: 210, y: 40, side: t, label: Chaff, text: "ARM or SAFE." }
+- { n: 2, x: 500, y: 40, side: t, label: Heading, text: "Your heading. The ring is drawn nose up." }
+- { n: 3, x: 930, y: 245, side: r, label: IR jammer, text: "**WARM**, then **OPER**. With British equipment this is **MWS**." }
+- { n: 4, x: 500, y: 180, side: t, label: Threat ring, text: "Threats are placed round the ring at their bearing." }
+- { n: 5, x: 500, y: 515, side: r, label: Your aircraft, text: "" }
+- { n: 6, x: 3, y: 520, side: l, label: Autopage, text: "The boxed level is selected." }
+- { n: 7, x: 950, y: 815, side: r, label: RLWR, text: "On, with the number of radar and laser threats shown." }
+- { n: 8, x: 210, y: 850, side: b, label: Countermeasures left, text: "Chaff, and with British equipment flares." }

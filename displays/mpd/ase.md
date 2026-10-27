@@ -19,10 +19,12 @@ Your aircraft is in the centre, nose up. Each threat the warning receivers detec
 |---|---|
 | **Search** | The radar is sweeping, not looking at you in particular. |
 | **Acquisition** | The radar has picked you out. |
-| **Track** | The radar is tracking you, ready to fire. A line runs from the centre towards it. |
+| **Track** | The radar is tracking you, ready to fire. |
 | **Launch** | A radar-guided missile is in the air. The icon flashes. |
 | **Laser** | You are being lased: designated or ranged. |
 | **Missile** | British equipment only: the missile warner has seen a missile or rocket coming. The icon flashes. |
+
+From **Track** up, including lasers and missiles, a dashed yellow line from the centre marks the threat's bearing as well.
 
 The number beside **RLWR** counts the radar and laser threats being shown.
 

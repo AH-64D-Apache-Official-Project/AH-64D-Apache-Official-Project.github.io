@@ -1,0 +1,222 @@
+<svg class="fig-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-420 -380 1840 1775" role="img" aria-label="ASE page" font-family="BMKApacheFont">
+<defs><linearGradient id="fmpdase-cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b706c"/><stop offset=".5" stop-color="#4a4f4b"/><stop offset="1" stop-color="#2f3330"/></linearGradient><radialGradient id="fmpdase-glass" cx=".35" cy=".25" r="1"><stop offset="0" stop-color="#0b120b"/><stop offset="1" stop-color="#020302"/></radialGradient><clipPath id="fmpdase-clip"><rect x="-245" y="-205" width="1490" height="1430" rx="40"/></clipPath></defs>
+<g clip-path="url(#fmpdase-clip)"><image href="{{ '/assets/figures/mpd-bezel.png' | relative_url }}" x="-259.5" y="-237.9" width="1536" height="1536" /></g>
+<rect x="-245" y="-205" width="1490" height="1430" rx="40" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="4"/>
+<rect x="-22" y="-22" width="1044" height="1060" rx="12" fill="#151716" stroke="#0a0b0a" stroke-width="3"/>
+<rect x="-8" y="-8" width="1016" height="1016" rx="6" fill="url(#fmpdase-glass)"/>
+<rect x="182.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="188.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="211.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T1</text>
+<rect x="182.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="188.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="211.5" y="1143.1" fill="#eef1ee" font-size="21" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">M</text>
+<text x="211.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B1</text>
+<rect x="302.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="308.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="331.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T2</text>
+<rect x="302.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="308.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="331.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B2</text>
+<rect x="422.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="428.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="451.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T3</text>
+<rect x="422.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="428.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="451.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B3</text>
+<rect x="542.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="548.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="571.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T4</text>
+<rect x="542.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="548.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="571.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B4</text>
+<rect x="662.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="668.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="691.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T5</text>
+<rect x="662.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="668.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="691.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B5</text>
+<rect x="782.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="788.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="811.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T6</text>
+<rect x="782.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="788.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="811.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B6</text>
+<rect x="-147.5" y="171.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="175.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="205.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L1</text>
+<rect x="1106.5" y="171.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="175.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="205.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R1</text>
+<rect x="-147.5" y="291.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="295.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="325.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L2</text>
+<rect x="1106.5" y="291.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="295.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="325.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R2</text>
+<rect x="-147.5" y="411.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="415.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="445.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L3</text>
+<rect x="1106.5" y="411.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="415.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="445.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R3</text>
+<rect x="-147.5" y="531.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="535.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="565.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L4</text>
+<rect x="1106.5" y="531.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="535.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="565.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R4</text>
+<rect x="-147.5" y="651.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="655.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="685.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L5</text>
+<rect x="1106.5" y="651.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="655.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="685.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R5</text>
+<rect x="-147.5" y="771.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="775.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="805.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L6</text>
+<rect x="1106.5" y="771.1" width="58" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="775.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="805.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R6</text>
+<rect x="-150.5" y="888.1" width="64" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-144.5" y="892.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-118.5" y="921.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">FCR</text>
+<rect x="-150.5" y="1008.1" width="64" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-144.5" y="1012.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-118.5" y="1041.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">WPN</text>
+<rect x="1103.5" y="888.1" width="64" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1109.5" y="892.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1135.5" y="921.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">COM</text>
+<rect x="1103.5" y="1008.1" width="64" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1109.5" y="1012.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1135.5" y="1041.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">VID</text>
+<rect x="29.5" y="1110.1" width="64" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="35.5" y="1114.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="61.5" y="1143.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">TSD</text>
+<rect x="905.5" y="1110.1" width="64" height="52" rx="8" fill="url(#fmpdase-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="911.5" y="1114.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="937.5" y="1143.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">A/C</text>
+<g class="co" data-n="1"><path d="M210.0 -299.0 L210.0 17.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M210.0 -299.0 L210.0 17.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="2"><path d="M468.0 -299.0 L468.0 -46.0 L500.0 -28.0 L500.0 6.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M468.0 -299.0 L468.0 -46.0 L500.0 -28.0 L500.0 6.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="3"><path d="M1339.0 245.0 L971.0 245.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 245.0 L971.0 245.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="4"><path d="M532.0 -299.0 L532.0 114.0 L500.0 132.0 L500.0 166.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M532.0 -299.0 L532.0 114.0 L500.0 132.0 L500.0 166.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="5"><path d="M1339.0 515.0 L521.0 515.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 515.0 L521.0 515.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="6"><path d="M-339.0 520.0 L3.0 520.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 520.0 L3.0 520.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="7"><path d="M1339.0 815.0 L985.0 815.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 815.0 L985.0 815.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="8"><path d="M210.0 1319.0 L210.0 910.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M210.0 1319.0 L210.0 910.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g>
+<defs></defs>
+
+<path d="M175.00 500.00 L178.00 458.00 L186.00 416.00 L200.00 376.00 L219.00 338.00 L242.00 302.00 L270.00 270.00 L302.00 242.00 L338.00 219.00 L376.00 200.00 L416.00 186.00 L458.00 178.00 L500.00 175.00 L542.00 178.00 L584.00 186.00 L624.00 200.00 L663.00 219.00 L698.00 242.00 L730.00 270.00 L758.00 302.00 L781.00 338.00 L800.00 376.00 L814.00 416.00 L822.00 458.00 L825.00 500.00 L822.00 542.00 L814.00 584.00 L800.00 624.00 L781.00 663.00 L758.00 698.00 L730.00 730.00 L698.00 758.00 L663.00 781.00 L624.00 800.00 L584.00 814.00 L542.00 822.00 L500.00 825.00 L458.00 822.00 L416.00 814.00 L376.00 800.00 L338.00 781.00 L302.00 758.00 L270.00 730.00 L242.00 698.00 L219.00 663.00 L200.00 624.00 L186.00 584.00 L178.00 542.00 L175.00 500.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.00 380.00 L80.00 380.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80.00 380.00 L80.00 437.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80.00 807.50 L80.00 870.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80.00 870.00 L2.00 870.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M461.75 22.00 L461.86 20.70 L462.20 19.43 L462.76 18.25 L463.50 17.18 L464.43 16.25 L465.50 15.50 L466.69 14.95 L467.95 14.61 L469.25 14.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M538.25 22.00 L538.14 20.70 L537.80 19.43 L537.25 18.25 L536.50 17.18 L535.57 16.25 L534.50 15.50 L533.31 14.95 L532.05 14.61 L530.75 14.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M461.75 57.00 L461.86 58.30 L462.20 59.57 L462.76 60.75 L463.50 61.82 L464.43 62.75 L465.50 63.50 L466.69 64.05 L467.95 64.39 L469.25 64.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M538.25 57.00 L538.14 58.30 L537.80 59.57 L537.25 60.75 L536.50 61.82 L535.57 62.75 L534.50 63.50 L533.31 64.05 L532.05 64.39 L530.75 64.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M461.75 22.00 L461.75 57.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M538.25 22.00 L538.25 57.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M469.25 14.50 L530.75 14.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M469.25 64.50 L530.75 64.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M461.75 945.00 L461.86 943.70 L462.20 942.44 L462.76 941.25 L463.50 940.18 L464.43 939.25 L465.50 938.50 L466.69 937.95 L467.95 937.61 L469.25 937.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M538.25 945.00 L538.14 943.70 L537.80 942.44 L537.25 941.25 L536.50 940.18 L535.57 939.25 L534.50 938.50 L533.31 937.95 L532.05 937.61 L530.75 937.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M461.75 980.00 L461.86 981.30 L462.20 982.57 L462.76 983.75 L463.50 984.82 L464.43 985.75 L465.50 986.50 L466.69 987.05 L467.95 987.39 L469.25 987.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M538.25 980.00 L538.14 981.30 L537.80 982.57 L537.25 983.75 L536.50 984.82 L535.57 985.75 L534.50 986.50 L533.31 987.05 L532.05 987.39 L530.75 987.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M461.75 945.00 L461.75 980.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M538.25 945.00 L538.25 980.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M469.25 937.50 L530.75 937.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M469.25 987.50 L530.75 987.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M151.25 805.00 L151.36 803.70 L151.70 802.44 L152.25 801.25 L153.00 800.18 L153.93 799.25 L155.00 798.50 L156.19 797.95 L157.45 797.61 L158.75 797.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M268.75 805.00 L268.64 803.70 L268.30 802.44 L267.75 801.25 L267.00 800.18 L266.07 799.25 L265.00 798.50 L263.81 797.95 L262.55 797.61 L261.25 797.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M151.25 895.00 L151.36 896.30 L151.70 897.56 L152.25 898.75 L153.00 899.82 L153.93 900.75 L155.00 901.50 L156.19 902.05 L157.45 902.39 L158.75 902.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M268.75 895.00 L268.64 896.30 L268.30 897.56 L267.75 898.75 L267.00 899.82 L266.07 900.75 L265.00 901.50 L263.81 902.05 L262.55 902.39 L261.25 902.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M151.25 805.00 L151.25 895.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M268.75 805.00 L268.75 895.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M158.75 797.50 L261.25 797.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M158.75 902.50 L261.25 902.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M957.95 197.75 L960.95 190.75 L967.95 187.75 L974.95 190.75 L977.95 197.75 L974.95 204.75 L967.95 207.75 L960.95 204.75 L957.95 197.75" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="158.75" y="836.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">CHAFF</text>
+<text xml:space="preserve" x="826.50" y="209.48" font-size="32.47" textLength="143.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">IRJAM  </text>
+<text xml:space="preserve" x="158.75" y="48.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">CHAFF</text>
+<path d="M957.95 197.75 L960.95 190.75 L967.95 187.75 L967.95 197.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M967.95 187.75 L974.95 190.75 L977.95 197.75 L967.95 197.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M977.95 197.75 L974.95 204.75 L967.95 207.75 L967.95 197.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M967.95 207.75 L960.95 204.75 L957.95 197.75 L967.95 197.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M880.50 227.00 L880.61 225.70 L880.95 224.44 L881.50 223.25 L882.25 222.18 L883.18 221.25 L884.25 220.50 L885.43 219.95 L886.70 219.61 L888.00 219.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M977.50 227.00 L977.39 225.70 L977.05 224.44 L976.50 223.25 L975.75 222.18 L974.82 221.25 L973.75 220.50 L972.57 219.95 L971.30 219.61 L970.00 219.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M880.50 257.00 L880.61 258.30 L880.95 259.56 L881.50 260.75 L882.25 261.82 L883.18 262.75 L884.25 263.50 L885.43 264.05 L886.70 264.39 L888.00 264.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M977.50 257.00 L977.39 258.30 L977.05 259.56 L976.50 260.75 L975.75 261.82 L974.82 262.75 L973.75 263.50 L972.57 264.05 L971.30 264.39 L970.00 264.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M880.50 227.00 L880.50 257.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M977.50 227.00 L977.50 257.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M888.00 219.50 L970.00 219.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M888.00 264.50 L970.00 264.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="888.00" y="254.48" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">OPER</text>
+<path d="M957.95 772.75 L960.95 765.75 L967.95 762.75 L974.95 765.75 L977.95 772.75 L974.95 779.75 L967.95 782.75 L960.95 779.75 L957.95 772.75" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M957.95 772.75 L960.95 765.75 L967.95 762.75 L967.95 772.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M967.95 762.75 L974.95 765.75 L977.95 772.75 L967.95 772.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M977.95 772.75 L974.95 779.75 L967.95 782.75 L967.95 772.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M967.95 782.75 L960.95 779.75 L957.95 772.75 L967.95 772.75 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M921.50 802.00 L921.61 800.70 L921.95 799.44 L922.50 798.25 L923.25 797.18 L924.18 796.25 L925.25 795.50 L926.44 794.95 L927.70 794.61 L929.00 794.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M977.50 802.00 L977.39 800.70 L977.05 799.44 L976.50 798.25 L975.75 797.18 L974.82 796.25 L973.75 795.50 L972.57 794.95 L971.30 794.61 L970.00 794.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M921.50 832.00 L921.61 833.30 L921.95 834.57 L922.50 835.75 L923.25 836.82 L924.18 837.75 L925.25 838.50 L926.44 839.05 L927.70 839.39 L929.00 839.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M977.50 832.00 L977.39 833.30 L977.05 834.57 L976.50 835.75 L975.75 836.82 L974.82 837.75 L973.75 838.50 L972.57 839.05 L971.30 839.39 L970.00 839.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M921.50 802.00 L921.50 832.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M977.50 802.00 L977.50 832.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M929.00 794.50 L970.00 794.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M929.00 839.50 L970.00 839.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="949.50" y="829.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">0</text>
+<path d="M520.00 500.00 L514.00 486.00 L500.00 480.00 L486.00 486.00 L480.00 500.00 L486.00 514.00 L500.00 520.00 L514.00 514.00 L520.00 500.00" fill="none" stroke="#00ffff" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M500.00 520.00 L500.00 540.00" fill="none" stroke="#00ffff" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M500.00 540.00 L487.50 540.00" fill="none" stroke="#00ffff" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M487.50 530.00 L487.50 550.00" fill="none" stroke="#00ffff" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M500.00 502.50 L500.00 497.50" fill="none" stroke="#00ffff" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M163.00 62.00 L257.00 62.00 L257.00 107.00 L163.00 107.00 L163.00 62.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="2.30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M293.25 -1.00 L366.75 -1.00 L366.75 62.00 L293.25 62.00 L293.25 -1.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="2.30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M299.25 10.00 L347.75 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M359.75 10.00 L347.75 4.00 L347.75 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
+<text xml:space="preserve" x="299.25" y="48.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">ASE</text>
+<path d="M773.25 17.00 L846.75 17.00 L846.75 8.00 L773.25 8.00 Z" fill="#0d4000" fill-opacity="0.50"/>
+<text xml:space="preserve" x="769.00" y="48.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">UTIL</text>
+<path d="M988.00 533.75 L988.00 601.25 L979.00 601.25 L979.00 533.75 Z" fill="#0d4000" fill-opacity="0.50"/>
+<text xml:space="preserve" x="908.50" y="576.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">CAQ</text>
+<text xml:space="preserve" x="867.50" y="784.48" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">RLWR </text>
+<text xml:space="preserve" x="30.00" y="209.48" font-size="32.47" textLength="205.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">CHAFF MODE</text>
+<path d="M24.00 222.50 L159.00 222.50 L159.00 267.50 L24.00 267.50 L24.00 222.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="2.30" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="30.00" y="254.48" font-size="32.47" textLength="123.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">MANUAL</text>
+<path d="M12.00 188.75 L12.00 256.25 L21.00 256.25 L21.00 188.75 Z" fill="#0d4000" fill-opacity="0.50"/>
+<text xml:space="preserve" x="30.00" y="428.23" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">S</text>
+<text xml:space="preserve" x="30.00" y="461.98" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">R</text>
+<text xml:space="preserve" x="30.00" y="495.73" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">H</text>
+<text xml:space="preserve" x="30.00" y="543.23" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">A</text>
+<text xml:space="preserve" x="30.00" y="576.98" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">C</text>
+<text xml:space="preserve" x="30.00" y="610.73" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">Q</text>
+<text xml:space="preserve" x="30.00" y="658.23" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">T</text>
+<text xml:space="preserve" x="30.00" y="691.98" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">R</text>
+<text xml:space="preserve" x="30.00" y="725.73" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">K</text>
+<text xml:space="preserve" x="30.00" y="773.23" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">O</text>
+<text xml:space="preserve" x="30.00" y="806.98" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">F</text>
+<text xml:space="preserve" x="30.00" y="840.73" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">F</text>
+<text xml:space="preserve" x="179.25" y="93.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">ARM</text>
+<path d="M24.00 506.75 L56.50 506.75 L56.50 626.00 L24.00 626.00 L24.00 506.75" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="2.30" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="80.00" y="474.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">A</text>
+<text xml:space="preserve" x="80.00" y="519.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">U</text>
+<text xml:space="preserve" x="80.00" y="564.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">T</text>
+<text xml:space="preserve" x="80.00" y="609.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">O</text>
+<text xml:space="preserve" x="80.00" y="654.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">P</text>
+<text xml:space="preserve" x="80.00" y="699.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">A</text>
+<text xml:space="preserve" x="80.00" y="744.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">G</text>
+<text xml:space="preserve" x="80.00" y="789.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">E</text>
+<text xml:space="preserve" x="189.50" y="881.98" font-size="32.47" textLength="41.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">30</text>
+<text xml:space="preserve" x="469.25" y="48.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">312</text>
+<text xml:space="preserve" x="469.25" y="971.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">360</text>
+</g>
+<g class="co" data-n="1"><circle cx="210.0" cy="17.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="210.0" cy="-325.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="210.0" y="-316.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">1</text></g>
+<g class="co" data-n="2"><circle cx="500.0" cy="6.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="468.0" cy="-325.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="468.0" y="-316.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">2</text></g>
+<g class="co" data-n="3"><circle cx="971.0" cy="245.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="1365.0" cy="245.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="1365.0" y="254.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">3</text></g>
+<g class="co" data-n="4"><circle cx="500.0" cy="166.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="532.0" cy="-325.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="532.0" y="-316.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">4</text></g>
+<g class="co" data-n="5"><circle cx="521.0" cy="515.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="1365.0" cy="515.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="1365.0" y="524.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">5</text></g>
+<g class="co" data-n="6"><circle cx="3.0" cy="520.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="-365.0" cy="520.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="-365.0" y="529.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">6</text></g>
+<g class="co" data-n="7"><circle cx="985.0" cy="815.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="1365.0" cy="815.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="1365.0" y="824.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">7</text></g>
+<g class="co" data-n="8"><circle cx="210.0" cy="910.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="210.0" cy="1345.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="210.0" y="1354.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">8</text></g>
+</svg>

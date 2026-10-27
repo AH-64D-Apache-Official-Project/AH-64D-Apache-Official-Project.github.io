@@ -35,6 +35,7 @@ state:                     # mpd: which page, and the MFD user values and texts 
   u: { MFD_IND_FUEL_CROSSFEED: 2 }
   t: { MFD_TEXT_IND_FUEL_FWD: "1580" }
   src: { heading: 312 }    # engine sources: heading, altitudeAGL, horizonBank, horizonDive, speed
+  pylons: { 5: fza_agm114k_base }  # WPN page: the magazine class (from the MPD addon's CfgMagazines) on each pylon
 callouts:
   - { n: 1, x: 558, y: 214, side: r, label: Forward cell, text: "Fuel in the forward cell, in pounds." }
 ```

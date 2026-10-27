@@ -82,7 +82,7 @@ These are on both formats:
 |---|---|---|
 | `L1`{: .vab} | `PRI`{: .mpd} | Opens the channel list on `L1`{: .vab}–`L5`{: .vab}: choose **CHAN 1**–**CHAN 4** for the primary laser code, or **NONE**. |
 | `L2`{: .vab} | `ALT`{: .mpd} | The same for the alternate code. Needs a primary first. |
-| `L3`{: .vab} | `SAL SEL`{: .mpd} | Steps through the SAL Hellfire types loaded, such as the K and the N. |
+| `L3`{: .vab} | `SAL SEL`{: .mpd} | Steps through the SAL Hellfire types loaded. The label reads **SAL2** for the K, K2A and N, and **SAL1** for the FA. |
 | `R3`{: .vab} | `TRAJ`{: .mpd} | Opens the trajectory choices: `R1`{: .vab} **HI**, `R2`{: .vab} **LO**, `R3`{: .vab} **DIR**. |
 
 The **CHANNELS** row along the bottom shows the four laser codes the channels hold. The missile symbol on the diagram reads the primary code and, below it, **T** when the seeker sees laser energy on that code, or **R** when it does not.

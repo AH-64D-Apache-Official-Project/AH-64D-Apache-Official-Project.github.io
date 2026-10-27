@@ -1,0 +1,47 @@
+title: WPN page, missile format
+kind: mpd
+caption: WPN page with Hellfires actioned and the aircraft armed. SAL missiles on the inboard stations, rocket pods outboard.
+state:
+  page: WPN
+  src: { heading: 312 }
+  pylons: { 1: fza_275_rocket_base, 13: fza_275_rocket_base, 5: fza_agm114k_base, 6: fza_agm114k_base, 7: fza_agm114k_base, 8: fza_agm114k_base, 9: fza_agm114k_base, 10: fza_agm114k_base, 11: fza_agm114k_base, 12: fza_agm114k_base }
+  u:
+    MFD_IND_WPN_SELECTED_WPN: 3
+    MFD_IND_WPN_MASTER_ARM: 1
+    MFD_IND_WPN_CHAFF_ARM: 1
+    MFD_IND_WPN_ROCKET_POD_1_4_STATE: 3
+    MFD_IND_WPN_ACQ_BOX: 3
+    MFD_IND_WPN_SELECTED_HF: 5
+    MFD_IND_WPN_SELECTED_PRI_CH: 1
+    MFD_IND_WPN_SELECTED_ALT_CH: 2
+    MFD_IND_WPN_POPOUT: 1
+  t:
+    MFD_TEXT_IND_WPN_SIGHT: TADS
+    MFD_TEXT_IND_WPN_ACQ_SRC: FXD
+    MFD_TEXT_IND_WPN_LST_CODE: B
+    MFD_TEXT_IND_WPN_LRFD_CODE: A
+    MFD_TEXT_IND_WPN_CMS_QTY: '30'
+    MFD_TEXT_IND_WPN_GUN_ROUNDS: '1200'
+    MFD_TEXT_IND_WPN_MANRNG: '3000'
+    MFD_TEXT_IND_WPN_ROCKET_POD_1_4_TEXT: 6PD
+    MFD_TEXT_IND_WPN_MSL_PRI_CODE: A PRF
+    MFD_TEXT_IND_WPN_MSL_ALT_CODE: B PRF
+    MFD_TEXT_IND_WPN_MSL_CHAN_1_CODE: A
+    MFD_TEXT_IND_WPN_MSL_CHAN_2_CODE: B
+    MFD_TEXT_IND_WPN_MSL_CHAN_3_CODE: C
+    MFD_TEXT_IND_WPN_MSL_CHAN_4_CODE: D
+    MFD_TEXT_IND_WPN_MSL_SAL_SEL: SAL2
+    MFD_TEXT_IND_WPN_MSL_TRAJ: DIR
+    MFD_TEXT_IND_WPN_MSL_MODE: NORM
+    MFD_TEXT_IND_WPN_MSL_IMAGE_LINE_1: A
+    MFD_TEXT_IND_WPN_MSL_IMAGE_LINE_2: R
+callouts:
+- { n: 1, x: 315, y: 112, side: t, label: Sight, text: "Your selected sight." }
+- { n: 2, x: 500, y: 130, side: t, label: Arm state, text: "**SAFE**, or **ARM** in yellow when the aircraft is armed." }
+- { n: 3, x: 685, y: 112, side: t, label: Acquisition source, text: "Your acquisition source." }
+- { n: 4, x: 305, y: 285, side: l, label: LST and LRFD codes, text: "The letters the spot tracker and the laser are set to." }
+- { n: 5, x: 500, y: 405, side: r, label: Cannon, text: "Rounds remaining." }
+- { n: 6, x: 345, y: 430, side: l, label: Selected missile, text: "The next missile to fire: its primary code letter, and **T** or **R** for whether its seeker sees that code." }
+- { n: 7, x: 267, y: 520, side: l, label: Rocket pod, text: "With the rocket type loaded." }
+- { n: 8, x: 560, y: 660, side: r, label: Chaff, text: "Chaff remaining, and ARM or SAFE." }
+- { n: 9, x: 335, y: 904, side: b, label: Missile channels, text: "The letter each channel holds. **PRI** and **ALT** mark the primary and alternate." }

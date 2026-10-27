@@ -99,7 +99,7 @@
 <g class="co" data-n="2"><path d="M500.0 -299.0 L500.0 245.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M500.0 -299.0 L500.0 245.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="3"><path d="M-339.0 620.0 L500.0 620.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 620.0 L500.0 620.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="4"><path d="M1339.0 600.0 L890.0 600.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 600.0 L890.0 600.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g class="co" data-n="5"><path d="M560.0 1319.0 L560.0 950.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M560.0 1319.0 L560.0 950.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="5"><path d="M560.0 1319.0 L560.0 981.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M560.0 1319.0 L560.0 981.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g>
 <defs></defs>
 
@@ -208,7 +208,7 @@
 <text xml:space="preserve" x="450.00" y="971.98" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">2</text>
 <path d="M533.25 985.00 L606.75 985.00 L606.75 994.00 L533.25 994.00 Z" fill="#0d4000" fill-opacity="0.50"/>
 <text xml:space="preserve" x="518.75" y="926.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">TEMP&gt;</text>
-<text xml:space="preserve" x="498.25" y="971.98" font-size="32.47" textLength="143.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">69Ã‚Â°C</text>
+<text xml:space="preserve" x="529.00" y="971.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">69°C</text>
 <path d="M653.25 985.00 L726.75 985.00 L726.75 994.00 L653.25 994.00 Z" fill="#0d4000" fill-opacity="0.50"/>
 <text xml:space="preserve" x="679.75" y="971.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">ECS</text>
 <path d="M773.25 985.00 L846.75 985.00 L846.75 994.00 L773.25 994.00 Z" fill="#0d4000" fill-opacity="0.50"/>
@@ -233,15 +233,15 @@
 <text xml:space="preserve" x="779.50" y="644.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">C</text>
 <text xml:space="preserve" x="779.50" y="689.48" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">E</text>
 <text xml:space="preserve" x="469.25" y="259.48" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">FAT</text>
-<text xml:space="preserve" x="428.25" y="304.48" font-size="32.47" textLength="143.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">15Ã‚Â°C</text>
+<text xml:space="preserve" x="459.00" y="304.48" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">15°C</text>
 <text xml:space="preserve" x="469.25" y="434.48" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">ICE</text>
 <text xml:space="preserve" x="438.50" y="479.48" font-size="32.47" textLength="123.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">      </text>
 <text xml:space="preserve" x="366.75" y="609.48" font-size="32.47" textLength="266.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">PLT CKPT TEMP</text>
-<text xml:space="preserve" x="428.25" y="654.48" font-size="32.47" textLength="143.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">69Ã‚Â°F</text>
+<text xml:space="preserve" x="459.00" y="654.48" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">69°F</text>
 </g>
 <g class="co" data-n="1"><circle cx="73.0" cy="222.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="-365.0" cy="222.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="-365.0" y="231.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">1</text></g>
 <g class="co" data-n="2"><circle cx="500.0" cy="245.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="500.0" cy="-325.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="500.0" y="-316.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">2</text></g>
 <g class="co" data-n="3"><circle cx="500.0" cy="620.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="-365.0" cy="620.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="-365.0" y="629.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">3</text></g>
 <g class="co" data-n="4"><circle cx="890.0" cy="600.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="1365.0" cy="600.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="1365.0" y="609.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">4</text></g>
-<g class="co" data-n="5"><circle cx="560.0" cy="950.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="560.0" cy="1345.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="560.0" y="1354.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">5</text></g>
+<g class="co" data-n="5"><circle cx="560.0" cy="981.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="560.0" cy="1345.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="560.0" y="1354.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">5</text></g>
 </svg>

@@ -18,6 +18,7 @@ The KU is how you type into the aircraft: point names, idents, grids, altitudes,
 - If the aircraft cannot use what you typed, the display shows an error. Press <kbd>Enter</kbd> to clear it and type again.
 - <kbd>Esc</kbd> stops the KU taking your keyboard, so your keys fly the aircraft again. Click the KU again to carry on with the same prompt.
 - A prompt can lead to the next one. Adding a point asks for its ident, free text, grid and altitude in turn.
+- Pressing any MPD button cancels the prompt.
 
 Letters, numbers, space, and `/ - + . *` can be typed. Up to 44 characters fit; the display shows the last 22.
 

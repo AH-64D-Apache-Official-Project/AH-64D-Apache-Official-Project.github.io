@@ -12,6 +12,9 @@ import render  # noqa: E402
 OUT = paths.OUT
 
 
+MAGS = []
+
+
 def build(state, mfd, consts):
     off = render.MPD_OFFSET_L
     user, text = {}, {}
@@ -24,7 +27,9 @@ def build(state, mfd, consts):
     for k, v in state.get('raw', {}).items():
         user[int(k)] = v
     page = consts['MPD_PAGE_' + state['page']] if isinstance(state['page'], str) else state['page']
-    r = render.Renderer(mfd, user, text, state.get('src'))
+    if state.get('pylons') and not MAGS:
+        MAGS.append(render.load_mags())
+    r = render.Renderer(mfd, user, text, state.get('src'), pylons=state.get('pylons'), mags=MAGS[0] if MAGS else None)
     return r.render(page)
 
 
