@@ -5,7 +5,7 @@ These scripts draw the manual's MPD and IHADSS figures from the mod's own source
 - **MPD pages** are rendered from the mod's MFD config. The config is preprocessed with `pcpp`, parsed, and drawn to SVG in the BMK font, then set in the cockpit's MPD bezel texture.
 - **IHADSS pages** run the mod's own HTML symbology code in headless Chromium, with flight data from the figure's spec.
 
-Each figure is described by `_data/figures/<id>.yml`: its title, caption, the page state to draw, and the numbered callouts. The build writes `_includes/figures/<id>.svg`, and IHADSS figures also write `assets/figures/hud/<id>.png`. Pages include a figure with `{% raw %}{% include fig.html id="<id>" %}{% endraw %}`.
+Each figure is described by `_data/figures/<id>.yml`: its title, caption, the page state to draw, and the numbered callouts. The build writes `_includes/figures/<id>.svg`, and IHADSS figures also write `assets/figures/hud/<id>.png`. Pages include a figure with `{% include fig.html id="<id>" %}`.
 
 ## Requirements
 
