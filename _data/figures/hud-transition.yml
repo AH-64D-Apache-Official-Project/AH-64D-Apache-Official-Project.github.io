@@ -1,0 +1,56 @@
+title: IHADSS transition symbology
+kind: hud
+caption: Pilot's flight symbology in transition mode, flying to waypoint W02.
+model:
+  hd: true
+  tv: false
+  white: false
+  fmt: flt
+  mode: trans
+  hdg: 312
+  cmdHdg: 18
+  tq: 72
+  tqSplit: false
+  tas: 96
+  vne: 0
+  g: 1.0
+  gLimit: -1
+  radAlt: 140
+  radAltHi: 200
+  radAltLo: 33
+  baroAlt: 1240
+  vsi: 300
+  attHold: false
+  altHold: false
+  slip: 0.4
+  pitch: 2
+  roll: 8
+  pitchBias: 5
+  vel: [3, 40]
+  acc: [0.2, 0.6]
+  wpt: ["W02", "12.4", "4.6", "0:03:12"]
+  losFlash: false
+  forType: pnvs
+  forFov: [-10, -4]
+  acq: [40, -8]
+  forCue: [40, -8]
+  had: ["P-HMD", "R 4.6", "", "W02", "", "", "", ""]
+callouts:
+  - { n: 1, x: 320, y: 52, side: t, label: Heading tape, text: "Magnetic heading, with the current heading boxed at the centre." }
+  - { n: 2, x: 341, y: 84, side: r, label: Command heading, text: "Caret pointing to the next waypoint." }
+  - { n: 3, x: 145, y: 107, side: l, label: Torque, text: "Highest engine torque, percent." }
+  - { n: 4, x: 117, y: 225, side: l, label: Airspeed, text: "True airspeed in knots." }
+  - { n: 5, x: 331, y: 120, side: r, label: Acceleration cue, text: "Shows where the velocity vector is heading." }
+  - { n: 6, x: 324, y: 180, side: r, label: Velocity vector, text: "Ground velocity from the reticle; full scale is 60 kt in transition." }
+  - { n: 7, x: 320, y: 240, side: l, label: LOS reticle, text: "Your line of sight." }
+  - { n: 8, x: 353, y: 240, side: r, label: Cueing dots, text: "Point from your line of sight towards the acquisition source." }
+  - { n: 9, x: 225, y: 282, side: l, label: Horizon line, text: "Moves 4:1 with pitch and roll." }
+  - { n: 10, x: 489, y: 225, side: r, label: Radar altitude, text: "Height above ground in feet." }
+  - { n: 11, x: 521, y: 189, side: r, label: Vertical speed, text: "Pointer on the radar altitude scale." }
+  - { n: 12, x: 542, y: 300, side: r, label: Radar altitude scale, text: "Analogue bar, shown below 200 ft." }
+  - { n: 13, x: 150, y: 372, side: l, label: Waypoint data, text: "Next waypoint, distance, ground speed and time to go." }
+  - { n: 14, x: 341, y: 413, side: r, label: Trim ball, text: "Centre it with the pedals." }
+  - { n: 15, x: 320, y: 458, side: b, label: Field of regard, text: "Where the sensor and your head point relative to the nose." }
+  - { n: 16, x: 127, y: 445, side: l, label: Sight, text: "Selected sight for this crew station." }
+  - { n: 17, x: 225, y: 445, side: b, label: Range, text: "Range and its source." }
+  - { n: 18, x: 522, y: 445, side: r, label: Acquisition source, text: "What the cueing dots and slave point to." }

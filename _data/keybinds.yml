@@ -1,227 +1,268 @@
-sight-select-hmd:
+# Bindings in Options > Controls > AH-64D Official Project, from the mod's CfgUserActions and default presets.
+# keys: the default binding; omit for unbound.
+
+fza_ah64_v30_sightSelectHMD:
   name: Sight Select HMD
-  description: Sets current sight to HMD
-  category: Sighting
-  keys: [Shift,1]
-  mod: true
-sight-select-tads:
+  group: Sights
+  keys: [Shift, "1"]
+  desc: Makes the helmet the selected sight.
+fza_ah64_v30_sightSelectTADS:
   name: Sight Select TADS
-  description: Sets current sight to TADS
-  category: Sighting
-  keys: [Shift,2]
-  mod: true
-sight-select-fxd:
-  name: Sight Select FXD
-  description: Sets current sight to FXD
-  category: Sighting
-  keys: [Shift,3]
-  mod: true
-sight-select-fcr:
+  group: Sights
+  keys: [Shift, "2"]
+  desc: CPG only. Makes the TADS the selected sight.
+fza_ah64_v30_sightSelectFCR:
   name: Sight Select FCR
-  description: Sets current sight to FCR
-  category: Sighting
-  keys: [Shift,4]
-  mod: true
-target-store:
-  name: Target Store
-  description: Adds the position currently being looked as a waypoint (NOT CURRENTLY IMPLEMENTED)
-  category: Sighting
-  keys: [Shift,G]
-Tads-Fov-Wide:
-  name: Tads LHG FOV Switch Wide
-  description: Sets the Tads FOV to Wide
-  category: Sighting
-  keys: [LAlt,1]
-Tads-Fov-Medium:
-  name: Tads LHG FOV Switch Medium
-  description: Sets the Tads FOV to Medium
-  category: Sighting
-  keys: [LAlt,2]
-Tads-Fov-Narrow:
-  name: Tads LHG FOV Switch Narrow
-  description: Sets the Tads FOV to Narrow
-  category: Sighting
-  keys: [LAlt,3]
-Tads-Fov-Zoom:
-  name: Tads LHG FOV Switch Zoom
-  description: Sets the Tads FOV to Zoom
-  category: Sighting
-  keys: [LAlt,4]
-Tads-Sensor-FLIR:
-  name: Tads LHG Sensor FLIR
-  description: Sets the Tads sensor to FLIR
-  category: Sighting
-  keys: [LCtrl,N]
-Tads-Sensor-DTV:
-  name: Tads LHG Sensor DTV
-  description: Sets the Tads sensor to DTV
-  category: Sighting
-  keys: [LShift,N]
-Tads-Sensor-DVO:
-  name: Tads LHG Sensor DVO
-  description: Sets the Tads sensor to DVO
-  category: Sighting
-  keys: [LAlt,N]
-Tads-LMC-Compensator:
-  name: Tads LHG LMC Compensator
-  description: Activates LMC Compensator
-  category: Sighting
-  keys: [Lctrl,T]
-
-symbology-up:
+  group: Sights
+  keys: [Shift, "3"]
+  desc: Makes the fire control radar the selected sight and takes ownership of it. Needs the radar fitted.
+fza_ah64_v30_sightSelectLink:
+  name: Sight Select Link
+  group: Sights
+  keys: [Shift, "4"]
+  desc: CPG only, radar fitted. Links the other sensor to the selected sight, or unlinks it.
+fza_ah64_sightSlave:
+  name: Sight Slave
+  group: Sights
+  keys: [Shift, F]
+  desc: Slaves the selected sight to the acquisition source, or releases it.
+fza_ah64_nvsSelectPnvs:
+  name: NVS Select PNVS
+  group: Night vision
+  desc: Takes the PNVS as your night vision sensor; the other crew station gets the TADS.
+fza_ah64_nvsSelectTads:
+  name: NVS Select TADS
+  group: Night vision
+  desc: Takes the TADS FLIR as your night vision sensor; the other crew station gets the PNVS.
+fza_ah64_symbologySelectUp:
   name: Symbology Select Up
-  description: Cycles symbology between transition and cruise
-  category: IHADSS
-  keys: [Shift,B]
-  mod: true
-symbology-down:
+  group: IHADSS
+  keys: [Shift, B]
+  desc: Toggles transition and cruise flight symbology.
+fza_ah64_symbologySelectDown:
   name: Symbology Select Down
-  description: Cycles symbology between hover and bobup
-  category: IHADSS
-  keys: [Ctrl,B]
-  mod: true
-symbology-select:
+  group: IHADSS
+  keys: [Ctrl, B]
+  desc: Toggles hover and bob-up flight symbology.
+fza_ah64_symbologySelectPress:
   name: Symbology Select Press
-  description: Selects the FLT page on the left MPD
-  category: IHADSS
+  group: IHADSS
   keys: [B]
-  mod: true
-
-was-m230:
-  name: WAS M230
-  description: Sets current selected weapon to be the M230, or if it is selected then deselects it
-  category: Weapons
-  keys: [1]
-  mod: true
-was-rkt:
-  name: WAS Rockets
-  description: Sets current selected weapon to be rockets, or if it is selected then deselects it
-  category: Weapons
-  keys: [2]
-  mod: true
-was-msl:
-  name: WAS Missiles
-  description: Sets current selected weapon to be hellfires, or if it is selected then deselects it
-  category: Weapons
-  keys: [3]
-  mod: true
-missile-advance:
-  name: Missile Advance
-  description: Selects next missile type
-  category: Weapons
-  keys: [Alt,F]
-lrfd-second-detent:
-  name: LRFD Second Detent
-  description: When held down, turns on the LRFD
+  desc: Opens the FLT page on your left MPD.
+fza_ah64_laserDesig:
+  name: LRFD Second Detent (Lase)
+  group: Laser
   keys: [G]
-  category: Weapons
-  mod: true
-target-range:
+  desc: Fires the laser rangefinder/designator while held.
+fza_ah64_lstAuto:
+  name: "LST Mode: Auto"
+  group: Laser
+  desc: CPG. Arms the laser spot tracker and scans the TADS for the LST code.
+fza_ah64_lstOff:
+  name: "LST Mode: Off"
+  group: Laser
+  desc: CPG. Turns the laser spot tracker off.
+fza_ah64_lstManual:
+  name: "LST Mode: Manual"
+  group: Laser
+  desc: CPG. Arms the laser spot tracker while you slew the TADS by hand.
+fza_ah64_cpgStoreUpdate:
+  name: CPG Store/Update
+  group: Laser
+  keys: [Shift, G]
+  desc: CPG. Stores a target point along the selected sight's line of sight at the range shown.
+fza_ah64_fcrSingleScan:
+  name: FCR Single Scan
+  group: Fire control radar
+  keys: [Shift, R]
+  desc: Starts a single radar scan, or stops a scan in progress.
+fza_ah64_fcrScanSize_W:
+  name: FCR Scan Size Wide (W)
+  group: Fire control radar
+  keys: [Z, "1"]
+  desc: Wide scan. Takes effect at the next scan.
+fza_ah64_fcrScanSize_M:
+  name: FCR Scan Size Medium (M)
+  group: Fire control radar
+  keys: [Z, "2"]
+  desc: Medium scan.
+fza_ah64_fcrScanSize_N:
+  name: FCR Scan Size Narrow (N)
+  group: Fire control radar
+  keys: [Z, "3"]
+  desc: Narrow scan.
+fza_ah64_fcrScanSize_Z:
+  name: FCR Scan Size Zoom (Z)
+  group: Fire control radar
+  keys: [Z, "4"]
+  desc: Zoom scan.
+fza_ah64_fcrModeGTM:
+  name: Ground Targeting Mode (GTM)
+  group: Fire control radar
+  keys: [Z, "5"]
+  desc: Radar to ground targeting mode.
+fza_ah64_fcrModeATM:
+  name: Air Targeting Mode (ATM)
+  group: Fire control radar
+  keys: [Z, "6"]
+  desc: Radar to air targeting mode.
+fza_ah64_fcrModeRMAP:
+  name: Radar Map Mode (RMAP)
+  group: Fire control radar
+  keys: [Z, "7"]
+  desc: Radar to radar map mode. Selected again, toggles the video underlay.
+fza_ah64_fcrModeTPM:
+  name: Terrain Profiles Mode (TPM)
+  group: Fire control radar
+  keys: [Z, "8"]
+  desc: Radar to terrain profile mode.
+fza_ah64_tadsLHGFov_W:
+  name: TADS LHG FOV Switch - W
+  group: TADS
+  keys: [Alt, "1"]
+  desc: TADS wide field of view.
+fza_ah64_tadsLHGFov_M:
+  name: TADS LHG FOV Switch - M
+  group: TADS
+  keys: [Alt, "2"]
+  desc: TADS medium field of view.
+fza_ah64_tadsLHGFov_N:
+  name: TADS LHG FOV Switch - N
+  group: TADS
+  keys: [Alt, "3"]
+  desc: TADS narrow field of view.
+fza_ah64_tadsLHGFov_Z:
+  name: TADS LHG FOV Switch - Z
+  group: TADS
+  keys: [Alt, "4"]
+  desc: TADS zoom field of view.
+fza_ah64_SensorSelect_FLIR:
+  name: LHG Sensor Select Switch - FLIR
+  group: TADS
+  keys: [Alt, "5"]
+  desc: TADS sensor to FLIR.
+fza_ah64_SensorSelect_DTV:
+  name: LHG Sensor Select Switch - DTV
+  group: TADS
+  keys: [Alt, "6"]
+  desc: TADS sensor to day TV.
+fza_ah64_SensorSelect_DVO:
+  name: LHG Sensor Select Switch - DVO
+  group: TADS
+  keys: [Alt, "7"]
+  desc: TADS sensor to direct view optics.
+fza_ah64_tadsLHGLmc:
+  name: LHG LMC Button
+  group: TADS
+  keys: [Ctrl, T]
+  desc: Toggles the linear motion compensator.
+fza_ah64_wasGun:
+  name: WAS Gun
+  group: Weapons
+  keys: ["1"]
+  desc: Actions the cannon in your crew station, or de-actions it.
+fza_ah64_wasRkt:
+  name: WAS Rockets
+  group: Weapons
+  keys: ["2"]
+  desc: Actions the rockets in your crew station, or de-actions them.
+fza_ah64_wasMsl:
+  name: WAS Missiles
+  group: Weapons
+  keys: ["3"]
+  desc: Actions the missiles in your crew station, or de-actions them.
+fza_ah64_missileAdvance:
+  name: Missile Advance
+  group: Weapons
+  desc: Steps to the next missile. Only in manual missile mode.
+fza_ah64_collectiveEmergJett:
+  name: Emergency Jettison
+  group: Weapons
+  desc: Jettisons all wing stores.
+fza_ah64_flare:
+  name: Deploy Flare
+  group: Countermeasures
+  keys: [X]
+  desc: Fires one flare.
+fza_ah64_radialMenu:
+  name: Radial Menu
+  group: Radial menu
+  desc: Opens the sensor radial menu. In a sub menu goes back; in the top menu closes it.
+fza_ah64_radialUp:
+  name: "Radial Menu: Up"
+  group: Radial menu
+  desc: Points the open radial menu at a sector; held there, selects it after the dwell time.
+fza_ah64_radialDown:
+  name: "Radial Menu: Down"
+  group: Radial menu
+  desc: As above.
+fza_ah64_radialLeft:
+  name: "Radial Menu: Left"
+  group: Radial menu
+  desc: As above.
+fza_ah64_radialRight:
+  name: "Radial Menu: Right"
+  group: Radial menu
+  desc: As above.
+fza_minigame_up:
+  name: "Minigame: Up"
+  group: MPD games
+  keys: [Up]
+fza_minigame_down:
+  name: "Minigame: Down"
+  group: MPD games
+  keys: [Down]
+fza_minigame_left:
+  name: "Minigame: Left"
+  group: MPD games
+  keys: [Left]
+fza_minigame_right:
+  name: "Minigame: Right"
+  group: MPD games
+  keys: [Right]
+fza_minigame_fire:
+  name: "Minigame: Fire"
+  group: MPD games
+  keys: [Enter]
+
+# Game controls the Apache takes over (standard Arma categories in Options > Controls)
+defaultAction:
+  name: Fire
+  group: Game controls
+  vanilla: true
+  desc: Fires the weapon actioned in your crew station.
+launchCM:
+  name: Countermeasures
+  group: Game controls
+  vanilla: true
+  desc: Fires chaff.
+vehLockTargets:
   name: Lock target
-  keys: [T]
-  category: Weapons
-  description: When in the TADS, ranges the M230 to the range looked at
-  mod: false
-Deploy-Flare:
-  name: Deploys Flares
-  keys: [R]
-  category: Weapons
-  description: When the British mission equipment is used and the MAW is armed, this will deploy flares
-  mod: false
-
-radar-gtm:
-  name: FCR Mode Select GTM
-  description: Sets FCR mode to Ground Tracking Mode
-  category: FCR
-  keys: [Shift,H]
-  mod: true
-radar-atm:
-  name: FCR Mode Select ATM
-  description: Sets FCR mode to Air Tracking Mode
-  category: FCR
-  keys: [Ctrl,H]
-  mod: true
-radar-singlescan:
-  name: FCR - Single Scan
-  description: Performs a single scan of the FCR
-  category: FCR
-  keys: [Shift,R]
-  mod: true
-radar-toggle:
-  name: FCR - Continuous Scan
-  description: Toggles enabling the FCR continuously
-  category: FCR
-  keys: [Ctrl,R]
-  mod: false
-targeting-next:
-  name: Next Target
-  description: Selects next visible target
-  category: FCR
-  keys: [R]
-  mod: false
-
-head-left:
-  name: Move Head Left
-  description: Moves head to the left in order to see around obstacle
-  category: View
-  keys: [Ctrl,Num 4]
-  mod: false
-head-right:
-  name: Move Head Right
-  description: Moves head to the right in order to see around obstacle
-  category: View
-  keys: [Ctrl,Num 6]
-  mod: false
-head-up:
-  name: Move Head Up
-  description: Moves head up in order to see over Dashboard
-  category: View
-  keys: [Ctrl,Page Up]
-  mod: false
-head-down:
-  name: Move Head Down
-  description: Moves head down in order to better see the displays
-  category: View
-  keys: [Ctrl,Page Down]
-  mod: false
-
-cockpit-interact:
-  name: Cockpit Interact
-  description: Interacts with the control under the cursor
-  category: Common
-  keys: [\]
-  mod: true
-Detach-interact-cursor:
-  name: Detach interact cursor
-  description: Detaches the cursor from the heah
-  category: Common
-  keys: [U]
-  mod: true
-  
-Force-Trim-Up:
-  name: Force Trim / Hold Mode Switch Up
-  description: Activates the force trim
-  category: Flight Controls
-  keys: []
-  mod: true
-  
-Force-Trim-Right:
-  name: Force Trim / Hold Mode Switch Right
-  description: Activates Altitude Hold
-  category: Flight Controls
-  keys: []
-  mod: true
-
-Force-Trim-Down:
-  name: Force Trim / Hold Mode Switch Down
-  description: De-Activates both Attitude and Altitude Hold
-  category: Flight Controls
-  keys: []
-  mod: true
-
-Force-Trim-Left:
-  name: Force Trim / Hold Mode Switch Left
-  description: Activates Attitude Hold
-  category: Flight Controls
-  keys: []
-  mod: true
+  group: Game controls
+  vanilla: true
+  desc: Steps the radar's next-to-shoot target, for the crew station that owns the radar.
+ActiveSensorsToggle:
+  name: Toggle active sensors
+  group: Game controls
+  vanilla: true
+  desc: Starts or stops continuous radar scan, for the crew station that owns the radar.
+zoomIn:
+  name: Zoom in
+  group: Game controls
+  vanilla: true
+  desc: CPG. Steps the TADS field of view in.
+zoomOut:
+  name: Zoom out
+  group: Game controls
+  vanilla: true
+  desc: CPG. Steps the TADS field of view out.
+NightVision:
+  name: Night vision
+  group: Game controls
+  vanilla: true
+  desc: CPG. Cycles the TADS sensor and FLIR polarity.
+Headlights:
+  name: Lights
+  group: Game controls
+  vanilla: true
+  desc: Search light on or off.

@@ -1,0 +1,5 @@
+title: MENU page
+kind: mpd
+caption: The MENU page. Labels with a dark bar under them are not simulated.
+state:
+  page: MENU

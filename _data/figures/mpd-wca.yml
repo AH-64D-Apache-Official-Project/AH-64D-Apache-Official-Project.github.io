@@ -1,0 +1,48 @@
+title: WCA page
+kind: mpd
+caption: WCA page after an engine 2 failure in cruise. Warnings are listed first, then cautions, then advisories.
+state:
+  page: WCA
+  u:
+    '0': 0
+    '1': 1
+    '2': 2
+    '3': 2
+    '4': 2
+    '5': 2
+    '6': 2
+    '7': 2
+    '8': 2
+    '9': 2
+    '10': 2
+    '11': 2
+    '12': 2
+    '13': 2
+    '14': 2
+    '15': 2
+    '16': 2
+    '17': 2
+  t:
+    '0': ENGINE 2 OUT
+    '1': ENG 2 OIL PSI LOW
+    '2': ATTITUDE HOLD
+    '3': BAR ALT HOLD
+callouts:
+- n: 1
+  x: 120
+  y: 193
+  side: l
+  label: Warning
+  text: Red.
+- n: 2
+  x: 120
+  y: 253
+  side: l
+  label: Caution
+  text: Yellow.
+- n: 3
+  x: 120
+  y: 313
+  side: l
+  label: Advisory
+  text: Green.

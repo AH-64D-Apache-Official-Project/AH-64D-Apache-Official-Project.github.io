@@ -1,0 +1,37 @@
+title: FUEL page
+kind: mpd
+caption: FUEL page in flight, both engines feeding, crossfeed NORM, no external tanks.
+state:
+  page: FUEL
+  u:
+    MFD_IND_FUEL_CROSSFEED: 2
+    MFD_IND_FUEL_XFER_MODE: 1
+    MFD_IND_FUEL_FWD_LOW: 1580
+    MFD_IND_FUEL_AFT_LOW: 2120
+    MFD_IND_FUEL_STN1_MASS: -1
+    MFD_IND_FUEL_STN2_MASS: -1
+    MFD_IND_FUEL_STN3_MASS: -1
+    MFD_IND_FUEL_STN4_MASS: -1
+    MFD_IND_FUEL_ENG1_FLOWING: 1
+    MFD_IND_FUEL_ENG2_FLOWING: 1
+  t:
+    MFD_TEXT_IND_FUEL_FWD: "1580"
+    MFD_TEXT_IND_FUEL_AFT: "2120"
+    MFD_TEXT_IND_FUEL_INT: "3700"
+    MFD_TEXT_IND_FUEL_FLOW_1: "520"
+    MFD_TEXT_IND_FUEL_FLOW_2: "510"
+    MFD_TEXT_IND_FUEL_FLOW_TOT: "1030"
+    MFD_TEXT_IND_FUEL_ENDR_INT: "3:35"
+callouts:
+  - { n: 1, x: 558, y: 214, side: r, label: Forward cell, text: "Fuel in the forward cell, in pounds." }
+  - { n: 2, x: 553, y: 552, side: r, label: Aft cell, text: "Fuel in the aft cell, in pounds." }
+  - { n: 3, x: 360, y: 300, side: l, label: Engine 1 feed, text: "Drawn bold while fuel flows from the forward cell to engine 1." }
+  - { n: 4, x: 640, y: 640, side: r, label: Engine 2 feed, text: "Drawn bold while fuel flows from the aft cell to engine 2." }
+  - { n: 5, x: 24, y: 590, side: l, label: Transfer pump, text: "Current transfer mode. `L4`{: .vab} opens the mode menu." }
+  - { n: 6, x: 982, y: 338, side: r, label: Boost pump, text: "Toggled with `R2`{: .vab}." }
+  - { n: 7, x: 976, y: 568, side: r, label: Crossfeed, text: "The boxed mode is active. Select with `R3`{: .vab} to `R5`{: .vab}." }
+  - { n: 8, x: 82, y: 823, side: l, label: Internal fuel, text: "Forward and aft cells combined. A TOT line is added when external tanks are fitted." }
+  - { n: 9, x: 500, y: 968, side: b, label: Calculated flow, text: "Fuel flow per engine and in total, pounds per hour." }
+  - { n: 10, x: 859, y: 832, side: r, label: Endurance, text: "Time left on internal fuel at the current flow, in hours and minutes." }
+  - { n: 11, x: 438, y: 728, side: l, label: SFR, text: "Specific fuel range. Blank on the ground or with no fuel flow." }
+  - { n: 12, x: 976, y: 818, side: r, label: Fuel type, text: "Always JP8." }

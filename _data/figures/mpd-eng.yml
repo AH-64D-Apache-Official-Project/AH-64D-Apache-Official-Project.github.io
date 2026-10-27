@@ -1,0 +1,94 @@
+title: ENG page
+kind: mpd
+caption: 'ENG page in flight: both engines at 62% torque, Nr 101%.'
+state:
+  page: ENG
+  u:
+    MFD_IND_ENG_TORQUE_1: 62
+    MFD_IND_ENG_TORQUE_2: 63
+    MFD_IND_ENG_TGT_1: 745
+    MFD_IND_ENG_TGT_2: 740
+    MFD_IND_ENG_NP_1: 101
+    MFD_IND_ENG_NP_2: 101
+    MFD_IND_ENG_NR: 101
+    MFD_IND_ENG_TGT_BAR: 965
+    MFD_IND_ENG_TORQUE_BAR: 125
+    MFD_IND_ENG_MODE: 2
+    MFD_IND_ENG_START: 0
+  t:
+    MFD_TEXT_IND_ENG_TORQUE_1: '62'
+    MFD_TEXT_IND_ENG_TORQUE_2: '63'
+    MFD_TEXT_IND_ENG_TGT_1: '745'
+    MFD_TEXT_IND_ENG_TGT_2: '740'
+    MFD_TEXT_IND_ENG_NP_1: '101'
+    MFD_TEXT_IND_ENG_NP_2: '101'
+    MFD_TEXT_IND_ENG_NR: '101'
+    MFD_TEXT_IND_ENG_NG_1: '93.1'
+    MFD_TEXT_IND_ENG_NG_2: '93.0'
+    MFD_TEXT_IND_ENG_OIL_PSI_1: '72'
+    MFD_TEXT_IND_ENG_OIL_PSI_2: '71'
+    MFD_TEXT_IND_ENG_PRI_HYD_PSI: '3010'
+    MFD_TEXT_IND_ENG_UTIL_HYD_PSI: '3005'
+    MFD_TEXT_IND_ENG_ACC_HYD_PSI: '3000'
+    MFD_TEXT_IND_ENG_ACQ_SRC: TADS
+callouts:
+- n: 1
+  x: 50
+  y: 268
+  side: l
+  label: Torque readouts
+  text: Engine 1 and 2 torque, percent.
+- n: 2
+  x: 50
+  y: 470
+  side: l
+  label: Torque tapes
+  text: Green to 100%, then yellow and red bands.
+- n: 3
+  x: 115
+  y: 180
+  side: l
+  label: Limit markers
+  text: Torque and TGT limits.
+- n: 4
+  x: 280
+  y: 450
+  side: l
+  label: TGT tapes
+  text: Turbine gas temperature, degrees C.
+- n: 5
+  x: 490
+  y: 420
+  side: t
+  label: Np tapes
+  text: Power turbine speed of each engine.
+- n: 6
+  x: 580
+  y: 420
+  side: t
+  label: Nr tape
+  text: 'Main rotor speed: the chevron shape in the middle.'
+- n: 7
+  x: 780
+  y: 518
+  side: r
+  label: Ng
+  text: Gas generator speed of each engine, percent.
+- n: 8
+  x: 780
+  y: 418
+  side: r
+  label: Np
+  text: Power turbine speed, digital.
+- n: 9
+  x: 688
+  y: 735
+  side: r
+  label: Hydraulics
+  text: Primary, utility and accumulator pressure, psi. Replaced by a list of active warnings and cautions when there are any.
+- n: 10
+  x: 940
+  y: 800
+  side: r
+  label: ACQ
+  text: Acquisition source.

@@ -1,0 +1,12 @@
+{% assign f = site.data.figures[include.id] %}
+<figure class="fig fig-{{ f.kind | default: 'mpd' }}" id="fig-{{ include.id }}">
+  <div class="fig-stage">{% include figures/{{ include.id }}.svg %}</div>
+  {% if f.caption %}<figcaption>{{ f.caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>{% endif %}
+  {% if f.callouts %}
+  <ol class="fig-legend">
+  {% for c in f.callouts %}
+    <li data-n="{{ c.n }}"><span class="co-n">{{ c.n }}</span><span class="co-t"><b>{{ c.label }}</b>{% if c.text %} {{ c.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</span></li>
+  {% endfor %}
+  </ol>
+  {% endif %}
+</figure>

@@ -1,0 +1,122 @@
+title: FLT page
+kind: mpd
+caption: FLT page in a gentle right turn at 96 kt, flying to waypoint W02.
+state:
+  page: FLT
+  src:
+    heading: 312
+    horizonBank: 0.14
+    bank: 8
+    pitch: 2
+  u:
+    MFD_IND_FLT_COMMAND_HEADING: 18
+    MFD_IND_FLT_FLY_TO_CUE_X: 6
+    MFD_IND_FLT_FLY_TO_CUE_Y: -2
+    MFD_IND_FLT_FLIGHT_PATH_X: 2
+    MFD_IND_FLT_FLIGHT_PATH_Y: 1
+    MFD_IND_FLT_VERT_SPEED: 1.5
+    MFD_IND_FLT_TURN: 0.6
+    MFD_IND_FLT_SLIP: 0.2
+    MFD_IND_FLT_ALTERNATE_SENSOR: -400
+    MFD_IND_FLT_FCR_CENTERLINE: -400
+  t:
+    MFD_TEXT_IND_FLT_TORQUE: '62'
+    MFD_TEXT_IND_FLT_BALT: '1240'
+    MFD_TEXT_IND_FLT_GALT: '140'
+    MFD_TEXT_IND_FLT_AIRSPEED: '96'
+    MFD_TEXT_IND_FLT_DESTINATION: W02
+    MFD_TEXT_IND_FLT_DISTANCETOGO: 4.6KM
+    MFD_TEXT_IND_FLT_TIMETOGO: 0:03:12
+    MFD_TEXT_IND_FLT_GROUNDSPEED: 94KTS
+    MFD_TEXT_IND_FLT_ACQ_SRC: W02
+callouts:
+- n: 1
+  x: 130
+  y: 162
+  side: l
+  label: Torque
+  text: Highest engine torque, percent.
+- n: 2
+  x: 330
+  y: 150
+  side: t
+  label: Heading tape
+  text: Magnetic heading; the current heading is boxed.
+- n: 3
+  x: 549
+  y: 188
+  side: t
+  label: Command heading
+  text: Caret pointing to the next waypoint.
+- n: 4
+  x: 890
+  y: 152
+  side: r
+  label: Barometric altitude
+  text: Feet above sea level.
+- n: 5
+  x: 345
+  y: 240
+  side: l
+  label: Bank scale
+  text: Ticks at 10, 20, 30 and 60 degrees.
+- n: 6
+  x: 140
+  y: 522
+  side: l
+  label: Airspeed
+  text: True airspeed, knots.
+- n: 7
+  x: 210
+  y: 562
+  side: l
+  label: Horizon and pitch ladder
+  text: Sky rungs in blue, ground rungs in brown, every 10 degrees.
+- n: 8
+  x: 500
+  y: 510
+  side: l
+  label: Aircraft datum
+  text: The aircraft, fixed in the centre.
+- n: 9
+  x: 440
+  y: 470
+  side: l
+  label: Flight path
+  text: Where the aircraft is actually going.
+- n: 10
+  x: 700
+  y: 540
+  side: r
+  label: Fly-to cue
+  text: Steer to put the flight path over it to reach the next waypoint.
+- n: 11
+  x: 870
+  y: 512
+  side: r
+  label: Radar altitude
+  text: Feet above the ground. Blank above about 1,420 ft.
+- n: 12
+  x: 935
+  y: 425
+  side: r
+  label: Vertical speed
+  text: Pointer on the radar altitude scale.
+- n: 13
+  x: 60
+  y: 805
+  side: l
+  label: Navigation data
+  text: Next point, distance, ground speed and time to go.
+- n: 14
+  x: 500
+  y: 960
+  side: b
+  label: Turn and slip
+  text: Turn rate on the scale, slip ball below it.
+- n: 15
+  x: 940
+  y: 800
+  side: r
+  label: ACQ
+  text: 'Acquisition source; `R6`{: .vab} opens the list.'

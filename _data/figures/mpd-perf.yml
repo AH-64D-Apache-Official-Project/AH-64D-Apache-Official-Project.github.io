@@ -1,0 +1,85 @@
+title: PERF page
+kind: mpd
+caption: PERF page with the current gross weight, density altitude and temperature.
+state:
+  page: PERF
+  t:
+    MFD_TEXT_IND_PERF_PA: '800'
+    MFD_TEXT_IND_PERF_FAT: '20'
+    MFD_TEXT_IND_PERF_GWT: '17850'
+    MFD_TEXT_IND_PERF_CG: '203.4'
+    MFD_TEXT_IND_PERF_HVR_TQ_IGE_OGE: REQUIRED  71  84
+    MFD_TEXT_IND_PERF_IND_TQ: INDICATED   62
+    MFD_TEXT_IND_PERF_GO_NOGO_TQ_IGE_OGE: GO-NO/GO  76  89
+    MFD_TEXT_IND_PERF_MAXGWT_DE_IGE_OGE: '   21650   19870'
+    MFD_TEXT_IND_PERF_MAXGWT_SE_IGE_OGE: '   15210   13090'
+    MFD_TEXT_IND_PERF_MAX_TQ_DE: '   115'
+    MFD_TEXT_IND_PERF_MAX_TQ_SE: '   122'
+    MFD_TEXT_IND_PERF_MAX_RNG_END_TQ: ' Q   82   48'
+    MFD_TEXT_IND_PERF_MAX_RNG_END_FF: FF 1130  880
+    MFD_TEXT_IND_PERF_VNE: ' VNE 197'
+    MFD_TEXT_IND_PERF_VSSE: VSSE 120
+    MFD_TEXT_IND_PERF_RNG_SPD: ' RNG 128'
+    MFD_TEXT_IND_PERF_END_SPD: ' END  75'
+    MFD_TEXT_IND_PERF_WIND: 270/12
+callouts:
+- n: 1
+  x: 60
+  y: 245
+  side: l
+  label: Pressure altitude
+  text: Feet.
+- n: 2
+  x: 50
+  y: 360
+  side: l
+  label: Free air temperature
+  text: Degrees C.
+- n: 3
+  x: 80
+  y: 475
+  side: l
+  label: Gross weight
+  text: Pounds, as loaded now.
+- n: 4
+  x: 360
+  y: 250
+  side: t
+  label: Hover torque
+  text: Torque needed to hover in and out of ground effect, and the go/no-go torque. The boxed value is the torque you are pulling now.
+- n: 5
+  x: 360
+  y: 575
+  side: l
+  label: Max gross weight
+  text: Heaviest you can be to hover IGE and OGE, on both engines and on one. Yellow when you are above it.
+- n: 6
+  x: 190
+  y: 830
+  side: l
+  label: Max torque
+  text: Torque available, both engines and one.
+- n: 7
+  x: 780
+  y: 250
+  side: r
+  label: Cruise
+  text: Torque and fuel flow for best range and best endurance.
+- n: 8
+  x: 800
+  y: 520
+  side: r
+  label: Speeds
+  text: VNE, single-engine safe speed, best range and best endurance speeds, true airspeed.
+- n: 9
+  x: 900
+  y: 722
+  side: r
+  label: Wind
+  text: Direction and speed, knots.
+- n: 10
+  x: 600
+  y: 825
+  side: r
+  label: Centre of gravity
+  text: Inches aft of datum, against the forward and aft limits.

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="shell">
+  {% include sidebar.html %}
+  <main class="main" id="main">
+    <article class="doc">
+      {% include breadcrumb.html %}
+      <header class="doc-head">
+        <h1>{{ page.title }}</h1>
+        {% if page.lead %}<p class="lead">{{ page.lead | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+        {% if page.seats %}<div class="doc-meta">{% for s in page.seats %}<span class="seat seat-{{ s | downcase }}">{{ s }}</span>{% endfor %}</div>{% endif %}
+      </header>
+      <div class="doc-body">
+        {{ content }}
+      </div>
+      {% include pager.html %}
+      <footer class="doc-foot">
+        <a href="{{ site.links.docs_repo }}/edit/master/{{ page.path }}">Edit this page</a>
+        <span>Written for v{{ site.version }} · Not affiliated with Boeing or the US Army</span>
+      </footer>
+    </article>
+    <aside class="toc" aria-label="On this page"><div class="toc-inner"><p class="toc-title">On this page</p><nav id="toc"></nav></div></aside>
+  </main>
+</div>

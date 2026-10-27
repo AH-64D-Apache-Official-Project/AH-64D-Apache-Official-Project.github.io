@@ -1,0 +1,40 @@
+title: UTIL page
+kind: mpd
+caption: Aircraft UTIL page with every FMC channel on.
+state:
+  page: ACUTIL
+  u:
+    MFD_IND_ACUTIL_PITCH: 1
+    MFD_IND_ACUTIL_ROLL: 1
+    MFD_IND_ACUTIL_YAW: 1
+    MFD_IND_ACUTIL_COLL: 1
+    MFD_IND_ACUTIL_TRIM: 1
+callouts:
+- n: 1
+  x: 90
+  y: 222
+  side: l
+  label: FMC channels
+  text: Pitch, roll, yaw, collective and trim. A filled circle is on; press the button to toggle.
+- n: 2
+  x: 500
+  y: 270
+  side: t
+  label: Free air temperature
+- n: 3
+  x: 500
+  y: 620
+  side: l
+  label: Cockpit temperature
+- n: 4
+  x: 890
+  y: 600
+  side: r
+  label: Anti-ice
+  text: Shown, not simulated.
+- n: 5
+  x: 560
+  y: 950
+  side: b
+  label: Bleed air and ECS
+  text: Shown, not simulated.

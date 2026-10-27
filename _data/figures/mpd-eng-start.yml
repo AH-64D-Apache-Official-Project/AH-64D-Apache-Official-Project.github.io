@@ -1,0 +1,51 @@
+title: ENG page, engine start
+kind: mpd
+caption: 'ENG page on the ground during an engine 1 start: the starter is engaged and Ng is passing 25%.'
+state:
+  page: ENG
+  u:
+    MFD_IND_ENG_MODE: 1
+    MFD_IND_ENG_START: 1
+    MFD_IND_ENG_TGT_1: 420
+    MFD_IND_ENG_TGT_BAR: 965
+    MFD_IND_ENG_TORQUE_BAR: 125
+  t:
+    MFD_TEXT_IND_ENG_TORQUE_1: '0'
+    MFD_TEXT_IND_ENG_TORQUE_2: '0'
+    MFD_TEXT_IND_ENG_TGT_1: '420'
+    MFD_TEXT_IND_ENG_TGT_2: '15'
+    MFD_TEXT_IND_ENG_NP_1: '0'
+    MFD_TEXT_IND_ENG_NP_2: '0'
+    MFD_TEXT_IND_ENG_NR: '0'
+    MFD_TEXT_IND_ENG_NG_1: '25.3'
+    MFD_TEXT_IND_ENG_NG_2: '0.0'
+    MFD_TEXT_IND_ENG_OIL_PSI_1: '31'
+    MFD_TEXT_IND_ENG_OIL_PSI_2: '0'
+    MFD_TEXT_IND_ENG_PRI_HYD_PSI: '   0'
+    MFD_TEXT_IND_ENG_UTIL_HYD_PSI: '   0'
+    MFD_TEXT_IND_ENG_ACC_HYD_PSI: '2990'
+callouts:
+- n: 1
+  x: 850
+  y: 654
+  side: r
+  label: Starter
+  text: START, with ON next to the engine whose starter is turning.
+- n: 2
+  x: 780
+  y: 518
+  side: r
+  label: Ng
+  text: Move the power lever to IDLE above 23%.
+- n: 3
+  x: 280
+  y: 520
+  side: l
+  label: TGT
+  text: Rises as the engine lights off.
+- n: 4
+  x: 250
+  y: 765
+  side: l
+  label: Engine oil pressure
+  text: Ground format only.

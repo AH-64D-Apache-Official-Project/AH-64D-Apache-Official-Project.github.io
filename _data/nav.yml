@@ -1,0 +1,91 @@
+- title: Getting started
+  icon: flag
+  pages:
+    - { title: Welcome, url: / }
+    - { title: Installation, url: /getting-started/installation/ }
+    - { title: Controls and bindings, url: /getting-started/controls/ }
+    - { title: Your first flight, url: /getting-started/first-flight/ }
+    - { title: Addon settings, url: /getting-started/settings/ }
+    - { title: FAQ and troubleshooting, url: /getting-started/faq/ }
+    - { title: Glossary, url: /getting-started/glossary/ }
+
+- title: The aircraft
+  icon: heli
+  pages:
+    - { title: Variants and customisation, url: /aircraft/variants/ }
+    - { title: Crew stations, url: /aircraft/crew/ }
+    - { title: Cockpit tour, url: /aircraft/cockpit/ }
+    - { title: Electrical and APU, url: /aircraft/electrical/ }
+    - { title: Engines and rotor, url: /aircraft/engines/ }
+    - { title: Fuel system, url: /aircraft/fuel/ }
+    - { title: Fire protection, url: /aircraft/fire/ }
+    - { title: Lighting, url: /aircraft/lighting/ }
+    - { title: Damage and failures, url: /aircraft/damage/ }
+
+- title: Flying
+  icon: stick
+  pages:
+    - { title: HeliSim flight model, url: /flying/flight-model/ }
+    - { title: Flight control modes, url: /flying/flight-control/ }
+    - { title: Start-up, url: /flying/startup/ }
+    - { title: Shutdown, url: /flying/shutdown/ }
+    - { title: Emergency procedures, url: /flying/emergency/ }
+
+- title: Displays
+  icon: mpd
+  pages:
+    - { title: Using the MPDs, url: /displays/mpd/ }
+    - { title: MENU, url: /displays/mpd/menu/ }
+    - { title: FLT, url: /displays/mpd/flt/ }
+    - { title: ENG, url: /displays/mpd/eng/ }
+    - { title: FUEL, url: /displays/mpd/fuel/ }
+    - { title: PERF, url: /displays/mpd/perf/ }
+    - { title: UTIL, url: /displays/mpd/util/ }
+    - { title: WCA, url: /displays/mpd/wca/ }
+    - { title: TSD, url: /displays/mpd/tsd/ }
+    - { title: WPN, url: /displays/mpd/wpn/ }
+    - { title: FCR, url: /displays/mpd/fcr/ }
+    - { title: ASE, url: /displays/mpd/ase/ }
+    - { title: VIDEO, url: /displays/mpd/video/ }
+    - { title: DMS, url: /displays/mpd/dms/ }
+    - { title: COM pages, url: /displays/mpd/com/ }
+    - { title: MPD games, url: /displays/mpd/games/ }
+    - { title: Up-front display, url: /displays/ufd/ }
+    - { title: Keyboard unit, url: /displays/ku/ }
+    - { title: IHADSS, url: /displays/ihadss/ }
+
+- title: Sensors and targeting
+  icon: target
+  pages:
+    - { title: Sights and acquisition, url: /targeting/sights/ }
+    - { title: TADS, url: /targeting/tads/ }
+    - { title: Night vision (PNVS), url: /targeting/nvs/ }
+    - { title: Fire control radar, url: /targeting/fcr/ }
+    - { title: Laser, url: /targeting/laser/ }
+    - { title: Radial menu, url: /targeting/radial/ }
+
+- title: Weapons
+  icon: missile
+  pages:
+    - { title: Weapon action switch, url: /weapons/was/ }
+    - { title: M230 cannon, url: /weapons/cannon/ }
+    - { title: Hydra 70 rockets, url: /weapons/rockets/ }
+    - { title: AGM-114 Hellfire, url: /weapons/hellfire/ }
+    - { title: Survivability (ASE), url: /weapons/ase/ }
+
+- title: Navigation and missions
+  icon: map
+  pages:
+    - { title: Points and routes, url: /mission/points/ }
+    - { title: Mission planner, url: /mission/planner/ }
+    - { title: Rearm and refuel, url: /mission/rearm/ }
+    - { title: For mission makers, url: /mission/editor/ }
+    - { title: Compatibility, url: /mission/compatibility/ }
+
+- title: Reference
+  icon: book
+  pages:
+    - { title: Keybind reference, url: /reference/keybinds/ }
+    - { title: What's new in 3.0, url: /reference/whats-new/ }
+    - { title: Changelogs, url: /reference/changelogs/ }
+    - { title: Contributing to the docs, url: /reference/contributing/ }

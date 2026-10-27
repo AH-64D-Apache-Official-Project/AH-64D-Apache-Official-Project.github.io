@@ -1,33 +1,7 @@
 ---
-title: search
-layout: none
-search: exclude
+layout: null
+sitemap: false
 ---
-
-[
-{% for page in site.html_pages %}
-{% unless page.search == "exclude" %}
-{
-"title": "{{ page.title | escape }}",
-"tags": "{{ page.tags }}",
-"keywords": "{{page.keywords}}",
-"url": "{{ page.url | remove: "/"}}",
-"summary": "{{page.summary | strip }}"
-}
-{% unless forloop.last and site.posts.size < 1 %},{% endunless %}
-{% endunless %}
-{% endfor %}
-
-{% for post in site.posts %}
-
-{
-"title": "{{ post.title | escape }}",
-"tags": "{{ post.tags }}",
-"keywords": "{{post.keywords}}",
-"url": "{{ post.url | remove: "/" }}",
-"summary": "{{post.summary | strip }}"
-}
-{% unless forloop.last %},{% endunless %}
-{% endfor %}
-
+[{% assign first = true %}{% for section in site.data.nav %}{% for item in section.pages %}{% assign p = site.pages | where: "url", item.url | first %}{% if p %}{% assign raw = p.content | split: site.liquid_open %}{% capture clean %}{% for part in raw %}{% if forloop.first %}{{ part }}{% else %}{{ part | split: site.liquid_close | last }}{% endif %}{% endfor %}{% endcapture %}{% unless first %},{% endunless %}{% assign first = false %}
+{"title": {{ p.title | jsonify }}, "url": {{ p.url | jsonify }}, "section": {{ section.title | jsonify }}, "keywords": {{ p.keywords | join: " " | jsonify }}, {% if p.layout == "home" %}{% assign clean = p.description %}{% endif %}"text": {{ p.lead | append: " " | append: clean | markdownify | strip_html | normalize_whitespace | truncatewords: 1200, "" | jsonify }}}{% endif %}{% endfor %}{% endfor %}
 ]

@@ -1,0 +1,9 @@
+{% assign flat = "" | split: "" %}{% for section in site.data.nav %}{% for p in section.pages %}{% assign flat = flat | push: p %}{% endfor %}{% endfor %}
+{% for p in flat %}{% if p.url == page.url %}{% assign i = forloop.index0 %}{% endif %}{% endfor %}
+{% if i %}
+{% assign pi = i | minus: 1 %}{% assign ni = i | plus: 1 %}
+<nav class="pager" aria-label="Previous and next page">
+  {% if i > 0 %}{% assign prev = flat[pi] %}<a class="pager-prev" href="{{ prev.url | relative_url }}"><span>Previous</span>{{ prev.title }}</a>{% else %}<span></span>{% endif %}
+  {% if flat[ni] %}{% assign next = flat[ni] %}<a class="pager-next" href="{{ next.url | relative_url }}"><span>Next</span>{{ next.title }}</a>{% endif %}
+</nav>
+{% endif %}

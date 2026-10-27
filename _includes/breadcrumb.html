@@ -1,0 +1,1 @@
+{% for section in site.data.nav %}{% for p in section.pages %}{% if p.url == page.url %}<p class="crumb">{{ section.title }}</p>{% endif %}{% endfor %}{% endfor %}
