@@ -38,6 +38,7 @@ The engines, APU and battery are worked from the **pilot's** left console. The C
 - **Lights**: set the exterior and cockpit lights for the time of day. See [Lighting]({{ '/aircraft/lighting/' | relative_url }}).
 - **NVS mode** switch, at night: **NORM** to put the night vision sensor's picture on your monocle. See [Night vision]({{ '/targeting/nvs/' | relative_url }}).
 - **Displays**: set up your MPDs, typically TSD on one and FLT or WPN on the other.
+- **ASE**: on the ASE page, RLWR on, chaff to ARM, and the IR jammer or MWS on. They all start off. See [Survivability]({{ '/weapons/ase/' | relative_url }}).
 - **Weapons**: the armament panel's **ARM/SAFE** and **GND ORIDE** buttons. On the ground, weapons cannot be actioned until ground override is on. See [Weapon action switch]({{ '/weapons/was/' | relative_url }}).
 
 ## Locked-rotor start
