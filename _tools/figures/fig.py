@@ -131,7 +131,9 @@ def mpd_figure(page_svg, callouts, fig_id, title, texture_href, lines='', marks=
     top = -380 if tb else -225
     bottom = 1395 if bb else 1245
     vb = (x0, top, -2 * x0 + 1000, bottom - top)
-    body = [bezel2.bezel(pre, texture_href), lines, '<g>%s</g>' % strip_svg(page_svg), marks]
+    # The display shows nothing outside its own square, though a page can draw there
+    clip = '<defs><clipPath id="%spage"><rect width="1000" height="1000"/></clipPath></defs>' % pre
+    body = [bezel2.bezel(pre, texture_href), lines, clip, '<g clip-path="url(#%spage)">%s</g>' % (pre, strip_svg(page_svg)), marks]
     return svg_wrap(vb, title, '\n'.join(body))
 
 

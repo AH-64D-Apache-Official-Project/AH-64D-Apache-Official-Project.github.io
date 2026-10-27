@@ -107,7 +107,8 @@
 <g class="co" data-n="10"><path d="M1339.0 854.0 L919.0 854.0 L901.0 832.0 L867.0 832.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 854.0 L919.0 854.0 L901.0 832.0 L867.0 832.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="11"><path d="M-339.0 728.0 L430.0 728.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 728.0 L430.0 728.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="12"><path d="M1339.0 796.0 L1035.0 796.0 L1017.0 818.0 L983.0 818.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 796.0 L1035.0 796.0 L1017.0 818.0 L983.0 818.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g>
+<defs><clipPath id="fmpdfuel-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdfuel-page)">
 <defs></defs>
 
 <path d="M299.25 10.00 L347.75 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>

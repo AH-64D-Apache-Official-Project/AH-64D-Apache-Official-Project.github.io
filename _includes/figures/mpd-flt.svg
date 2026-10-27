@@ -95,7 +95,7 @@
 <rect x="905.5" y="1110.1" width="64" height="52" rx="8" fill="url(#fmpdflt-cap)" stroke="#121413" stroke-width="3"/>
 <rect x="911.5" y="1114.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
 <text x="937.5" y="1143.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">A/C</text>
-<g class="co" data-n="1"><path d="M-339.0 162.0 L103.0 162.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 162.0 L103.0 162.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="1"><path d="M-339.0 162.0 L104.0 162.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 162.0 L104.0 162.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="2"><path d="M330.0 -299.0 L330.0 150.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M330.0 -299.0 L330.0 150.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="3"><path d="M549.0 -299.0 L549.0 141.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M549.0 -299.0 L549.0 141.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="4"><path d="M1339.0 152.0 L934.0 152.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 152.0 L934.0 152.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
@@ -110,7 +110,8 @@
 <g class="co" data-n="13"><path d="M-339.0 805.0 L49.0 805.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 805.0 L49.0 805.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="14"><path d="M500.0 1319.0 L500.0 983.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M500.0 1319.0 L500.0 983.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="15"><path d="M1339.0 800.0 L983.0 800.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 800.0 L983.0 800.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g>
+<defs><clipPath id="fmpdflt-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdflt-page)">
 <defs><clipPath id="c1"><rect x="200.0" y="270.0" width="600.0" height="460.0"/></clipPath><clipPath id="c2"><rect x="200.0" y="270.0" width="600.0" height="460.0"/></clipPath></defs>
 
 <text xml:space="preserve" x="30.00" y="691.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">-W-</text>
@@ -448,7 +449,7 @@
 <path d="M500.00 165.00 L500.00 205.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="10.35" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M645.00 248.85 L655.00 231.53" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="10.35" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M355.00 248.85 L345.00 231.53" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="10.35" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M456.04 811.92 L447.22 781.39 L472.96 785.02 Z" fill="#33ff00" fill-opacity="1.00"/>
+<path d="M543.96 188.08 L552.78 218.61 L527.04 214.98 Z" fill="#33ff00" fill-opacity="1.00"/>
 <path d="M375.00 975.00 L625.00 975.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M480.00 975.00 L480.00 940.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M520.00 975.00 L520.00 940.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
@@ -495,7 +496,7 @@
 <path d="M542.50 195.00 L550.00 180.00 L557.50 195.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M242.50 195.00 L250.00 180.00 L257.50 195.00 Z" fill="#33ff00" fill-opacity="1.00"/>
 </g>
-<g class="co" data-n="1"><circle cx="103.0" cy="162.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="-365.0" cy="162.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="-365.0" y="171.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">1</text></g>
+<g class="co" data-n="1"><circle cx="104.0" cy="162.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="-365.0" cy="162.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="-365.0" y="171.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">1</text></g>
 <g class="co" data-n="2"><circle cx="330.0" cy="150.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="330.0" cy="-325.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="330.0" y="-316.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">2</text></g>
 <g class="co" data-n="3"><circle cx="549.0" cy="141.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="549.0" cy="-325.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="549.0" y="-316.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">3</text></g>
 <g class="co" data-n="4"><circle cx="934.0" cy="152.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="1365.0" cy="152.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="1365.0" y="161.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">4</text></g>

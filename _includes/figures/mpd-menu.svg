@@ -96,7 +96,8 @@
 <rect x="911.5" y="1114.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
 <text x="937.5" y="1143.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">A/C</text>
 
-<g>
+<defs><clipPath id="fmpdmenu-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdmenu-page)">
 <defs></defs>
 
 <path d="M12.00 188.75 L12.00 256.25 L21.00 256.25 L21.00 188.75 Z" fill="#0d4000" fill-opacity="0.50"/>

@@ -104,7 +104,8 @@
 <g class="co" data-n="7"><path d="M-339.0 520.0 L221.0 520.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 520.0 L221.0 520.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="8"><path d="M1339.0 660.0 L568.0 660.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 660.0 L568.0 660.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="9"><path d="M335.0 1319.0 L335.0 918.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M335.0 1319.0 L335.0 918.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g>
+<defs><clipPath id="fmpdwpn-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdwpn-page)">
 <defs></defs>
 
 <path d="M169.00 10.00 L238.00 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>

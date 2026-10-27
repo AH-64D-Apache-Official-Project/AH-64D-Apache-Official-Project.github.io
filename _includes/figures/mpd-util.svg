@@ -100,7 +100,8 @@
 <g class="co" data-n="3"><path d="M-339.0 620.0 L500.0 620.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 620.0 L500.0 620.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="4"><path d="M1339.0 600.0 L890.0 600.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 600.0 L890.0 600.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="5"><path d="M560.0 1319.0 L560.0 981.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M560.0 1319.0 L560.0 981.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g>
+<defs><clipPath id="fmpdutil-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdutil-page)">
 <defs></defs>
 
 <path d="M15.00 150.00 L170.00 150.00 L170.00 420.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>

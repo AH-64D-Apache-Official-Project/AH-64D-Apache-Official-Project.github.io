@@ -103,7 +103,8 @@
 <g class="co" data-n="6"><path d="M-339.0 520.0 L3.0 520.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 520.0 L3.0 520.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="7"><path d="M1339.0 815.0 L985.0 815.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 815.0 L985.0 815.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="co" data-n="8"><path d="M210.0 1319.0 L210.0 910.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M210.0 1319.0 L210.0 910.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
-<g>
+<defs><clipPath id="fmpdase-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdase-page)">
 <defs></defs>
 
 <path d="M175.00 500.00 L178.00 458.00 L186.00 416.00 L200.00 376.00 L219.00 338.00 L242.00 302.00 L270.00 270.00 L302.00 242.00 L338.00 219.00 L376.00 200.00 L416.00 186.00 L458.00 178.00 L500.00 175.00 L542.00 178.00 L584.00 186.00 L624.00 200.00 L663.00 219.00 L698.00 242.00 L730.00 270.00 L758.00 302.00 L781.00 338.00 L800.00 376.00 L814.00 416.00 L822.00 458.00 L825.00 500.00 L822.00 542.00 L814.00 584.00 L800.00 624.00 L781.00 663.00 L758.00 698.00 L730.00 730.00 L698.00 758.00 L663.00 781.00 L624.00 800.00 L584.00 814.00 L542.00 822.00 L500.00 825.00 L458.00 822.00 L416.00 814.00 L376.00 800.00 L338.00 781.00 L302.00 758.00 L270.00 730.00 L242.00 698.00 L219.00 663.00 L200.00 624.00 L186.00 584.00 L178.00 542.00 L175.00 500.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>

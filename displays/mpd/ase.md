@@ -24,7 +24,7 @@ Your aircraft is in the centre, nose up. Each threat the warning receivers detec
 | **Laser** | You are being lased: designated or ranged. |
 | **Missile** | British equipment only: the missile warner has seen a missile or rocket coming. The icon flashes. |
 
-From **Track** up, including lasers and missiles, a dashed yellow line from the centre marks the threat's bearing as well.
+From **Track** up, including lasers and missiles, a dashed yellow line also runs from the centre towards the threat.
 
 The number beside **RLWR** counts the radar and laser threats being shown.
 

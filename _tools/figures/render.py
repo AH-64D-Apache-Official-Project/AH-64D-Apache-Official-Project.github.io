@@ -142,13 +142,14 @@ class Renderer:
             v = self.src(b.get('source', ''), b.get('sourceIndex', 0)) * float(b.get('sourceScale', 1))
             lo, hi = float(b.get('min', 0)), float(b.get('max', 1))
             f = 0.0 if hi == lo else max(0.0, min(1.0, (v - lo) / (hi - lo)))
-            # like linear bones, the game takes maxAngle at min and minAngle at max
-            ang = math.radians(float(b.get('maxAngle', 0)) + (float(b.get('minAngle', 0)) - float(b.get('maxAngle', 0))) * f)
+            # minAngle at min, maxAngle at max; positive turns clockwise on the display, and the game turns the bone's
+            # points a further 180 deg. Checked against the TSD compass rose (heading up, labels in order), the FCR
+            # scan bars (drawn pointing down, shown pointing up from the ownship) and the ATM sector's +180 comment.
+            ang = math.radians(float(b.get('minAngle', 0)) + (float(b.get('maxAngle', 0)) - float(b.get('minAngle', 0))) * f + 180.0)
             cx, cy = b.get('center', [0.5, 0.5])
             ar = float(b.get('aspectRatio', 1))
-            # positive angles turn anticlockwise on the display
-            rx = x * math.cos(ang) + y * ar * math.sin(ang)
-            ry = (-x * math.sin(ang) + y * ar * math.cos(ang)) / ar
+            rx = x * math.cos(ang) - y * ar * math.sin(ang)
+            ry = (x * math.sin(ang) + y * ar * math.cos(ang)) / ar
             return cx + rx, cy + ry
         if t == 'horizon':
             # offsets are screen units about pos0; pitch moves the horizon (pos10 - pos0) per 10 deg
