@@ -30,7 +30,7 @@ The engines, APU and battery are worked from the **pilot's** left console. The C
 11. Check the UFD and the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}): no warnings, no cautions.
 {: .steps}
 
-> Do not move a power lever to IDLE before Ng passes 23%: no fuel reaches the engine below that, and the start hangs. If a start goes wrong, set that engine's start switch to **IGN ORIDE** (or click it again while it is starting) to abort, and put the lever back to **OFF**. Leave the switch at IGN ORIDE for a while: the starter keeps turning the engine and cools it. A hot engine restarted too soon starts hot. See [Engines and rotor]({{ '/aircraft/engines/' | relative_url }}#hot-starts).
+> Fuel only reaches the engine once Ng passes 23%. A power lever moved to IDLE sooner does nothing until then: the starter alone turns the engine to about 25%, and it lights off at 23%. If a start goes wrong, set that engine's start switch to **IGN ORIDE** (or click it again while it is starting) to abort, and put the lever back to **OFF**. Leave the switch at IGN ORIDE for a while: the starter keeps turning the engine and cools it. A hot engine restarted too soon starts hot. See [Engines and rotor]({{ '/aircraft/engines/' | relative_url }}#hot-starts).
 {: .caution}
 
 ## After start

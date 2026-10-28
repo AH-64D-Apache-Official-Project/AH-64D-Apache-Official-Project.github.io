@@ -57,8 +57,8 @@ Moving the collective more than a small amount from where it was disengages alti
 
 Heading hold uses the pedals. Below 5 kt ground speed it holds your heading. Faster than that it blends into turn coordination, keeping the trim ball centred so you can turn with the cyclic alone. Pressing the pedals flies through it; releasing force trim takes the new heading.
 
-**Springless Pedals** turns heading hold off along with pedal force trim.
+**Springless Pedals** turns heading hold off along with pedal force trim, and **Keyboard Auto Pedal** replaces it.
 
 ## Keyboard assists
 
-In **Casual** realism the keyboard options in the HeliSim settings add their own help on top of the FMC: auto pedal, auto pitch (holds the level-flight attitude) and auto roll (the roll keys command up to 30° of bank and roll level when released). See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim).
+The keyboard options in the HeliSim settings add their own help on top of the FMC. Auto pedal flies the pedals in either realism setting; in **Casual** only, auto pitch holds the level-flight attitude and auto roll makes the roll keys command up to 30° of bank and roll level when released. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim).

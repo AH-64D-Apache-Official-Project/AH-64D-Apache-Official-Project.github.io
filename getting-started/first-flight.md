@@ -7,7 +7,7 @@ keywords: [first flight, tutorial, hover, takeoff, landing, beginner, quick star
 ## Set up
 
 1. Bind the cockpit cursor, the flight controls and the collective. See [Controls and bindings]({{ '/getting-started/controls/' | relative_url }}).
-2. Choose your control scheme under **Addon Options → BradMick's HeliSim**. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim). On a keyboard, start with **Casual** and **Keyboard Auto Pedal**.
+2. Choose your control scheme under **Addon Options → BradMick's HeliSim**. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim). On a keyboard, start with **Casual**; **Keyboard Auto Pedal** is on by default. With a stick and pedals, choose **Realistic** and turn Keyboard Auto Pedal off.
 3. In the editor, place an **AH-64D BLOCK I** on an open field or an airfield in daylight, put an **AH-64D Pilot** in the pilot seat (the rear seat), make it playable and press **Play Scenario**.
 {: .steps}
 

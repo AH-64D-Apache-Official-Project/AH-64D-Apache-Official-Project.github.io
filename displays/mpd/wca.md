@@ -34,9 +34,10 @@ Press the lit **MASTER WARNING** or **MASTER CAUTION** button on the glareshield
 
 | Page text | UFD | Cause | Do |
 |---|---|---|---|
-| ENGINE 1 FIRE / ENGINE 2 FIRE / APU FIRE | | Fire detected. | [Engine fire]({{ '/flying/emergency/' | relative_url }}#fire). |
+| ENGINE 1 FIRE / ENGINE 2 FIRE / APU FIRE | None: the fire panel button lights | Fire detected. | [Engine fire]({{ '/flying/emergency/' | relative_url }}#fire). |
 | ENGINE 1 OUT / ENGINE 2 OUT | ENG1 OUT / ENG2 OUT | The engine has failed, or its Ng is below idle with its power lever at FLY. | [Single engine failure]({{ '/flying/emergency/' | relative_url }}#engine-failure). |
-| ENG1 OVSP / ENG2 OVSP | | Np at or above 115%. | Reduce power; the engine may trip. |
+| AFT DECK FIRE | DECK FIRE | Shown only by the fire panel's TEST switch. | |
+| ENG1 OVSP / ENG2 OVSP | ENG1 OVSP / ENG2 OVSP | Np at or above 115%. | Reduce power; the engine may trip. |
 | LOW ROTOR RPM | LOW RTR | Nr below 95% in the air. | Lower the collective. |
 | HIGH ROTOR RPM | HIGH RTR | Nr at or above 106%. | Raise the collective, reduce the descent. |
 | HYD FAILURE | HYD FAIL | Both hydraulic pumps failed. | Land as soon as possible. |
@@ -69,9 +70,9 @@ Press the lit **MASTER WARNING** or **MASTER CAUTION** button on the glareshield
 
 | Page text | UFD | Meaning |
 |---|---|---|
-| APU START / APU POWER ON / APU ON / APU STOP | | APU starting, on line, running on the ground, shutting down. |
+| APU START / APU POWER ON / APU ON / APU STOP | APU START / APU PWR ON / APU ON / APU STOP | APU starting, on line, running on the ground, shutting down. |
 | ENGINE 1 START / ENGINE 2 START | ENG1 START / ENG2 START | Starter turning. |
-| BATTERY | | Battery damaged. |
+| BATTERY | BATTERY | Battery damaged. |
 | ACCUM OIL PRES LO | ACCUM PSI | Hydraulic accumulator pressure low. |
 | CANOPY OPEN | CANOPY | A canopy door is open. |
 | ATTITUDE HOLD | ATT HOLD | Attitude hold engaged. |

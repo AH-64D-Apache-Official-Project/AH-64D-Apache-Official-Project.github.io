@@ -66,9 +66,9 @@ HeliSim is the flight model, so these settings decide how the aircraft responds 
 
 | You fly with | Set |
 |---|---|
-| Joystick, throttle and pedals | **Realistic**. Leave every keyboard and mouse option off. |
+| Joystick, throttle and pedals | **Realistic**, and turn **Keyboard Auto Pedal** off: it is on by default, and flies the pedals in Realistic too. Leave the other keyboard and mouse options off. |
 | Joystick with a spring-less or force-feedback stick | As above, plus **Springless Cyclic** (and **Springless Pedals** if they are spring-less too). |
-| Keyboard | **Casual**, with **Keyboard Auto Pedal**. Try **Keyboard Auto Pitch** and **Keyboard Auto Roll** if the aircraft is hard to hold level. |
+| Keyboard | **Casual**. **Keyboard Auto Pedal** and **Keyboard Auto Pitch** are on by default; try **Keyboard Auto Roll** too if the aircraft is hard to hold level. |
 | Mouse | **Casual**, **Mouse as Joystick**, and set **Mouse Sensitivity**. |
 
 ### All options
@@ -81,14 +81,14 @@ HeliSim is the flight model, so these settings decide how the aircraft responds 
 | Springless Cyclic | Off | Disables cyclic force trim, for sticks without a centring spring. |
 | Springless Pedals | Off | Disables pedal force trim. This also disables heading hold. |
 | Keyboard Sticky Pitch / Roll / Yaw | Off | Keyboard input keeps building while the key is held, instead of springing back. Do not use with a stick or gamepad. |
-| Keyboard Auto Pedal | Off | The pedals are flown for you. Does not work with Sticky Yaw. |
-| Keyboard Auto Pitch | Off | Casual only. Holds the level flight pitch attitude. |
+| Keyboard Auto Pedal | On | The pedals are flown for you, in either realism setting, in place of heading hold. Does not work with Sticky Yaw. |
+| Keyboard Auto Pitch | On | Casual only. Holds the level flight pitch attitude. |
 | Keyboard Auto Roll | Off | Casual only. The roll keys command a bank angle (up to 30° in the Apache) and roll level when released. |
 | Mouse as Joystick | Off | The mouse flies the cyclic. Freelook stops moving the controls. Do not use with a stick or gamepad. |
 | Mouse Sensitivity | 1.0 | Sensitivity for Mouse as Joystick, 0.1 to 1. |
 | Aircraft Environmental Settings | Europe - Summer | The base altitude and temperature the engines and rotor see: **Standard Day** (sea level, 15 °C), **Europe** summer/winter (800 ft, 20 °C / 0 °C), **Middle East** (1,800 ft, 30 °C), **Central Asia** summer/winter (5,000 ft, 30 °C / -5 °C), **Asia** (3,100 ft, 25 °C). Hot and high costs power. |
 | Enable VRS Warning | Off | Warns you as the aircraft enters vortex ring state. |
 | Rotor Model | Simple | **BET** is a higher-fidelity rotor model that is not finished. Leave it on Simple. |
-| Control Input Visualiser: Colour Scheme | | Colours for the control overlay. |
+| Control Input Visualiser: Colour Scheme | Default | Colours for the control overlay. |
 
 The remaining HeliSim options (**Fixed Test Gross Weight**, **Disable Wind**, the debugging displays and the **Flight Log**) are for testing the flight model. Leave them off for normal play.

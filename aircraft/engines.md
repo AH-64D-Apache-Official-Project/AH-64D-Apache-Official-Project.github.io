@@ -36,10 +36,9 @@ The [start-up checklist]({{ '/flying/startup/' | relative_url }}) puts it all in
 
 ### Hot starts
 
-Watch TGT during the start. Above **851 °C** while starting is a hot start, and it damages the engine for as long as it lasts. The two usual causes:
+Watch TGT during the start. Above **851 °C** while starting is a hot start, and it damages the engine for as long as it lasts. The usual cause is **restarting a hot engine**: heat left in the engine from its last run makes the next start peak hotter. Before moving the lever to IDLE, let TGT come down below about 80 °C. Holding the start switch at **IGN ORIDE** with the lever at OFF turns the engine on the starter without fuel, which cools it faster.
 
-- **Restarting a hot engine.** Heat left in the engine from its last run makes the next start peak hotter. Before moving the lever to IDLE, let TGT come down below about 80 °C. Holding the start switch at **IGN ORIDE** with the lever at OFF turns the engine on the starter without fuel, which cools it faster.
-- **Moving the lever too early.** Below 23% Ng, no fuel is introduced and the start hangs.
+Moving the lever to IDLE before 23% Ng does no harm: fuel is only introduced at 23%, which the starter reaches on its own.
 
 To **abort** a start, set the start switch to **IGN ORIDE**, or click it again while the engine is starting, and bring the power lever back to OFF. IGN ORIDE stays where you put it and keeps the starter turning the engine, cooling it. Return the switch to OFF before trying again.
 
