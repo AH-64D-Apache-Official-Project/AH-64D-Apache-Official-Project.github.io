@@ -145,7 +145,9 @@ The point you are flying to feeds the FLT page, the IHADSS, and the data block a
 
 ## COORD {#coord}
 
-`T5`{: .vab} **COORD** lists the stored points, six to a page. `B2`{: .vab} **PAGE** moves through the pages.
+`T5`{: .vab} **COORD** lists the stored points, six to a page. `B2`{: .vab} and `B3`{: .vab} page back and forward, wrapping round at the ends.
+
+{% include fig.html id="mpd-coord" %}
 
 | Button | Label | Lists |
 |---|---|---|

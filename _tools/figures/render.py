@@ -53,6 +53,23 @@ def load_mags():
     return mags
 
 
+def load_icon_types():
+    """FzaIconTypes, the TSD point symbols: {class name: Node}, with the DMS constants their macros use."""
+    cache = os.path.join(paths.CACHE, 'icons.pickle')
+    if os.path.exists(cache):
+        return pickle.load(open(cache, 'rb'))
+    import prep
+    prep.mirror()
+    entry = '_tsd_icons.cpp'
+    open(os.path.join(prep.VROOT, entry), 'w', encoding='utf-8').write(
+        '#include "fza_ah64_dms/headers/constants.h"\n#include "fza_ah64_mpd/FzaIconTypes.hpp"\n')
+    pre = os.path.join(paths.CACHE, 'icons_pre.cpp')
+    prep.run(entry, pre)
+    types = {c.name: c for c in cfg.find(cfg.load(pre), ['FzaIconTypes']).classes()}
+    pickle.dump(types, open(cache, 'wb'))
+    return types
+
+
 def load_constants():
     consts = {}
     for line in open(paths.mod('addons', 'fza_ah64_mpd', 'headers', 'mfdConstants.h'), encoding='utf-8'):

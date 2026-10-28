@@ -21,6 +21,8 @@ The page opens on the **video view**: the picture fills the screen, with only th
 
 The symbology is drawn on the picture only in the video view.
 
+{% include fig.html id="mpd-video" %}
+
 ## Menu view
 
 | Button | Label | Action |

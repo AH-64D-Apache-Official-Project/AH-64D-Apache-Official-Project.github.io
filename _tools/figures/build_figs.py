@@ -23,7 +23,7 @@ OUT = paths.OUT
 BEZEL_HREF = "{{ '/assets/figures/mpd-bezel.png' | relative_url }}"
 
 
-def hud_png(model, out_png, transparent=False):
+def hud_png(model, out_png, transparent=False, weight=1):
     js = paths.mod('addons', 'fza_ah64_ihadss', 'ui', 'js')
     page = os.path.join(OUT, '_hud.html')
     scripts = ''.join('<script src="%s"></script>' % paths.url(os.path.join(js, f)) for f in
@@ -31,10 +31,24 @@ def hud_png(model, out_png, transparent=False):
     open(page, 'w', encoding='utf-8').write(
         '<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:"BMKApacheFont";src:url("%s")}'
         'html,body{margin:0;padding:0;background:%s;overflow:hidden}#ihadss{display:block;width:1680px;height:1360px}</style></head>'
-        '<body><canvas id="ihadss"></canvas>%s<script>document.fonts.load("15px BMKApacheFont").then(function(){'
+        '<body><canvas id="ihadss"></canvas>%s<script>window.IH.weight=%s;document.fonts.load("15px BMKApacheFont").then(function(){'
         'window.fzaIhadss.update(%s);});</script></body></html>'
-        % (paths.url(paths.FONT), 'transparent' if transparent else '#000', scripts, json.dumps(model)))
+        % (paths.url(paths.FONT), 'transparent' if transparent else '#000', scripts, weight, json.dumps(model)))
     paths.shoot([{'html': page, 'png': out_png, 'width': 1680, 'height': 1360, 'transparent': transparent, 'wait': 800}])
+
+
+# The VIDEO page's symbology layer (fza_ah64_mpd/ui/video): the IHADSS canvas at 175vw x 141.67vw, left -37.5vw and
+# top 50vh - 73.75vw on the square page, its lines and text 1.75 times as heavy
+VIDEO_RECT = (-375.0, -237.5, 1750.0, 1416.667)
+VIDEO_WEIGHT = 1.75
+
+
+def video_layer(model):
+    import base64
+    png = os.path.join(OUT, '_video.png')
+    hud_png(model, png, transparent=True, weight=VIDEO_WEIGHT)
+    uri = 'data:image/png;base64,' + base64.b64encode(open(png, 'rb').read()).decode()
+    return '<image x="%.1f" y="%.1f" width="%.1f" height="%.1f" href="%s"/>' % (VIDEO_RECT + (uri,))
 
 
 def lit_fn(img, alpha=False):
@@ -52,6 +66,8 @@ def lit_fn(img, alpha=False):
 
 def build_mpd(fid, spec, mfd, consts, callouts, title):
     page = run.build(spec['state'], mfd, consts)
+    if spec['state'].get('video'):
+        page = page.replace('\n</svg>', '\n' + video_layer(spec['state']['video']) + '\n</svg>')
     svg_path = os.path.join(OUT, fid + '.svg')
     open(svg_path, 'w', encoding='utf-8').write(page)
     png = svg_path[:-4] + '.png'

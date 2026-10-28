@@ -1,0 +1,48 @@
+title: COORD page
+kind: mpd
+caption: COORD listing the stored waypoints and hazards.
+state:
+  page: COORD
+  u:
+    MFD_IND_COORD_PAGE_TYPE: 1
+    MFD_IND_COORD_PAGE_POINT: -1
+    MFD_IND_COORD_PAGE_SHOTDEL: 0
+  t:
+    MFD_TEXT_COORD_PAGENUM: 1/1
+    MFD_TEXT_COORD_LINE_1: W01 WP     W84 47 13S FU 1204 1037   350 FT
+    MFD_TEXT_COORD_LINE_4: W02 WP     W84 47 13S FU 1212 1103   420 FT
+    MFD_TEXT_COORD_LINE_7: W03 LZ     W84 47 13S FU 1190 1149   510 FT
+    MFD_TEXT_COORD_LINE_10: W04 TO     W84 47 13S FU 1233 1076   380 FT
+callouts:
+- n: 1
+  x: 210
+  y: 35
+  side: t
+  label: List
+  text: The list shown, boxed. CTRLM, COORD and SHOT pick the others.
+- n: 2
+  x: 726
+  y: 112
+  side: r
+  label: Title
+  text: What the list holds.
+- n: 3
+  x: 62
+  y: 353
+  side: l
+  label: Point
+  text: Its number, ident and free text, then the datum and grid.
+- n: 4
+  x: 947
+  y: 353
+  side: r
+  label: Altitude
+  text: In feet, read like your barometric altitude.
+  snap: false
+- n: 5
+  x: 390
+  y: 987
+  side: b
+  label: Page
+  text: This page and how many there are.
+  snap: false

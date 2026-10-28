@@ -1,0 +1,153 @@
+<svg class="fig-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-420 -380 1840 1775" role="img" aria-label="COORD page" font-family="BMKApacheFont">
+<defs><linearGradient id="fmpdcoord-cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b706c"/><stop offset=".5" stop-color="#4a4f4b"/><stop offset="1" stop-color="#2f3330"/></linearGradient><radialGradient id="fmpdcoord-glass" cx=".35" cy=".25" r="1"><stop offset="0" stop-color="#0b120b"/><stop offset="1" stop-color="#020302"/></radialGradient><clipPath id="fmpdcoord-clip"><rect x="-245" y="-205" width="1490" height="1430" rx="40"/></clipPath></defs>
+<g clip-path="url(#fmpdcoord-clip)"><image href="{{ '/assets/figures/mpd-bezel.png' | relative_url }}" x="-259.5" y="-237.9" width="1536" height="1536" /></g>
+<rect x="-245" y="-205" width="1490" height="1430" rx="40" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="4"/>
+<rect x="-22" y="-22" width="1044" height="1060" rx="12" fill="#151716" stroke="#0a0b0a" stroke-width="3"/>
+<rect x="-8" y="-8" width="1016" height="1016" rx="6" fill="url(#fmpdcoord-glass)"/>
+<rect x="182.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="188.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="211.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T1</text>
+<rect x="182.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="188.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="211.5" y="1143.1" fill="#eef1ee" font-size="21" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">M</text>
+<text x="211.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B1</text>
+<rect x="302.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="308.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="331.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T2</text>
+<rect x="302.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="308.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="331.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B2</text>
+<rect x="422.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="428.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="451.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T3</text>
+<rect x="422.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="428.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="451.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B3</text>
+<rect x="542.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="548.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="571.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T4</text>
+<rect x="542.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="548.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="571.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B4</text>
+<rect x="662.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="668.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="691.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T5</text>
+<rect x="662.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="668.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="691.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B5</text>
+<rect x="782.5" y="-133.9" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="788.5" y="-129.9" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="811.5" y="-145.9" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">T6</text>
+<rect x="782.5" y="1111.1" width="58" height="50" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="788.5" y="1115.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="811.5" y="1191.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">B6</text>
+<rect x="-147.5" y="171.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="175.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="205.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L1</text>
+<rect x="1106.5" y="171.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="175.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="205.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R1</text>
+<rect x="-147.5" y="291.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="295.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="325.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L2</text>
+<rect x="1106.5" y="291.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="295.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="325.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R2</text>
+<rect x="-147.5" y="411.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="415.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="445.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L3</text>
+<rect x="1106.5" y="411.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="415.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="445.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R3</text>
+<rect x="-147.5" y="531.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="535.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="565.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L4</text>
+<rect x="1106.5" y="531.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="535.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="565.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R4</text>
+<rect x="-147.5" y="651.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="655.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="685.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L5</text>
+<rect x="1106.5" y="651.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="655.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="685.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R5</text>
+<rect x="-147.5" y="771.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-141.5" y="775.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-181.5" y="805.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">L6</text>
+<rect x="1106.5" y="771.1" width="58" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1112.5" y="775.1" width="46" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1198.5" y="805.1" fill="#9aa39c" font-size="22" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">R6</text>
+<rect x="-150.5" y="888.1" width="64" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-144.5" y="892.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-118.5" y="921.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">FCR</text>
+<rect x="-150.5" y="1008.1" width="64" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="-144.5" y="1012.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="-118.5" y="1041.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">WPN</text>
+<rect x="1103.5" y="888.1" width="64" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1109.5" y="892.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1135.5" y="921.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">COM</text>
+<rect x="1103.5" y="1008.1" width="64" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="1109.5" y="1012.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="1135.5" y="1041.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">VID</text>
+<rect x="29.5" y="1110.1" width="64" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="35.5" y="1114.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="61.5" y="1143.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">TSD</text>
+<rect x="905.5" y="1110.1" width="64" height="52" rx="8" fill="url(#fmpdcoord-cap)" stroke="#121413" stroke-width="3"/>
+<rect x="911.5" y="1114.1" width="52" height="3" rx="1.5" fill="#fff" fill-opacity=".18"/>
+<text x="937.5" y="1143.1" fill="#eef1ee" font-size="18" font-family="IBM Plex Sans, sans-serif" font-weight="600" text-anchor="middle">A/C</text>
+<g class="co" data-n="1"><path d="M210.0 -299.0 L210.0 18.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M210.0 -299.0 L210.0 18.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="2"><path d="M1339.0 112.0 L736.0 112.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 112.0 L736.0 112.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="3"><path d="M-339.0 353.0 L54.0 353.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M-339.0 353.0 L54.0 353.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="4"><path d="M1339.0 353.0 L947.0 353.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M1339.0 353.0 L947.0 353.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="co" data-n="5"><path d="M390.0 1319.0 L390.0 987.0" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="8" stroke-linejoin="round"/><path class="co-line" d="M390.0 1319.0 L390.0 987.0" fill="none" stroke="#ffb547" stroke-width="3" stroke-linejoin="round"/></g>
+<defs><clipPath id="fmpdcoord-page"><rect width="1000" height="1000"/></clipPath></defs>
+<g clip-path="url(#fmpdcoord-page)">
+<defs></defs>
+
+<text xml:space="preserve" x="179.25" y="971.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">TSD</text>
+<text xml:space="preserve" x="518.75" y="936.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">SRCH&gt;</text>
+<text xml:space="preserve" x="559.75" y="971.98" font-size="32.47" textLength="20.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">?</text>
+<path d="M649.00 933.00 L718.00 933.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M730.00 933.00 L718.00 927.00 L718.00 939.00 Z" fill="#33ff00" fill-opacity="1.00"/>
+<text xml:space="preserve" x="649.00" y="971.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">FARM</text>
+<text xml:space="preserve" x="349.00" y="936.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">PAGE</text>
+<text xml:space="preserve" x="359.25" y="971.98" font-size="32.47" textLength="61.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">1/1</text>
+<path d="M158.75 10.00 L248.25 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260.25 10.00 L248.25 4.00 L248.25 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
+<text xml:space="preserve" x="158.75" y="48.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">WPTHZ</text>
+<path d="M278.75 10.00 L368.25 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M380.25 10.00 L368.25 4.00 L368.25 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
+<text xml:space="preserve" x="278.75" y="48.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">CTRLM</text>
+<text xml:space="preserve" x="409.00" y="48.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">LINE</text>
+<path d="M413.25 17.00 L486.75 17.00 L486.75 8.00 L413.25 8.00 Z" fill="#0d4000" fill-opacity="0.50"/>
+<text xml:space="preserve" x="529.00" y="48.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">AREA</text>
+<path d="M533.25 17.00 L606.75 17.00 L606.75 8.00 L533.25 8.00 Z" fill="#0d4000" fill-opacity="0.50"/>
+<path d="M638.75 10.00 L728.25 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M740.25 10.00 L728.25 4.00 L728.25 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
+<text xml:space="preserve" x="638.75" y="48.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">COORD</text>
+<path d="M758.75 10.00 L848.25 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M860.25 10.00 L848.25 4.00 L848.25 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
+<text xml:space="preserve" x="769.00" y="48.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">SHOT</text>
+<path d="M278.00 966.00 L302.00 951.00 L308.00 951.00 L308.00 959.00 L326.00 959.00 L326.00 975.00 L308.00 975.00 L308.00 983.00 L302.00 983.00 L278.00 966.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M502.00 966.00 L478.00 951.00 L472.00 951.00 L472.00 959.00 L454.00 959.00 L454.00 975.00 L472.00 975.00 L472.00 983.00 L478.00 983.00 L502.00 966.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="59.25" y="241.98" font-size="32.47" textLength="881.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">W01 WP     W84 47 13S FU 1204 1037   350 FT</text>
+<text xml:space="preserve" x="59.25" y="361.98" font-size="32.47" textLength="881.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">W02 WP     W84 47 13S FU 1212 1103   420 FT</text>
+<text xml:space="preserve" x="59.25" y="481.98" font-size="32.47" textLength="881.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">W03 LZ     W84 47 13S FU 1190 1149   510 FT</text>
+<text xml:space="preserve" x="59.25" y="601.98" font-size="32.47" textLength="881.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">W04 TO     W84 47 13S FU 1233 1076   380 FT</text>
+<path d="M152.75 -1.00 L267.25 -1.00 L267.25 62.00 L152.75 62.00 L152.75 -1.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="2.30" stroke-linecap="round" stroke-linejoin="round"/>
+<text xml:space="preserve" x="284.75" y="121.98" font-size="32.47" textLength="430.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">WAYPOINTS AND HAZARDS</text>
+<path d="M272.12 90.00 L272.24 88.70 L272.58 87.43 L273.13 86.25 L273.88 85.18 L274.80 84.25 L275.88 83.50 L277.06 82.95 L278.32 82.61 L279.62 82.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M727.88 90.00 L727.76 88.70 L727.42 87.43 L726.87 86.25 L726.12 85.18 L725.20 84.25 L724.12 83.50 L722.94 82.95 L721.68 82.61 L720.38 82.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M272.12 135.00 L272.24 136.30 L272.58 137.56 L273.13 138.75 L273.88 139.82 L274.80 140.75 L275.88 141.50 L277.06 142.05 L278.32 142.39 L279.62 142.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M727.88 135.00 L727.76 136.30 L727.42 137.56 L726.87 138.75 L726.12 139.82 L725.20 140.75 L724.12 141.50 L722.94 142.05 L721.68 142.39 L720.38 142.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M272.12 90.00 L272.12 135.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M727.87 90.00 L727.87 135.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M279.62 82.50 L720.38 82.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M279.62 142.50 L720.38 142.50" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g class="co" data-n="1"><circle cx="210.0" cy="18.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="210.0" cy="-325.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="210.0" y="-316.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">1</text></g>
+<g class="co" data-n="2"><circle cx="736.0" cy="112.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="1365.0" cy="112.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="1365.0" y="121.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">2</text></g>
+<g class="co" data-n="3"><circle cx="54.0" cy="353.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="-365.0" cy="353.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="-365.0" y="362.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">3</text></g>
+<g class="co" data-n="4"><circle cx="947.0" cy="353.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="1365.0" cy="353.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="1365.0" y="362.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">4</text></g>
+<g class="co" data-n="5"><circle cx="390.0" cy="987.0" r="6.5" fill="#ffb547" stroke="#000" stroke-width="2.5"/><circle cx="390.0" cy="1345.0" r="25" fill="#ffb547" stroke="#000" stroke-width="3"/><text x="390.0" y="1354.0" fill="#111" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="26" text-anchor="middle">5</text></g>
+</svg>

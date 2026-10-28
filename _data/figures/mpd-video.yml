@@ -1,0 +1,96 @@
+title: VIDEO page, TADS
+kind: mpd
+caption: 'The VIDEO page showing the TADS with its symbology (picture removed): FLIR, LMC on, lasing, and a laser Hellfire within constraints.'
+state:
+  page: VID
+  u:
+    MFD_IND_VID_VSEL: 1
+    MFD_IND_VID_UNDERLAY: 0
+    MFD_IND_VID_VIEW: 1
+    MFD_IND_VID_SHARP: 0
+    MFD_IND_VID_COLOR: 0
+    MFD_IND_VID_SYMB: 0
+    MFD_IND_VID_GS: 0
+  t:
+    MFD_TEXT_IND_VID_VSEL: TADS
+  video:
+    hd: true
+    tv: false
+    white: false
+    g: 1.0
+    gLimit: -1
+    radAltHi: 200
+    radAltLo: 33
+    vne: 0
+    attHold: false
+    altHold: false
+    slip: 0
+    pitchBias: 5
+    tqSplit: false
+    losFlash: false
+    forType: tads
+    fmt: wpn
+    mode: trans
+    hdg: 15
+    cmdHdg: 14
+    tq: 58
+    tas: 12
+    radAlt: 60
+    baroAlt: 600
+    vsi: 0
+    pitch: 3
+    roll: 0
+    vel:
+    - 0
+    - 3
+    acc:
+    - 0
+    - 0
+    forFov:
+    - 14
+    - -3
+    altBrg: -20
+    acq:
+    - -34
+    - 6
+    forCue:
+    - -20
+    - 3
+    sensor: FLIR
+    fovNext: 0.316
+    lmc: true
+    laser: true
+    msl:
+    - 14
+    - -3
+    - true
+    - true
+    - 20
+    had:
+    - TADS
+    - '*3420'
+    - CMSL
+    - PHS
+    - ''
+    - DIR-NORM
+    - ''
+    - ''
+callouts:
+- n: 1
+  x: 810
+  y: 40
+  side: t
+  label: Symbology
+  text: Whose symbology is drawn, here the TADS. Press for the menu view.
+- n: 2
+  x: 40
+  y: 315
+  side: l
+  label: Picture size
+  text: Wide, normal or zoomed in; the one in use is boxed.
+- n: 3
+  x: 712
+  y: 314
+  side: r
+  label: TADS symbology
+  text: As in the TADS, drawn heavier.

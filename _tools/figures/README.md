@@ -40,6 +40,18 @@ callouts:
   - { n: 1, x: 558, y: 214, side: r, label: Forward cell, text: "Fuel in the forward cell, in pounds." }
 ```
 
+Two layers the game draws over a page can be added to `state`:
+
+```yaml
+  tsd:                       # TSD points and lines (fza_mpd_fnc_uiDrawPoint, fza_mpd_fnc_pageTSDDrawCanvas)
+    scale: 10000             # the TSD scale in metres
+    lines: [[[-240, -2000], [500, 4630]]]           # metres from the aircraft, x right and y ahead
+    points:
+      - { ident: WP, id: 2, at: [500, 4630] }       # icon, size, colour and labels come from FzaIconTypes
+      - { ident: AE, id: 57, text: T72, at: [3300, 7300] }
+  video: { hd: true, fmt: wpn, ... }                # VIDEO page: an IHADSS model, drawn as the page's symbology layer
+```
+
 Callout `x`/`y` are page units (0–1000 across the screen). Point anywhere inside the element; the build moves the end of the line to the element's edge on the `side` its badge is on (`l`, `r`, `t` or `b`). Add `snap: false` to leave a point where it is.
 
 ## Writing an IHADSS figure spec
