@@ -106,7 +106,7 @@ The ident sets a point's icon. It must suit the point's type: a waypoint cannot 
 | {{ i }}CH.png" alt=""> | `CH` | SAM, Chaparral |
 | {{ i }}HK.png" alt=""> | `HK` | SAM, Hawk |
 | {{ i }}ST.png" alt=""> | `ST` | SAM, Stinger |
+| {{ i }}VU.png" alt=""> | `VU` | SAM, Vulcan |
 | {{ i }}SR.png" alt=""> | `SR` | Radar, battlefield surveillance |
 | {{ i }}TR.png" alt=""> | `TR` | Radar, target acquisition |
 
-The ABR page also lists `VU` (SAM, Vulcan), but the aircraft does not accept it as an ident.

@@ -4,7 +4,7 @@ lead: The big changes since 2.2.8, the last full release, with links to where ea
 keywords: [whats new, new, changes, release, 3.0, helisim, ihadss, helmet, tpm, rmap, video, radial, minigames]
 ---
 
-> Version 3.0 needs **HeliSim Core 1.4** or later and **CBA_A3 3.16** or later. See [Installation]({{ '/getting-started/installation/' | relative_url }}).
+> Version 3.0 needs **HeliSim Core 1.4.2** or later and **CBA_A3 3.16** or later. See [Installation]({{ '/getting-started/installation/' | relative_url }}).
 {: .note}
 
 The first sections are new since the 2.3 release candidates. [Also new since 2.2.8](#since-228) lists what those pre-releases added.
@@ -38,6 +38,7 @@ The first sections are new since the 2.3 release candidates. [Also new since 2.2
 ## MPDs
 
 - The **VIDEO page** shows the TADS, the PNVS or either crew station's helmet symbology. See [VIDEO]({{ '/displays/mpd/video/' | relative_url }}).
+- The **ENG page** marks the engines' actual torque and TGT limits, counts down the time left in each time-limited range, and shows the immediate action steps for a warning. See [ENG]({{ '/displays/mpd/eng/' | relative_url }}).
 - **Games** on the MPD, for the long wait on the ground. See [MPD games]({{ '/displays/mpd/games/' | relative_url }}).
 
 ## Also new since 2.2.8 {#since-228}

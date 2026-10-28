@@ -60,7 +60,7 @@ The left side lists the rocket types loaded, up to five, with how many of each. 
 
 | Button | Label | Action |
 |---|---|---|
-| `L1`{: .vab}–`L5`{: .vab} | rocket types | Selects the rocket type to fire. |
+| `L1`{: .vab}–`L5`{: .vab} | rocket types | Selects the rocket type to fire. With another player in the CPG seat, only the CPG can change it. |
 | `R1`{: .vab} | `QTY`{: .mpd} | Opens the quantity choices, how many rockets one trigger pull fires: `R1`{: .vab} 1, `R2`{: .vab} 2, `R3`{: .vab} 4, `R4`{: .vab} 8, `R5`{: .vab} 12, `R6`{: .vab} 24, `B6`{: .vab} ALL. |
 
 **TOTAL ROCKETS** shows how many of the selected type are left. See [Hydra 70 rockets]({{ '/weapons/rockets/' | relative_url }}).

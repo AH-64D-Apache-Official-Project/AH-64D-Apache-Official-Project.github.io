@@ -34,7 +34,7 @@ The number beside **RLWR** counts the radar and laser threats being shown.
 |---|---|---|
 | `T1`{: .vab} | `CHAFF`{: .mpd} (US) / `CMS`{: .mpd} (British) | Arms or safes the chaff dispenser. It must be **ARM** for chaff to fire. |
 | `T2`{: .vab} | | Opens the TSD. |
-| `L3`{: .vab}–`L6`{: .vab} | `SRH` `ACQ` `TRK` `OFF` | **Autopage**. When a threat reaches the chosen state, the right MPD switches to this page, unless one of your MPDs already shows it. |
+| `L3`{: .vab}–`L6`{: .vab} | `SRH` `ACQ` `TRK` `OFF` | **Autopage**. When a new threat reaches the chosen state or a higher one, the right MPD switches to this page, unless one of your MPDs already shows it. A laser designating you counts as above tracking. |
 | `R1`{: .vab} | `IRJAM`{: .mpd} (US) / `MWS`{: .mpd} (British) | Turns the IR jammer, or the missile warning system, on or off. The IR jammer shows **WARM** for two seconds, then **OPER**. |
 | `R6`{: .vab} | `RLWR`{: .mpd} | Turns the radar and laser warning receivers on or off. You hear a tone when they come on. |
 | `B1`{: .vab} | | MENU. |

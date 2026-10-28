@@ -7,6 +7,8 @@ seats: [PLT, CPG]
 
 Warnings are red, cautions yellow. Every message, and what raises it, is listed on the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}). Acknowledge **MASTER WARNING** or **MASTER CAUTION** to silence it, then deal with the cause.
 
+For most warnings, the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#emergency-format) also shows the immediate action steps in its lower half. The checklists below go further.
+
 > In every emergency: **fly the aircraft first.** Keep the rotor in the green, keep away from the ground, then work the checklist.
 {: .warning}
 
@@ -21,7 +23,7 @@ Warnings are red, cautions yellow. Every message, and what raises it, is listed 
 5. Engine fire: continue as for a [single engine failure](#engine-failure). APU fire on the ground: shut down.
 {: .steps}
 
-A fire is out when its handle is armed and a bottle has worked. Each bottle can fail, which is why there are two. A fire that is not put out usually burns itself out within half a minute or so once the engine is shut down, doing damage until it does. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}).
+Arm the handle **before** discharging: a bottle only reaches a fire whose handle is already armed. Each bottle can fail, one time in four, which is why there are two. A fire that is not put out usually burns itself out within half a minute or so once the engine is shut down, doing damage until it does. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}).
 
 ## Single engine failure {#engine-failure}
 

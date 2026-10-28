@@ -20,10 +20,7 @@ The KU is how you type into the aircraft: point names, idents, grids, altitudes,
 - A prompt can lead to the next one. Adding a point asks for its ident, free text, grid and altitude in turn.
 - Pressing any MPD button cancels the prompt.
 
-Letters, numbers, space, and `/ - + . *` can be typed. Up to 44 characters fit; the display shows the last 22.
-
-> Use the number keys along the top of your keyboard. The numeric keypad does not type digits correctly.
-{: .caution}
+Letters, numbers, space, and `/ - + . *` can be typed, from the number keys along the top of the keyboard or the numeric keypad. Up to 44 characters fit; the display shows the last 22.
 
 > While the KU has your keyboard, your normal key bindings do nothing for the keys it uses. If the aircraft stops responding to your keys, press <kbd>Esc</kbd>.
 {: .tip}

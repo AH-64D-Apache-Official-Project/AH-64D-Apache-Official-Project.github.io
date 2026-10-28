@@ -60,7 +60,7 @@ The TSD has no terrain map. It plots points, lines and symbols on black, at the 
 
 Along the bottom of the root page, in the NAV phase:
 
-- the point you are flying to, its distance in km, your ground speed in knots, and the time to reach it;
+- the point you are flying to, its distance in km, your ground speed in knots, and the time to reach it, blank at 15 kt or less;
 - **ENDR**: endurance on the fuel you have, at your current burn rate;
 - **WIND**: direction and speed, or **CALM** below 5 kt.
 

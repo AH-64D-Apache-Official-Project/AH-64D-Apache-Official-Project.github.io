@@ -7,8 +7,10 @@ state:
     MFD_IND_ENG_MODE: 1
     MFD_IND_ENG_START: 1
     MFD_IND_ENG_TGT_1: 420
-    MFD_IND_ENG_TGT_BAR: 965
-    MFD_IND_ENG_TORQUE_BAR: 125
+    MFD_IND_ENG_TGT_BAR: 949
+    MFD_IND_ENG_TGT_SUB_1: 810
+    MFD_IND_ENG_TGT_SUB_2: 870
+    MFD_IND_ENG_TORQUE_BAR: 30
   t:
     MFD_TEXT_IND_ENG_TORQUE_1: '0'
     MFD_TEXT_IND_ENG_TORQUE_2: '0'
@@ -49,3 +51,9 @@ callouts:
   side: l
   label: Engine oil pressure
   text: Ground format only.
+- n: 5
+  x: 30
+  y: 470
+  side: l
+  label: Torque limit
+  text: 'With the rotor below 50%, torque is limited to 30%: the red bar.'

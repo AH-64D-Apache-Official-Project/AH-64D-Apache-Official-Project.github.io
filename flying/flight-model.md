@@ -50,6 +50,35 @@ The aircraft counts as single-engine when one engine's torque falls below about 
 
 The engines limit their own TGT to 867 °C, or 896 °C with one engine. TGT above 810 °C is time-limited; keep it there only as long as you need the power.
 
+| TGT, both engines | Allowed |
+|---|---|
+| Up to 810 °C | Continuous |
+| 810 to 870 °C | 30 minutes |
+| 870 to 878 °C | 10 minutes |
+| Above 878 °C | None: damage at once |
+
+| TGT, one engine | Allowed |
+|---|---|
+| Up to 810 °C | Continuous |
+| 810 to 870 °C | 30 minutes |
+| 870 to 878 °C | 10 minutes |
+| 878 to 896 °C | 2.5 minutes |
+| 896 to 949 °C | 12 seconds |
+| Above 949 °C | None: damage at once |
+
+### Engine speeds
+
+| Each engine | Allowed |
+|---|---|
+| Ng up to 102.2% | Continuous |
+| Ng 102.2% to 105.1% | 12 seconds |
+| Ng above 105.1% | None: damage at once |
+| Np up to 105% | Continuous |
+| Np 105% to 121% | 12 seconds |
+| Np above 121% | None: damage at once |
+
+Each band's allowance starts again from full whenever you enter it. The [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#timers) shows the time left.
+
 ## Weight
 
 | | |

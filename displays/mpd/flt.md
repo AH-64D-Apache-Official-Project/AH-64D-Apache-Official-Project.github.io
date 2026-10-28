@@ -26,7 +26,7 @@ The **-W- BIAS** and **SET** labels are not simulated.
 
 ## Navigation
 
-When a route or a direct-to point is active, the box in the lower left shows the point's identifier, distance, ground speed and time to go, and the command heading caret and fly-to cue steer you to it. Points and routes are set up on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}).
+When a route or a direct-to point is active, the box in the lower left shows the point's identifier, distance, ground speed and time to go, and the command heading caret and fly-to cue steer you to it. Time to go is in minutes and seconds under 5 minutes, hours and minutes above, and blank at 15 kt or less. Points and routes are set up on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}).
 
 ## Sensor bearings
 

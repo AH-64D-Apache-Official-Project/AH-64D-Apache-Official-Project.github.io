@@ -61,6 +61,6 @@ Unless the server allows otherwise, you need supplies close by:
 
 Give a loadout a name and **Save** it. Saved loadouts are kept in your Arma profile, so they are there next time, on any mission. **Load** puts one back on the screen; **Delete** removes it.
 
-**Push to Mission** saves the loadout under the mission instead of your profile.
+**Push to Mission** saves the loadout under the mission instead of your profile, for everyone in the mission to load. It lasts until the mission ends, and only the player who pushed it can delete it.
 
-The **DTC** box is a work in progress and does nothing yet.
+The **DTC** box is a work in progress: its buttons are disabled.

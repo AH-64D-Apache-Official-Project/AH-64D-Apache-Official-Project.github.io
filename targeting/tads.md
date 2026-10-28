@@ -43,6 +43,8 @@ If the day TV is damaged the HAD shows `TV FAIL`{: .mpd}; with both cameras dama
 | {% include key.html id="fza_ah64_tadsLHGFov_Z" %} | Zoom |
 | {% include key.html id="zoomIn" %} / {% include key.html id="zoomOut" %} | Step in and out through the fields of view the sensor has. |
 
+The four field of view bindings have no default key. Use zoom in and out, the [radial menu]({{ '/targeting/radial/' | relative_url }}), or bind them yourself.
+
 Brackets in the TADS reticle show the size of the next narrower field of view.
 
 ## Linear motion compensator {#lmc}

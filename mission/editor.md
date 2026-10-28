@@ -20,7 +20,7 @@ Each has three attributes:
 
 | Attribute | |
 |---|---|
-| **Point Index** | The point's number. A new entity takes the next free number of its type. Waypoints and hazards share the numbers 1 to 50. Two entities of the same type with the same number clash: only one is kept. |
+| **Point Index** | The point's number. A new entity takes the next free number of its type. Waypoints and hazards share the numbers 1 to 50. Two entities of the same type with the same number clash: only one is kept. A number outside its type's range is rejected with an `Invalid index` error. |
 | **Point Ident** | The two-letter code that sets the icon, chosen from a list with each icon shown. The list holds only idents that suit the entity: see [Idents]({{ '/mission/points/' | relative_url }}#idents). |
 | **Point Free Text** | Up to three characters drawn beside the icon, such as `HLD` or a callsign. |
 

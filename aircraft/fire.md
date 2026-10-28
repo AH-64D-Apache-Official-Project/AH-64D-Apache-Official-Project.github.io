@@ -9,7 +9,7 @@ Both crew stations have the same fire panel on the glareshield, and either can w
 
 | Control | What it does |
 |---|---|
-| **ENG 1**, **APU**, **ENG 2** fire handles | Light red when a fire is detected there. Press to **arm** that handle: it shuts off fuel to the engine or APU (while there is DC power), and the handle's armed light comes on. Press again to disarm it. |
+| **ENG 1**, **APU**, **ENG 2** fire handles | Light red when a fire is detected there. Press to **arm** that handle: it shuts off fuel to the engine or APU (while there is DC power), the handle's armed light comes on, and that fire's voice warning and MASTER WARNING stop. Press again to disarm it. |
 | **PRI** and **RES** | Discharge the primary or reserve extinguisher bottle into whichever area is armed. Each bottle fires once, and its light shows when it has been used. |
 | **TEST** switch | **TEST 1** lights every fire and armed light, plays each fire warning, lights MASTER WARNING and shows `DECK FIRE`{: .mpd}. **TEST 2** also lights both bottles' discharge lights. Return it to the centre to end the test. |
 
@@ -27,7 +27,11 @@ A fire shows as `ENGINE 1 FIRE`{: .mpd}, `ENGINE 2 FIRE`{: .mpd} or `APU FIRE`{:
 3. If the fire is still burning, press **RES**.
 {: .steps}
 
-A fire goes out when its handle is armed *and* a bottle has discharged successfully. A bottle can fail: each has roughly a one-in-four chance of not putting the fire out, which is what the reserve is for. With the engine or APU shut down, a fire that is not extinguished usually burns itself out within half a minute or so, still doing damage until it does.
+A bottle only reaches a fire if that fire's handle is **already armed** when the bottle is discharged. Arm first, then discharge: a bottle fired before the handle is armed, or with only another handle armed, is wasted. A bottle that reaches the fire puts it out, unless it fails: each one has a one-in-four chance of failing, which is what the reserve is for.
+
+With the engine or APU shut down, a fire that is not extinguished usually burns itself out within half a minute or so, still doing damage until it does.
+
+While a fire warning is active, the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#emergency-format) shows the immediate action steps.
 
 > Arm the handle for the **burning** side. Arming the wrong one shuts down a good engine. Check the lit handle, or the WCA page, before you press.
 {: .warning}

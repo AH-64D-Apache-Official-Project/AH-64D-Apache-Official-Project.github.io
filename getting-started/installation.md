@@ -15,7 +15,7 @@ The Apache is one mod that leans on four others. All five must be loaded, on eve
 | [CBA_A3](https://steamcommunity.com/workshop/filedetails/?id=450814997), version 3.16 or later | Addon settings, key bindings and the event system. |
 | [ACE3](https://steamcommunity.com/workshop/filedetails/?id=463939057) | Laser codes, Hellfire guidance and the rearm framework. |
 | [Hatchet Interaction Framework](https://steamcommunity.com/workshop/filedetails/?id=2941986336) | The cockpit cursor: it is what lets you click switches and buttons. |
-| [HeliSim Core](https://steamcommunity.com/workshop/filedetails/?id=3806917476), version 1.4 or later | The flight model and the aircraft systems: engines, electrics, hydraulics, fuel, rotor. |
+| [HeliSim Core](https://steamcommunity.com/workshop/filedetails/?id=3806917476), version 1.4.2 or later | The flight model and the aircraft systems: engines, electrics, hydraulics, fuel, rotor. |
 | **AH-64D Apache Longbow** | This mod. |
 
 ### Optional

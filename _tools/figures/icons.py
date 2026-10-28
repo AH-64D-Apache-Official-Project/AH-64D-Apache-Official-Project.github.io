@@ -56,7 +56,7 @@ for _i in ['AM', 'FI', 'FL', 'FU', 'MI']:
     TSD_IDENTS[_i] = ('controlMeasures/friendly/' + _i, 'BLUE')
 for _i in ['AE', 'EF', 'EI', 'EM', 'EU']:
     TSD_IDENTS[_i] = ('controlMeasures/enemy/' + _i, 'RED')
-for _i in [str(n) for n in range(1, 18)] + ['GU', 'S6', 'ZU', 'CT', 'CH', 'ST', 'HK']:
+for _i in [str(n) for n in range(1, 18)] + ['GU', 'S6', 'ZU', 'CT', 'CH', 'ST', 'HK', 'VU']:
     TSD_IDENTS[_i] = ('targetThreats/GU', 'RED')
 TSD_IDENTS['SR'] = TSD_IDENTS['TR'] = ('targetThreats/R', 'RED')
 TSD_IDENTS['TG'] = ('targetThreats/TG', 'RED')

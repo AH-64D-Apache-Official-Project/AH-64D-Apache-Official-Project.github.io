@@ -18,7 +18,7 @@ Every cockpit switch and MPD button has its own binding under **AH-64D Official 
 Follow [Start-up]({{ '/flying/startup/' | relative_url }}).
 
 **The mod does not load, or the aircraft is missing.**
-Check every required mod is loaded, including **HeliSim Core 1.4** or later and **CBA_A3 3.16** or later. See [Installation]({{ '/getting-started/installation/' | relative_url }}).
+Check every required mod is loaded, including **HeliSim Core 1.4.2** or later and **CBA_A3 3.16** or later. See [Installation]({{ '/getting-started/installation/' | relative_url }}).
 
 **The UFD shows `VERS MISM`{: .mpd}.**
 The mod's files do not match each other: verify the files in Steam, or reinstall. See [DMS]({{ '/displays/mpd/dms/' | relative_url }}).

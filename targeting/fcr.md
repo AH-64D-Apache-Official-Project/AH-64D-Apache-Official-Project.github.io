@@ -62,6 +62,8 @@ The scan size sets the width of the sector. A new size stops a running scan and 
 | **N**arrow | {% include key.html id="fza_ah64_fcrScanSize_N" %} | 30° | 90° |
 | **Z**oom | {% include key.html id="fza_ah64_fcrScanSize_Z" %} | 15° | 45° |
 
+The scan size bindings have no default key. Use the [radial menu]({{ '/targeting/radial/' | relative_url }}), or bind them yourself.
+
 TPM chooses its own width: 180° below 45 kt, 90° above 55 kt.
 
 ## What it sees

@@ -79,22 +79,18 @@ fza_ah64_fcrSingleScan:
 fza_ah64_fcrScanSize_W:
   name: FCR Scan Size Wide (W)
   group: Fire control radar
-  keys: [Z, "1"]
   desc: Wide scan. Takes effect at the next scan.
 fza_ah64_fcrScanSize_M:
   name: FCR Scan Size Medium (M)
   group: Fire control radar
-  keys: [Z, "2"]
   desc: Medium scan.
 fza_ah64_fcrScanSize_N:
   name: FCR Scan Size Narrow (N)
   group: Fire control radar
-  keys: [Z, "3"]
   desc: Narrow scan.
 fza_ah64_fcrScanSize_Z:
   name: FCR Scan Size Zoom (Z)
   group: Fire control radar
-  keys: [Z, "4"]
   desc: Zoom scan.
 fza_ah64_fcrModeGTM:
   name: Ground Targeting Mode (GTM)
@@ -119,22 +115,18 @@ fza_ah64_fcrModeTPM:
 fza_ah64_tadsLHGFov_W:
   name: TADS LHG FOV Switch - W
   group: TADS
-  keys: [Alt, "1"]
   desc: TADS wide field of view.
 fza_ah64_tadsLHGFov_M:
   name: TADS LHG FOV Switch - M
   group: TADS
-  keys: [Alt, "2"]
   desc: TADS medium field of view.
 fza_ah64_tadsLHGFov_N:
   name: TADS LHG FOV Switch - N
   group: TADS
-  keys: [Alt, "3"]
   desc: TADS narrow field of view.
 fza_ah64_tadsLHGFov_Z:
   name: TADS LHG FOV Switch - Z
   group: TADS
-  keys: [Alt, "4"]
   desc: TADS zoom field of view.
 fza_ah64_SensorSelect_FLIR:
   name: LHG Sensor Select Switch - FLIR
