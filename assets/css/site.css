@@ -225,7 +225,7 @@ code.vab {
 /* display text: `FUEL`{: .mpd} */
 code.mpd {
   display: inline-block; padding: 2px 6px 1px; border-radius: 3px; font-family: var(--font-mpd); font-size: .9em; letter-spacing: .02em;
-  color: var(--mpd-green); background: #050805; border: 1px solid #1d2a1d;
+  color: var(--mpd-green); background: #050805; border: 1px solid #1d2a1d; white-space: nowrap;
 }
 code.mpd.box { outline: 1.5px solid var(--mpd-green); outline-offset: -4px; padding: 3px 8px 2px; }
 /* up-front display mock: <div class="ufd"><pre> */

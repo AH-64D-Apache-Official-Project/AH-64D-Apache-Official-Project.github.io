@@ -60,9 +60,9 @@ def fcr_symbols(spec):
 def to_png(svg_path, png_path, size=1000):
     html = svg_path[:-4] + '.html'
     open(html, 'w', encoding='utf-8').write(
-        '<!doctype html><html><head><style>@font-face{font-family:"BMKApacheFont";src:url("file://%s")}'
+        '<!doctype html><html><head><style>@font-face{font-family:"BMKApacheFont";src:url("%s")}'
         'html,body{margin:0;background:#000}</style></head><body>%s</body></html>'
-        % (paths.FONT, open(svg_path, encoding='utf-8').read()))
+        % (paths.url(paths.FONT), open(svg_path, encoding='utf-8').read()))
     paths.shoot([{'html': html, 'png': png_path, 'width': size, 'height': size}])
 
 

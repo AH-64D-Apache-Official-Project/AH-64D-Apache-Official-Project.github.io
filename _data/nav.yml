@@ -89,3 +89,11 @@
     - { title: What's new in 3.0, url: /reference/whats-new/ }
     - { title: Changelogs, url: /reference/changelogs/ }
     - { title: Contributing to the docs, url: /reference/contributing/ }
+
+- title: Developers (archive)
+  icon: code
+  pages:
+    - { title: Coding guidelines, url: /developer/guidelines/ }
+    - { title: Helper scripts, url: /developer/helper-scripts/ }
+    - { title: MPD system (2.x), url: /developer/mpds/ }
+    - { title: Engine control (2.x), url: /developer/engines/ }

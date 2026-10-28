@@ -6,7 +6,7 @@ redirect_from:
   - /flight-model-helisim.html
 ---
 
-HeliSim is a separate mod, **HeliSim Core**, by BradMick. The Apache supplies its aircraft data: weights, rotor, engines, transmission, fuel, hydraulics and electrics.
+HeliSim is a separate mod, [**HeliSim Core**](https://steamcommunity.com/workshop/filedetails/?id=3806917476), by BradMick. The Apache supplies its aircraft data: weights, rotor, engines, transmission, fuel, hydraulics and electrics.
 
 ## What it simulates
 

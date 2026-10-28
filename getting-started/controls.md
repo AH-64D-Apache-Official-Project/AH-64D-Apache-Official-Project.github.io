@@ -14,7 +14,7 @@ Bindings live in **Options → Controls**. Use the **Show** drop-down to pick a 
 | **Hatchet Interaction Framework** | The cockpit cursor: clicking switches and buttons. |
 | **HeliSim Flight Controls** | Cyclic, pedals, collective, trim and hold modes. |
 | **AH-64D Official Project** | Sights, weapons, the radar, the TADS, the laser. |
-| **AH-64D Cockpit Controls** | One binding per cockpit switch and MPD button, for HOTAS and button boxes. Optional. |
+| **AH-64D Official Project: Cockpit Controls** | One binding per cockpit switch and MPD button, for HOTAS and button boxes. Optional. |
 | **AH-64D HeliSim Cockpit Controls** | Battery, APU, engine start switches, rotor brake and power levers as discrete positions, for switch panels. Optional. |
 | **AH-64D MPD Minigames** | Inputs for the games on the MPD. Optional. |
 
@@ -92,6 +92,6 @@ Some of Arma's standard bindings do different things in the Apache:
 
 ## HOTAS and switch panels
 
-Every cockpit switch and MPD button has its own binding in **AH-64D Cockpit Controls**, named `system: control` (for example `left mpd: l1`). Bind them to a button box or the buttons on your grip.
+Every cockpit switch and MPD button has its own binding in **AH-64D Official Project: Cockpit Controls**, named `system: control` (for example `left mpd: left mpd l1`). Bind them to a button box or the buttons on your grip.
 
 For the engine panel, **AH-64D HeliSim Cockpit Controls** has one binding per switch position: **Battery - On**, **Engine 1 Power Lever - Idle**, and so on. These suit physical toggles and detented throttles, because the binding sets a position instead of stepping through them.

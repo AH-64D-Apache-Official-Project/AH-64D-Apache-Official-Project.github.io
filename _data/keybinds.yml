@@ -38,12 +38,12 @@ fza_ah64_symbologySelectUp:
   name: Symbology Select Up
   group: IHADSS
   keys: [Shift, B]
-  desc: Toggles transition and cruise flight symbology.
+  desc: Transition flight symbology, or cruise if already in transition.
 fza_ah64_symbologySelectDown:
   name: Symbology Select Down
   group: IHADSS
   keys: [Ctrl, B]
-  desc: Toggles hover and bob-up flight symbology.
+  desc: Hover flight symbology, or bob-up if already in hover. Selecting bob-up stores your position and heading.
 fza_ah64_symbologySelectPress:
   name: Symbology Select Press
   group: IHADSS

@@ -1,0 +1,100 @@
+title: IHADSS rocket symbology
+kind: hud
+crop:
+- 30
+- -30
+- 640
+- 510
+caption: 'Pilot in a shallow dive with rockets actioned, looking at a target 6° right of the nose: turn right to bring the rocket steering cursor onto the reticle.'
+model:
+  hd: false
+  tv: false
+  white: false
+  g: 1.0
+  gLimit: -1
+  radAltHi: 200
+  radAltLo: 33
+  vne: 0
+  attHold: false
+  altHold: false
+  slip: 0
+  pitchBias: 5
+  tqSplit: false
+  losFlash: false
+  forType: pnvs
+  fmt: flt
+  mode: trans
+  hdg: 200
+  cmdHdg: -30
+  tq: 48
+  tas: 42
+  radAlt: 110
+  baroAlt: 900
+  vsi: -500
+  vel:
+  - 1
+  - 41
+  acc:
+  - 0
+  - 0
+  wpt:
+  - W03
+  - '41'
+  - '2.9'
+  - '2:17'
+  had:
+  - P-HMD
+  - M3.0
+  - PRKT
+  - TADS
+  - ''
+  - 6PD NORM 14
+  - ''
+  - ''
+  pitch: -2
+  roll: 0
+  forFov:
+  - 6
+  - -4
+  acq:
+  - -36
+  - -9
+  forCue:
+  - -30
+  - -12
+  altBrg: -30
+symbols:
+- sym: headtracker
+  x: 224
+  y: 176
+- sym: fpv
+  x: 240
+  y: 256
+- sym: rkt
+  x: 416
+  y: 227
+callouts:
+- n: 1
+  x: 416
+  y: 190
+  side: t
+  label: Rocket steering cursor
+  text: Turn until it is centred on the reticle. The reticle inside its height means the pylons can reach.
+- n: 2
+  x: 240
+  y: 256
+  side: b
+  label: Flight path vector
+  text: Below the nose in the dive.
+- n: 3
+  x: 226
+  y: 471
+  side: b
+  label: Range
+  text: 'M: a manual range of 3.0 km.'
+- n: 4
+  x: 524
+  y: 490
+  side: r
+  label: Weapon
+  text: 'PRKT: the pilot has rockets. Below: type, mode and rockets left.'

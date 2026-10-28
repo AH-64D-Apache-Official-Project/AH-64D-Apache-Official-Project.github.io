@@ -21,21 +21,19 @@ import run  # noqa: E402
 DOCS = paths.DOCS
 OUT = paths.OUT
 BEZEL_HREF = "{{ '/assets/figures/mpd-bezel.png' | relative_url }}"
-# IHADSS crop, in format units: x 50..610, y 20..490 (the PNG is 2x)
-HUD_CROP = (300, 240, 1420, 1180)
 
 
 def hud_png(model, out_png, transparent=False):
     js = paths.mod('addons', 'fza_ah64_ihadss', 'ui', 'js')
     page = os.path.join(OUT, '_hud.html')
-    scripts = ''.join('<script src="file://%s/%s"></script>' % (js, f) for f in
+    scripts = ''.join('<script src="%s"></script>' % paths.url(os.path.join(js, f)) for f in
                       ['ihadss_common.js', 'ihadss_base.js', 'ihadss_flight.js', 'ihadss_weapon.js', 'ihadss_main.js'])
     open(page, 'w', encoding='utf-8').write(
-        '<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:"BMKApacheFont";src:url("file://%s")}'
+        '<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:"BMKApacheFont";src:url("%s")}'
         'html,body{margin:0;padding:0;background:%s;overflow:hidden}#ihadss{display:block;width:1680px;height:1360px}</style></head>'
         '<body><canvas id="ihadss"></canvas>%s<script>document.fonts.load("15px BMKApacheFont").then(function(){'
         'window.fzaIhadss.update(%s);});</script></body></html>'
-        % (paths.FONT, 'transparent' if transparent else '#000', scripts, json.dumps(model)))
+        % (paths.url(paths.FONT), 'transparent' if transparent else '#000', scripts, json.dumps(model)))
     paths.shoot([{'html': page, 'png': out_png, 'width': 1680, 'height': 1360, 'transparent': transparent, 'wait': 800}])
 
 
@@ -64,18 +62,45 @@ def build_mpd(fid, spec, mfd, consts, callouts, title):
     return fig.mpd_figure(page, callouts, fid, title, BEZEL_HREF, lines, marks)
 
 
+HUD_SYMBOLS = os.path.join(paths.HERE, 'hud_symbols')
+HUD_GREEN = (0x1A, 0xFF, 0x00)
+# Format units each virtual symbol is drawn at (fza_ihadss_fnc_htmlIcons)
+HUD_SYMBOL_SIZE = {'rkt': 128, 'rkt_inhibit': 128, 'rkt_stow': 128, 'rkt_stow_inhibit': 128}
+
+
+def add_symbols(img, symbols):
+    """The world-referenced symbols the game draws natively over the page: {sym, x, y, size?} in format units."""
+    for s in symbols or []:
+        name = s['sym']
+        src = os.path.join(HUD_SYMBOLS, name + '.png') if '/' not in name else \
+            os.path.join(DOCS, 'assets', 'icons', name + '.png')
+        im = Image.open(src).convert('RGBA')
+        px = int(2 * s.get('size', HUD_SYMBOL_SIZE.get(name, 30 if '/' in name else 64)))
+        im = im.resize((px, px), Image.LANCZOS)
+        r, g, b, a = im.split()
+        lum = Image.merge('RGB', (r, g, b)).convert('L')
+        tint = Image.merge('RGBA', [lum.point(lambda v, t=t: v * t // 255) for t in HUD_GREEN] + [a])
+        x, y = int((s['x'] + 100) * 2 - px / 2), int((s['y'] + 100) * 2 - px / 2)
+        img.alpha_composite(tint, (x, y))
+
+
 def build_hud(fid, spec, callouts, title):
     png = os.path.join(DOCS, 'assets', 'figures', 'hud', fid + '.png')
     hud_png(spec['model'], png, transparent=True)
-    img = Image.open(png).convert('RGBA').crop(HUD_CROP)
+    img = Image.open(png).convert('RGBA')
+    add_symbols(img, spec.get('symbols'))
+    # crop: [x0, y0, x1, y1] in format units; the PNG is 2x with a 100 unit margin
+    cx0, cy0, cx1, cy1 = spec.get('crop', [50, 20, 610, 490])
+    img = img.crop(((cx0 + 100) * 2, (cy0 + 100) * 2, (cx1 + 100) * 2, (cy1 + 100) * 2))
     img.save(png, optimize=True)
     for c in callouts:
-        c['x'] = (c['x'] - 50) * 2
-        c['y'] = (c['y'] - 20) * 2
-    fig.assign_sides(callouts, (0, 0, fig.HUD_W, fig.HUD_H))
+        c['x'] = (c['x'] - cx0) * 2
+        c['y'] = (c['y'] - cy0) * 2
+    w, h = img.size
+    fig.assign_sides(callouts, (0, 0, w, h))
     fig.snap(callouts, lit_fn(img, alpha=True), lambda x, y: (x, y), gap=12, pad=8)
-    lines, marks = fig.callout_layers(callouts, (0, 0, fig.HUD_W, fig.HUD_H), 80) if callouts else ('', '')
-    return fig.hud_figure("{{ '/assets/figures/hud/%s.png' | relative_url }}" % fid, fid, title, lines, marks, callouts)
+    lines, marks = fig.callout_layers(callouts, (0, 0, w, h), 80) if callouts else ('', '')
+    return fig.hud_figure("{{ '/assets/figures/hud/%s.png' | relative_url }}" % fid, fid, title, lines, marks, callouts, (w, h))
 
 
 def main(only):

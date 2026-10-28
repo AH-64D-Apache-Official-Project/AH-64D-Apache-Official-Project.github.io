@@ -36,7 +36,7 @@ The **BRT** and **VID** knobs and the **DAY/NT/MONO** switch on the bezel are no
 
 ## Pressing buttons
 
-Click a button through the cockpit cursor ([Controls and bindings]({{ '/getting-started/controls/' | relative_url }})) or bind it directly: every button on both MPDs, in both seats, has a binding in **AH-64D Cockpit Controls** (`left mpd: t1`, `right mpd: fcr` and so on).
+Click a button through the cockpit cursor ([Controls and bindings]({{ '/getting-started/controls/' | relative_url }})) or bind it directly: every button on both MPDs, in both seats, has a binding in **AH-64D Official Project: Cockpit Controls** (`left mpd: left mpd t1`, `right mpd: right mpd fcr` and so on).
 
 Each MPD remembers its page, and each page remembers its own settings. Both crew stations have their own pair of MPDs and can show any page independently, but they share the aircraft's data: a waypoint added on the pilot's TSD appears on the CPG's.
 

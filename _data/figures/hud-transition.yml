@@ -1,56 +1,190 @@
 title: IHADSS transition symbology
 kind: hud
-caption: Pilot's flight symbology in transition mode, flying to waypoint W02.
+crop:
+- 30
+- -30
+- 640
+- 510
+caption: Pilot's transition symbology at 48 kt and slowing, flying to waypoint W02 while looking 4° left of the nose.
 model:
-  hd: true
+  hd: false
   tv: false
   white: false
+  g: 1.0
+  gLimit: -1
+  radAltHi: 200
+  radAltLo: 33
+  vne: 0
+  attHold: false
+  altHold: false
+  slip: -0.5
+  pitchBias: 5
+  tqSplit: false
+  losFlash: false
+  forType: pnvs
   fmt: flt
   mode: trans
   hdg: 312
-  cmdHdg: 18
-  tq: 72
-  tqSplit: false
-  tas: 96
-  vne: 0
-  g: 1.0
-  gLimit: -1
+  cmdHdg: 5
+  tq: 46
+  tas: 48
   radAlt: 140
-  radAltHi: 200
-  radAltLo: 33
   baroAlt: 1240
   vsi: 300
-  attHold: false
-  altHold: false
-  slip: 0.4
+  vel:
+  - 3
+  - 46
+  acc:
+  - 0.5
+  - -1.5
+  wpt:
+  - W02
+  - '46'
+  - '4.6'
+  - '3:14'
+  had:
+  - P-HMD
+  - '1.5'
+  - ''
+  - TADS
+  - ''
+  - ''
+  - ''
+  - ''
   pitch: 2
   roll: 8
-  pitchBias: 5
-  vel: [3, 40]
-  acc: [0.2, 0.6]
-  wpt: ["W02", "12.4", "4.6", "0:03:12"]
-  losFlash: false
-  forType: pnvs
-  forFov: [-10, -4]
-  acq: [40, -8]
-  forCue: [40, -8]
-  had: ["P-HMD", "R 4.6", "", "W02", "", "", "", ""]
+  forFov:
+  - -4
+  - -2
+  acq:
+  - 68
+  - -9
+  forCue:
+  - 64
+  - -10
+  altBrg: 64
+symbols:
+- sym: headtracker
+  x: 384
+  y: 208
+- sym: fpv
+  x: 432
+  y: 176
+- sym: flyto
+  x: 464
+  y: 224
 callouts:
-  - { n: 1, x: 320, y: 52, side: t, label: Heading tape, text: "Magnetic heading, with the current heading boxed at the centre." }
-  - { n: 2, x: 341, y: 84, side: r, label: Command heading, text: "Caret pointing to the next waypoint." }
-  - { n: 3, x: 145, y: 107, side: l, label: Torque, text: "Highest engine torque, percent." }
-  - { n: 4, x: 117, y: 225, side: l, label: Airspeed, text: "True airspeed in knots." }
-  - { n: 5, x: 331, y: 120, side: r, label: Acceleration cue, text: "Shows where the velocity vector is heading." }
-  - { n: 6, x: 324, y: 180, side: r, label: Velocity vector, text: "Ground velocity from the reticle; full scale is 60 kt in transition." }
-  - { n: 7, x: 320, y: 240, side: l, label: LOS reticle, text: "Your line of sight." }
-  - { n: 8, x: 353, y: 240, side: r, label: Cueing dots, text: "Point from your line of sight towards the acquisition source." }
-  - { n: 9, x: 225, y: 282, side: l, label: Horizon line, text: "Moves 4:1 with pitch and roll." }
-  - { n: 10, x: 489, y: 225, side: r, label: Radar altitude, text: "Height above ground in feet." }
-  - { n: 11, x: 521, y: 189, side: r, label: Vertical speed, text: "Pointer on the radar altitude scale." }
-  - { n: 12, x: 542, y: 300, side: r, label: Radar altitude scale, text: "Analogue bar, shown below 200 ft." }
-  - { n: 13, x: 150, y: 372, side: l, label: Waypoint data, text: "Next waypoint, distance, ground speed and time to go." }
-  - { n: 14, x: 341, y: 413, side: r, label: Trim ball, text: "Centre it with the pedals." }
-  - { n: 15, x: 320, y: 458, side: b, label: Field of regard, text: "Where the sensor and your head point relative to the nose." }
-  - { n: 16, x: 127, y: 445, side: l, label: Sight, text: "Selected sight for this crew station." }
-  - { n: 17, x: 225, y: 445, side: b, label: Range, text: "Range and its source." }
-  - { n: 18, x: 522, y: 445, side: r, label: Acquisition source, text: "What the cueing dots and slave point to." }
+- n: 1
+  x: 320
+  y: -6
+  side: t
+  label: Heading
+  text: Aircraft heading, on a tape covering 105° each side.
+- n: 2
+  x: 329
+  y: 26
+  side: r
+  label: Command heading
+  text: Bearing to the next waypoint.
+- n: 3
+  x: 100
+  y: 60
+  side: l
+  label: Torque
+  text: The higher engine torque. Boxed at 98% and over; flashes when the engines are more than 12% apart.
+- n: 4
+  x: 80
+  y: 225
+  side: l
+  label: Airspeed
+  text: True airspeed in knots. Boxed at VNE.
+- n: 5
+  x: 341
+  y: 94
+  side: r
+  label: Acceleration cue
+  text: Where the velocity vector is heading.
+- n: 6
+  x: 329
+  y: 150
+  side: l
+  label: Velocity vector
+  text: Speed and direction over the ground. The top of the lubber line is 60 kt.
+- n: 7
+  x: 384
+  y: 208
+  side: b
+  label: Head tracker
+  text: The aircraft's nose.
+- n: 8
+  x: 432
+  y: 176
+  side: r
+  label: Flight path vector
+  text: Where the aircraft is going. Shown over 5 kt ground speed.
+- n: 9
+  x: 470
+  y: 232
+  side: b
+  label: Fly-to cue
+  text: The next waypoint.
+- n: 10
+  x: 305
+  y: 240
+  side: l
+  label: LOS reticle
+  text: Your line of sight.
+- n: 11
+  x: 218
+  y: 282.6
+  side: l
+  label: Horizon line
+  text: Bank, and pitch at a quarter scale.
+- n: 12
+  x: 555
+  y: 225
+  side: r
+  label: Radar altitude
+  text: Height above the ground in feet. HI over 200 ft, LO under 33 ft.
+- n: 13
+  x: 608
+  y: 300
+  side: r
+  label: Vertical speed and radar altitude scales
+  text: The pointer is climb or descent, the ends of the scale 1,000 ft/min. The bar is height above the ground under 200 ft.
+- n: 14
+  x: 62
+  y: 380
+  side: l
+  label: Waypoint data
+  text: Next waypoint and distance; ground speed and time to go.
+- n: 15
+  x: 293
+  y: 450
+  side: l
+  label: Trim ball
+  text: Centre it with the pedals. Here the aircraft is out of trim.
+- n: 16
+  x: 300
+  y: 498
+  side: b
+  label: Field of regard
+  text: The box is where your head points within the PNVS's reach; the dot is the acquisition source.
+- n: 17
+  x: 100
+  y: 470
+  side: l
+  label: Sight
+  text: Your selected sight.
+- n: 18
+  x: 226
+  y: 471
+  side: b
+  label: Range
+  text: The range in use and its source.
+- n: 19
+  x: 535
+  y: 470
+  side: r
+  label: Acquisition source
+  text: What the cueing dots point to.

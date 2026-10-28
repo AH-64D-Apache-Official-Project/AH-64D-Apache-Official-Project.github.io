@@ -10,7 +10,7 @@ Each figure is described by `_data/figures/<id>.yml`: its title, caption, the pa
 ## Requirements
 
 - Python 3 with `pcpp`, `PyYAML` and `Pillow` (`pip install pcpp pyyaml pillow`)
-- Node with Playwright and its Chromium (`npm i -g playwright && npx playwright install chromium`)
+- Node with Playwright and its Chromium (`npm i -g playwright && npx playwright install chromium`). To use an installed Chrome instead, set `FM_CHROME_CHANNEL=chrome`. With a global install, set `NODE_PATH` to the global `node_modules` folder.
 - A checkout of the AH-64D mod at the commit being documented
 
 ## Use
@@ -41,5 +41,32 @@ callouts:
 ```
 
 Callout `x`/`y` are page units (0–1000 across the screen). Point anywhere inside the element; the build moves the end of the line to the element's edge on the `side` its badge is on (`l`, `r`, `t` or `b`). Add `snap: false` to leave a point where it is.
+
+## Writing an IHADSS figure spec
+
+```yaml
+title: IHADSS hover symbology
+kind: hud
+caption: Pilot's hover symbology at 40 ft.
+crop: [30, -30, 640, 510]  # format units shown: x0, y0, x1, y1. Heads up needs this wider crop; the default suits heads down
+model:                     # the JSON the page's fzaIhadss.update() takes; fza_ihadss_fnc_htmlModel builds it in game
+  hd: false                # false: heads up, spread layout, clipped to the lens
+  white: false
+  fmt: flt                 # flt or wpn
+  mode: hover              # trans, cruise, hover, bobup
+  vel: [1.5, 2.5]
+  forFov: [-10, -4]
+  had: [P-HMD, "1.5", "", TADS, "", "", "", ""]
+symbols:                   # symbols the game draws natively over the page, in format units
+  - { sym: headtracker, x: 480, y: 176 }
+callouts:
+  - { n: 1, x: 350, y: 193, side: l, label: Velocity vector, text: "Drift over the ground." }
+```
+
+The format is 640 × 480 units, 16 to the degree, with the reticle at 320, 240. Callout `x`/`y` are format units. `symbols` takes `headtracker`, `fpv`, `flyto`, `cuedlos` and the `rkt` cursors from `hud_symbols/`, or an icon path under `assets/icons/` such as `fcr/mpd/nts`. Place them where the game would: the head tracker is the aircraft's nose seen from where `forFov` says the head points, and so on. A world symbol outside the format or the lens is not drawn in game, so leave it out.
+
+## Icons
+
+`python icons.py tsd` and `python icons.py fcr` convert the MPD's TSD and FCR symbol textures to the PNGs in `assets/icons/`. Re-running rewrites the files even when nothing changed, so only commit the ones you meant to change.
 
 `labels.py states.json name` lists the text drawn next to each button for a page state, which helps when writing a button table. `run.py states.json name` renders a state on its own, without the bezel, to `.cache/out/`.

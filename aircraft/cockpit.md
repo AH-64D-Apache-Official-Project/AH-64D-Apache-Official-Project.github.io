@@ -7,7 +7,7 @@ redirect_from:
   - /cockpit.html
 ---
 
-Every control on this page is clicked with the cockpit cursor (see [Controls and bindings]({{ '/getting-started/controls/' | relative_url }})). Most can also be bound to a key in **AH-64D Cockpit Controls** or **AH-64D HeliSim Cockpit Controls**. Hover the cursor over a control to see its name.
+Every control on this page is clicked with the cockpit cursor (see [Controls and bindings]({{ '/getting-started/controls/' | relative_url }})). Most can also be bound to a key in **AH-64D Official Project: Cockpit Controls** or **AH-64D HeliSim Cockpit Controls**. Hover the cursor over a control to see its name.
 
 > These screenshots are from an earlier build. The panels have not moved, but a few labels on them have changed.
 {: .note}

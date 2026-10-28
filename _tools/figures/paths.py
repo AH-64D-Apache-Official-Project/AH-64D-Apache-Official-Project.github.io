@@ -5,6 +5,7 @@ FM_DOCS: the docs repo; defaults to the checkout this file is in.
 """
 import json
 import os
+import pathlib
 import subprocess
 import tempfile
 
@@ -14,6 +15,11 @@ MOD = os.environ.get('FM_MOD', '')
 CACHE = os.path.join(HERE, '.cache')
 OUT = os.path.join(CACHE, 'out')
 FONT = os.path.join(DOCS, 'assets', 'fonts', 'BMKApacheFont.ttf')
+
+
+def url(path):
+    """A file:// URL for a local path, valid on Windows as well."""
+    return pathlib.Path(path).resolve().as_uri()
 
 
 def mod(*parts):

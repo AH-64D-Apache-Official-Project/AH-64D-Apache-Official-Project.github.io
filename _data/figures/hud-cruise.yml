@@ -1,0 +1,111 @@
+title: IHADSS cruise symbology
+kind: hud
+crop:
+- 30
+- -30
+- 640
+- 510
+caption: Pilot's cruise symbology at 128 kt in a 15° right bank, with attitude and altitude hold engaged.
+model:
+  hd: false
+  tv: false
+  white: false
+  g: 1.0
+  gLimit: -1
+  radAltHi: 200
+  radAltLo: 33
+  vne: 0
+  attHold: true
+  altHold: true
+  slip: 0
+  pitchBias: 5
+  tqSplit: false
+  losFlash: false
+  forType: pnvs
+  fmt: flt
+  mode: cruise
+  hdg: 92
+  cmdHdg: 5
+  tq: 64
+  tas: 128
+  baroAlt: 1850
+  vsi: 0
+  vel:
+  - 2
+  - 126
+  acc:
+  - 0
+  - 0
+  wpt:
+  - W04
+  - '126'
+  - '6.2'
+  - '1:36'
+  had:
+  - P-HMD
+  - '1.5'
+  - ''
+  - TADS
+  - ''
+  - ''
+  - ''
+  - ''
+  pitch: -1
+  roll: 15
+  forFov:
+  - -8
+  - -3
+  acq:
+  - 56
+  - 1
+  forCue:
+  - 48
+  - -1
+  altBrg: 48
+symbols:
+- sym: headtracker
+  x: 448
+  y: 192
+- sym: fpv
+  x: 464
+  y: 176
+- sym: flyto
+  x: 528
+  y: 160
+callouts:
+- n: 1
+  x: 208
+  y: 138
+  side: l
+  label: Pitch ladder
+  text: Solid above the horizon, dashed below, at half scale.
+- n: 2
+  x: 266
+  y: 50
+  side: r
+  label: Bank triangle
+  text: Bank angle, read against the lubber line.
+- n: 3
+  x: 52
+  y: 225
+  side: l
+  label: Attitude hold
+  text: Box around the airspeed while attitude hold is on.
+- n: 4
+  x: 585
+  y: 225
+  side: b
+  label: Altitude hold
+  text: On the vertical speed scale while altitude hold is on.
+- n: 5
+  x: 570
+  y: 112
+  side: r
+  label: Barometric altitude
+  text: Feet, in cruise only.
+- n: 6
+  x: 305
+  y: 240
+  side: l
+  label: LOS reticle
+  text: Drawn bold in cruise.

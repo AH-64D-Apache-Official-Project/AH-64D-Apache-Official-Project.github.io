@@ -140,12 +140,13 @@ def mpd_figure(page_svg, callouts, fig_id, title, texture_href, lines='', marks=
 HUD_W, HUD_H = 1120, 940
 
 
-def hud_figure(href, fig_id, title, lines='', marks='', callouts=()):
+def hud_figure(href, fig_id, title, lines='', marks='', callouts=(), size=(HUD_W, HUD_H)):
+    w, h = size
     tb = any(c.get('_side') == 't' for c in callouts)
     bb = any(c.get('_side') == 'b' for c in callouts)
     top = -50 - (100 if tb else 0)
-    bottom = HUD_H + 50 + (100 if bb else 0)
-    vb = (-140, top, HUD_W + 280, bottom - top)
-    body = ['<rect x="0" y="0" width="%d" height="%d" rx="18" fill="#030503"/>' % (HUD_W, HUD_H), lines,
-            '<image href="%s" x="0" y="0" width="%d" height="%d"/>' % (href, HUD_W, HUD_H), marks]
+    bottom = h + 50 + (100 if bb else 0)
+    vb = (-140, top, w + 280, bottom - top)
+    body = ['<rect x="0" y="0" width="%d" height="%d" rx="18" fill="#030503"/>' % (w, h), lines,
+            '<image href="%s" x="0" y="0" width="%d" height="%d"/>' % (href, w, h), marks]
     return svg_wrap(vb, title, '\n'.join(body), font=False)

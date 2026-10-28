@@ -1,0 +1,161 @@
+title: TADS weapon symbology
+kind: hud
+crop:
+- 30
+- 20
+- 610
+- 490
+caption: 'The CPG looking through the TADS (picture removed): FLIR medium field of view, LMC on, lasing, and a laser Hellfire within constraints that can lock on before launch.'
+model:
+  hd: true
+  tv: false
+  white: true
+  g: 1.0
+  gLimit: -1
+  radAltHi: 200
+  radAltLo: 33
+  vne: 0
+  attHold: false
+  altHold: false
+  slip: 0
+  pitchBias: 5
+  tqSplit: false
+  losFlash: false
+  forType: tads
+  fmt: wpn
+  mode: trans
+  hdg: 15
+  cmdHdg: 14
+  tq: 58
+  tas: 12
+  radAlt: 60
+  baroAlt: 600
+  vsi: 0
+  pitch: 3
+  roll: 0
+  vel:
+  - 0
+  - 3
+  acc:
+  - 0
+  - 0
+  forFov:
+  - 14
+  - -3
+  altBrg: -20
+  acq:
+  - -34
+  - 6
+  forCue:
+  - -20
+  - 3
+  sensor: FLIR
+  fovNext: 0.316
+  lmc: true
+  laser: true
+  msl:
+  - 14
+  - -3
+  - true
+  - true
+  - 20
+  had:
+  - TADS
+  - '*3420'
+  - CMSL
+  - PHS
+  - ''
+  - DIR-NORM
+  - ''
+  - ''
+callouts:
+- n: 1
+  x: 120
+  y: 108
+  side: l
+  label: Sensor
+  text: The TADS sensor in view.
+- n: 2
+  x: 225
+  y: 172
+  side: l
+  label: FOV brackets
+  text: What the next narrower field of view will show.
+- n: 3
+  x: 299
+  y: 84
+  side: l
+  label: Other sight
+  text: Where the pilot's sight points.
+- n: 4
+  x: 279
+  y: 199
+  side: l
+  label: Lasing
+  text: Shown while the laser fires.
+- n: 5
+  x: 262
+  y: 240
+  side: l
+  label: Cueing dots
+  text: Slew this way to find the acquisition source.
+- n: 6
+  x: 240
+  y: 425
+  side: l
+  label: Airspeed
+  text: True airspeed in knots.
+- n: 7
+  x: 110
+  y: 445
+  side: l
+  label: Sight
+  text: TADS selected.
+- n: 8
+  x: 338
+  y: 85
+  side: r
+  label: TADS azimuth
+  text: The caret shows where the TADS points.
+- n: 9
+  x: 350
+  y: 240
+  side: r
+  label: TADS reticle
+  text: The short marks at the ends show LMC is on.
+- n: 10
+  x: 400
+  y: 280
+  side: r
+  label: Constraints box
+  text: 'Missile constraints: solid when the reticle is inside, large when a missile can lock on before launch.'
+- n: 11
+  x: 425
+  y: 425
+  side: r
+  label: Radar altitude
+  text: Height above the ground in feet.
+- n: 12
+  x: 535
+  y: 445
+  side: r
+  label: Acquisition source
+  text: 'PHS: the pilot''s helmet sight.'
+- n: 13
+  x: 460
+  y: 466
+  side: r
+  label: Weapon
+  text: 'CMSL: the CPG has missiles. Below: trajectory and missile mode.'
+- n: 14
+  x: 237
+  y: 448
+  side: b
+  label: Range
+  text: Laser range in metres, marked with a star.
+- n: 15
+  x: 300
+  y: 474
+  side: b
+  label: Field of regard
+  text: The box is the TADS within its limits; the dot is the acquisition source.
