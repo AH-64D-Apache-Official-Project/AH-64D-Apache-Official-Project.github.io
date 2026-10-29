@@ -74,7 +74,7 @@ callouts:
   y: 126.5
   side: r
   label: Acceleration cue
-  text: Where the drift is heading. Keep it on the reticle to stay still.
+  text: The aircraft's acceleration, from the tip of the velocity vector. Keep it on the reticle to stay still.
 - n: 3
   x: 352
   y: 26

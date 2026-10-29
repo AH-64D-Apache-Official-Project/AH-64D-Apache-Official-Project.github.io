@@ -103,7 +103,7 @@ callouts:
   y: 94
   side: r
   label: Acceleration cue
-  text: Where the velocity vector is heading.
+  text: The aircraft's acceleration, from the tip of the velocity vector.
 - n: 6
   x: 329
   y: 150

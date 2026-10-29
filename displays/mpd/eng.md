@@ -63,14 +63,16 @@ The markings across the torque and TGT tapes are the aircraft's actual limits:
 - The **red bar** across both tapes is the maximum.
 - Each **yellow bar** is where a time-limited range starts. There is one for each engine, with a gap between them.
 
-| | Both engines | One engine |
+| | Dual engine (DE) | Single engine (SE) |
 |---|---|---|
 | **Torque** | Yellow at 100%, red at 115%. | Yellow at 110% and 122%, red at 125%. |
 | **TGT** | Yellow at 810 and 870 °C, red at 949 °C. | Yellow at 810, 870, 878 and 896 °C, red at 949 °C. |
 
+Each yellow bar sits at the top of the range below it: the time-limited range starts just above it, at 101% for dual engine torque.
+
 The markings move when the limits do:
 
-- They switch to the one-engine set when the aircraft counts as single-engine: when one engine's torque falls below about half of the other's.
+- They switch to the single engine set when the aircraft counts as single engine: when one engine's torque falls below about half of the other's.
 - With low rotor speed, torque is limited further. Below 90% Nr the red bar is at 70%, and below 50% Nr at 30%, with no time-limited range.
 
 How long each range allows is on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.

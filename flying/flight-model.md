@@ -18,72 +18,75 @@ HeliSim is a separate mod, [**HeliSim Core**](https://steamcommunity.com/worksho
 
 ## Limits
 
-Exceeding a limit is not just a warning. HeliSim counts the time spent above each band and damages the engine or drivetrain when the allowance runs out.
+Exceeding a limit is not just a warning. HeliSim times each time-limited range, and damages the engine or drivetrain when its allowance runs out.
+
+Each range starts just above the top of the one below it and includes its own top figure. In dual engine torque, 100% is still normal, 101% to 115% is the 6-second range, and anything above 115% is over the maximum. The figures are as the ENG page reads them.
 
 ### Torque
 
-| Both engines | Allowed |
+| Dual engine (DE) | Allowed |
 |---|---|
-| Up to 100% | Continuous |
-| 100% to 115% | 6 seconds |
+| 0–100% | Continuous |
+| 101–115% | 6 seconds |
 | Above 115% | None: damage at once |
 
-| One engine | Allowed |
+| Single engine (SE) | Allowed |
 |---|---|
-| Up to 110% | Continuous |
-| 110% to 122% | 2.5 minutes |
-| 122% to 125% | 6 seconds |
+| 0–110% | Continuous |
+| 111–122% | 2.5 minutes |
+| 123–125% | 6 seconds |
 | Above 125% | None: damage at once |
 
-The aircraft counts as single-engine when one engine's torque falls below about half of the other's.
+The aircraft counts as single engine when one engine's torque falls below about half of the other's.
 
 ### Rotor speed
 
 | Nr | |
 |---|---|
-| 95% to 105% | Normal |
+| 95–105% | Normal |
+| 106–110% | Transient. `HIGH RTR`{: .mpd} warning. |
+| Above 110% | Over the maximum |
 | Below 95%, airborne | `LOW RTR`{: .mpd} warning |
-| 106% and above | `HIGH RTR`{: .mpd} warning |
-| 110% | Maximum |
 
 ### Temperature
 
-The engines limit their own TGT to 867 °C, or 896 °C with one engine. TGT above 810 °C is time-limited; keep it there only as long as you need the power.
+The engines limit their own TGT to 867 °C, or 896 °C single engine. TGT above 810 °C is time-limited; keep it there only as long as you need the power.
 
-| TGT, both engines | Allowed |
+| TGT, dual engine | Allowed |
 |---|---|
-| Up to 810 °C | Continuous |
-| 810 to 870 °C | 30 minutes |
-| 870 to 878 °C | 10 minutes |
+| 0–810 °C | Continuous |
+| 811–870 °C | 30 minutes |
+| 871–878 °C | 10 minutes |
 | Above 878 °C | None: damage at once |
 
-| TGT, one engine | Allowed |
+| TGT, single engine | Allowed |
 |---|---|
-| Up to 810 °C | Continuous |
-| 810 to 870 °C | 30 minutes |
-| 870 to 878 °C | 10 minutes |
-| 878 to 896 °C | 2.5 minutes |
-| 896 to 949 °C | 12 seconds |
+| 0–810 °C | Continuous |
+| 811–870 °C | 30 minutes |
+| 871–878 °C | 10 minutes |
+| 879–896 °C | 2.5 minutes |
+| 897–949 °C | 12 seconds |
 | Above 949 °C | None: damage at once |
 
 ### Engine speeds
 
 | Each engine | Allowed |
 |---|---|
-| Ng up to 102.2% | Continuous |
-| Ng 102.2% to 105.1% | 12 seconds |
+| Ng 0–102.2% | Continuous |
+| Ng 102.3–105.1% | 12 seconds |
 | Ng above 105.1% | None: damage at once |
-| Np up to 105% | Continuous |
-| Np 105% to 121% | 12 seconds |
+| Np 0–105% | Continuous |
+| Np 106–121% | 12 seconds |
 | Np above 121% | None: damage at once |
 
-Each band's allowance starts again from full whenever you enter it. The [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#timers) shows the time left.
+Each range's allowance starts again from full whenever you enter it. The [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#timers) shows the time left.
 
 ## Weight
 
 | | |
 |---|---|
-| Empty | 13,920 lb (6,314 kg) |
+| Empty, without the radar | 13,920 lb (6,314 kg) |
+| Empty, with the radar | 14,570 lb (6,609 kg) |
 | Maximum gross | 23,000 lb (10,433 kg) |
 
 A full load of Hellfires, rockets, 1,200 rounds and full fuel is heavy. On a hot day or at altitude you may not be able to hover out of ground effect. The [PERF page]({{ '/displays/mpd/perf/' | relative_url }}) tells you what you can do at your weight in the conditions; the [mission planner]({{ '/mission/planner/' | relative_url }}) does the same before you load the aircraft.
@@ -97,4 +100,11 @@ The engines and rotor see the base altitude and temperature set in **Aircraft En
 
 ## Vortex ring state
 
-Descending slowly and nearly vertically under power lets the rotor settle into its own downwash. Lift falls away, and adding collective makes it worse. To avoid it, keep forward speed when you descend steeply, and keep the descent rate low below about 20 kt. To recover, move the aircraft out of the column of air: forward or sideways cyclic, then collective once the rotor bites again. Turn on **Enable VRS Warning** in the HeliSim settings for a warning as it develops.
+Descending faster than 300 ft/min, slower than effective translational lift (ETL, about 24 kt), with power applied makes the helicopter susceptible to vortex ring state (VRS).
+
+As the rate of descent increases, the air flowing up through the rotor reduces its induced flow. The inboard part of each blade turns slower and makes less lift, so the change in induced flow there takes it towards its critical stall angle, and it sheds an inboard set of vortices. Together with the vortices at the blade tips, these stall the whole main rotor. Lift falls away, and adding collective makes it worse.
+
+- **To avoid it**, keep the rate of descent under 300 ft/min below ETL, or keep your airspeed above ETL when you need to descend steeply.
+- **To recover**, move the aircraft out of its own downwash with forward or sideways cyclic, then add collective once the rotor has clean air again.
+
+Turn on **Enable VRS Warning** in the HeliSim settings for an on-screen warning. Below ETL it comes in three stages as the descent builds: entering VRS from 2,000 ft/min, developing from about 2,900 ft/min, and fully developed VRS imminent from about 3,900 ft/min. The aircraft is susceptible long before the first one.

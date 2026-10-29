@@ -30,7 +30,7 @@ Arm the handle **before** discharging: a bottle only reaches a fire whose handle
 `ENG1 OUT`{: .mpd} or `ENG2 OUT`{: .mpd}. The other engine picks up the load and the aircraft is now single-engine: its limits change. See [single-engine limits]({{ '/flying/flight-model/' | relative_url }}#limits).
 
 1. **Collective**: lower it as needed to keep **Nr at 95% or more**. A heavy aircraft on a hot day may not hold a hover on one engine.
-2. **Airspeed**: in a hover or low and slow, gain forward speed if you can. Forward flight needs less power than hovering.
+2. **Airspeed**: in a hover or low and slow, gain forward speed if you can. Forward flight needs less power than hovering. Aim for at least **VSSE**, velocity safe single engine, shown on the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}).
 3. **Torque**: keep the good engine at or below 110%. Up to 122% is allowed for 2.5 minutes, up to 125% for 6 seconds.
 4. **Failed engine power lever**: **OFF**.
 5. **Weight**: if you cannot hold height, jettison stores with {% include key.html id="fza_ah64_collectiveEmergJett" %}.

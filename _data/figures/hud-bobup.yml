@@ -5,7 +5,7 @@ crop:
 - -30
 - 640
 - 510
-caption: 'Pilot''s bob-up symbology: the aircraft has drifted about 10 ft right and 20 ft back from the stored point and yawed 6° right of the stored heading, and is moving back towards the point.'
+caption: 'Pilot''s bob-up symbology: the aircraft has drifted about 10 ft right and 20 ft back from the stored position and yawed 6° right of the stored heading. The acceleration cue is inside the bob-up box, taking the aircraft back over the position.'
 model:
   hd: false
   tv: false
@@ -32,11 +32,11 @@ model:
   baroAlt: 420
   vsi: 120
   vel:
-  - -0.8
-  - 1.2
+  - -1.2
+  - 2.4
   acc:
-  - -0.3
-  - 0.4
+  - -0.2
+  - 0.3
   bob:
   - -10
   - 20
@@ -71,7 +71,7 @@ callouts:
   y: 126
   side: l
   label: Bob-up box
-  text: The stored hover point. Fly it back over the reticle.
+  text: The stored hover position. Place the acceleration cue inside it to move back over the position.
 - n: 2
   x: 312
   y: 26
@@ -79,8 +79,14 @@ callouts:
   label: Stored heading
   text: The heading when bob-up was selected.
 - n: 3
-  x: 299
-  y: 205
+  x: 297
+  y: 194
   side: l
   label: Velocity vector
-  text: Moving back towards the point.
+  text: Moving back towards the position.
+- n: 4
+  x: 271
+  y: 143
+  side: r
+  label: Acceleration cue
+  text: Inside the box.

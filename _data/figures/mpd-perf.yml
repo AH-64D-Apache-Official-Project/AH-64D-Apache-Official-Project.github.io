@@ -1,6 +1,6 @@
 title: PERF page
 kind: mpd
-caption: PERF page with the current gross weight, density altitude and temperature.
+caption: PERF page for the current gross weight, pressure altitude and temperature.
 state:
   page: PERF
   t:
@@ -46,31 +46,31 @@ callouts:
   y: 250
   side: t
   label: Hover torque
-  text: Torque needed to hover in and out of ground effect, and the go/no-go torque. The boxed value is the torque you are pulling now.
+  text: 'Required torque to hover IGE and OGE, and the go/no-go torque: a 5 ft hover at the maximum dual engine gross weight. The boxed value is the indicated torque, the higher engine now.'
 - n: 5
   x: 360
   y: 575
   side: l
   label: Max gross weight
-  text: Heaviest you can be to hover IGE and OGE, on both engines and on one. Yellow when you are above it.
+  text: Maximum gross weight to hover IGE and OGE, dual engine (DE) and single engine (SE).
 - n: 6
   x: 190
   y: 830
   side: l
   label: Max torque
-  text: Torque available, both engines and one.
+  text: Maximum torque available per engine, DE at the 30-minute limit and SE at the 2.5-minute limit.
 - n: 7
   x: 780
   y: 250
   side: r
   label: Cruise
-  text: Torque and fuel flow for best range and best endurance.
+  text: Torque per engine (Q) and total fuel flow (FF) at the maximum range (RNG) and maximum endurance (END) airspeeds.
 - n: 8
   x: 800
   y: 520
   side: r
   label: Speeds
-  text: VNE, single-engine safe speed, best range and best endurance speeds, true airspeed.
+  text: 'True airspeeds: VNE, velocity never exceed; VSSE, velocity safe single engine; maximum range (RNG) and maximum endurance (END).'
 - n: 9
   x: 900
   y: 722

@@ -52,13 +52,13 @@ The [radial menu]({{ '/targeting/radial/' | relative_url }}) has the same choice
 | **Transition** | Velocity vector to 60 kt, horizon line, waypoint data. |
 | **Cruise** | Pitch ladder, bank, barometric altitude, waypoint data. No velocity vector. |
 | **Hover** | Velocity vector to 6 kt. No attitude, no waypoint data. |
-| **Bob-up** | Hover, plus a box over the stored point. |
+| **Bob-up** | Hover, plus a box over the stored position. |
 
 ### Transition {#transition}
 
 {% include fig.html id="hud-transition" %}
 
-The **velocity vector** grows from the reticle in the direction you are moving over the ground. Its full length, to the top of the lubber line under the heading tape, is 60 kt. The **acceleration cue**, the circle, shows where the vector is heading.
+The **velocity vector** grows from the reticle in the direction you are moving over the ground. Its full length, to the top of the lubber line under the heading tape, is 60 kt. The **acceleration cue**, the circle, shows the aircraft's acceleration, which way and how hard. In transition it is always drawn from the tip of the velocity vector.
 
 The **horizon line** banks with the aircraft and moves a quarter as far as the real horizon in pitch, stopping at 30°. It sits a little below the reticle in level flight.
 
@@ -78,7 +78,9 @@ In hover the velocity vector's full length is 6 kt, so it shows small drift. The
 
 {% include fig.html id="hud-bobup" %}
 
-Bob-up adds an octagon, 12 ft across, over the point stored when you selected it. The edge of the display is 40 ft away; further than that, the box waits at the edge. The command heading caret shows the stored heading instead of the next waypoint.
+Bob-up adds an octagon, the bob-up box, 12 ft across, over the position stored when you selected it. The edge of the display is 40 ft away; further than that, the box waits at the edge. The command heading caret shows the stored heading instead of the next waypoint.
+
+To re-establish the aircraft over the stored position, place the acceleration cue inside the bob-up box.
 
 ### Symbols in the world {#world}
 

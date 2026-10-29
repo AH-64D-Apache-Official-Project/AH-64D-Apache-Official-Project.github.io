@@ -31,13 +31,16 @@ When Nr reaches 101% and the UFD shows no warnings or cautions, you are ready.
 ## Fly a circuit
 
 1. Press {% include key.html id="fza_ah64_symbologySelectUp" %} for **transition** symbology.
-2. Lower the nose a little and raise the collective to keep your height as you accelerate. Watch torque on the monocle; keep it below 100%.
+2. Lower the nose a little and raise the collective to keep your height as you accelerate. Watch torque on the monocle; keep it at or below 100%.
 3. Climb to about 500 ft and settle at 100 kt.
 4. Turn with the cyclic, using pedal to keep the trim ball centred.
 5. Fly back towards your take-off point, slowing to about 40 kt on the final approach, and descend.
 6. Below 40 kt and 50 ft, switch back to **hover** symbology, come to a hover, then lower the collective gently until you are on the ground.
 7. Collective fully down.
 {: .steps}
+
+> Once you are slower than about 24 kt, keep the descent under 300 ft/min. Descending faster than that, slow and with power applied, risks [vortex ring state]({{ '/flying/flight-model/' | relative_url }}#vortex-ring-state).
+{: .caution}
 
 ## Next steps
 

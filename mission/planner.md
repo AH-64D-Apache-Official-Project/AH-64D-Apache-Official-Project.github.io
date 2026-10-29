@@ -34,9 +34,9 @@ Changing the radar or swapping the IAFS and magazine is marked with a warning: i
 
 As you build the loadout the planner works out, for the pressure altitude and temperature where you are:
 
-- **Weights**: empty, ammunition, fuel, the gross weight and the maximum, and how much you could jettison.
-- **Hover torque** in and out of ground effect, maximum continuous torque, and maximum torque on both engines and one.
-- **Power margin**, **maximum gross weight**, **maximum range** and **endurance**, and the maximum rate of descent out of ground effect.
+- **Weights**: empty, ammunition, the current and maximum gross weight, and how much you could jettison, with the torque that would save: 1% for every 200 lb.
+- **Torque**: maximum torque available dual engine (DE) and single engine (SE), continuous DE torque, and the torque to hover in ground effect (IGE) and out of it (OGE). The DE power margin is the continuous torque left over in an OGE hover; the maximum rate of descent OGE is worked out from it.
+- **Airspeeds and fuel**: the maximum endurance and maximum range airspeeds, in knots true airspeed, each with its fuel flow; how long the fuel loaded lasts at the maximum range fuel flow; and VSSE, velocity safe single engine, now and after a jettison.
 
 These come from the same aircraft data as the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}). If the loadout leaves no power margin, take something off before you fly.
 
