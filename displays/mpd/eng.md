@@ -103,13 +103,13 @@ When a warning with an emergency procedure is active, the lower half of the page
 | `ENGINE 1 FIRE`{: .mpd} or `ENGINE 2 FIRE`{: .mpd} | Engine fire in flight, or on the ground. |
 | `APU FIRE`{: .mpd} | APU fire in flight, or on the ground. |
 | `AFT DECK FIRE`{: .mpd} | Aft deck fire. |
-| `ENGINE 1 OUT`{: .mpd} or `ENGINE 2 OUT`{: .mpd} | Single engine failure. Both together: dual engine failure. |
+| `ENGINE 1 OUT`{: .mpd} or `ENGINE 2 OUT`{: .mpd} | Single engine failure, with one engine out. |
 | `LOW ROTOR RPM`{: .mpd} | Low rotor RPM, Np failed low. |
 | `ENG1 OVSP`{: .mpd} or `ENG2 OVSP`{: .mpd} | Engine overspeed, Np failed high. |
 | `HYD FAILURE`{: .mpd} | Hydraulic failure. |
 | `TAIL ROTOR HYD`{: .mpd} | Tail rotor hydraulic failure. |
 
-`HIGH ROTOR RPM`{: .mpd} has no procedure, so it shows in the WCA list instead.
+`HIGH ROTOR RPM`{: .mpd} has no procedure, and neither do both engines out together, so these show in the WCA list instead.
 
 With more than one warning active, the page shows the most urgent: fires first, then engine failures, low rotor RPM, overspeed and hydraulics.
 
