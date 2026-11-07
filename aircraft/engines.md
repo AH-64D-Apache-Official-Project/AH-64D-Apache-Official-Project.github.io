@@ -1,9 +1,20 @@
 ---
 title: Engines and rotor
 lead: Two turboshaft engines drive the rotors through nose gearboxes and the main transmission. How they start, how they are governed, and how they fail.
-keywords: [engine, turboshaft, ng, np, nr, tgt, torque, power lever, idle, fly, governor, start, hot start, abort, overspeed, chips, oil, transmission, gearbox, rotor brake, drivetrain]
+keywords: [engine, turboshaft, t700, 701c, ng, np, nr, tgt, torque, oil, power lever, idle, fly, dec, governor, start, hot start, abort, overspeed, tgt limiter, droop, chips, transmission, gearbox, nose gearbox, rotor brake, drive train]
 seats: [PLT]
 ---
+
+## The engines
+
+The AH-64D is powered by two General Electric **T700-GE-701C** turboshaft engines. Each engine has four sections:
+
+| Section | Contains |
+|---|---|
+| **Cold** | The inlet and the compressor. |
+| **Hot** | The combustion section. |
+| **Power turbine** | The turbine that turns the energy from the hot section into shaft power, which turns the rotor. |
+| **Accessory** | The engine's support components: oil and fuel pumps, air turbine starter, hydromechanical unit (HMU), alternator and others. |
 
 ## The numbers you watch
 
@@ -14,18 +25,27 @@ seats: [PLT]
 | **Np** | Power turbine speed: the shaft that drives the rotor. | 101% |
 | **Nr** | Main rotor speed. | 101% |
 | **TQ** | Torque from each engine, percent. | Matched between engines, below 100%. |
+| **Oil** | Engine oil pressure, psi. | 23 to 120 psi. |
 
-All five are on the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}). Torque is also on the FLT page and the IHADSS.
+All are on the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}), oil pressure only in its ground format. Torque is also on the FLT page and the IHADSS.
+
+The torque, TGT, Np and Ng readings are colour coded:
+
+- **Green**: within the normal operating range.
+- **Yellow**: a cautionary, time-limited range. A timer counts down the time allowed; when it runs out, the engine or drive train starts taking damage.
+- **Red**: past the maximum, or below the minimum needed to operate. Red above a maximum means damage is being done.
+
+The limits themselves, and how long each range allows, are on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.
 
 ## Power levers
 
-Each engine has its own power lever with three detents: **OFF**, **IDLE** and **FLY**. At **FLY** the engine control unit governs Np, and therefore the rotor, at 101%: raise the collective and it adds fuel to hold the speed, lower it and it takes fuel away. Moving a lever from IDLE to FLY takes about eight seconds of travel; the rotor follows.
+Each engine has its own power lever, on the pilot's power lever quadrant, with three detents: **OFF**, **IDLE** and **FLY**. At **FLY** the engine's digital electronic control (DEC) governs Np, and therefore the rotor, at 101%: raise the collective and it adds fuel to hold the speed, lower it and it takes fuel away. Moving a lever from IDLE to FLY takes about eight seconds of travel; the rotor follows.
 
 With both engines at IDLE, moving either lever to **FLY** moves both. To bring one engine up on its own, the other must be OFF or already at FLY. The levers cannot go to FLY while the rotor brake is on.
 
 ## Starting
 
-The starters are air turbines. They need bleed air from the APU, or from the other engine once its lever is at FLY.
+The starters are air turbines. They need pneumatic air from the APU, or bleed air from the other engine once its lever is at FLY.
 
 1. Set the start switch to **START**. The `ENG1 START`{: .mpd} advisory shows and Ng begins to climb.
 2. Above **23% Ng**, move the power lever to **IDLE**. Fuel is introduced and the engine lights off.
@@ -44,15 +64,21 @@ To **abort** a start, set the start switch to **IGN ORIDE**, or click it again w
 
 ## Limits and damage
 
-Running outside a limit is counted, not just shown. The aircraft allows a set time in each band, then damages the engine, the nose gearboxes or the transmission. The bands are on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.
+Running outside a limit is counted, not just shown. The aircraft allows a set time in each range, then damages the engine, the nose gearboxes or the transmission. The ranges are on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.
 
 | Exceeded | Damages |
 |---|---|
 | TGT, Ng, Np | That engine |
-| Torque, both engines | The main transmission |
-| Torque, one engine | That engine's nose gearbox |
+| Torque, dual engine | The main transmission |
+| Torque, single engine | That engine's nose gearbox |
 
-The engines also protect themselves. The governor holds TGT at 867 °C (896 °C on one engine). A mechanical limiter shuts the engine down at 110% Ng, and an electrical trip does the same at about 120% Np. A tripped engine cannot be restarted until the aircraft is repaired. `ENG1 OVSP`{: .mpd} / `ENG2 OVSP`{: .mpd} warns of Np at 115% or more.
+### Engine protection
+
+- **TGT limiter.** The DEC stops feeding the engine more fuel at **867 °C** dual engine, or **896 °C** single engine. At the limit TGT stops rising, but no more power reaches the rotor either: pull more collective and the rotor slows down, or "droops".
+- **Ng overspeed.** A mechanical overspeed protection shuts the engine down at **110% Ng**.
+- **Np overspeed.** An electrical overspeed protection shuts the engine down at **119.6% Np**. `ENG1 OVSP`{: .mpd} / `ENG2 OVSP`{: .mpd} warns of Np at 115% or more, before it trips.
+
+An engine shut down by its overspeed protection cannot be restarted until the aircraft is repaired.
 
 ### How an engine fails
 
@@ -68,17 +94,35 @@ Engine damage gets worse in steps, whether it comes from enemy fire or from exce
 
 Once you see chips or low oil pressure, the engine is on borrowed time. Reduce power on it, plan to land, and see [Emergency procedures]({{ '/flying/emergency/' | relative_url }}).
 
-## Drivetrain
+## Drive train
 
 | Part | Carries | When damaged |
 |---|---|---|
-| **Nose gearboxes** (one per engine) | Each engine's torque into the transmission. | `GRBX1 OIL PSI`{: .mpd}, then `GRBX1 CHIPS`{: .mpd}. A damaged one slips, so its engine's torque jumps about. If it comes apart, its engine overspeeds. |
-| **Main transmission** | Both engines to the main rotor, the tail drive and the accessories. | `XMSN1 OIL PSI`{: .mpd}, `XMSN2 OIL PSI`{: .mpd}, then `XMSN CHIPS`{: .mpd}. If it fails, it takes the rotors, generators and hydraulic pumps with it. |
-| **Intermediate** and **tail rotor gearboxes** | The tail rotor. | `GRBX VIB`{: .mpd}. If either fails, the tail rotor stops turning. |
+| **Nose gearboxes** (one per engine) | Each engine's torque into the main transmission. | `GRBX1 OIL PSI`{: .mpd}, then `GRBX1 CHIPS`{: .mpd}. A damaged one slips, so its engine's torque jumps about. |
+| **Main transmission** | Both engines to the main rotor, the tail rotor drive and the accessory section. | `XMSN1 OIL PSI`{: .mpd}, `XMSN2 OIL PSI`{: .mpd}, then `XMSN CHIPS`{: .mpd}. |
+| **Intermediate** and **tail rotor gearboxes** | The tail rotor. | `GRBX VIB`{: .mpd}. |
+
+Each message in these sequences means more severe damage than the one before it.
+
+### Main transmission
+
+Torque limits are exceeded on the main transmission when operating **dual engine**. As it is damaged, the transmission warns of its impending failure with `XMSN1 OIL PSI`{: .mpd}, then `XMSN2 OIL PSI`{: .mpd}, then `XMSN CHIPS`{: .mpd}. Once `XMSN CHIPS`{: .mpd} shows, land immediately, before the transmission fails.
+
+A transmission failure is catastrophic: all hydraulic and electrical power, the main rotor and the tail rotor are lost.
+
+### Nose gearboxes
+
+Torque limits are exceeded on a nose gearbox when operating **single engine**. As it is damaged, the gearbox warns of its impending failure with `GRBX1 OIL PSI`{: .mpd}, then `GRBX1 CHIPS`{: .mpd} (or gearbox 2). Once `GRBX1 CHIPS`{: .mpd} shows, land immediately, before the gearbox fails.
+
+When a nose gearbox fails, its engine loses its load. The engine accelerates to maximum power, trips its Np or Ng overspeed protection and shuts down. On one engine that leaves you with none: enter an [autorotation]({{ '/flying/emergency/' | relative_url }}#dual-engine-failure).
+
+### Tail rotor gearboxes
+
+The tail rotor has two gearboxes: the **intermediate** gearbox and the **tail rotor gearbox** itself. Critical damage to either shows the `GRBX VIB`{: .mpd} caution, warning of an impending failure. If either fails, the tail rotor stops turning and its thrust is lost. See [Gearbox vibration]({{ '/flying/emergency/' | relative_url }}#gearbox-vibration).
 
 ## Rotor brake
 
-The rotor brake switch steps **OFF → BRK → LOCK → OFF**.
+The rotor brake slows the rotor to a stop after shutdown, and locks it, for example in high winds. It starts in the OFF position. The rotor brake switch steps **OFF → BRK → LOCK → OFF**.
 
 - **BRK** slows the rotor to a stop, in well under a minute, but only once Nr is below 50%.
 - **LOCK** holds the stopped rotor.

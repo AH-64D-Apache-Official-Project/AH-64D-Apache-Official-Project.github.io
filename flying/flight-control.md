@@ -4,7 +4,7 @@ lead: The flight management computer stabilises the Apache and can hold its atti
 keywords: [fmc, sas, hold, attitude hold, altitude hold, heading hold, position hold, force trim, trim, beep, hover hold]
 ---
 
-The flight management computer (FMC) runs four features. All of them need DC power and pressure to the flight controls (primary hydraulics, or utility down to the accumulator). The `FMC DISENG`{: .mpd} caution shows when the primary hydraulic pump has failed or any of the FMC's pitch, roll, yaw or collective channels is off; see the [UTIL page]({{ '/displays/mpd/util/' | relative_url }}). Without the FMC you fly on the mechanical controls alone.
+The flight management computer (FMC) runs four features. All of them need DC power and primary hydraulic pressure: the FMC can only move the flight controls through the primary side of the servos. The `FMC DISENG`{: .mpd} caution shows when the primary hydraulic pump has failed or any of the FMC's pitch, roll, yaw or collective channels is off; see the [UTIL page]({{ '/displays/mpd/util/' | relative_url }}). Without the FMC you fly on the mechanical controls alone.
 
 | Feature | What it does | How you control it |
 |---|---|---|

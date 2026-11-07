@@ -95,6 +95,14 @@ def tsd_symbols(spec):
         return cx + p[0] * s, cy - p[1] * s
 
     out = []
+    # Zones, areas and lines (fza_mpd_fnc_tsdZoneDrawCanvas): dash 0 solid, 1 short dashes, 2 an active zone's long dashes
+    for sh in spec.get('shapes', []):
+        pts = [screen(p) for p in sh['pts']]
+        d = 'M ' + ' L '.join('%.1f %.1f' % (x * render.S, y * render.S) for x, y in pts) + (' Z' if sh.get('closed', True) else '')
+        dash = {1: (0.006, 0.006), 2: (0.02, 0.012)}.get(sh.get('dash', 0))
+        out.append('<path d="%s" fill="none" stroke="%s" stroke-width="%.1f"%s/>'
+                   % (d, sh.get('colour', TSD_LINE_COLOUR), TSD_LINE_WIDTH * render.S,
+                      ' stroke-dasharray="%.1f %.1f"' % (dash[0] * render.S, dash[1] * render.S) if dash else ''))
     for a, b in spec.get('lines', []):
         (x1, y1), (x2, y2) = screen(a), screen(b)
         out.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="%.1f"/>'

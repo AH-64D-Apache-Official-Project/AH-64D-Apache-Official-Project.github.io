@@ -8,7 +8,7 @@ Bindings are in **Options → Controls**. For which to set up first, and the coc
 
 ## AH-64D Official Project
 
-{% assign groups = "Sights|Night vision|IHADSS|TADS|Laser|Fire control radar|Weapons|Countermeasures|Radial menu" | split: "|" -%}
+{% assign groups = "Sights|Night vision|IHADSS|TADS|Laser|Fire control radar|MPD cursor|Weapons|Countermeasures|Radial menu" | split: "|" -%}
 {%- for g in groups %}
 ### {{ g }}
 
@@ -53,7 +53,7 @@ These are Arma's own bindings, in their usual categories. In the Apache they do 
 |---|---|
 | **Left MPD**, **Right MPD** | Every button: `L1`–`L6`, `R1`–`R6`, `T1`–`T6`, `B1`/MENU–`B6`, and the FCR, WPN, TSD, A/C and VID page buttons. |
 | **Engine panel** | APU, battery, rotor brake; each engine's start switch, and its power lever to OFF, IDLE or FLY. |
-| **Fire panel** | Select engine 1, the APU or engine 2; discharge the primary or reserve bottle; test. |
+| **Fire panel** | Arm the ENG 1, APU or ENG 2 FIRE pushbutton; discharge the primary or reserve bottle; test. |
 | **Armament panel** | ARM/SAFE, ground override. |
 | **Warning/caution panel** | Acknowledge master caution, master warning. |
 | **Others** | Emergency hydraulics, NVS mode, floodlight, anti-collision light, keyboard unit, monocle, canopy door. |

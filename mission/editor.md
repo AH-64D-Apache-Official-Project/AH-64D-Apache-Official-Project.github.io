@@ -28,6 +28,8 @@ The point takes the entity's position and height.
 
 The points are mission data, not loaded into any aircraft automatically. Crews load them with **MASTER LOAD** on the [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu), which replaces whatever the aircraft held. Tell your players to do it, or brief them on the point numbers so they can build their routes.
 
+Lines, engagement areas, zones and routes cannot be placed in the editor. Crews build those as a [DTC]({{ '/mission/planner/' | relative_url }}#dtc) in the mission planner, which MASTER LOAD loads on top of your points. A DTC pushed to the mission from the planner's DTC manager is there for every crew to open.
+
 > Number your waypoints in the order you want them flown. Players build routes by typing point numbers on the KU, so W01, W02, W03 is far quicker than a scattered list.
 {: .tip}
 

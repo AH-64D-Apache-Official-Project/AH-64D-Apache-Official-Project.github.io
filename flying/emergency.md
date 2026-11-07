@@ -1,7 +1,7 @@
 ---
 title: Emergency procedures
 lead: What to do when a warning or caution comes up. Short checklists, with the detail on the pages they link to.
-keywords: [emergency, fire, engine failure, single engine, dual engine, autorotation, hydraulics, emer hyd, low rotor, high rotor, generator, chips, jettison]
+keywords: [emergency, fire, engine failure, single engine, dual engine, autorotation, hydraulics, emer hyd, tail rotor, low rotor, high rotor, generator, tru, chips, transmission, gearbox, grbx vib, jettison]
 seats: [PLT, CPG]
 ---
 
@@ -14,16 +14,16 @@ For most warnings, the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#emer
 
 ## Engine fire {#fire}
 
-`ENGINE 1 FIRE`{: .mpd}, `ENGINE 2 FIRE`{: .mpd} or `APU FIRE`{: .mpd}, with a voice warning and the fire handle lit red.
+`ENGINE 1 FIRE`{: .mpd}, `ENGINE 2 FIRE`{: .mpd} or `APU FIRE`{: .mpd}, with a voice warning and the FIRE pushbutton lit red.
 
-1. **Confirm which side.** Check the lit fire handle, or the WCA page.
-2. **Fire handle** for that engine or the APU: press to **arm**. Fuel to it is shut off; that engine runs down.
+1. **Confirm which side.** Check the lit FIRE pushbutton, or the WCA page.
+2. **FIRE pushbutton** for that engine or the APU: press to **arm**. Fuel to it is shut off; that engine runs down.
 3. **PRI**: press to discharge the primary bottle.
 4. If the fire still burns, **RES**: discharge the reserve bottle.
 5. Engine fire: continue as for a [single engine failure](#engine-failure). APU fire on the ground: shut down.
 {: .steps}
 
-Arm the handle **before** discharging: a bottle only reaches a fire whose handle is already armed. Each bottle can fail, one time in four, which is why there are two. A fire that is not put out usually burns itself out within half a minute or so once the engine is shut down, doing damage until it does. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}).
+Arm the FIRE pushbutton **before** discharging: a bottle only reaches a fire whose pushbutton is already armed. Each bottle can fail, one time in four, which is why there are two. A fire that is not put out usually burns itself out within half a minute or so once the engine is shut down, doing damage until it does. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}).
 
 ## Single engine failure {#engine-failure}
 
@@ -47,7 +47,23 @@ Do not try to restart an engine that failed from damage. A tripped or fire-damag
 2. Land as soon as practical, before it fails. An engine that fails from oil starvation may catch fire.
 {: .steps}
 
-`GRBX`, `XMSN` and `GRBX VIB` cautions mean the drivetrain is damaged. Land as soon as possible: a failed transmission takes the rotors, generators and hydraulic pumps with it, and a failed tail gearbox stops the tail rotor. See [Engines and rotor]({{ '/aircraft/engines/' | relative_url }}#drivetrain).
+## Transmission and nose gearboxes
+
+`XMSN1 OIL PSI`{: .mpd}, `XMSN2 OIL PSI`{: .mpd} and `XMSN CHIPS`{: .mpd} mean the main transmission is damaged, usually from exceeding the dual engine torque limits. `GRBX1 OIL PSI`{: .mpd} and `GRBX1 CHIPS`{: .mpd} (or gearbox 2) mean a nose gearbox is damaged, usually from exceeding the single engine torque limits. Each message is more severe than the one before it.
+
+1. **Torque**: reduce it, back inside its limits.
+2. **Land as soon as possible.** Once `XMSN CHIPS`{: .mpd} or a `GRBX CHIPS`{: .mpd} shows, land **immediately**, before it fails.
+{: .steps}
+
+A transmission failure is catastrophic: all hydraulic and electrical power, the main rotor and the tail rotor are lost. A nose gearbox failure overspeeds its engine until the engine's overspeed protection shuts it down; on one engine, that means an [autorotation](#dual-engine-failure). See [Drive train]({{ '/aircraft/engines/' | relative_url }}#drive-train).
+
+## Gearbox vibration
+
+`GRBX VIB`{: .mpd}: the intermediate or tail rotor gearbox is critically damaged, and the tail rotor may stop turning.
+
+1. **Airspeed**: accelerate above **100 kt**, and be prepared for a loss of tail rotor thrust.
+2. **Land**, staying above 100 kt all the way to touchdown, so the aircraft does not spin about its yaw axis if the tail rotor fails.
+{: .steps}
 
 ## Dual engine failure
 
@@ -72,15 +88,15 @@ Both engines out: the rotor is your only source of energy.
 | Message | Action |
 |---|---|
 | `PRI HYD PSI`{: .mpd} / `PRI HYD LVL`{: .mpd} | The utility system still powers the flight controls. If the primary pump has failed, `BUCS FAIL`{: .mpd} and `FMC DISENG`{: .mpd} follow: fly without the hold modes. Land as soon as practical. |
-| `UTIL HYD PSI`{: .mpd} / `UTIL HYD LVL`{: .mpd} | Gun and rocket pylons are lost (`GUN FAIL`{: .mpd}, **PYLON ERROR**). The primary system keeps the flight controls. Land as soon as practical. |
-| `HYD FAIL`{: .mpd} | Both pumps failed. Press **EMER HYD** for about a minute and a half of control from the accumulator, and land at once. |
-| `TAIL RTR`{: .mpd} | Tail rotor control lost. Land as soon as possible. |
+| `UTIL HYD PSI`{: .mpd} / `UTIL HYD LVL`{: .mpd} | The AWS and pylon articulation are lost (`GUN FAIL`{: .mpd}, **PYLON ERROR**). The primary system keeps the flight controls. Land as soon as practical. |
+| `HYD FAIL`{: .mpd} | Primary and utility hydraulics both lost: all control of the aircraft is lost. **Immediately** press **EMER HYD**, in either crew station, and land without delay. The accumulator gives about 60 seconds of control. |
+| `TAIL RTR`{: .mpd} | Primary pressure and utility fluid both lost. The tail rotor stays fixed in its last commanded position and does not answer the pedals. Land as soon as possible. |
 
 See [Hydraulics]({{ '/aircraft/electrical/' | relative_url }}#hydraulics) and [Emergency hydraulics]({{ '/aircraft/electrical/' | relative_url }}#emergency-hydraulics).
 
 ## Electrical
 
-One generator or rectifier carries the whole load, so `GEN1 FAIL`{: .mpd} or `RECT1 FAIL`{: .mpd} on its own needs no action beyond landing when convenient. With both of a pair failed you lose AC or DC systems: the MPDs, IHADSS, radar, sights or countermeasures, depending on which. See [What needs what]({{ '/aircraft/electrical/' | relative_url }}#what-needs-what).
+A single generator and a single TRU carry the whole load, so `GEN1 FAIL`{: .mpd} or `RECT1 FAIL`{: .mpd} on its own needs no action beyond landing when convenient. With both of a pair failed you lose AC or DC systems: the MPDs, IHADSS, radar, sights or countermeasures, depending on which. With both generators failed, the battery bus lasts about 12 minutes. See [What needs what]({{ '/aircraft/electrical/' | relative_url }}#what-needs-what).
 
 ## Fuel
 

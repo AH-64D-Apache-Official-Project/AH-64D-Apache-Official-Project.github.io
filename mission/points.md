@@ -21,15 +21,20 @@ Points are the aircraft's own, shared by both crew stations. Each aircraft has i
 ## Where points come from
 
 - **The mission.** The mission maker places points in the editor ([For mission makers]({{ '/mission/editor/' | relative_url }}#points)). Load them into the aircraft with **MASTER LOAD** on the [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu). A master load replaces the points the aircraft holds.
-- **The TSD.** Add, edit, delete or store points on the [WPT and THRT pages]({{ '/displays/mpd/tsd/' | relative_url }}#wpt). **STO NOW** stores your present position: a waypoint, or a target on the THRT page in the ATK phase.
-- **The sights.** The CPG's **Store/Update** stores a target where the sight is looking, and the radar's **TGT** button stores its next-to-shoot. Both take the next free `T` number, overwriting from `T01` when all 50 are used. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}#storing-a-target).
+- **A DTC.** Points, routes, lines, areas and zones planned in the [mission planner]({{ '/mission/planner/' | relative_url }}#dtc) and uploaded to the aircraft are loaded by the same **MASTER LOAD**, over the mission's.
+- **The TSD.** Add, edit, delete or store points on the [WPT and THRT pages]({{ '/displays/mpd/tsd/' | relative_url }}#wpt), by typing or with the [MPD cursor]({{ '/displays/mpd/tsd/' | relative_url }}#cursor). **STO NOW** stores your present position: a waypoint, or a target on the THRT page in the ATK phase.
+- **The sights.** The CPG's **Store/Update** stores a target where the sight is looking, and the FCR page's [TGT]({{ '/displays/mpd/fcr/' | relative_url }}#tgt) stores radar targets. Both take the next free `T` number, overwriting from `T01` when all 50 are used. A radar target chosen with the TSD's [CAQ]({{ '/displays/mpd/tsd/' | relative_url }}#caq) is stored as `T50`. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}#storing-a-target).
 
 ## Using points
 
 - **Routes**: build one on the [RTE page]({{ '/displays/mpd/tsd/' | relative_url }}#rte) from waypoints, hazards and control measures.
 - **Direct to**: **DIR** on the RTE page flies straight to any point.
-- **Acquisition source**: any point can be your sight's [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq), from the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord), which also gives range to it.
+- **Acquisition source**: any point can be your sight's [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq), from the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord), which also gives range to it, or picked off the map with the TSD's [CAQ]({{ '/displays/mpd/tsd/' | relative_url }}#caq).
 - The TSD's [SHOW page]({{ '/displays/mpd/tsd/' | relative_url }}) sets which kinds of point are drawn in each phase.
+
+## Lines, areas and zones
+
+Besides points, the aircraft holds up to 15 **lines** (phase and boundary lines, FLOT, FLET and FSCL), 12 **engagement areas**, and 8 **priority fire** and 8 **no fire zones**. Lines and areas come only from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc); zones can also be drawn on the TSD's [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn). The TSD draws them, the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord) lists lines and areas, and the radar uses the zones to [sort its targets]({{ '/targeting/fcr/' | relative_url }}#zones).
 
 ## Flying a route
 

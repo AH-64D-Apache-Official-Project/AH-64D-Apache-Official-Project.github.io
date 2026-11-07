@@ -34,7 +34,7 @@ The transfer pump moves fuel between the main cells at about 50 lb/min.
 | **AUTO** | Keeps the cells in balance. When a cell falls below about 810 lb and the other holds noticeably more, fuel is moved into the lighter one. Moving fuel *out* of the forward cell needs both engines running, so after a single-engine failure the system cannot strand fuel away from the working engine. |
 | **OFF** | No transfer. |
 
-AUTO needs air to run the pump: the APU, or an engine running.
+AUTO needs pneumatic air to run the pump: the APU, or an engine running.
 
 ## Auxiliary tanks
 

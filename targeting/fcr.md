@@ -1,7 +1,7 @@
 ---
 title: Fire control radar
 lead: How to use the Longbow radar. Who controls it, how to scan, what it can see, and how to step through its targets.
-keywords: [fcr, radar, longbow, scan, single scan, continuous, gtm, atm, rmap, tpm, scan size, nts, ants, centerline, owner, link, slave, detection]
+keywords: [fcr, radar, longbow, scan, single scan, continuous, gtm, atm, rmap, tpm, scan size, nts, ants, centerline, owner, link, slave, detection, zone, priority fire zone, no fire zone, tgt, cursor]
 seats: [PLT, CPG]
 redirect_from:
   - /targeting-fcr.html
@@ -85,9 +85,18 @@ Targets are ranked: bright before dim, then air defence, wheeled, tracked, helic
 
 The highest-priority target is the **next to shoot** (NTS), and the one after it the **alternate** (ANTS). Step the NTS through the top 16 with `L1`{: .vab} **NTS** on the FCR page or {% include key.html id="vehLockTargets" %}, as the owner with FCR as your sight. The NTS stays on its target as long as that target remains in the top 16.
 
-`L4`{: .vab} **TGT** on the FCR page stores the NTS as a target point, the next free from `T01`{: .mpd} to `T50`{: .mpd}.
+With FCR as your sight you can also choose the NTS with the [MPD cursor]({{ '/displays/mpd/fcr/' | relative_url }}#cursor). **TGT** on the FCR page stores radar targets as target points, `T01`{: .mpd} to `T50`{: .mpd}: see [TGT]({{ '/displays/mpd/fcr/' | relative_url }}#tgt).
 
 With FCR as your sight, a new NTS also becomes your [range source]({{ '/targeting/sights/' | relative_url }}#range), and the radar-guided Hellfires are fired at it: see [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#rf).
+
+## Zones {#zones}
+
+Priority fire (PF) and no fire (NF) zones, drawn on the TSD's [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn) or loaded from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc), change what the radar puts first:
+
+- Targets in the **active PF zone** rank above all others. After a scan, if the NTS is outside the PF zone and there are targets in it, the NTS moves into the zone.
+- Targets in an **active NF zone** are not shown on the FCR page, the TSD or the helmet, and cannot become the NTS or ANTS.
+
+Zones take effect on the next scan. The active ones are drawn on the GTM and ATM pages.
 
 ## The centreline {#centerline}
 

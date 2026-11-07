@@ -148,6 +148,50 @@ fza_ah64_tadsLHGLmc:
   group: TADS
   keys: [Ctrl, T]
   desc: Toggles the linear motion compensator.
+fza_ah64_iatEngage:
+  name: "IAT/OFS: IAT"
+  group: TADS
+  desc: "CPG. Tap to track the target nearest the reticle, hold to size the gates, press again for manual track. See the image auto tracker."
+fza_ah64_iatOffset:
+  name: "IAT/OFS: OFS"
+  group: TADS
+  desc: CPG. While tracking, lets your aim input move the line of sight about the target; again to return to it.
+fza_ah64_iatPolarityWhite:
+  name: "IAT Polarity: White"
+  group: TADS
+  desc: CPG. The image auto tracker looks for a white target.
+fza_ah64_iatPolarityAuto:
+  name: "IAT Polarity: Auto"
+  group: TADS
+  desc: CPG. The image auto tracker chooses its polarity.
+fza_ah64_iatPolarityBlack:
+  name: "IAT Polarity: Black"
+  group: TADS
+  desc: CPG. The image auto tracker looks for a black target.
+fza_ah64_mpdCursorUp:
+  name: "MPD Cursor: Up"
+  group: MPD cursor
+  desc: Moves your MPD cursor up, faster the further it is pushed and the longer it is held. Bind to an axis, a hat or a key.
+fza_ah64_mpdCursorDown:
+  name: "MPD Cursor: Down"
+  group: MPD cursor
+  desc: Moves your MPD cursor down.
+fza_ah64_mpdCursorLeft:
+  name: "MPD Cursor: Left"
+  group: MPD cursor
+  desc: Moves your MPD cursor left. Pushed again at the inner edge of an MPD, it moves onto the other one.
+fza_ah64_mpdCursorRight:
+  name: "MPD Cursor: Right"
+  group: MPD cursor
+  desc: Moves your MPD cursor right.
+fza_ah64_mpdCursorEnter:
+  name: "MPD Cursor: Enter"
+  group: MPD cursor
+  desc: Presses the button whose label the cursor is on, or acts on what it is over on the TSD or FCR page.
+fza_ah64_mpdCursorDisplaySelect:
+  name: "MPD Cursor: Display Select"
+  group: MPD cursor
+  desc: Moves your MPD cursor to the centre of your other MPD.
 fza_ah64_wasGun:
   name: WAS Gun
   group: Weapons

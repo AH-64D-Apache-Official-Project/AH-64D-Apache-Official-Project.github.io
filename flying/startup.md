@@ -7,7 +7,7 @@ redirect_from:
   - /startup.html
 ---
 
-The engines, APU and battery are worked from the **pilot's** left console. The CPG cannot start the aircraft. Panel locations are shown on the [cockpit tour]({{ '/aircraft/cockpit/' | relative_url }}).
+The engines, APU and battery are worked from the **pilot's** power lever quadrant, on the left console. The CPG cannot start the aircraft. Panel locations are shown on the [cockpit tour]({{ '/aircraft/cockpit/' | relative_url }}).
 
 ## Before you start
 
@@ -20,12 +20,12 @@ The engines, APU and battery are worked from the **pilot's** left console. The C
 1. **Rotor brake** switch: **OFF**. It steps OFF → BRK → LOCK → OFF. With the brake set, the power levers will not go to FLY.
 2. **MSTR IGN** switch: **BATT**. The UFD comes on. The MPDs stay dark until the APU is running.
 3. **HDU**: fit the monocle from its stowage on the right side of the cockpit. See [IHADSS]({{ '/displays/ihadss/' | relative_url }}).
-4. **APU** pushbutton: press. The UFD shows `APU START`{: .mpd}, then `APU PWR ON`{: .mpd}, then `APU ON`{: .mpd} when it is ready to start engines. The MPDs come on: ENG on the left, the DTU page on the right.
+4. **APU** pushbutton: press. The UFD shows `APU START`{: .mpd} and `APU PWR ON`{: .mpd}. `ACCUM PSI`{: .mpd} shows while the accumulator is discharged, and clears once the pumps have recharged it. `APU ON`{: .mpd} shows when the APU is ready to start engines. The MPDs come on: ENG on the left, the DTU page on the right.
 5. **ENG 1 START** switch: **START**. The switch springs back; the `ENG1 START`{: .mpd} advisory shows while the starter turns.
 6. Watch **Ng** on the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}). Above **23%**, move the **engine 1 power lever** to **IDLE**. Fuel is introduced and the engine lights off.
 7. The starter drops out at 52% Ng. Let Ng settle at about **68%**, idle.
 8. Repeat steps 5 to 7 for **engine 2**.
-9. **Power levers**: **FLY**. With both engines at idle, moving either lever to FLY takes both. Nr comes up to **101%**.
+9. **Power levers**: **FLY**. With both engines at idle, moving either lever to FLY takes both. Nr comes up to **101%**; the APU disengages from the accessory section at about 95% Nr.
 10. **APU** pushbutton: press to shut the APU down once both engines are at FLY. Left running in flight, it raises the `APU ON`{: .mpd} caution.
 11. Check the UFD and the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}): no warnings, no cautions.
 {: .steps}

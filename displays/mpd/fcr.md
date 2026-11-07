@@ -1,7 +1,7 @@
 ---
 title: FCR page
 lead: The fire control radar's display. Its ground and air targeting formats, the radar map and the terrain profile, the buttons, and what each symbol means.
-keywords: [fcr, radar, longbow, gtm, atm, rmap, tpm, nts, ants, c scp, cscope, scan, centerline, target symbols, lobl, loal, terrain profile, clearance]
+keywords: [fcr, radar, longbow, gtm, atm, rmap, tpm, nts, ants, c scp, cscope, scan, centerline, target symbols, lobl, loal, terrain profile, clearance, tgt, store, zoom, cursor, zone]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-fcr.html
@@ -46,13 +46,41 @@ While the radar scans, the **scan bar** sweeps across the sector: green for a co
 | `T1`{: .vab} | `C SCP`{: .mpd} | Shows the radar's targets on your helmet display, at their places in the outside world, or in the TADS picture when it is up. Boxed when on. Only on your own display. |
 | `L1`{: .vab} | `NTS`{: .mpd} | Steps the next-to-shoot to the next target. The same as Arma's **Lock target** key. |
 | `L2`{: .vab} / `R2`{: .vab} | arrows | Slews the scan centerline left or right. See [Fire control radar]({{ '/targeting/fcr/' | relative_url }}#centerline). |
-| `L4`{: .vab} | `TGT`{: .mpd} | Stores the NTS as the next free target point, **T01** to **T50**. Barriered while there is no NTS. |
+| `L4`{: .vab} | `TGT`{: .mpd} | Selects [TGT](#tgt), for storing radar targets as target points. Boxed while selected. |
+| `L5`{: .vab} | `ALL`{: .mpd} | With TGT selected: stores every target symbol on the page. |
+| `R1`{: .vab} | `ZOOM`{: .mpd} | GTM only: [zooms](#zoom) on an area you choose with the cursor, or back. |
 | `R6`{: .vab} | `ACQ`{: .mpd} | Opens the [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list. |
 | `B1`{: .vab} | | MENU. |
 
 `NTS`, `TGT`, `RF HO` and the arrows are shown only while the FCR is your sight. NTS and the arrows work only for the crew station that [owns the radar]({{ '/targeting/fcr/' | relative_url }}#owner).
 
-**UTIL**, **ZOOM**, **RF HO** and **ELEV** are not simulated.
+**UTIL**, **RF HO** and **ELEV** are not simulated, nor is ZOOM in RMAP.
+
+## Choosing targets with the cursor {#cursor}
+
+With FCR as your sight, the [MPD cursor]({{ '/displays/mpd/' | relative_url }}#cursor) can choose a target on the GTM, ATM or RMAP page. Over the scan area it shows a white **X**; on a target symbol, the symbol is drawn over a black circle instead. **Cursor Enter** then:
+
+- stores it, while [TGT](#tgt) is selected, or
+- makes it the NTS, if you [own the radar]({{ '/targeting/fcr/' | relative_url }}#owner).
+
+After the first scan of a burst, the cursor jumps to `L1`{: .vab} **NTS** if you own the radar, so **Cursor Enter** steps the NTS. It does not jump after you have chosen a target with it.
+
+## TGT {#tgt}
+
+`L4`{: .vab} **TGT** stores radar targets in the target file, as target points. It can only be selected with FCR as your sight and targets on the page, and can be deselected at any time.
+
+While TGT is selected:
+
+- a window at the top right shows the target point the next target will be stored at, and below it those stored since TGT was selected, the latest last;
+- **Cursor Enter** on a target stores it;
+- `L5`{: .vab} **ALL** stores every target symbol on the page;
+- RF HO, ELEV, the centreline arrows and the ACQ button are hidden.
+
+Targets take the next free number from `T01`{: .mpd} to `T50`{: .mpd}. A target already stored since TGT was selected is not stored again, even after a scan has moved it.
+
+## ZOOM {#zoom}
+
+In GTM, `R1`{: .vab} **ZOOM** puts a white box with an X on the cursor, sized by the scan size. Place it over the area you want with the cursor and press **Cursor Enter**: the page zooms in on that area, about six times in a wide scan. Outside the target area the normal cursor shows. Press **ZOOM** again for the full display.
 
 ## Target symbols
 
@@ -72,6 +100,8 @@ Each symbol shows what the target is and how it sits. Symbols are yellow; a **di
 </div>
 
 The 1.5 km split is only how the symbol is drawn. It does not decide how a missile is launched.
+
+The active [zones]({{ '/targeting/fcr/' | relative_url }}#zones) are drawn on the GTM and ATM pages, as on the TSD: the active PF zone white, active NF zones yellow. They are not drawn on RMAP.
 
 | Symbol | Meaning |
 |---|---|

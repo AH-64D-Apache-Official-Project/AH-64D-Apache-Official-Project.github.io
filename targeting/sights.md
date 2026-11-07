@@ -49,6 +49,8 @@ Open the list with `R6`{: .vab} **ACQ** on the FLT, ENG, TSD or WPN page. The li
 | `B5`{: .vab} | *point* | Your stored coordinate point, set on the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord). |
 | `B6`{: .vab} | **TADS** | The TADS line of sight. |
 
+You can also pick a point or radar target off the TSD map with the MPD cursor, using [CAQ]({{ '/displays/mpd/tsd/' | relative_url }}#caq).
+
 **SKR** and **RFI** are listed but cannot be selected. Any other button closes the list without changing anything.
 
 Only sources that make sense for your seat and sight are accepted:

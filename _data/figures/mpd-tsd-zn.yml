@@ -1,0 +1,52 @@
+title: TSD ZN page
+kind: mpd
+caption: 'ZN page drawing PF zones with OPT AUTO: one box cut into four strips, PF1 active and assigned to the ownship. NF1 is active to the right.'
+state:
+  page: TSD
+  src:
+    heading: 312
+  u:
+    MFD_IND_TSD_PHASE: 1
+    MFD_IND_TSD_SUBPAGE: 6
+    MFD_IND_TSD_FROZEN: 1
+    MFD_IND_TSD_HSI_HDG: 312
+    MFD_IND_TSD_OWNSHIP_X: 0.5
+    MFD_IND_TSD_OWNSHIP_Y: 0.69
+    MFD_IND_TSD_OWNSHIP_ROT: 0
+    MFD_IND_TSD_SCALE_BOXES: 10000
+    MFD_IND_TSD_ZN_VARIANT: 0
+    MFD_IND_TSD_ZN_TYPE: 0
+    MFD_IND_TSD_ZN_OPT: 0
+    MFD_IND_TSD_ZN_DRAW: 0
+    MFD_IND_TSD_ZN_ANY: 1
+    MFD_IND_TSD_ZN_EDIT: 0
+  t:
+    MFD_TEXT_IND_TSD_ZN_COUNT: '4'
+    MFD_TEXT_IND_TSD_ZN_SEL: PF1
+    MFD_TEXT_IND_TSD_ACQ_SRC: TADS
+  tsd:
+    scale: 10000
+    shapes:
+    - { pts: [[-2000, 3000], [-2000, 6000], [-1000, 6000], [-1000, 3000]], colour: '#FFFFFF', dash: 2 }
+    - { pts: [[-1000, 3000], [-1000, 6000], [0, 6000], [0, 3000]], colour: '#FFFFFF', dash: 1 }
+    - { pts: [[0, 3000], [0, 6000], [1000, 6000], [1000, 3000]], colour: '#FFFFFF', dash: 1 }
+    - { pts: [[1000, 3000], [1000, 6000], [2000, 6000], [2000, 3000]], colour: '#FFFFFF', dash: 1 }
+    - { pts: [[2600, 1400], [2600, 3000], [3900, 3000], [3900, 1400]], colour: '#FFFF00', dash: 2 }
+    points:
+    - { ident: TSD_ZONE_LABEL_WHITE, text: OWN, at: [-1500, 4500] }
+    - { ident: TSD_ZONE_LABEL_WHITE, text: PF2, at: [-500, 4500] }
+    - { ident: TSD_ZONE_LABEL_WHITE, text: PF3, at: [500, 4500] }
+    - { ident: TSD_ZONE_LABEL_WHITE, text: PF4, at: [1500, 4500] }
+    - { ident: TSD_ZONE_LABEL_YELLOW, text: NF1, at: [3250, 2200] }
+callouts:
+- { n: 1, x: 56, y: 248, side: l, label: TYPE, text: PF or NF zones. }
+- { n: 2, x: 60, y: 361, side: l, label: OPT, text: 'AUTO: one zone, cut into strips.' }
+- { n: 3, x: 56, y: 474, side: l, label: ACT, text: The active PF zone. }
+- { n: 4, x: 60, y: 567, side: l, label: DEL, text: Deletes the PF zones. }
+- { n: 5, x: 46, y: 700, side: l, label: '#Z', text: How many strips AUTO makes. }
+- { n: 6, x: 56, y: 815, side: l, label: DR, text: 'BX: a box from two corners.' }
+- { n: 7, x: 570, y: 46, side: t, label: ASN, text: Assigns a PF zone to you. }
+- { n: 8, x: 377, y: 520, side: l, label: Active PF zone, text: 'PF1, active and yours: alternating dashes, labelled OWN.', snap: false }
+- { n: 9, x: 623, y: 425, side: r, label: PF zones, text: 'PF2 to PF4, dashed.', snap: false }
+- { n: 10, x: 740, y: 610, side: r, label: NF zone, text: 'NF1, active, in yellow.', snap: false }
+- { n: 11, x: 512, y: 743, side: r, label: Ownship, text: 'Frozen in white where the map froze; the live aircraft in cyan.' }

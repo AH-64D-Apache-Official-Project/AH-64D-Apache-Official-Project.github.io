@@ -73,6 +73,9 @@ These are in **AH-64D Official Project**. The ones worth binding first:
 | {% include key.html id="fza_ah64_flare" %} | | One flare. |
 | {% include key.html id="fza_ah64_symbologySelectUp" %} | | Transition/cruise symbology. |
 | {% include key.html id="fza_ah64_symbologySelectDown" %} | | Hover/bob-up symbology. |
+| {% include key.html id="fza_ah64_mpdCursorUp" %}, Down, Left, Right | | The [MPD cursor]({{ '/displays/mpd/' | relative_url }}#cursor). Best on a hat or a small stick. |
+| {% include key.html id="fza_ah64_mpdCursorEnter" %} | | Presses what the MPD cursor is on. |
+| {% include key.html id="fza_ah64_iatEngage" %} | | CPG: the TADS [image auto tracker]({{ '/targeting/tads/' | relative_url }}#iat). |
 
 The full list, with defaults, is in the [keybind reference]({{ '/reference/keybinds/' | relative_url }}).
 

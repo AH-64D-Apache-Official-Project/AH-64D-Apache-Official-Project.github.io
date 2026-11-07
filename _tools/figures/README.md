@@ -49,6 +49,8 @@ Two layers the game draws over a page can be added to `state`:
     points:
       - { ident: WP, id: 2, at: [500, 4630] }       # icon, size, colour and labels come from FzaIconTypes
       - { ident: AE, id: 57, text: T72, at: [3300, 7300] }
+    shapes:                  # zones, areas and lines (fza_mpd_fnc_tsdZoneDrawCanvas); label them with TSD_ZONE_LABEL_* points
+      - { pts: [[-2000, 3000], [2000, 3000], [2000, 5000], [-2000, 5000]], colour: '#FFFFFF', dash: 2 }  # dash 0, 1 or 2
   video: { hd: true, fmt: wpn, ... }                # VIDEO page: an IHADSS model, drawn as the page's symbology layer
 ```
 

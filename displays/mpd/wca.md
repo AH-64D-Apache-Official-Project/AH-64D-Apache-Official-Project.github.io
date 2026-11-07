@@ -34,26 +34,26 @@ Press the lit **MASTER WARNING** or **MASTER CAUTION** button on the glareshield
 
 | Page text | UFD | Cause | Do |
 |---|---|---|---|
-| ENGINE 1 FIRE / ENGINE 2 FIRE / APU FIRE | None: the fire panel button lights | Fire detected. | [Engine fire]({{ '/flying/emergency/' | relative_url }}#fire). |
+| ENGINE 1 FIRE / ENGINE 2 FIRE / APU FIRE | None: the FIRE pushbutton lights | Fire detected. | [Engine fire]({{ '/flying/emergency/' | relative_url }}#fire). |
 | ENGINE 1 OUT / ENGINE 2 OUT | ENG1 OUT / ENG2 OUT | The engine has failed, or its Ng is below idle with its power lever at FLY. | [Single engine failure]({{ '/flying/emergency/' | relative_url }}#engine-failure). |
 | AFT DECK FIRE | DECK FIRE | Shown only by the fire panel's TEST switch. | |
 | ENG1 OVSP / ENG2 OVSP | ENG1 OVSP / ENG2 OVSP | Np at or above 115%. | Reduce power; the engine may trip. |
 | LOW ROTOR RPM | LOW RTR | Nr below 95% in the air. | Lower the collective. |
 | HIGH ROTOR RPM | HIGH RTR | Nr at or above 106%. | Raise the collective, reduce the descent. |
-| HYD FAILURE | HYD FAIL | Both hydraulic pumps failed. | Land as soon as possible. |
-| TAIL ROTOR HYD | TAIL RTR | Primary pressure and utility fluid both lost. | Land as soon as possible. |
+| HYD FAILURE | HYD FAIL | Primary and utility hydraulics both lost. | Press **EMER HYD** immediately and land without delay. See [Hydraulics]({{ '/flying/emergency/' | relative_url }}#hydraulics). |
+| TAIL ROTOR HYD | TAIL RTR | Primary hydraulic pressure low and utility hydraulic level low. The tail rotor stays where it was. | Land as soon as possible. |
 
 ## Cautions
 
 | Page text | UFD | Cause |
 |---|---|---|
 | GENERATOR 1 FAIL / GENERATOR 2 FAIL | GEN1 FAIL / GEN2 FAIL | Generator damaged. |
-| RECTIFIER 1 FAIL / RECTIFIER 2 FAIL | RECT1 FAIL / RECT2 FAIL | Rectifier damaged. |
+| RECTIFIER 1 FAIL / RECTIFIER 2 FAIL | RECT1 FAIL / RECT2 FAIL | Transformer rectifier unit (TRU) damaged. |
 | ENGINE 1 CHIPS / ENGINE 2 CHIPS | ENG1 CHIPS / ENG2 CHIPS | Metal in the engine oil. |
 | ENG 1 OIL PSI LOW / ENG 2 OIL PSI LOW | ENG1 OIL PSI / ENG2 OIL PSI | Engine oil pressure low. |
 | GRBX 1 OIL PSI LOW / GRBX 2 OIL PSI LOW | GRBX1 OIL PSI / GRBX2 OIL PSI | Nose gearbox damaged. |
 | GEARBOX 1 CHIPS / GEARBOX 2 CHIPS | GRBX1 CHIPS / GRBX2 CHIPS | Nose gearbox badly damaged. |
-| GEARBOX VIBRATION | GRBX VIB | Intermediate or tail gearbox damaged. |
+| GEARBOX VIBRATION | GRBX VIB | Intermediate or tail rotor gearbox damaged. See [Gearbox vibration]({{ '/flying/emergency/' | relative_url }}#gearbox-vibration). |
 | XMSN 1 OIL PSI LOW / XMSN 2 OIL PSI LOW | XMSN1 OIL PSI / XMSN2 OIL PSI | Main transmission damaged. |
 | MAIN XMSN CHIPS | XMSN CHIPS | Main transmission badly damaged. |
 | FORWARD FUEL LOW / AFT FUEL LOW | FWD FUEL LO / AFT FUEL LO | Fuel cell low. |
@@ -73,7 +73,7 @@ Press the lit **MASTER WARNING** or **MASTER CAUTION** button on the glareshield
 | APU START / APU POWER ON / APU ON / APU STOP | APU START / APU PWR ON / APU ON / APU STOP | APU starting, on line, running on the ground, shutting down. |
 | ENGINE 1 START / ENGINE 2 START | ENG1 START / ENG2 START | Starter turning. |
 | BATTERY | BATTERY | Battery damaged. |
-| ACCUM OIL PRES LO | ACCUM PSI | Hydraulic accumulator pressure low. |
+| ACCUM OIL PRES LO | ACCUM PSI | Utility hydraulic accumulator at or below its 1,650 psi precharge: normal during an APU start, until the pumps recharge it. |
 | CANOPY OPEN | CANOPY | A canopy door is open. |
 | ATTITUDE HOLD | ATT HOLD | Attitude hold engaged. |
 | RAD ALT HOLD / BAR ALT HOLD | RAD HOLD / BAR HOLD | Altitude hold engaged, radar or barometric. |

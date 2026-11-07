@@ -1,7 +1,7 @@
 ---
 title: TSD page
 lead: The tactical situation display. Your own aircraft at the centre of a moving plot of waypoints, routes, targets, threats and radar returns.
-keywords: [tsd, tactical situation display, map, nav, atk, phase, scale, show, waypoint, route, threat, coord, abr, hsi, wind, endurance]
+keywords: [tsd, tactical situation display, map, nav, atk, phase, scale, show, waypoint, route, threat, coord, abr, hsi, wind, endurance, cursor, frz, freeze, pan, zoom, caq, cursor acquisition, zn, zone, priority fire zone, no fire zone, pfz, nfz, trp, line, area, flot, flet, phase line]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-tsd.html
@@ -37,24 +37,81 @@ The TSD has no terrain map. It plots points, lines and symbols on black, at the 
 | **Threats** | Radar and laser warnings from the [ASE]({{ '/weapons/ase/' | relative_url }}), placed on the ring at their bearing. A launch flashes. |
 | **TADS line of sight** | While the CPG's sight is the TADS: a line out to the TADS range, with a crosshair at its end. |
 | **Radar footprint** | While your sight is the FCR (or the CPG is linked TADS-FCR): the scan sector out to 8 km. Green while scanning continuously or idle, white for a single scan. |
+| **Zones** | Priority fire (PF) zones in white, no fire (NF) zones in yellow. See [Zones on the map](#zones-on-the-map). |
+| **Lines and areas** | Lines and engagement areas from the [DTC]({{ '/mission/planner/' | relative_url }}#dtc). See [Zones on the map](#zones-on-the-map). |
 
 ## Root page buttons
 
 | Button | Label | Action |
 |---|---|---|
 | `T2`{: .vab} | `ASE`{: .mpd} | Opens the [ASE page]({{ '/displays/mpd/ase/' | relative_url }}). |
+| `T3`{: .vab} | `PAN`{: .mpd} | Opens [PAN](#pan). |
 | `T5`{: .vab} | `COORD`{: .mpd} | Opens the [COORD page](#coord). |
 | `L6`{: .vab} | `SHOW`{: .mpd} | Opens [SHOW](#show). |
+| `R1`{: .vab} | `ZOOM`{: .mpd} | Draws the map 20% larger about your aircraft, or back. Boxed while on. The range marks and scale move out to match. |
 | `R2`{: .vab} | `SC`{: .mpd} | Opens the scale choices: `R1`{: .vab} 50 km, `R2`{: .vab} 25 km, `R3`{: .vab} 10 km, `R4`{: .vab} 5 km. |
 | `R3`{: .vab} | `CTR`{: .mpd} | Moves your aircraft between the bottom of the page (more look-ahead) and the centre. |
+| `R4`{: .vab} | `CAQ`{: .mpd} | Cursor acquisition: see [CAQ](#caq). |
+| `R5`{: .vab} | `FRZ`{: .mpd} | Freezes the map, or back to the live map. See [FRZ](#frz). |
 | `R6`{: .vab} | `ACQ`{: .mpd} | Opens the [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list. |
 | `B1`{: .vab} | | MENU. |
 | `B2`{: .vab} | `PHASE`{: .mpd} | NAV or ATK. |
+| `B3`{: .vab} | `ZN`{: .mpd} | Opens [ZN](#zn), the zone page. |
 | `B4`{: .vab} | `WPT`{: .mpd} | Opens [WPT](#wpt). |
 | `B5`{: .vab} | `RTE`{: .mpd} | Opens [RTE](#rte). |
 | `B6`{: .vab} | `THRT`{: .mpd} | Opens [THRT](#thrt). |
 
-**RPT**, **PAN**, **PP**, **UTIL**, **ADF**, **CAQ**, **FRZ** and **ZN** are not simulated.
+ZOOM, CTR and FRZ work the same on the WPT, THRT and PAN pages. **RPT**, **PP**, **UTIL** and **ADF** are not simulated.
+
+## The MPD cursor on the TSD {#cursor}
+
+The [MPD cursor]({{ '/displays/mpd/' | relative_url }}#cursor) works on the map as well as on the buttons. Over the map, inside its border, it shows a white **X**. Where the page takes a point, moving the cursor onto one draws that point over a black circle, and **Cursor Enter** chooses it.
+
+| Page | Cursor Enter on the map |
+|---|---|
+| Root, with **CAQ** | Makes the point or radar target your acquisition source. See [CAQ](#caq). |
+| **WPT** or **THRT**, top level, **DEL** or **EDT** | Chooses the point, as if typed with **POINT>**. |
+| **WPT** or **THRT** **ADD** | Adds a point of the chosen type at the cursor, at ground level: ident `WP`, `TU`, `CP` or `TG`. |
+| **RTE** **ADD** | Chooses the waypoint, hazard or control measure to insert. |
+| **RTE** **DIR** | Flies direct to the point. |
+| **PAN** | Pans the map to put that spot in the middle. |
+| **ZN** | Places a corner of the zone being drawn. See [ZN](#zn). |
+| Any page with a **GRID** prompt on the KU | Fills the prompt with the cursor's grid. |
+
+Points hidden outside the map border cannot be chosen.
+
+## FRZ {#frz}
+
+`R5`{: .vab} **FRZ** freezes the map where it is: your aircraft carries on flying across a still map. The frozen picture of your aircraft is white with its rotors stopped, and the map border turns dashed. Threat symbols from the ASE turn with the frozen map. Press **FRZ** again to return to the live map.
+
+PAN, CAQ and ZN freeze the map for you.
+
+## CAQ {#caq}
+
+`R4`{: .vab} **CAQ**, cursor acquisition, freezes the map and lets you choose your [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) from it with the MPD cursor:
+
+1. Press **CAQ**.
+2. Put the cursor on a waypoint, hazard, control measure, target or threat, or on a radar target.
+3. **Cursor Enter**. The point becomes your acquisition source.
+{: .steps}
+
+A radar target chosen this way is stored as target point `T50`{: .mpd}, which becomes the acquisition source. If you own the radar it also becomes the NTS. CAQ ends when you choose a point, press it again, or leave the TSD's top level.
+
+## PAN {#pan}
+
+`T3`{: .vab} **PAN** freezes the map so you can move it to look somewhere else. Press **PAN** again to return to the TSD.
+
+| Button | Label | Action |
+|---|---|---|
+| `T2`{: .vab} | `LAST PAN`{: .mpd} | Back to where you last panned to. |
+| `T4`{: .vab} / `T6`{: .vab} | arrows | Turns the map a degree left or right. Held, it turns at 40° a second. |
+| `T5`{: .vab} | `HDG>`{: .mpd} | Turns the map to a heading typed on the KU. |
+| `L1`{: .vab} | `POINT>`{: .mpd} | Pans to a point (`W01`, `C51`, `T01`) or a grid typed on the KU. |
+| `L2`{: .vab} / `L5`{: .vab} | arrows | Pans to the next or the last waypoint of the route, with the leg to it up the page. Held, it steps twice a second. |
+| `L3`{: .vab} / `L4`{: .vab} | arrows | Moves forward or back along the route, a twentieth of the map at a time. Held, it runs along the route. |
+| `B4`{: .vab}–`B6`{: .vab} | | WPT, RTE and THRT. |
+
+**Cursor Enter** on the map pans to the spot under the cursor. ZOOM, SC, CTR and FRZ are on the right as usual. **RPT** is not simulated.
 
 ### Data block
 
@@ -71,6 +128,9 @@ SHOW chooses what each phase draws. A filled box beside a label means it is show
 | Button | NAV phase | ATK phase |
 |---|---|---|
 | `T1`{: .vab} | **HSI**: a compass rose around your aircraft | Same |
+| `L1`{: .vab} | **INACTIVE ZONES**: zones that are not active. Off by default. | Same. On by default. |
+| `L2`{: .vab} | **AREAS**: engagement areas. Off by default. | Same. On by default. |
+| `L3`{: .vab} | **LINES**: lines from the DTC. Off by default. | Same. Off by default. |
 | `L4`{: .vab} | **WAYPOINT DATA**: the data block | **CURRENT ROUTE**: no effect yet; the route is drawn in both phases |
 | `L5`{: .vab} | **PLANNED TGT/THRT**: targets and threats | Same |
 | `R1`{: .vab} | **CONTROL MEASURES** (green) | Same |
@@ -83,7 +143,7 @@ SHOW chooses what each phase draws. A filled box beside a label means it is show
 | `B6`{: .vab} | | **HAZARDS** |
 | `L6`{: .vab} | Back to the root page | Same |
 
-**INACTIVE ZONES**, **AREAS**, **LINES**, **RFI THREATS** and **OBSTACLES** are not simulated.
+The active zones are always drawn. **RFI THREATS** and **OBSTACLES** are not simulated.
 
 ## Entering text: the keyboard unit
 
@@ -143,6 +203,65 @@ The point you are flying to feeds the FLT page, the IHADSS, and the data block a
 
 `B6`{: .vab} **THRT** works exactly like WPT, but on targets and threats (**T01**–**T50**, ident `TG` by default, or a threat type such as a SAM system). **STO** in the ATK phase stores a target where you are.
 
+## ZN {#zn}
+
+`B3`{: .vab} **ZN** is where you draw **priority fire (PF)** and **no fire (NF)** zones, with the [MPD cursor](#cursor) on a frozen map. The radar uses them to sort its targets: see [Zones]({{ '/targeting/fcr/' | relative_url }}#zones). Press **ZN** again to return to the TSD. **PAN** works from here too.
+
+{% include fig.html id="mpd-tsd-zn" %}
+
+`L1`{: .vab} **TYPE** switches the page between **PF** and **NF** zones. While you draw, the other type's inactive zones are hidden, and every zone of the type you are working on is shown.
+
+### Drawing a zone
+
+`L6`{: .vab} **DR** sets how a zone is drawn:
+
+- **BX**, box: two cursor presses on opposite corners give a box square to the map.
+- **LN**, lines: four cursor presses give its four corners, in order.
+
+Put the cursor on the map and press **Cursor Enter** for each corner. A corner that would make the sides cross, or leave the zone with no area, is refused. While a zone is being drawn, `B2`{: .vab} shows **CLR** in place of PHASE: each press takes back the last corner.
+
+### PF zones
+
+| Button | Label | Action |
+|---|---|---|
+| `L2`{: .vab} | `OPT`{: .mpd} | How the zones are made: **AUTO**, **MAN** or **TRP**. See below. |
+| `L3`{: .vab} | `ACT`{: .mpd} | Steps the active PF zone through the zones drawn, then none. Shown once there are PF zones. |
+| `L4`{: .vab} | `DEL`{: .mpd} | Deletes all the PF zones, after `L2`{: .vab} **YES**. `L3`{: .vab} **NO** cancels. |
+| `L5`{: .vab} | `#Z`{: .mpd} or `KM`{: .mpd} | AUTO and MAN: how many zones, 1 to 8. TRP: the size of each square, 1 to 3 km. |
+| `T4`{: .vab} | `ASN`{: .mpd} | Opens the assign list. Choose a zone (`T2`{: .vab} PF1, `T1`{: .vab} PF2, `L1`{: .vab}–`L6`{: .vab} PF3–PF8), then `B6`{: .vab} **OWN** to make it yours and active. `T4`{: .vab} returns. |
+
+| OPT | You draw | You get |
+|---|---|---|
+| **AUTO** | One zone. | That zone cut into **#Z** strips of equal width, parallel to its first side and numbered from it. |
+| **MAN** | **#Z** zones, one after another. | Each zone as drawn. |
+| **TRP** | One cursor press, on a target reference point. | Four squares of **KM** a side around it: PF1 upper left, PF2 upper right, PF3 lower right, PF4 lower left. |
+
+A new set of PF zones replaces the old ones. PF1 becomes active and is assigned to you (OWN).
+
+### NF zones
+
+| Button | Label | Action |
+|---|---|---|
+| `T1`{: .vab} | `ACTIVE`{: .mpd} | **MULTI**: any number of NF zones can be active. **SINGLE**: only one. Can only be changed while the radar is off or not fitted. |
+| `L2`{: .vab} | `SEL`{: .mpd} | Chooses the NF zone to work on, NF1 to NF8: `T2`{: .vab} NF1, `T1`{: .vab} NF2, `L1`{: .vab}–`L6`{: .vab} NF3–NF8. |
+| `L3`{: .vab} | `ACT`{: .mpd} | Makes the chosen NF zone active, or not. Boxed while it is active. |
+| `L4`{: .vab} | `DEL`{: .mpd} | Deletes the chosen NF zone, after `L2`{: .vab} **YES**. |
+
+An NF zone is stored, and made active, as soon as its last corner is placed. **SEL** then moves on to the next empty zone.
+
+**SEND**, **XMIT BOTH** and the PF page's **OWN** are not simulated: there is no datalink to share zones with.
+
+### Zones on the map {#zones-on-the-map}
+
+| Item | Drawn as |
+|---|---|
+| **PF zone** | White and dashed. The active one has alternating dashes. Each is labelled PF1 to PF8, except the active one; the one assigned to you is labelled **OWN**. |
+| **NF zone** | Yellow and dashed, labelled NF1 to NF8. Active ones have alternating dashes. |
+| **Line** | By its ident: **FLOT** blue, **FLET** red, **FSCL** white, boundary (**BL**) and phase (**PL**) lines green. A phase line has its ident at both ends. |
+| **Area** | Red, labelled **EA01** to **EA12**. |
+
+Active zones are always drawn; inactive zones, lines and areas follow [SHOW](#show). With a great many dashed edges on the map at once, zoomed in on large zones, the last ones drawn are solid. Lines and areas come from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc): they cannot be drawn in the cockpit.
+
 ## COORD {#coord}
 
 `T5`{: .vab} **COORD** lists the stored points, six to a page. `B2`{: .vab} and `B3`{: .vab} page back and forward, wrapping round at the ends.
@@ -153,12 +272,14 @@ The point you are flying to feeds the FLT page, the IHADSS, and the data block a
 |---|---|---|
 | `T1`{: .vab} | `WPTHZ`{: .mpd} | Waypoints and hazards. |
 | `T2`{: .vab} | `CTRLM`{: .mpd} | Control measures. |
+| `T3`{: .vab} | `LINE`{: .mpd} | Lines, three to a page: each line's number and ident, with a row for each of its points' grid and altitude. |
+| `T4`{: .vab} | `AREA`{: .mpd} | Engagement areas, the same way. |
 | `T5`{: .vab} | `COORD`{: .mpd} | Targets and threats. Pressed again, returns to the TSD. |
 | `T6`{: .vab} | `SHOT`{: .mpd} | Your last Hellfire shots: missile type, time and where they were fired at. |
 | `R1`{: .vab}–`R6`{: .vab} | | Expands that line with the time and distance to the point, its bearing, and its latitude and longitude. |
 | `L1`{: .vab}–`L6`{: .vab} | | Makes that line's point your [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq). |
 
-**LINE**, **AREA**, **SRCH** and **FARM** are not simulated.
+Every list shows all its slots: empty ones are blank. **SRCH** and **FARM** are not simulated.
 
 ## ABR {#abr}
 

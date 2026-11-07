@@ -118,10 +118,12 @@
 <path d="M278.75 10.00 L368.25 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M380.25 10.00 L368.25 4.00 L368.25 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
 <text xml:space="preserve" x="278.75" y="48.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">CTRLM</text>
+<path d="M409.00 10.00 L478.00 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490.00 10.00 L478.00 4.00 L478.00 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
 <text xml:space="preserve" x="409.00" y="48.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">LINE</text>
-<path d="M413.25 17.00 L486.75 17.00 L486.75 8.00 L413.25 8.00 Z" fill="#0d4000" fill-opacity="0.50"/>
+<path d="M529.00 10.00 L598.00 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610.00 10.00 L598.00 4.00 L598.00 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
 <text xml:space="preserve" x="529.00" y="48.98" font-size="32.47" textLength="82.00" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">AREA</text>
-<path d="M533.25 17.00 L606.75 17.00 L606.75 8.00 L533.25 8.00 Z" fill="#0d4000" fill-opacity="0.50"/>
 <path d="M638.75 10.00 L728.25 10.00" fill="none" stroke="#33ff00" stroke-opacity="1.00" stroke-width="3.45" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M740.25 10.00 L728.25 4.00 L728.25 16.00 Z" fill="#33ff00" fill-opacity="1.00"/>
 <text xml:space="preserve" x="638.75" y="48.98" font-size="32.47" textLength="102.50" lengthAdjust="spacingAndGlyphs" fill="#33ff00" fill-opacity="1.00">COORD</text>

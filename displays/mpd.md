@@ -27,6 +27,23 @@ redirect_from:
 
 The **BRT** and **VID** knobs and the **DAY/NT/MONO** switch on the bezel are not simulated.
 
+## The MPD cursor {#cursor}
+
+Each crew station has its own **MPD cursor**: a green ring with four spokes that you move over your two MPDs with a stick or hat. It presses buttons for you and picks things off the TSD and FCR pages. Bind it in **AH-64D Official Project**:
+
+| Binding | Action |
+|---|---|
+| **MPD Cursor: Up / Down / Left / Right** | Moves the cursor, faster the further a stick is pushed and the longer it is held. Bind them to a stick's axes, a hat or keys. |
+| **MPD Cursor: Enter** | Presses the button whose label the cursor is on, or acts on what it is over on the page. |
+| **MPD Cursor: Display Select** | Moves the cursor to the centre of your other MPD. |
+
+- **Buttons.** Put the cursor on a button's label and the whole label goes bold. **Cursor Enter** presses that button, and holding it holds the button. A button with no label can be pressed at its place on the MPD's edge.
+- **Pages.** Over the TSD's map or the FCR's scan area the cursor is a white X. What Enter does there is on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}#cursor) and [FCR]({{ '/displays/mpd/fcr/' | relative_url }}#cursor) pages.
+- **Changing MPD.** Push the cursor against the inner edge of an MPD, let go and push again, and it moves onto the other one. On an MPD that is off, it moves to the other.
+- **Stowing.** Three minutes after you last used it, the cursor moves to the lower left corner, unless it is resting on a label or a TSD or FCR symbol.
+
+The cursor is all bindings: the cockpit mouse cursor does not move it.
+
 ## Reading a page
 
 - A label with an **arrow** above it opens another page.

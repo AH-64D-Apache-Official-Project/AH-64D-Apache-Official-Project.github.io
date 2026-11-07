@@ -46,33 +46,27 @@ While a starter is turning, a **START** box shows **ON** beside the engine being
 
 Torque and TGT have one tape per engine, with the digital value above it. In the middle, the two Np tapes sit either side of the rotor speed chevron, which should rest at 101% in flight. Ng is digital only, at the right.
 
-The torque and TGT tapes change width and colour with the range they are in:
+The torque and TGT tapes are coloured by the range they are in: **green** in the normal range, **yellow** in a time-limited range, where a timer counts down the time left, and **red** past the maximum. They also step wider as they rise:
 
-| Tape | Range |
-|---|---|
-| Narrow, green | Normal. |
-| Wider, yellow | A time-limited range. A timer counts down the time left. |
-| Widest, red | Past the maximum. |
+| Tape | Narrow | Wider | Widest |
+|---|---|---|---|
+| **Torque** | Up to 100% | 100% to 115% | Above 115% |
+| **TGT** | Up to 810 °C | Above 810 °C | |
 
 The Np tapes and their digits, and the Ng digits, turn yellow and red the same way. Ng is also red when it is below 63% with the engine running.
 
 ### Limit markings
 
-The markings across the torque and TGT tapes are the aircraft's actual limits:
-
-- The **red bar** across both tapes is the maximum.
-- Each **yellow bar** is where a time-limited range starts. There is one for each engine, with a gap between them.
+A **red bar** across both torque tapes, and another across both TGT tapes, marks the maximum:
 
 | | Dual engine (DE) | Single engine (SE) |
 |---|---|---|
-| **Torque** | Yellow at 100%, red at 115%. | Yellow at 110% and 122%, red at 125%. |
-| **TGT** | Yellow at 810 and 870 °C, red at 949 °C. | Yellow at 810, 870, 878 and 896 °C, red at 949 °C. |
+| **Torque** | 115% | 125% |
+| **TGT** | 949 °C | 949 °C |
 
-Each yellow bar sits at the top of the range below it: the time-limited range starts just above it, at 101% for dual engine torque.
+The bars move when the limits do:
 
-The markings move when the limits do:
-
-- They switch to the single engine set when the aircraft counts as single engine: when one engine's torque falls below about half of the other's.
+- They switch to the single engine maximum when the aircraft counts as single engine: when one engine's torque falls below about half of the other's.
 - With low rotor speed, torque is limited further. Below 90% Nr the red bar is at 70%, and below 50% Nr at 30%, with no time-limited range.
 
 How long each range allows is on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.
@@ -88,7 +82,7 @@ A white timer counts down the time left in a time-limited range, in minutes and 
   - With both engines in one, a single timer sits centred between the two columns and shows the shorter time.
 - **Np** has a timer for each engine, in place of its number.
 
-When a timer reaches **0:00**, the allowance is used up and the engine or drivetrain starts taking damage. A range with no allowance shows 0:00 as soon as you enter it.
+When a timer reaches **0:00**, the allowance is used up and the engine or drive train starts taking damage. A range with no allowance shows 0:00 as soon as you enter it.
 
 Each range has its own allowance. It starts again from full each time you enter the range, so climbing into the next range and coming back resets it.
 

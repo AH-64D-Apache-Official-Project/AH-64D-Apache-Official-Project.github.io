@@ -17,9 +17,15 @@ The data transfer unit page. The right MPD shows it when the aircraft powers up.
 
 | Button | Label | Action |
 |---|---|---|
-| `L1`{: .vab} | `MASTER LOAD`{: .mpd} | Loads the mission's points into the aircraft. The page shows the load in progress, then complete, after about four seconds. Press `L1`{: .vab} again to return. |
+| `L1`{: .vab} | `MASTER LOAD`{: .mpd} | Loads the mission data, and any DTC, into the aircraft. The page shows the load in progress, then complete, after about four seconds. Press `L1`{: .vab} again to return. |
 
-**MASTER LOAD** copies every waypoint, hazard, control measure and target the mission maker placed in the editor ([For mission makers]({{ '/mission/editor/' | relative_url }}#points)) into this aircraft, replacing what it held. The points then appear on the TSD and can be used in routes.
+**MASTER LOAD** does two things, in order:
+
+1. It copies every waypoint, hazard, control measure and target the mission maker placed in the editor ([For mission makers]({{ '/mission/editor/' | relative_url }}#points)) into this aircraft, replacing what it held.
+2. If a DTC has been uploaded to the aircraft from the [mission planner]({{ '/mission/planner/' | relative_url }}#dtc), for this map, it loads that on top: its lines, areas and zones, and its points and routes. A DTC with no points of a type, or no routes, leaves the mission's in place.
+{: .steps}
+
+The points then appear on the TSD and can be used in routes.
 
 > Load the mission data before you build your routes. A master load replaces the aircraft's points, including any you added yourself.
 {: .caution}

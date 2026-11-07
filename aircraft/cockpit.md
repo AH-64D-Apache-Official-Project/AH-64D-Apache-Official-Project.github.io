@@ -22,12 +22,12 @@ Every control on this page is clicked with the cockpit cursor (see [Controls and
 | 1 | **Floodlight knob** | Both | Cockpit floodlighting on or off. See [Lighting]({{ '/aircraft/lighting/' | relative_url }}). |
 | 2 | **Anti-collision light switch** | PLT | Red anti-collision strobes, **ON** or **OFF**. |
 | 3 | **ENG 1** and **ENG 2 start switches** | PLT | **START** (springs back), **OFF**, **IGN ORIDE** (stays). Clicked when the engine is off, it starts it; clicked while it is starting, it aborts the start. See [Start-up]({{ '/flying/startup/' | relative_url }}). |
-| 4 | **APU pushbutton** | PLT | Starts and stops the APU. See [Electrical, APU and hydraulics]({{ '/aircraft/electrical/' | relative_url }}). |
+| 4 | **APU pushbutton** | PLT | On the power lever quadrant. Starts and stops the APU. See [Electrical, APU and hydraulics]({{ '/aircraft/electrical/' | relative_url }}). |
 | 5 | **MSTR IGN switch** | PLT | Battery on or off. |
 | 6 | **Rotor brake switch** | PLT | Steps **OFF → BRK → LOCK → OFF**. |
 | 7 | **NVS mode switch** | Both | **OFF**, **NORM** (the night vision sensor follows your head) or **FIXED** (it looks straight ahead). See [Night vision]({{ '/targeting/nvs/' | relative_url }}). |
 | | **Power levers** | PLT | One per engine, with **OFF**, **IDLE** and **FLY** detents. Click the detent you want and the lever moves there. With both engines at idle, moving either lever to **FLY** takes both. |
-| | **EMER HYD** | Both | On the yellow-and-black emergency panel next to the power levers. Puts the hydraulic accumulator's pressure on the flight controls. See [Electrical, APU and hydraulics]({{ '/aircraft/electrical/' | relative_url }}#emergency-hydraulics). |
+| | **EMER HYD** | Both | On the yellow-and-black emergency panel next to the power levers. Puts the utility hydraulic accumulator's pressure on the flight controls when both hydraulic systems are lost. See [Electrical, APU and hydraulics]({{ '/aircraft/electrical/' | relative_url }}#emergency-hydraulics). |
 
 ## Front panel
 
@@ -38,7 +38,7 @@ Every control on this page is clicked with the cockpit cursor (see [Controls and
 |---|---|---|---|
 | 1 | **Keyboard unit (KU)** | Both | Click it to type into the aircraft with your keyboard; click again to stop. See [Keyboard unit]({{ '/displays/ku/' | relative_url }}). |
 | 2 | **IHADSS brightness** | Both | Not used. The helmet display comes on with power once the HDU is fitted. |
-| 3 | **Fire detection and extinguishing panel** | Both | Fire warning lights, the **ENG 1**, **APU** and **ENG 2** fire handles, the **PRI** and **RES** extinguisher bottles and the **TEST** switch. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}). |
+| 3 | **Fire detection and extinguishing panel** | Both | Fire warning lights, the **ENG 1**, **APU** and **ENG 2** FIRE pushbuttons, the **PRI** and **RES** extinguisher bottles and the **TEST** switch. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}). |
 | 4 | **Multipurpose displays** | Both | Two per seat. See [Using the MPDs]({{ '/displays/mpd/' | relative_url }}). |
 | 5 | **Up-front display (UFD)** | Both | Warnings, cautions, advisories, fuel and the clock. See [UFD]({{ '/displays/ufd/' | relative_url }}). |
 | 6 | **Standby instruments** | PLT | Magnetic compass, attitude indicator, airspeed and altimeter. |

@@ -48,6 +48,8 @@ The symbology is drawn on the picture only in the video view.
 | `R5`{: .vab} | **PLT HMD** | The pilot's night vision sensor. | P-FLT |
 | `R6`{: .vab} | **NO VIDEO** | None. | |
 
+Over the TADS picture, the [image auto tracker's]({{ '/targeting/tads/' | relative_url }}#iat) gates are drawn while it tracks.
+
 A night vision source shows nothing while that crew station's NVS mode switch is OFF. A damaged sensor shows nothing either. See [Night vision]({{ '/targeting/nvs/' | relative_url }}).
 
 ## The underlay
