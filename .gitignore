@@ -8,3 +8,4 @@ vendor/
 .bundle/
 _tools/figures/.cache/
 __pycache__/
+.claude/
