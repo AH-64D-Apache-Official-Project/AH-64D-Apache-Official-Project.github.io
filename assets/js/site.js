@@ -76,6 +76,12 @@
       t.parentNode.insertBefore(w, t);
       w.appendChild(t);
     });
+    // WCA tables: colour the WARNING, CAUTION and ADVISORY heading rows
+    body.querySelectorAll("table tr").forEach(function (tr) {
+      var c = tr.firstElementChild;
+      var m = c && c.textContent.trim().match(/^UFD (WARNING|CAUTION|ADVISORY)$/);
+      if (m) { tr.classList.add("wca-" + m[1].toLowerCase()); }
+    });
   }
 
   // Figures: hovering a legend entry or a callout highlights its pair

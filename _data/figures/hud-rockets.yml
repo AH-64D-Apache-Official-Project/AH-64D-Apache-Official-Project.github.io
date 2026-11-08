@@ -5,7 +5,7 @@ crop:
 - -30
 - 640
 - 510
-caption: 'Pilot in a shallow dive with rockets actioned, looking at a target 6° right of the nose: turn right to bring the rocket steering cursor onto the reticle.'
+caption: 'Pilot, rockets actioned, in a shallow dive with the target 6° right of the nose. The aircraft is turned right to align the rocket steering cursor with the LOS reticle.'
 model:
   hd: false
   tv: false
@@ -79,22 +79,22 @@ callouts:
   y: 190
   side: t
   label: Rocket steering cursor
-  text: Turn until it is centred on the reticle. The reticle inside its height means the pylons can reach.
+  text: 'Dynamic I-beam indicating how to point the aircraft for rocket delivery; aligned with the LOS reticle for launch. The LOS reticle within its vertical extent indicates the pylons can reach the solution.'
 - n: 2
   x: 240
   y: 256
   side: b
   label: Flight path vector
-  text: Below the nose in the dive.
+  text: 'Projected flight path; below the nose in the dive.'
 - n: 3
   x: 226
   y: 471
   side: b
-  label: Range
-  text: 'M: a manual range of 3.0 km.'
+  label: Range and range source
+  text: 'M: manual range, 3.0 km.'
 - n: 4
   x: 524
   y: 490
   side: r
-  label: Weapon
-  text: 'PRKT: the pilot has rockets. Below: type, mode and rockets left.'
+  label: Weapon control and weapon status
+  text: 'HAD weapon control status field: PRKT, pilot rockets actioned. Weapon status field: rocket type, mode and quantity remaining.'

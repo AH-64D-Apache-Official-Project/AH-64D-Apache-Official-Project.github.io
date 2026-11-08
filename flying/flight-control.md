@@ -1,64 +1,69 @@
 ---
 title: Flight control modes
-lead: The flight management computer stabilises the Apache and can hold its attitude, position, altitude and heading for you. Knowing what it is doing is the key to flying the aircraft smoothly.
-keywords: [fmc, sas, hold, attitude hold, altitude hold, heading hold, position hold, force trim, trim, beep, hover hold]
+lead: The flight management computer (FMC), stability augmentation, the attitude, altitude and heading hold modes, and force trim.
+keywords: [fmc, sas, scas, hold, attitude hold, altitude hold, heading hold, position hold, velocity hold, force trim, trim, hover hold, turn coordination]
 ---
 
-The flight management computer (FMC) runs four features. All of them need DC power and primary hydraulic pressure: the FMC can only move the flight controls through the primary side of the servos. The `FMC DISENG`{: .mpd} caution shows when the primary hydraulic pump has failed or any of the FMC's pitch, roll, yaw or collective channels is off; see the [UTIL page]({{ '/displays/mpd/util/' | relative_url }}). Without the FMC you fly on the mechanical controls alone.
+## Flight management computer
 
-| Feature | What it does | How you control it |
+The flight management computer (FMC) provides stability augmentation and the hold modes. It requires DC power and primary hydraulic pressure, since the FMC moves the flight controls only through the primary side of the servos. The `FMC DISENG`{: .mpd} caution is displayed when the primary hydraulic pump has failed or any FMC axis (pitch, roll, yaw or collective) is selected off on the [UTIL page]({{ '/displays/mpd/util/' | relative_url }}). With the FMC disengaged, the helicopter is flown on the mechanical flight controls alone.
+
+| Function | Description | Control |
 |---|---|---|
-| **Stability augmentation** | Damps the aircraft's natural wobbles in pitch, roll and yaw. | Always on. |
-| **Attitude hold** | Holds position, velocity or attitude, depending on your speed. | **Attitude Hold** binding. |
-| **Altitude hold** | Holds radar or barometric altitude with the collective. | **Altitude Hold** binding. |
-| **Heading hold** | Holds heading, or coordinates turns, with the pedals. | Automatic with force trim. |
+| Stability augmentation | Damps the aircraft's natural oscillations in pitch, roll and yaw. | Always on. |
+| Attitude hold | Holds position, velocity or attitude, depending on ground speed. | **Attitude Hold** binding |
+| Altitude hold | Holds radar or barometric altitude with the collective. | **Altitude Hold** binding |
+| Heading hold | Holds heading, or coordinates turns, with the pedals. | Automatic with force trim |
 
-**Hold Modes Off** disengages all of them. When a hold drops out you hear a tone.
+**Hold Modes Off** disengages all hold modes. A tone sounds when a hold mode disengages.
 
 ## Force trim
 
-Trim sets the control position the aircraft returns to with your hands off. On a sprung stick:
+Force trim sets the control position the aircraft returns to with the controls released.
 
-1. Hold **Force Trim**. The holds stop working against you, so you can fly freely.
-2. Fly the aircraft to the attitude you want.
-3. Release **Force Trim**. The current control positions become the new trim, and the holds take the new attitude, position or heading as their reference.
+1. Force trim interrupt – Press and hold.
+2. Flight control – Position in the desired position.
+3. Force trim interrupt – Release.
+4. Flight control – Re-centre (Center Trim Mode only).
 {: .steps}
 
-**Force Trim Reset** zeroes the trim and recentres the controls. **Beep Trim** moves the cyclic trim a little at a time, and moves the reference of an engaged attitude hold with it.
+On release, the hold modes take the new attitude, position or heading as their reference.
 
-With **Cyclic Center Trim Mode** or **Pedal Center Trim Mode** on (in the HeliSim settings), the control does nothing after a trim release until you bring your stick or pedals back to centre. Turn these on if the aircraft jumps when you release force trim. Spring-less and force-feedback sticks should use **Springless Cyclic** and **Springless Pedals** instead, which turn force trim off for that control.
+**Force Trim Reset** zeroes the trim and recentres the controls.
+
+With **Cyclic Center Trim Mode** or **Pedal Center Trim Mode** selected in the HeliSim settings, the control has no effect after a trim release until it is returned to centre; this prevents a control jump on release. Springless and force-feedback sticks use **Springless Cyclic** and **Springless Pedals**, which disable force trim for that control.
 
 ## Attitude hold
 
-Press **Attitude Hold** to engage it. What it holds depends on your ground speed:
+Attitude hold is engaged with **Attitude Hold**. The sub-mode depends on ground speed:
 
 | Ground speed | Sub-mode | Holds |
 |---|---|---|
-| 5 kt or less | **Position hold** | Your position over the ground. |
-| Above 5 kt, accelerating, up to 40 kt | **Velocity hold** | Your speed and direction over the ground. |
-| Above 40 kt (and down to 30 kt as you slow) | **Attitude hold** | Your pitch and roll. |
+| 5 kt or less | Position hold | Position over the ground |
+| Above 5 kt, accelerating, up to 40 kt | Velocity hold | Ground speed and track |
+| Above 40 kt (down to 30 kt when decelerating) | Attitude hold | Pitch and roll attitude |
 
-Move the cyclic past a small breakout and that axis lets go while you fly through it; centre the stick and it takes hold again. Use force trim to give it a new reference.
+A cyclic input beyond a small breakout releases the hold in that axis while the input is held; the hold re-engages when the cyclic is returned to centre. Force trim sets a new reference.
 
-`ATT HOLD`{: .mpd} shows on the UFD while it is engaged. In position hold, drifting about 50 ft from the hold point raises `HOVER DRIFT`{: .mpd}.
+`ATT HOLD`{: .mpd} is displayed on the UFD while attitude hold is engaged. In position hold, a drift of approximately 50 ft from the hold point displays the `HOVER DRIFT`{: .mpd} advisory.
 
 ## Altitude hold
 
-Press **Altitude Hold** when you are close to level, within 200 ft/min of vertical speed. It will not engage while you are climbing or descending faster.
+Altitude hold is engaged with **Altitude Hold** when the rate of climb or descent is within 200 fpm; it does not engage at a greater rate of climb or descent.
 
 | Conditions at engagement | Holds | UFD |
 |---|---|---|
-| Below 1,428 ft above the ground and 40 kt ground speed | Radar altitude | `RAD HOLD`{: .mpd} |
+| Below 1,428 ft above ground level and below 40 kt ground speed | Radar altitude | `RAD HOLD`{: .mpd} |
 | Otherwise | Barometric altitude | `BAR HOLD`{: .mpd} |
 
-Moving the collective more than a small amount from where it was disengages altitude hold. **Altitude Beep Up/Down** raises or lowers the held altitude a step per tap, or climbs and descends while held.
+A collective input beyond a small breakout disengages altitude hold.
 
 ## Heading hold
 
-Heading hold uses the pedals. Below 5 kt ground speed it holds your heading. Faster than that it blends into turn coordination, keeping the trim ball centred so you can turn with the cyclic alone. Pressing the pedals flies through it; releasing force trim takes the new heading.
+Heading hold uses the pedals. Below 5 kt ground speed it holds heading; above that it blends into turn coordination, keeping the skid/slip ball centred so that turns are flown with cyclic alone. A pedal input overrides heading hold; a force trim release sets the new heading.
 
-**Springless Pedals** turns heading hold off along with pedal force trim, and **Keyboard Auto Pedal** replaces it.
+**Springless Pedals** disables heading hold together with pedal force trim, and **Keyboard Auto Pedal** replaces it.
 
 ## Keyboard assists
 
-The keyboard options in the HeliSim settings add their own help on top of the FMC. Auto pedal flies the pedals in either realism setting; in **Casual** only, auto pitch holds the level-flight attitude and auto roll makes the roll keys command up to 30° of bank and roll level when released. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim).
+The keyboard options in the HeliSim settings add their own assistance to the FMC. Auto pedal operates the pedals in either realism setting. In **Casual** only, auto pitch holds the level-flight attitude, and auto roll makes the roll keys command up to 30° of bank and returns the aircraft to wings level when released. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim).

@@ -48,7 +48,7 @@
     - { title: ASE, url: /displays/mpd/ase/ }
     - { title: VIDEO, url: /displays/mpd/video/ }
     - { title: DMS, url: /displays/mpd/dms/ }
-    - { title: COM pages, url: /displays/mpd/com/ }
+    - { title: Laser codes, url: /displays/mpd/code/ }
     - { title: MPD games, url: /displays/mpd/games/ }
     - { title: Up-front display, url: /displays/ufd/ }
     - { title: Keyboard unit, url: /displays/ku/ }

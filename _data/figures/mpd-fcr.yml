@@ -1,6 +1,6 @@
 title: FCR page, GTM
 kind: mpd
-caption: FCR page in ground targeting mode, wide scan, scanning continuously. The CPG has the FCR as sight and missiles actioned.
+caption: 'FCR page, GTM format, wide scan size, continuous scanburst. The CPG has the FCR as the selected sight and missiles actioned.'
 state:
   page: FCR
   src: { heading: 312 }
@@ -33,12 +33,12 @@ state:
     - { icon: wheelMOVE, a: -9, r: 5600 }
     - { icon: unkLOAL, a: -42, r: 2900, dim: true }
 callouts:
-- { n: 1, x: 500, y: 75, side: t, label: Heading tape, text: "With the FCR centerline below the lubber line, and the next waypoint's bearing (the caret)." }
-- { n: 2, x: 957, y: 60, side: r, label: Target count, text: "How many targets the radar has found." }
-- { n: 3, x: 155, y: 300, side: l, label: Scan sector, text: "Range arcs every 2 km out to 8 km. The sector width follows the scan size." }
-- { n: 4, x: 385, y: 593, side: l, label: Scan bar, text: "Sweeps across the sector while the radar scans." }
-- { n: 5, x: 570, y: 569, side: r, label: NTS, text: "The next-to-shoot target, in the diamond. The triangle marks the alternate, the ANTS." }
-- { n: 6, x: 372, y: 518, side: l, label: Targets, text: "One symbol per target: what it is and whether it is moving. See the table below." }
-- { n: 7, x: 220, y: 940, side: b, label: Sight and range, text: "Your sight, and the range and its source." }
-- { n: 8, x: 500, y: 940, side: b, label: Sensor window, text: "Where the TADS looks (the box) and where your acquisition source points (the diamond)." }
-- { n: 9, x: 780, y: 940, side: b, label: Weapon, text: "The weapon actioned." }
+- { n: 1, x: 500, y: 75, side: t, label: Heading scale, text: 'With the FCR centerline bearing below the lubber line, and the command heading chevron.' }
+- { n: 2, x: 957, y: 60, side: r, label: Total target count status window, text: 'Total number of targets detected within the scanburst.' }
+- { n: 3, x: 155, y: 300, side: l, label: Scan sector symbol, text: 'Range arcs at 2, 4, 6 and 8 km. The sector follows the selected scan size.' }
+- { n: 4, x: 385, y: 593, side: l, label: Scan wiper symbol, text: 'Moves across the scan sector with the antenna while the FCR is transmitting: white during a single scanburst, green during continuous scan.' }
+- { n: 5, x: 570, y: 569, side: r, label: NTS and ANTS symbols, text: 'NTS symbol (diamond): the highest priority target. ANTS symbol (triangle): the alternate next-to-shoot.' }
+- { n: 6, x: 372, y: 518, side: l, label: FCR target symbols, text: 'Target type, and moving or stationary. See the table below.' }
+- { n: 7, x: 220, y: 940, side: b, label: Sight select status, range and range source, text: 'HAD sight select status and range and range source status fields.' }
+- { n: 8, x: 500, y: 940, side: b, label: FOR symbols, text: 'Field of regard: the field of view box (TADS) and the cued LOS dot (acquisition source).' }
+- { n: 9, x: 780, y: 940, side: b, label: Weapon status, text: 'HAD weapon status field: the actioned weapon.' }

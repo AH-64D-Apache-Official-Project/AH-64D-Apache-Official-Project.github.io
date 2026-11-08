@@ -12,26 +12,26 @@ The first sections are new since the 2.3 release candidates. [Also new since 2.2
 ## Flying
 
 - **HeliSim Core.** The flight model and the aircraft systems (engines, electrics, hydraulics, fuel, rotor) now come from the separate HeliSim Core mod, which must be loaded, in place of the flight model built into the mod. See [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}).
-- **Flight control modes** run on HeliSim Core's flight management computer. Attitude hold picks position, velocity or attitude hold by your ground speed, and heading hold blends into turn coordination. See [Flight control modes]({{ '/flying/flight-control/' | relative_url }}).
+- **Flight control modes** run on HeliSim Core's flight management computer. Attitude hold selects position, velocity or attitude hold by ground speed, and heading hold blends into turn coordination. See [Flight control modes]({{ '/flying/flight-control/' | relative_url }}).
 - The main and tail rotors can now be **destroyed**. See [Damage and failures]({{ '/aircraft/damage/' | relative_url }}).
-- **Overstress**: pulling more than 3.5 g fatigues the airframe, until the stabilator, fin, tail boom or rotor blades come off. See [Overstress]({{ '/aircraft/damage/' | relative_url }}#overstress).
-- The [PERF page]({{ '/displays/mpd/perf/' | relative_url }}) shows the same figures in both crew stations, and the [mission planner]({{ '/mission/planner/' | relative_url }}) works out weight and performance from HeliSim's data, at your pressure altitude and temperature.
+- **Overstress**: HeliSim provides stress damage; overstressing the aircraft (over-g) results in component loss. See [Overstress]({{ '/aircraft/damage/' | relative_url }}#overstress).
+- The [PERF page]({{ '/displays/mpd/perf/' | relative_url }}) shows the same figures in both crew stations, and the [mission planner]({{ '/mission/planner/' | relative_url }}) calculates weight and performance from HeliSim's data, at the current pressure altitude and temperature.
 
 ## Helmet and symbology
 
-- A new **IHADSS helmet**, now the AH-64D pilot's default headgear. It is needed to bring the monocle down and for head tracking.
+- A new **IHADSS helmet**, now the AH-64D pilot's default headgear. It is required to fit the HDU and for head tracking.
 - **New helmet symbology**: four flight modes (transition, cruise, hover and bob-up), the CPG's weapon symbology, missile constraints, the rocket steering cursor and the high action display. See [IHADSS]({{ '/displays/ihadss/' | relative_url }}).
-- The PNVS picture fills the monocle's lens, and the CPG can have the TADS picture there. Either crew station can take the PNVS or the TADS FLIR as its night vision sensor. See [Night vision]({{ '/targeting/nvs/' | relative_url }}).
+- The PNVS video fills the HDU, and the CPG can display TADS video on it. Either crew station can take the PNVS or the TADS FLIR as its night vision sensor. See [Night vision]({{ '/targeting/nvs/' | relative_url }}).
 
 ## Sensors and targeting
 
-- **Range sources**: laser, radar, navigation, manual and automatic, shown on the HAD. Targets can be **stored** along your sight. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}).
+- **Range sources**: laser, radar, navigation, manual and automatic, shown on the HAD. Targets can be **stored** along the sight's line of sight. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}).
 - The **laser spot tracker** finds someone else's laser spot and turns the TADS onto it. See [Laser]({{ '/targeting/laser/' | relative_url }}).
 - The radar gains **TPM** (terrain profile) and **RMAP** modes. In TPM, **C SCP** draws the terrain profile and obstacles on the helmet. See [Fire control radar]({{ '/targeting/fcr/' | relative_url }}).
 - The TADS **image auto tracker** (IAT) holds the TADS on a vehicle, a man or a point, with offset track and a polarity switch. See [TADS]({{ '/targeting/tads/' | relative_url }}#iat).
 - **Priority fire and no fire zones** sort the radar's targets: targets in the active PF zone come first, and those in an active NF zone are hidden. See [Fire control radar]({{ '/targeting/fcr/' | relative_url }}#zones).
 - The FCR page's **TGT** stores radar targets as target points, one at a time or all at once, and **ZOOM** enlarges part of the GTM scope. See [FCR]({{ '/displays/mpd/fcr/' | relative_url }}#tgt).
-- A **radial menu** for your sight, the TADS, the radar, the laser spot tracker and your symbology. See [Radial menu]({{ '/targeting/radial/' | relative_url }}).
+- A **radial menu** for the sight, the TADS, the radar, the laser spot tracker and the symbology. See [Radial menu]({{ '/targeting/radial/' | relative_url }}).
 
 ## Weapons
 

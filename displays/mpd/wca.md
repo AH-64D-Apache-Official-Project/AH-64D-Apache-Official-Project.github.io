@@ -1,7 +1,7 @@
 ---
-title: WCA page
-lead: Every active warning, caution and advisory, and what each one means.
-keywords: [wca, warning, caution, advisory, master caution, master warning, fault, failure, list]
+title: Warnings, cautions and advisories (WCA) page
+lead: The WCA page lists every active warning, caution and advisory. The complete list of messages, with the UFD and MPD text and the corrective action for each.
+keywords: [wca, warning, caution, advisory, master caution, master warning, mstr caut, mstr warn, fault, failure, list, corrective action]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-wca.html
@@ -9,79 +9,98 @@ redirect_from:
 
 {% include fig.html id="mpd-wca" %}
 
-The page lists up to 18 active messages, warnings first. The same messages appear in short form on the [UFD]({{ '/displays/ufd/' | relative_url }}), and the first five warnings and cautions also appear on the ENG page.
+The WCA page lists up to 18 active messages, warnings first. The same messages are displayed on the [UFD]({{ '/displays/ufd/' | relative_url }}), and the first five warnings and cautions are also displayed on the ENG page.
 
-- A **warning** (red) needs action now. It lights the **MASTER WARNING** button and sounds a voice warning.
-- A **caution** (yellow) needs attention soon. It lights **MASTER CAUTION** and sounds a tone.
-- An **advisory** (green) is information.
+- A **warning** (red) indicates a hazardous condition requiring immediate corrective action. It illuminates the MSTR WARN lighted button and plays a voice message.
+- A **caution** (yellow) indicates an impending dangerous condition requiring attention but not necessarily immediate action. It illuminates the MSTR CAUT lighted button and plays a caution tone.
+- An **advisory** (green) indicates a safe or normal configuration, condition or performance, or imparts information for routine action.
 
-Press the lit **MASTER WARNING** or **MASTER CAUTION** button on the glareshield to acknowledge it.
+The crewmember presses the illuminated MSTR WARN or MSTR CAUT lighted button on the glareshield to acknowledge it.
 
 ## Buttons
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `T1`{: .vab} | `DTU`{: .mpd} | Opens the [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu). |
-| `T3`{: .vab} | `IBIT`{: .mpd} | Opens the [MPD games]({{ '/displays/mpd/games/' | relative_url }}). |
-| `T5`{: .vab} | `VERS`{: .mpd} | Opens the [VER page]({{ '/displays/mpd/dms/' | relative_url }}#ver). |
-| `T6`{: .vab} | `UTIL`{: .mpd} | Opens UTIL. |
-| `B1`{: .vab} | | MENU. |
-| `B6`{: .vab} | `WCA`{: .mpd .box} | This page; pressed again, opens ENG. |
+| `T1`{: .vab} | `DTU`{: .mpd} | [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu) |
+| `T3`{: .vab} | `IBIT`{: .mpd} | [MPD games]({{ '/displays/mpd/games/' | relative_url }}) |
+| `T5`{: .vab} | `VERS`{: .mpd} | [VERS page]({{ '/displays/mpd/dms/' | relative_url }}#ver) |
+| `T6`{: .vab} | `UTIL`{: .mpd} | UTIL page |
+| `B1`{: .vab} | | MENU page |
+| `B6`{: .vab} | `WCA`{: .mpd .box} | This page; pressed again, the ENG page |
 
-**FAULT** and **RESET** are not simulated.
+FAULT and RESET are not simulated.
 
-## Warnings
+## Message list
 
-| Page text | UFD | Cause | Do |
-|---|---|---|---|
-| ENGINE 1 FIRE / ENGINE 2 FIRE / APU FIRE | None: the FIRE pushbutton lights | Fire detected. | [Engine fire]({{ '/flying/emergency/' | relative_url }}#fire). |
-| ENGINE 1 OUT / ENGINE 2 OUT | ENG1 OUT / ENG2 OUT | The engine has failed, or its Ng is below idle with its power lever at FLY. | [Single engine failure]({{ '/flying/emergency/' | relative_url }}#engine-failure). |
-| AFT DECK FIRE | DECK FIRE | Shown only by the fire panel's TEST switch. | |
-| ENG1 OVSP / ENG2 OVSP | ENG1 OVSP / ENG2 OVSP | Np at or above 115%. | Reduce power; the engine may trip. |
-| LOW ROTOR RPM | LOW RTR | Nr below 95% in the air. | Lower the collective. |
-| HIGH ROTOR RPM | HIGH RTR | Nr at or above 106%. | Raise the collective, reduce the descent. |
-| HYD FAILURE | HYD FAIL | Primary and utility hydraulics both lost. | Press **EMER HYD** immediately and land without delay. See [Hydraulics]({{ '/flying/emergency/' | relative_url }}#hydraulics). |
-| TAIL ROTOR HYD | TAIL RTR | Primary hydraulic pressure low and utility hydraulic level low. The tail rotor stays where it was. | Land as soon as possible. |
+The following table provides a list of Warnings, Cautions and Advisories:
 
-## Cautions
-
-| Page text | UFD | Cause |
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
 |---|---|---|
-| GENERATOR 1 FAIL / GENERATOR 2 FAIL | GEN1 FAIL / GEN2 FAIL | Generator damaged. |
-| RECTIFIER 1 FAIL / RECTIFIER 2 FAIL | RECT1 FAIL / RECT2 FAIL | Transformer rectifier unit (TRU) damaged. |
-| ENGINE 1 CHIPS / ENGINE 2 CHIPS | ENG1 CHIPS / ENG2 CHIPS | Metal in the engine oil. |
-| ENG 1 OIL PSI LOW / ENG 2 OIL PSI LOW | ENG1 OIL PSI / ENG2 OIL PSI | Engine oil pressure low. |
-| GRBX 1 OIL PSI LOW / GRBX 2 OIL PSI LOW | GRBX1 OIL PSI / GRBX2 OIL PSI | Nose gearbox damaged. |
-| GEARBOX 1 CHIPS / GEARBOX 2 CHIPS | GRBX1 CHIPS / GRBX2 CHIPS | Nose gearbox badly damaged. |
-| GEARBOX VIBRATION | GRBX VIB | Intermediate or tail rotor gearbox damaged. See [Gearbox vibration]({{ '/flying/emergency/' | relative_url }}#gearbox-vibration). |
-| XMSN 1 OIL PSI LOW / XMSN 2 OIL PSI LOW | XMSN1 OIL PSI / XMSN2 OIL PSI | Main transmission damaged. |
-| MAIN XMSN CHIPS | XMSN CHIPS | Main transmission badly damaged. |
-| FORWARD FUEL LOW / AFT FUEL LOW | FWD FUEL LO / AFT FUEL LO | Fuel cell low. |
-| PRI HYD PSI LOW / UTIL HYD PSI LOW | PRI HYD PSI / UTIL HYD PSI | Hydraulic pressure low. |
-| PRI HYD LEVEL LOW / UTIL HYD LEVEL LOW | PRI HYD LVL / UTIL HYD LVL | Hydraulic fluid low: a leak. |
-| AUTO/MAN STAB FAIL | STAB FAIL | Stabilator damaged. |
-| BUCS FAIL | BUCS FAIL | Primary hydraulic pump failed. |
-| FMC DISENGAGED | FMC DISENG | Primary hydraulic pump failed, or an FMC channel is off. |
-| APU ON | APU ON | APU running in flight. |
-| ROTOR BRAKE ON/LK | RTR BRK ON/LK | Rotor brake set with a power lever off OFF. |
-| IRJAM FAIL | IRJAM FAIL | IR jammer on but damaged or without DC power (US equipment). |
+| — | ENGINE 1 FIRE | 1. EMER ENG SHUTDOWN (affected engine) – When conditions permit<br>2. Illuminated ENG FIRE button – Press and RDY light illuminates<br>3. FIRE DISCH button(s) – Press<br>4. LAND AS SOON AS POSSIBLE |
+| — | ENGINE 2 FIRE | As ENGINE 1 FIRE |
+| — | APU FIRE | 1. Illuminated APU FIRE button – Press and RDY light illuminates<br>2. FIRE DISCH button(s) – Press<br>3. LAND AS SOON AS POSSIBLE |
+| DECK FIRE | AFT DECK FIRE | Displayed by the fire test only |
+| ENG1 OUT | ENGINE 1 OUT | LAND AS SOON AS PRACTICABLE |
+| ENG2 OUT | ENGINE 2 OUT | LAND AS SOON AS PRACTICABLE |
+| ENG1 OVSP | ENG1 OVSP | |
+| ENG2 OVSP | ENG2 OVSP | |
+| LOW RTR | LOW ROTOR RPM | Collective – Lower to restore Nr |
+| HIGH RTR | HIGH ROTOR RPM | |
+| HYD FAIL | HYD FAILURE | 1. EMER HYD button – Press ON<br>2. LAND WITHOUT DELAY |
+| TAIL RTR | TAIL ROTOR HYD | LAND AS SOON AS POSSIBLE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| GEN1 FAIL | GENERATOR 1 FAIL | LAND AS SOON AS PRACTICABLE |
+| GEN2 FAIL | GENERATOR 2 FAIL | LAND AS SOON AS PRACTICABLE |
+| Both GEN1 FAIL and GEN2 FAIL | | LAND AS SOON AS POSSIBLE |
+| RECT1 FAIL | RECTIFIER 1 FAIL | LAND AS SOON AS PRACTICABLE |
+| RECT2 FAIL | RECTIFIER 2 FAIL | LAND AS SOON AS PRACTICABLE |
+| Both RECT1 FAIL and RECT2 FAIL | | LAND AS SOON AS POSSIBLE |
+| ENG1 CHIPS | ENGINE 1 CHIPS | |
+| ENG2 CHIPS | ENGINE 2 CHIPS | |
+| ENG1 OIL PSI | ENG 1 OIL PSI LOW | |
+| ENG2 OIL PSI | ENG 2 OIL PSI LOW | |
+| GRBX1 OIL PSI | GRBX 1 OIL PSI LOW | |
+| GRBX2 OIL PSI | GRBX 2 OIL PSI LOW | |
+| GRBX1 CHIPS | GEARBOX 1 CHIPS | LAND AS SOON AS PRACTICABLE |
+| GRBX2 CHIPS | GEARBOX 2 CHIPS | LAND AS SOON AS PRACTICABLE |
+| GRBX VIB | GEARBOX VIBRATION | LAND AS SOON AS POSSIBLE |
+| XMSN1 OIL PSI | XMSN 1 OIL PSI LOW | |
+| XMSN2 OIL PSI | XMSN 2 OIL PSI LOW | |
+| XMSN CHIPS | MAIN XMSN CHIPS | LAND AS SOON AS POSSIBLE |
+| FWD FUEL LO | FORWARD FUEL LOW | LAND AS SOON AS PRACTICABLE |
+| AFT FUEL LO | AFT FUEL LOW | LAND AS SOON AS PRACTICABLE |
+| PRI HYD PSI | PRI HYD PSI LOW | LAND AS SOON AS POSSIBLE |
+| UTIL HYD PSI | UTIL HYD PSI LOW | LAND AS SOON AS POSSIBLE |
+| Both PRI HYD PSI and UTIL HYD PSI | | See HYD FAIL |
+| PRI HYD LVL | PRI HYD LEVEL LOW | LAND AS SOON AS PRACTICABLE |
+| UTIL HYD LVL | UTIL HYD LEVEL LOW | LAND AS SOON AS PRACTICABLE |
+| Both PRI HYD LVL and UTIL HYD LVL | | Be prepared for HYD FAIL |
+| BUCS FAIL | BUCS FAIL | LAND AS SOON AS POSSIBLE |
+| FMC DISENG | FMC DISENGAGED | |
+| STAB FAIL | AUTO/MAN STAB FAIL | |
+| APU ON | APU ON | Turn off APU |
+| RTR BRK ON/LK | ROTOR BRAKE ON/LK | |
+| IRJAM FAIL | IRJAM FAIL | |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| APU START | APU START | |
+| APU PWR ON | APU POWER ON | |
+| APU ON | APU ON | |
+| APU STOP | APU STOP | |
+| APU FAIL | APU FAIL | Repair the APU |
+| ENG1 START | ENGINE 1 START | |
+| ENG2 START | ENGINE 2 START | |
+| BATTERY | BATTERY | Repair the battery |
+| ACCUM PSI | ACCUM OIL PRES LO | Information System Status |
+| CANOPY | CANOPY OPEN | |
+| ATT HOLD | ATTITUDE HOLD | |
+| RAD HOLD / BAR HOLD | RAD ALT HOLD / BAR ALT HOLD | |
+| HOVER DRIFT | HOVER DRIFT | |
+| RTR BRK ON | ROTOR BRAKE ON | |
+| TW LOCK SEL | TAIL WHEEL LOCK SEL | |
+| EXT1 EMPTY – EXT4 EMPTY | EXTERNAL 1–4 EMPTY | |
+| FCR FAULT | FCR FAULT | |
+| WPT APRCH / WPT PASSED | WAYPOINT APPROACH / WAYPOINT PASSED | |
+| FUEL CHECK | FUEL CHECK | |
+| VERS MISM | VERSION MISMATCH | |
 
-## Advisories
-
-| Page text | UFD | Meaning |
-|---|---|---|
-| APU START / APU POWER ON / APU ON / APU STOP | APU START / APU PWR ON / APU ON / APU STOP | APU starting, on line, running on the ground, shutting down. |
-| ENGINE 1 START / ENGINE 2 START | ENG1 START / ENG2 START | Starter turning. |
-| BATTERY | BATTERY | Battery damaged. |
-| ACCUM OIL PRES LO | ACCUM PSI | Utility hydraulic accumulator at or below its 1,650 psi precharge: normal during an APU start, until the pumps recharge it. |
-| CANOPY OPEN | CANOPY | A canopy door is open. |
-| ATTITUDE HOLD | ATT HOLD | Attitude hold engaged. |
-| RAD ALT HOLD / BAR ALT HOLD | RAD HOLD / BAR HOLD | Altitude hold engaged, radar or barometric. |
-| HOVER DRIFT | HOVER DRIFT | About 50 ft from the position hold point. |
-| ROTOR BRAKE ON | RTR BRK ON | Rotor brake set, both power levers off. |
-| TAIL WHEEL LOCK SEL | TW LOCK SEL | On the ground. |
-| EXTERNAL 1–4 EMPTY | EXT1–4 EMPTY | An external tank has run dry. |
-| FCR FAULT | FCR FAULT | The radar has failed. |
-| WAYPOINT APPROACH / WAYPOINT PASSED | WPT APRCH / WPT PASSED | Nearing or past the next point, with no TSD on display. |
-| FUEL CHECK | FUEL CHECK | [Fuel check]({{ '/displays/mpd/fuel/' | relative_url }}#fuel-check) results ready. |
-| VERSION MISMATCH | VERS MISM | The mod's files are from different builds. See the [VER page]({{ '/displays/mpd/dms/' | relative_url }}#ver). |
+The conditions that raise each message are described on the corresponding system page; see [Emergency procedures]({{ '/flying/emergency/' | relative_url }}).

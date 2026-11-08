@@ -56,7 +56,7 @@ These are Arma's own bindings, in their usual categories. In the Apache they do 
 | **Fire panel** | Arm the ENG 1, APU or ENG 2 FIRE pushbutton; discharge the primary or reserve bottle; test. |
 | **Armament panel** | ARM/SAFE, ground override. |
 | **Warning/caution panel** | Acknowledge master caution, master warning. |
-| **Others** | Emergency hydraulics, NVS mode, floodlight, anti-collision light, keyboard unit, monocle, canopy door. |
+| **Others** | Emergency hydraulics, NVS mode, floodlight, anti-collision light, keyboard unit, HDU, canopy door. |
 
 **AH-64D HeliSim Cockpit Controls** has one binding per switch position, for switch panels: **Battery** Off and On, **APU** Off and On, each **Engine Start** switch at Ignition Override, Off and Start, the **Rotor Brake** at Off, Brake and Lock, and each **Power Lever** at Off, Idle and Fly.
 

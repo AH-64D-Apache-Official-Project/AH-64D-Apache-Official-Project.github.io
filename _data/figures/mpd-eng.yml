@@ -1,6 +1,6 @@
 title: ENG page
 kind: mpd
-caption: 'ENG page in flight: both engines at 62% torque, Nr 101%, with the limit markings for both engines.'
+caption: 'ENG page, in-flight format: both engines at 62% torque, Nr 101%, with the limit markings for both engines.'
 state:
   page: ENG
   u:
@@ -36,59 +36,59 @@ callouts:
   x: 60
   y: 268
   side: l
-  label: Torque readouts
-  text: Engine 1 and 2 torque, percent.
+  label: Engine torque digital readouts
+  text: 'Engine 1 and 2 torque, percent.'
 - n: 2
   x: 65
   y: 470
   side: l
-  label: Torque tapes
-  text: Green in the normal range, yellow in a time-limited range, red past the maximum. The tape steps wider at 100% and again at 115%.
+  label: Engine torque tapes
+  text: 'Green in the normal range, yellow in a time-limited range, red past the maximum. The tape steps wider at 100% and again at 115%.'
 - n: 3
   x: 115
   y: 222
   side: l
-  label: Red limit bar
-  text: The maximum, here 115% torque and 949 °C TGT for both engines.
+  label: Limit marking
+  text: 'The maximum, here 115% torque and 949 °C TGT for both engines.'
 - n: 4
   x: 280
   y: 450
   side: l
   label: TGT tapes
-  text: Turbine gas temperature, degrees C.
+  text: 'Turbine gas temperature, °C.'
 - n: 5
   x: 490
   y: 420
   side: t
-  label: Np tapes
-  text: Power turbine speed of each engine.
+  label: Power turbine speed (Np) tapes
+  text: 'Engine 1 and 2 Np.'
 - n: 6
   x: 580
   y: 420
   side: t
-  label: Nr tape
-  text: 'Main rotor speed: the chevron shape in the middle.'
+  label: Main rotor speed (Nr) tape
+  text: 'The chevron in the centre.'
 - n: 7
   x: 915
   y: 418
   side: r
-  label: Np
-  text: Power turbine speed, digital.
+  label: Np digital readouts
+  text: 'Engine 1 and 2 Np, percent.'
 - n: 8
   x: 915
   y: 518
   side: r
-  label: Ng
-  text: Gas generator speed of each engine, percent.
+  label: Gas generator speed (Ng) digital readouts
+  text: 'Engine 1 and 2 Ng, percent.'
 - n: 9
   x: 940
   y: 230
   side: r
-  label: Hydraulics
-  text: Primary, utility and accumulator pressure, psi. Here, at the top right, in every format but Ground.
+  label: Hydraulic pressure (HYD PSI) status window
+  text: 'Primary (PRI), utility (UTIL) and accumulator (ACC) pressure, psi; in the upper right area of the page in every format except Ground.'
 - n: 10
   x: 940
   y: 800
   side: r
-  label: ACQ
-  text: Acquisition source.
+  label: ACQ button
+  text: 'Acquisition source.'

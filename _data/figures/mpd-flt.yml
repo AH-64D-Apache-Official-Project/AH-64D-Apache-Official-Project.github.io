@@ -1,6 +1,6 @@
 title: FLT page
 kind: mpd
-caption: FLT page in a gentle right turn at 96 kt, flying to waypoint W02.
+caption: FLT page, 8° right bank, 96 knots true airspeed, destination point W02.
 state:
   page: FLT
   src:
@@ -34,32 +34,32 @@ callouts:
   x: 130
   y: 162
   side: l
-  label: Torque
-  text: Highest engine torque, percent.
+  label: Engine torque
+  text: Digital readout of the higher of the two engine torques, percent.
 - n: 2
   x: 330
   y: 150
   side: t
-  label: Heading tape
-  text: Magnetic heading; the current heading is boxed.
+  label: Heading scale
+  text: Moving magnetic heading scale; current magnetic heading is presented in the centre as a 3-digit data field.
 - n: 3
   x: 549
   y: 188
   side: t
   label: Command heading
-  text: Caret pointing to the next waypoint.
+  text: Chevron along the bottom of the heading scale; the heading to the next navigation waypoint.
 - n: 4
   x: 890
   y: 152
   side: r
   label: Barometric altitude
-  text: Feet above sea level.
+  text: Barometric altitude, feet.
 - n: 5
   x: 345
   y: 240
   side: l
-  label: Bank scale
-  text: Ticks at 10, 20, 30 and 60 degrees.
+  label: Bank angle
+  text: Analogue indication of the current bank angle; the bank angle triangle moves with the roll of the attitude indicator.
 - n: 6
   x: 140
   y: 522
@@ -70,53 +70,53 @@ callouts:
   x: 210
   y: 562
   side: l
-  label: Horizon and pitch ladder
-  text: Sky rungs in blue, ground rungs in brown, every 10 degrees.
+  label: Attitude indicator
+  text: Pitch and roll attitude. The sky portion of the pitch ladder is cyan; the horizon line and the ground portion are brown.
 - n: 8
   x: 500
   y: 510
   side: l
-  label: Aircraft datum
-  text: The aircraft, fixed in the centre.
+  label: Waterline
+  text: Central reference of the pitch ladder.
 - n: 9
   x: 440
   y: 470
   side: l
-  label: Flight path
-  text: Where the aircraft is actually going.
+  label: Flight path vector
+  text: The projected flight path; the point towards which the helicopter is flying.
 - n: 10
   x: 700
   y: 540
   side: r
-  label: Fly-to cue
-  text: Steer to put the flight path over it to reach the next waypoint.
+  label: Navigation fly-to cue
+  text: Direction to the active next navigation waypoint, used with the flight path vector. When aligned, the flight path vector fits within the cue.
 - n: 11
   x: 870
   y: 512
   side: r
   label: Radar altitude
-  text: Feet above the ground. Blank above about 1,420 ft.
+  text: Digital readout, feet AGL. Not presented above 1,428 ft.
 - n: 12
   x: 935
   y: 425
   side: r
-  label: Vertical speed
-  text: Pointer on the radar altitude scale.
+  label: Rate of climb
+  text: Rate of climb scale; the filled triangle pointer indicates the current rate of climb or descent.
 - n: 13
   x: 60
   y: 805
   side: l
-  label: Navigation data
-  text: Next point, distance, ground speed and time to go.
+  label: Navigation data status window
+  text: Destination point, distance to go, ground speed and time to go.
 - n: 14
   x: 500
   y: 960
   side: b
-  label: Turn and slip
-  text: Turn rate on the scale, slip ball below it.
+  label: Turn rate and skid/slip
+  text: Turn rate indicator, with the skid/slip ball below it.
 - n: 15
   x: 940
   y: 800
   side: r
   label: ACQ
-  text: 'Acquisition source; `R6`{: .vab} opens the list.'
+  text: 'Acquisition source; `R6`{: .vab} presents the list.'

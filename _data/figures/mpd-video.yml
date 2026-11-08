@@ -1,6 +1,6 @@
 title: VIDEO page, TADS
 kind: mpd
-caption: 'The VIDEO page showing the TADS with its symbology (picture removed): FLIR, LMC on, lasing, and a laser Hellfire within constraints.'
+caption: 'VIDEO page, decluttered mode: TADS underlay with weapon symbology (video removed), FLIR, LMC on, laser firing, and a SAL Hellfire in constraints.'
 state:
   page: VID
   u:
@@ -72,7 +72,7 @@ state:
     - CMSL
     - PHS
     - ''
-    - DIR-NORM
+    - DIR NORM
     - ''
     - ''
 callouts:
@@ -80,17 +80,17 @@ callouts:
   x: 810
   y: 40
   side: t
-  label: Symbology
-  text: Whose symbology is drawn, here the TADS. Press for the menu view.
+  label: VSEL button
+  text: 'The video symbology presented, here TADS. Pressing it deselects decluttered mode.'
 - n: 2
   x: 40
   y: 315
   side: l
-  label: Picture size
-  text: Wide, normal or zoomed in; the one in use is boxed.
+  label: VIEW buttons
+  text: 'W, N and Z; the selected view mode is boxed.'
 - n: 3
   x: 712
   y: 314
   side: r
-  label: TADS symbology
-  text: As in the TADS, drawn heavier.
+  label: Weapon symbology
+  text: 'TADS weapon symbology, as in the TADS optics view, drawn heavier.'

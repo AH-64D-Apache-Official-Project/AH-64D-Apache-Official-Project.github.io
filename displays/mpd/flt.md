@@ -1,33 +1,33 @@
 ---
-title: FLT page
-lead: A head-down attitude indicator with airspeed, altitudes, heading and steering to the next point.
-keywords: [flt, flight, attitude, horizon, airspeed, altitude, heading, fly-to, turn, slip]
+title: Flight (FLT) page
+lead: The MPD FLT page presents the flight instrument symbology required for flight.
+keywords: [flt, flight, flight instruments, attitude indicator, waterline, pitch ladder, airspeed, barometric altitude, radar altitude, heading scale, command heading, fly-to cue, flight path vector, rate of climb, turn rate, skid slip, navigation data]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-flt.html
 ---
 
-Open it from the top row of any aircraft page, from MENU, or by pressing {% include key.html id="fza_ah64_symbologySelectPress" %}, which puts it on your left MPD.
+The FLT page is selected from the top row of any aircraft page, from the MENU page, or with {% include key.html id="fza_ah64_symbologySelectPress" %}, which presents it on the left MPD.
 
 {% include fig.html id="mpd-flt" %}
 
 ## Buttons
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `T2`{: .vab} | `FLT`{: .mpd .box} | This page; pressed again, opens ENG. |
-| `T3`{: .vab} | `FUEL`{: .mpd} | Opens FUEL. |
-| `T4`{: .vab} | `PERF`{: .mpd} | Opens PERF. |
-| `T6`{: .vab} | `UTIL`{: .mpd} | Opens UTIL. |
-| `R6`{: .vab} | `ACQ`{: .mpd} | Opens the [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list. |
-| `B1`{: .vab} | | MENU. |
+| `T2`{: .vab} | `FLT`{: .mpd .box} | This page; pressed again, the ENG page |
+| `T3`{: .vab} | `FUEL`{: .mpd} | FUEL page |
+| `T4`{: .vab} | `PERF`{: .mpd} | PERF page |
+| `T6`{: .vab} | `UTIL`{: .mpd} | A/C UTIL page |
+| `R6`{: .vab} | `ACQ`{: .mpd} | [Acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list |
+| `B1`{: .vab} | | MENU page |
 
-The **-W- BIAS** and **SET** labels are not simulated.
+The -W- (waterline) button, the BIAS buttons and the FLT SET button are not simulated.
 
-## Navigation
+## Navigation data status window
 
-When a route or a direct-to point is active, the box in the lower left shows the point's identifier, distance, ground speed and time to go, and the command heading caret and fly-to cue steer you to it. Time to go is in minutes and seconds under 5 minutes, hours and minutes above, and blank at 15 kt or less. Points and routes are set up on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}).
+With a destination point selected, the navigation data status window in the lower left area of the page presents the destination point, distance to go, ground speed and time to go. The command heading and the navigation fly-to cue provide steering to the destination point. The seconds digits of the time to go are presented only when the time is less than 5 minutes; time to go is not presented at a ground speed of 15 kt or less. Points and routes are set on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}).
 
 ## Sensor bearings
 
-Small markers on the heading tape show where the radar's centreline and the other crew station's sight are pointing, when they are in use.
+The FCR centerline bearing and the alternate sensor bearing are presented along the bottom of the heading scale. The FCR centerline bearing represents the azimuth of the current FCR scan centerline. The alternate sensor bearing, a triangle, represents the line of sight azimuth of the other crewmember's selected sight.

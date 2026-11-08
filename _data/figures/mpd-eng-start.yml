@@ -1,6 +1,6 @@
 title: ENG page, engine start
 kind: mpd
-caption: 'ENG page on the ground during an engine 1 start: the starter is engaged and Ng is passing 25%.'
+caption: 'ENG page, ground format, during an engine 1 start: the starter is engaged and Ng is passing 25%.'
 state:
   page: ENG
   u:
@@ -29,29 +29,29 @@ callouts:
   x: 850
   y: 654
   side: r
-  label: Starter
-  text: START, with ON next to the engine whose starter is turning.
+  label: Start status (START) window
+  text: 'With the starter mode ON label next to the engine being started.'
 - n: 2
   x: 780
   y: 518
   side: r
-  label: Ng
-  text: Move the power lever to IDLE above 23%.
+  label: Ng digital readout
+  text: 'Engine 1 Ng; the minimum with the power lever at IDLE is 23%.'
 - n: 3
   x: 280
   y: 520
   side: l
-  label: TGT
-  text: Rises as the engine lights off.
+  label: TGT tape
+  text: 'Rises as the engine lights off.'
 - n: 4
   x: 250
   y: 765
   side: l
-  label: Engine oil pressure
-  text: Ground format only.
+  label: Engine oil pressure (ENGINE OIL PSI) status window
+  text: 'Ground format only.'
 - n: 5
   x: 30
   y: 470
   side: l
-  label: Torque limit
-  text: 'With the rotor below 50%, torque is limited to 30%: the red bar.'
+  label: Limit marking
+  text: 'With Nr below 50%, torque is limited to 30%.'

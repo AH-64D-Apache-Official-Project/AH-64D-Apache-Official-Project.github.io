@@ -1,6 +1,6 @@
 title: ENG page, limits and timers
 kind: mpd
-caption: 'Both engines in a time-limited torque and TGT range, and engine 1 above its Ng limit. Torque and TGT each show one timer, centred, with the shorter time; the Ng timer is under engine 1 only.'
+caption: 'Both engines in a time-limited torque and TGT range, and engine 1 above its Ng limit. Engine torque and TGT each present one count-down timer, centred, with the shorter time; the Ng timer is below engine 1 only.'
 state:
   page: ENG
   u:
@@ -46,23 +46,23 @@ callouts:
   x: 65
   y: 470
   side: l
-  label: Yellow tape
-  text: Yellow in a time-limited range, and wider above 100%.
+  label: Engine torque tape
+  text: 'Yellow in a time-limited range, and wider above 100%.'
 - n: 2
   x: 115
   y: 568
   side: b
-  label: Torque timer
-  text: 'Both engines are over 100%, so one timer sits between the columns with the shorter time. TGT is the same: engine 2 is in the 870 °C range, with 10 minutes, and engine 1 in the 810 °C range, with 30.'
+  label: Torque count-down timer
+  text: 'Both engines are above 100%, so one timer is presented between the columns with the shorter time. TGT is the same: engine 2 is in the 870 °C range, with 10 minutes, and engine 1 in the 810 °C range, with 30.'
 - n: 3
   x: 780
   y: 518
   side: r
-  label: Ng, yellow
-  text: Engine 1 above 102.2%.
+  label: Ng digital readout, yellow
+  text: 'Engine 1 above 102.2%.'
 - n: 4
   x: 780
   y: 565
   side: r
-  label: Ng timer
-  text: Only engine 1 is in its timed range, so its timer takes the place of its number.
+  label: Ng count-down timer
+  text: 'Only engine 1 is in its time-limited range, so its timer is presented in place of its digital readout.'

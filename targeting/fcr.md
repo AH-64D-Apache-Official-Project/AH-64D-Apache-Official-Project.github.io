@@ -1,120 +1,120 @@
 ---
 title: Fire control radar
-lead: How to use the Longbow radar. Who controls it, how to scan, what it can see, and how to step through its targets.
+lead: Operation of the fire control radar — radar ownership, scanning, modes, scan size, detection, target priority, zones, the centreline and use with the TADS.
 keywords: [fcr, radar, longbow, scan, single scan, continuous, gtm, atm, rmap, tpm, scan size, nts, ants, centerline, owner, link, slave, detection, zone, priority fire zone, no fire zone, tgt, cursor]
 seats: [PLT, CPG]
 redirect_from:
   - /targeting-fcr.html
 ---
 
-The radar sits in the dome above the rotor. Only aircraft with it fitted can use it: see [Variants and customisation]({{ '/aircraft/variants/' | relative_url }}). What it shows is described on the [FCR page]({{ '/displays/mpd/fcr/' | relative_url }}).
+The fire control radar is mounted on the mast above the main rotor, on aircraft with the radar installed; see [Variants and configuration]({{ '/aircraft/variants/' | relative_url }}). Its display is described on the [FCR page]({{ '/displays/mpd/fcr/' | relative_url }}).
 
-## Who controls it {#owner}
+## Radar ownership {#owner}
 
-The radar is shared, and only one crew station controls it at a time: the **owner**.
+The radar is aircraft common, and is controlled by one crew station at a time, the owner:
 
-- The crew station that last selected the FCR as its sight owns it.
-- The CPG also owns it while linked with TADS as the sight (TADS-L). See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}).
+- The crew station that last selected FCR as its sight owns the radar.
+- The CPG also owns the radar while linked with TADS as the sight (TADS-L). See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}).
 - Taking the radar from the other crew station stops its scan.
-- Selecting a different sight gives it up and stops the scan.
+- Selecting a different sight releases the radar and stops the scan.
 
-Only the owner can scan, change the mode or scan size, slew the centreline and step the next-to-shoot target. The other crew station's radar keys do nothing.
+Only the owner can scan, change the mode or scan size, slew the centreline and step the next-to-shoot target. The other crew station's radar bindings have no effect.
 
-## Before it will scan
+## Requirements
 
 - AC and DC power, and an undamaged radar.
-- In the air, or **GND ORIDE** on when on the ground.
+- Airborne, or GND ORIDE selected on the ground.
 
-A radar that loses power or is damaged shows `FCR FAIL`{: .mpd} on the HAD and the `FCR FAULT`{: .mpd} advisory.
+A radar that loses power or is damaged displays `FCR FAIL`{: .mpd} on the HAD and the `FCR FAULT`{: .mpd} advisory.
 
 ## Scanning
 
-| How | Binding | Behaviour |
+| Scan | Binding | Function |
 |---|---|---|
-| **Single scan** | {% include key.html id="fza_ah64_fcrSingleScan" %} | One scan burst, then it stops by itself. Press again to stop early. |
-| **Continuous scan** | {% include key.html id="ActiveSensorsToggle" %} | Keeps scanning until you toggle it off. |
+| Single scan | {% include key.html id="fza_ah64_fcrSingleScan" %} | One scanburst, then stops. Pressed again, stops early. |
+| Continuous scan | {% include key.html id="ActiveSensorsToggle" %} | Continuous scanbursts until deselected. |
 
-While the radar transmits, the HAD shows `FCR XMIT`{: .mpd}.
+While the radar transmits, the HAD displays `FCR XMIT`{: .mpd}, and the scan wiper symbol moves across the scan sector with the antenna on the [FCR page]({{ '/displays/mpd/fcr/' | relative_url }}).
 
-A scan burst is a number of full sweeps of the sector, there and back. In GTM and RMAP it is 2 sweeps in Wide and Medium, 3 in Narrow and 4 in Zoom; in ATM always 2. The antenna turns at 60° a second (120° in TPM), so a wide GTM sweep takes 3 seconds and a single scan about 6. It first slews to the edge of the sector before the sweep starts.
+One scan is a near bar and a far bar: a sweep of the antenna from one scan limit to the other, and back. A scanburst consists of multiple scans: in GTM and RMAP, 2 scans in Wide and Medium, 3 in Narrow and 4 in Zoom; in ATM, always 2. The antenna rotates at 60° per second (120° in TPM), so one wide GTM scan takes 3 seconds and a single scanburst approximately 6 seconds. The antenna slews to the scan limit before the first bar starts.
 
-Targets are updated each time a sweep completes. Starting a new scan clears the old targets.
+Targets are updated at the end of each scan. A new scanburst clears the previous targets.
 
 ## Modes
 
-Select the mode with the mode keys. Changing mode stops a running scan.
+Changing mode stops a scan in progress.
 
 | Mode | Binding | Use |
 |---|---|---|
-| **GTM** | {% include key.html id="fza_ah64_fcrModeGTM" %} | Ground targets. |
-| **ATM** | {% include key.html id="fza_ah64_fcrModeATM" %} | Aircraft and helicopters, all round. |
-| **RMAP** | {% include key.html id="fza_ah64_fcrModeRMAP" %} | Ground targets over a picture of the terrain. Select RMAP again to turn the picture on or off. |
-| **TPM** | {% include key.html id="fza_ah64_fcrModeTPM" %} | Terrain profile for flying low at night. No targets. |
+| GTM | {% include key.html id="fza_ah64_fcrModeGTM" %} | Ground targets |
+| ATM | {% include key.html id="fza_ah64_fcrModeATM" %} | Aircraft and helicopters, all azimuths |
+| RMAP | {% include key.html id="fza_ah64_fcrModeRMAP" %} | Ground targets over a terrain image. Selecting RMAP again toggles the image. |
+| TPM | {% include key.html id="fza_ah64_fcrModeTPM" %} | Terrain profile for low-level flight at night; no targets |
 
 ## Scan size
 
-The scan size sets the width of the sector. A new size stops a running scan and takes effect from the next one.
+The scan size sets the width of the sector. A new size stops a scan in progress and applies from the next scan.
 
 | Size | Binding | GTM and RMAP | ATM |
 |---|---|---|---|
-| **W**ide | {% include key.html id="fza_ah64_fcrScanSize_W" %} | 90° | All round, except about 12° either side of the tail |
-| **M**edium | {% include key.html id="fza_ah64_fcrScanSize_M" %} | 45° | 180° |
-| **N**arrow | {% include key.html id="fza_ah64_fcrScanSize_N" %} | 30° | 90° |
-| **Z**oom | {% include key.html id="fza_ah64_fcrScanSize_Z" %} | 15° | 45° |
+| Wide | {% include key.html id="fza_ah64_fcrScanSize_W" %} | 90° | All azimuths except approximately 12° either side of the tail |
+| Medium | {% include key.html id="fza_ah64_fcrScanSize_M" %} | 45° | 180° |
+| Narrow | {% include key.html id="fza_ah64_fcrScanSize_N" %} | 30° | 90° |
+| Zoom | {% include key.html id="fza_ah64_fcrScanSize_Z" %} | 15° | 45° |
 
-The scan size bindings have no default key. Use the [radial menu]({{ '/targeting/radial/' | relative_url }}), or bind them yourself.
+The scan size bindings have no default key; they are selected with the [radial menu]({{ '/targeting/radial/' | relative_url }}) or user bindings.
 
-TPM chooses its own width: 180° below 45 kt, 90° above 55 kt.
+TPM selects its own width: 180° below 45 kt, 90° above 55 kt.
 
-## What it sees
+## Detection
 
-- Range 500 m to 8 km, and it needs line of sight.
-- Stationary ground targets show out to 6 km. Moving targets and aircraft show out to 8 km.
-- GTM and RMAP ignore anything more than 25° above the antenna. ATM shows only aircraft and helicopters that are moving, down to 22.5° below the antenna.
-- Targets are classed as tracked, wheeled, helicopter, aircraft or air defence. Anything else is unknown.
+- Range 500 m to 8 km, with line of sight required.
+- Stationary ground targets are displayed to 6 km; moving targets and aircraft to 8 km.
+- GTM and RMAP ignore targets more than 25° above the antenna. ATM displays only moving aircraft and helicopters, down to 22.5° below the antenna.
+- Targets are classified as tracked, wheeled, helicopter, aircraft or air defence; any other target is unknown.
 
-Detection is not certain. Each scan burst a target may show bright, dim or not at all:
+Detection is probabilistic. In each scanburst a target may be displayed in full intensity, in partial intensity, or not at all:
 
-- **Moving targets** stand out from the ground, and show bright most of the time.
-- **Stationary targets** are harder. They show better in the smaller scan sizes, and keep their best result from the last three scan bursts.
-- A few false returns from the ground (clutter) appear in GTM and RMAP.
+- Moving targets are distinct from the ground return and are displayed in full intensity in most scans.
+- Stationary targets are detected less reliably. Detection improves at smaller scan sizes, and each target keeps its best result from the last three scanbursts.
+- A small number of false ground returns (clutter) are displayed in GTM and RMAP.
 
-## Priority and the next-to-shoot target
+## Target priority and next-to-shoot
 
-Targets are ranked: bright before dim, then air defence, wheeled, tracked, helicopter, aircraft, unknown. The FCR page, the helmet and the TSD's NAV phase show the top 16; the TSD's ATK phase shows them all.
+Targets are ranked: full intensity before partial intensity, then air defence, wheeled, tracked, helicopter, flyer, unknown. The FCR page, the HMD and the TSD NAV phase display the top 16; the TSD ATK phase displays all.
 
-The highest-priority target is the **next to shoot** (NTS), and the one after it the **alternate** (ANTS). Step the NTS through the top 16 with `L1`{: .vab} **NTS** on the FCR page or {% include key.html id="vehLockTargets" %}, as the owner with FCR as your sight. The NTS stays on its target as long as that target remains in the top 16.
+The highest-priority target is the next-to-shoot (NTS), and the next is the alternate (ANTS). The owner steps the NTS through the top 16 with `L1`{: .vab} NTS on the FCR page or {% include key.html id="vehLockTargets" %}, with FCR as the sight. The NTS remains on its target while that target remains in the top 16.
 
-With FCR as your sight you can also choose the NTS with the [MPD cursor]({{ '/displays/mpd/fcr/' | relative_url }}#cursor). **TGT** on the FCR page stores radar targets as target points, `T01`{: .mpd} to `T50`{: .mpd}: see [TGT]({{ '/displays/mpd/fcr/' | relative_url }}#tgt).
+With FCR as the sight, the NTS can also be selected with the [MPD cursor]({{ '/displays/mpd/fcr/' | relative_url }}#cursor). TGT on the FCR page stores radar targets as target points `T01`{: .mpd} to `T50`{: .mpd}; see [TGT]({{ '/displays/mpd/fcr/' | relative_url }}#tgt).
 
-With FCR as your sight, a new NTS also becomes your [range source]({{ '/targeting/sights/' | relative_url }}#range), and the radar-guided Hellfires are fired at it: see [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#rf).
+With FCR as the sight, a new NTS becomes the [range source]({{ '/targeting/sights/' | relative_url }}#range), and RF Hellfires are launched at it; see [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#rf).
 
 ## Zones {#zones}
 
-Priority fire (PF) and no fire (NF) zones, drawn on the TSD's [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn) or loaded from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc), change what the radar puts first:
+Priority fire (PF) and no fire (NF) zones, drawn on the TSD [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn) or loaded from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc), change the target priority:
 
-- Targets in the **active PF zone** rank above all others. After a scan, if the NTS is outside the PF zone and there are targets in it, the NTS moves into the zone.
-- Targets in an **active NF zone** are not shown on the FCR page, the TSD or the helmet, and cannot become the NTS or ANTS.
+- Targets in the active PF zone rank above all others. After a scan, if the NTS is outside the PF zone and targets exist inside it, the NTS moves into the zone.
+- Targets in an active NF zone are not displayed on the FCR page, the TSD or the HMD, and cannot become the NTS or ANTS.
 
-Zones take effect on the next scan. The active ones are drawn on the GTM and ATM pages.
+Zones take effect from the next scan. The active zones are drawn on the GTM and ATM pages.
 
-## The centreline {#centerline}
+## Centreline {#centerline}
 
-The centreline is where the middle of the scan sector points.
+The centreline is the centre of the scan sector.
 
-- Slew it with `L2`{: .vab} and `R2`{: .vab} on the FCR page: 90° a press in Wide, 22.5° in Medium, 15° in Narrow, 7.5° in Zoom. Slewing stops a running scan.
-- A slewed centreline holds its compass bearing as the aircraft turns. Slew it back to the nose and it follows the nose again.
-- It cannot be slewed in TPM or in wide ATM.
+- `L2`{: .vab} and `R2`{: .vab} on the FCR page slew it: 90° per press in Wide, 22.5° in Medium, 15° in Narrow, 7.5° in Zoom. Slewing stops a scan in progress.
+- A slewed centreline holds its bearing as the aircraft turns. Slewed back to the nose, it follows the nose.
+- It cannot be slewed in TPM or in ATM Wide.
 
-Some sight settings point it for you:
+Some sight configurations point the centreline automatically:
 
-- **Pilot**: you can slew it only with **FXD** as your acquisition source. Otherwise it follows your acquisition source (your head, with PHS), updating at most four times a second and not during a scan. Selecting the FCR as sight points it along your acquisition source.
-- **CPG**: you cannot slew it while slaved or in TADS-L. Slaved with FCR as the sight, it points along your acquisition source. In TADS-L it follows the TADS.
+- **Pilot**: the centreline can be slewed only with FXD as the acquisition source. Otherwise it follows the acquisition source (the pilot's head with PHS), updating at most four times per second and not during a scan. Selecting FCR as the sight points it along the acquisition source.
+- **CPG**: the centreline cannot be slewed while slaved or in TADS-L. Slaved with FCR as the sight, it points along the acquisition source; in TADS-L it follows the TADS.
 
-## On the helmet
+## C-scope {#on-the-helmet}
 
-`T1`{: .vab} **C SCP** on the FCR page puts the radar's targets on your helmet and the VIDEO page, or in TPM the terrain profile lines and obstacles. It is your own setting; the other crew station's is separate. The HAD shows `CSCOPE`{: .mpd} while it is on.
+`T1`{: .vab} C SCP on the FCR page presents the FCR target symbols in the C-scope format on the HMD and the VIDEO page, or in TPM the terrain profile lines and obstacle symbols. It is crewstation independent.
 
-## Using it with the TADS
+## Use with the TADS
 
-With **FCR-L** (FCR as the sight, linked), pressing {% include key.html id="fza_ah64_sightSlave" %} slaves the TADS onto the NTS, so the CPG can look at each radar target before engaging. With **TADS-L**, the radar scans wherever the TADS is pointing.
+In FCR-L (FCR as the sight, linked), {% include key.html id="fza_ah64_sightSlave" %} slaves the TADS onto the NTS, for visual identification of each radar target before engagement. In TADS-L, the radar scans along the TADS line of sight.

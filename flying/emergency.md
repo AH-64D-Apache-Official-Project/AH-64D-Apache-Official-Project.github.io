@@ -1,110 +1,135 @@
 ---
 title: Emergency procedures
-lead: What to do when a warning or caution comes up. Short checklists, with the detail on the pages they link to.
-keywords: [emergency, fire, engine failure, single engine, dual engine, autorotation, hydraulics, emer hyd, tail rotor, low rotor, high rotor, generator, tru, chips, transmission, gearbox, grbx vib, jettison]
+lead: Warnings, cautions and advisories for every system, with the UFD and MPD indications and the corrective action for each.
+keywords: [emergency, fire, engine failure, single engine, dual engine, autorotation, hydraulics, emer hyd, tail rotor, low rotor, high rotor, generator, tru, chips, transmission, gearbox, grbx vib, fuel, jettison]
 seats: [PLT, CPG]
 ---
 
-Warnings are red, cautions yellow. Every message, and what raises it, is listed on the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}). Acknowledge **MASTER WARNING** or **MASTER CAUTION** to silence it, then deal with the cause.
+## General
 
-For most warnings, the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#emergency-format) also shows the immediate action steps in its lower half. The checklists below go further.
+Warnings are displayed in red, cautions in yellow and advisories in green. Each new warning illuminates the MSTR WARN lighted button and plays a voice message; each new caution illuminates the MSTR CAUT lighted button and plays a caution tone. The crewmember presses the illuminated button to acknowledge it.
 
-> In every emergency: **fly the aircraft first.** Keep the rotor in the green, keep away from the ground, then work the checklist.
-{: .warning}
+For warnings with a procedure, the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#emergency-format) displays the immediate action steps in its lower half.
 
-## Engine fire {#fire}
+The corrective actions use the following landing conditions only: **LAND WITHOUT DELAY**, **LAND AS SOON AS POSSIBLE** and **LAND AS SOON AS PRACTICABLE**.
 
-`ENGINE 1 FIRE`{: .mpd}, `ENGINE 2 FIRE`{: .mpd} or `APU FIRE`{: .mpd}, with a voice warning and the FIRE pushbutton lit red.
+Each system's description, and the effect of each failure, is given on that system's page: [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}), [Electrical, APU and hydraulics]({{ '/aircraft/electrical/' | relative_url }}), [Fuel system]({{ '/aircraft/fuel/' | relative_url }}), [Fire protection]({{ '/aircraft/fire/' | relative_url }}).
 
-1. **Confirm which side.** Check the lit FIRE pushbutton, or the WCA page.
-2. **FIRE pushbutton** for that engine or the APU: press to **arm**. Fuel to it is shut off; that engine runs down.
-3. **PRI**: press to discharge the primary bottle.
-4. If the fire still burns, **RES**: discharge the reserve bottle.
-5. Engine fire: continue as for a [single engine failure](#engine-failure). APU fire on the ground: shut down.
-{: .steps}
+## Fire {#fire}
 
-Arm the FIRE pushbutton **before** discharging: a bottle only reaches a fire whose pushbutton is already armed. Each bottle can fail, one time in four, which is why there are two. A fire that is not put out usually burns itself out within half a minute or so once the engine is shut down, doing damage until it does. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}).
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| — | ENGINE 1 FIRE | 1. EMER ENG SHUTDOWN (affected engine) – When conditions permit<br>2. Illuminated ENG FIRE button – Press and RDY light illuminates<br>3. FIRE DISCH button(s) – Press<br>4. LAND AS SOON AS POSSIBLE |
+| — | ENGINE 2 FIRE | 1. EMER ENG SHUTDOWN (affected engine) – When conditions permit<br>2. Illuminated ENG FIRE button – Press and RDY light illuminates<br>3. FIRE DISCH button(s) – Press<br>4. LAND AS SOON AS POSSIBLE |
+| — | APU FIRE | 1. Illuminated APU FIRE button – Press and RDY light illuminates<br>2. FIRE DISCH button(s) – Press<br>3. LAND AS SOON AS POSSIBLE |
 
-## Single engine failure {#engine-failure}
+The FIRE button for the affected area **must be armed before** a bottle is discharged; a bottle discharged with the button not armed does not reach the fire. See [Fire protection]({{ '/aircraft/fire/' | relative_url }}).
 
-`ENG1 OUT`{: .mpd} or `ENG2 OUT`{: .mpd}. The other engine picks up the load and the aircraft is now single-engine: its limits change. See [single-engine limits]({{ '/flying/flight-model/' | relative_url }}#limits).
+## Engines {#engine-failure}
 
-1. **Collective**: lower it as needed to keep **Nr at 95% or more**. A heavy aircraft on a hot day may not hold a hover on one engine.
-2. **Airspeed**: in a hover or low and slow, gain forward speed if you can. Forward flight needs less power than hovering. Aim for at least **VSSE**, velocity safe single engine, shown on the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}).
-3. **Torque**: keep the good engine at or below 110%. Up to 122% is allowed for 2.5 minutes, up to 125% for 6 seconds.
-4. **Failed engine power lever**: **OFF**.
-5. **Weight**: if you cannot hold height, jettison stores with {% include key.html id="fza_ah64_collectiveEmergJett" %}.
-6. **Land** as soon as practical. Plan a running landing if you cannot hover.
-{: .steps}
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| ENG1 OUT | ENGINE 1 OUT | LAND AS SOON AS PRACTICABLE |
+| ENG2 OUT | ENGINE 2 OUT | LAND AS SOON AS PRACTICABLE |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| ENG1 START | ENGINE 1 START | |
+| ENG2 START | ENGINE 2 START | |
 
-Do not try to restart an engine that failed from damage. A tripped or fire-damaged engine cannot be restarted until the aircraft is repaired.
+Following a single engine failure, the remaining engine can sustain flight provided the helicopter remains above the velocity safe single engine (VSSE) displayed on the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}). Below VSSE, maximum single engine torque is required to maintain level flight, and exceeding the maximum torque available single engine results in rotor droop. Single engine torque limits are given in [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}#indications-and-limits).
 
-## Chips or low oil pressure
+### Dual engine failure {#dual-engine-failure}
 
-`ENG1 CHIPS`{: .mpd}, `ENG1 OIL PSI`{: .mpd} (or engine 2): the engine is damaged and will get worse.
-
-1. Reduce power on that engine as far as the flight allows.
-2. Land as soon as practical, before it fails. An engine that fails from oil starvation may catch fire.
-{: .steps}
-
-## Transmission and nose gearboxes
-
-`XMSN1 OIL PSI`{: .mpd}, `XMSN2 OIL PSI`{: .mpd} and `XMSN CHIPS`{: .mpd} mean the main transmission is damaged, usually from exceeding the dual engine torque limits. `GRBX1 OIL PSI`{: .mpd} and `GRBX1 CHIPS`{: .mpd} (or gearbox 2) mean a nose gearbox is damaged, usually from exceeding the single engine torque limits. Each message is more severe than the one before it.
-
-1. **Torque**: reduce it, back inside its limits.
-2. **Land as soon as possible.** Once `XMSN CHIPS`{: .mpd} or a `GRBX CHIPS`{: .mpd} shows, land **immediately**, before it fails.
-{: .steps}
-
-A transmission failure is catastrophic: all hydraulic and electrical power, the main rotor and the tail rotor are lost. A nose gearbox failure overspeeds its engine until the engine's overspeed protection shuts it down; on one engine, that means an [autorotation](#dual-engine-failure). See [Drive train]({{ '/aircraft/engines/' | relative_url }}#drive-train).
-
-## Gearbox vibration
-
-`GRBX VIB`{: .mpd}: the intermediate or tail rotor gearbox is critically damaged, and the tail rotor may stop turning.
-
-1. **Airspeed**: accelerate above **100 kt**, and be prepared for a loss of tail rotor thrust.
-2. **Land**, staying above 100 kt all the way to touchdown, so the aircraft does not spin about its yaw axis if the tail rotor fails.
-{: .steps}
-
-## Dual engine failure
-
-Both engines out: the rotor is your only source of energy.
-
-1. **Collective: down, immediately.** Every second of delay costs rotor speed you cannot get back.
-2. **Nr**: hold it in the green, 95% to 105%, with the collective.
-3. Fly at a moderate forward speed towards the best landing area in reach.
-4. Near the ground, **flare** with aft cyclic to slow down and cushion the descent, then level the aircraft.
-5. As the aircraft settles, **raise the collective** to cushion the touchdown.
-{: .steps}
+On a dual engine failure, the pilot must enter an autorotation: establish an airspeed between 77 and 107 knots and lower the collective to maintain Nr. Autorotation cannot be performed safely above 145 knots true airspeed. See [Autorotation]({{ '/flying/flight-model/' | relative_url }}#autorotation).
 
 ## Rotor speed
 
-| Warning | Cause | Action |
+A low rotor RPM condition occurs when the power demanded exceeds the maximum torque available. To recover, the pilot **MUST** lower the collective to restore Nr. Nr can take several seconds to recover.
+
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
 |---|---|---|
-| `LOW RTR`{: .mpd} | Nr below 95% in the air: too much collective for the power available. | Lower the collective. |
-| `HIGH RTR`{: .mpd} | Nr 106% or more: too little load, often in a descent or flare. | Raise the collective, reduce the descent rate. |
+| LOW RTR | LOW ROTOR RPM | Collective – Lower to restore Nr |
+| HIGH RTR | HIGH ROTOR RPM | |
 
-## Hydraulics
+## Drive train
 
-| Message | Action |
-|---|---|
-| `PRI HYD PSI`{: .mpd} / `PRI HYD LVL`{: .mpd} | The utility system still powers the flight controls. If the primary pump has failed, `BUCS FAIL`{: .mpd} and `FMC DISENG`{: .mpd} follow: fly without the hold modes. Land as soon as practical. |
-| `UTIL HYD PSI`{: .mpd} / `UTIL HYD LVL`{: .mpd} | The AWS and pylon articulation are lost (`GUN FAIL`{: .mpd}, **PYLON ERROR**). The primary system keeps the flight controls. Land as soon as practical. |
-| `HYD FAIL`{: .mpd} | Primary and utility hydraulics both lost: all control of the aircraft is lost. **Immediately** press **EMER HYD**, in either crew station, and land without delay. The accumulator gives about 60 seconds of control. |
-| `TAIL RTR`{: .mpd} | Primary pressure and utility fluid both lost. The tail rotor stays fixed in its last commanded position and does not answer the pedals. Land as soon as possible. |
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| NONE | NONE | NONE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| GRBX VIB | GEARBOX VIBRATION | LAND AS SOON AS POSSIBLE |
+| GRBX1 CHIPS | GEARBOX 1 CHIPS | LAND AS SOON AS PRACTICABLE |
+| GRBX2 CHIPS | GEARBOX 2 CHIPS | LAND AS SOON AS PRACTICABLE |
+| XMSN CHIPS | MAIN XMSN CHIPS | LAND AS SOON AS POSSIBLE |
 
-See [Hydraulics]({{ '/aircraft/electrical/' | relative_url }}#hydraulics) and [Emergency hydraulics]({{ '/aircraft/electrical/' | relative_url }}#emergency-hydraulics).
+### Gearbox vibration {#gearbox-vibration}
+
+With GRBX VIB displayed, the pilot must accelerate the helicopter above 100 kt, be prepared for a loss of tail rotor thrust, and remain above this airspeed all the way to touchdown to prevent the helicopter from spinning about its yaw axis.
 
 ## Electrical
 
-A single generator and a single TRU carry the whole load, so `GEN1 FAIL`{: .mpd} or `RECT1 FAIL`{: .mpd} on its own needs no action beyond landing when convenient. With both of a pair failed you lose AC or DC systems: the MPDs, IHADSS, radar, sights or countermeasures, depending on which. With both generators failed, the battery bus lasts about 12 minutes. See [What needs what]({{ '/aircraft/electrical/' | relative_url }}#what-needs-what).
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| NONE | NONE | NONE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| GEN1 FAIL | GENERATOR 1 FAIL | LAND AS SOON AS PRACTICABLE |
+| GEN2 FAIL | GENERATOR 2 FAIL | LAND AS SOON AS PRACTICABLE |
+| Both GEN1 FAIL and GEN2 FAIL | | LAND AS SOON AS POSSIBLE |
+| RECT1 FAIL | RECTIFIER 1 FAIL | LAND AS SOON AS PRACTICABLE |
+| RECT2 FAIL | RECTIFIER 2 FAIL | LAND AS SOON AS PRACTICABLE |
+| Both RECT1 FAIL and RECT2 FAIL | | LAND AS SOON AS POSSIBLE |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| BATTERY | BATTERY | Repair the battery |
+
+## Hydraulics {#hydraulics}
+
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| HYD FAIL | HYD FAILURE | 1. EMER HYD button – Press ON<br>2. LAND WITHOUT DELAY |
+| TAIL RTR | TAIL ROTOR HYD | LAND AS SOON AS POSSIBLE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| FMC DISENG | FMC DISENGAGED | |
+| BUCS FAIL | BUCS FAIL | LAND AS SOON AS POSSIBLE |
+| PRI HYD PSI | PRI HYD PSI LOW | LAND AS SOON AS POSSIBLE |
+| UTIL HYD PSI | UTIL HYD PSI LOW | LAND AS SOON AS POSSIBLE |
+| Both PRI HYD PSI and UTIL HYD PSI | | See HYD FAIL |
+| PRI HYD LVL | PRI HYD LEVEL LOW | LAND AS SOON AS PRACTICABLE |
+| UTIL HYD LVL | UTIL HYD LEVEL LOW | LAND AS SOON AS PRACTICABLE |
+| Both PRI HYD LVL and UTIL HYD LVL | | Be prepared for HYD FAIL |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| ACCUM PSI | ACCUM OIL PRES LO | Information System Status |
+
+A loss of both primary and utility hydraulics results in a complete loss of aircraft control. The crew **MUST** immediately press the EMER HYD button and land the aircraft without delay. Emergency hydraulics provide control for approximately 60 seconds. See [Electrical, APU and hydraulics]({{ '/aircraft/electrical/' | relative_url }}#hydraulic-system).
+
+## APU
+
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| — | APU FIRE | See [Fire](#fire) |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| APU ON | APU ON | Turn off APU |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| APU FAIL | APU FAIL | Repair the APU |
 
 ## Fuel
 
-`FWD FUEL LO`{: .mpd} or `AFT FUEL LO`{: .mpd}: one cell is low. Check the [FUEL page]({{ '/displays/mpd/fuel/' | relative_url }}). If the other cell has fuel, crossfeed to feed both engines from it, or transfer fuel across. If both are low, land.
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| NONE | NONE | NONE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| AFT FUEL LO | AFT FUEL LOW | LAND AS SOON AS PRACTICABLE |
+| FWD FUEL LO | FORWARD FUEL LOW | LAND AS SOON AS PRACTICABLE |
+
+With both low fuel cautions displayed, the fuel remaining is 500 lb, approximately 27 minutes at 1,100 lb per hour.
 
 ## Flight controls
 
-| Caution | Action |
-|---|---|
-| `FMC DISENG`{: .mpd} | The hold modes and stability augmentation are lost. Check the [UTIL page]({{ '/displays/mpd/util/' | relative_url }}) for a channel switched off; otherwise fly by hand and land as soon as practical. |
-| `STAB FAIL`{: .mpd} | The stabilator is damaged. Expect pitch changes with speed and power; slow down and land as soon as practical. |
+| UFD CAUTION | MPD CAUTION | CORRECTIVE ACTION |
+|---|---|---|
+| FMC DISENG | FMC DISENGAGED | |
+| STAB FAIL | AUTO/MAN STAB FAIL | |
+
+With FMC DISENG displayed, the hold modes and stability augmentation are lost in the affected axes; the [UTIL page]({{ '/displays/mpd/util/' | relative_url }}) shows whether an FMC axis is selected off. With STAB FAIL displayed, the stabilator remains at its last position and no longer schedules with airspeed.
+
+## Wing stores jettison
+
+Emergency jettison {% include key.html id="fza_ah64_collectiveEmergJett" %} releases all wing stores: rocket launchers, missile launchers and external tanks. It requires battery power.

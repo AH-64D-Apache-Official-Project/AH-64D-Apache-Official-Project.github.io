@@ -1,110 +1,93 @@
 ---
-title: ENG page
-lead: Engines, rotor and hydraulics at a glance. The page you watch during start-up, and the one that tells you what is wrong, and what to do, when something is.
+title: Engine (ENG) page
+lead: Engine, rotor and hydraulic indications, the ground, in-flight and emergency formats, limit markings and count-down timers.
 keywords: [eng, engine, torque, tgt, np, nr, ng, oil, hydraulics, start, limits, timers, emergency, procedure]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-eng.html
 ---
 
-Open it with the **A/C** button, from MENU, or by pressing the boxed tab on any aircraft page.
+The ENG page is selected with the A/C fixed action button, from the MENU page, or with the boxed page button on any aircraft page.
 
 {% include fig.html id="mpd-eng" %}
 
 ## Formats
 
-The lower half of the page changes with what you are doing:
+The ENG page has ground, in-flight and emergency formats. The upper half of the page is the same in each; the lower half changes with the aircraft's state:
 
-| Format | When | Lower half |
+| Format | Condition | Lower half |
 |---|---|---|
-| **Ground** | On the ground, with no warning or caution | Engine oil pressure for both engines, and the hydraulic pressures. |
-| **Flight** | Airborne, with no warning or caution | Empty. |
-| **WCA** | Any warning or caution active | A box listing up to five of them. |
-| **Emergency** | A warning with an emergency procedure active | That warning's immediate action steps. See [Emergency format](#emergency-format). |
+| Ground | On the ground, no warning or caution | Engine oil pressure (ENGINE OIL PSI) and hydraulic pressure (HYD PSI) status windows |
+| In-flight | Airborne, no warning or caution | Blank |
+| In-flight, active warnings and cautions | Any warning or caution active | Up to five active warnings (red) and cautions (yellow) |
+| Emergency | A warning with a procedure active | The immediate action steps for that warning; see [Emergency format](#emergency-format) |
 
-In every format but Ground, the hydraulic pressures are at the top right.
-
-While a starter is turning, a **START** box shows **ON** beside the engine being started.
+In all formats except Ground, the HYD PSI status window is displayed in the upper right area of the page. While a starter is engaged, the start status (START) window and the starter mode ON label are displayed beside the engine being started.
 
 {% include fig.html id="mpd-eng-start" %}
 
 ## Buttons
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `T2`{: .vab} | `FLT`{: .mpd} | Opens FLT. |
-| `T3`{: .vab} | `FUEL`{: .mpd} | Opens FUEL. |
-| `T4`{: .vab} | `PERF`{: .mpd} | Opens PERF. |
-| `T6`{: .vab} | `UTIL`{: .mpd} | Opens UTIL. |
-| `R6`{: .vab} | `ACQ`{: .mpd} | Opens the [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list. |
-| `B1`{: .vab} | | MENU. |
-| `B6`{: .vab} | `WCA`{: .mpd} | Opens the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}). |
+| `T2`{: .vab} | `FLT`{: .mpd} | FLT page |
+| `T3`{: .vab} | `FUEL`{: .mpd} | FUEL page |
+| `T4`{: .vab} | `PERF`{: .mpd} | PERF page |
+| `T6`{: .vab} | `UTIL`{: .mpd} | UTIL page |
+| `R6`{: .vab} | `ACQ`{: .mpd} | [Acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list |
+| `B1`{: .vab} | | MENU page |
+| `B6`{: .vab} | `WCA`{: .mpd} | [WCA page]({{ '/displays/mpd/wca/' | relative_url }}) |
 
-**SYS** and **ETF** are not simulated.
+SYS and ETF are not simulated.
 
-## Reading the tapes
+## Indications
 
-Torque and TGT have one tape per engine, with the digital value above it. In the middle, the two Np tapes sit either side of the rotor speed chevron, which should rest at 101% in flight. Ng is digital only, at the right.
+Engine torque and turbine gas temperature (TGT) are displayed as a vertical tape for each engine, with a digital readout above. In the centre, the two power turbine speed (Np) tapes are displayed either side of the main rotor speed (Nr) tape, a chevron, which rests at 101% in flight. Gas generator speed (Ng) is displayed as a digital readout on the right. Hydraulic pressure for the primary (PRI), utility (UTIL) and accumulator (ACC) systems is displayed as digital readouts in the HYD PSI status window.
 
-The torque and TGT tapes are coloured by the range they are in: **green** in the normal range, **yellow** in a time-limited range, where a timer counts down the time left, and **red** past the maximum. They also step wider as they rise:
-
-| Tape | Narrow | Wider | Widest |
-|---|---|---|---|
-| **Torque** | Up to 100% | 100% to 115% | Above 115% |
-| **TGT** | Up to 810 °C | Above 810 °C | |
-
-The Np tapes and their digits, and the Ng digits, turn yellow and red the same way. Ng is also red when it is below 63% with the engine running.
+The torque, TGT, Np and Ng indications are colour coded: **green** in the normal range, **yellow** in a time-limited range, **red** beyond a maximum or below a minimum. The torque and TGT tapes widen as they rise: torque above 100% and above 115%, TGT above 810 °C. Ng is also displayed red below 63% with the engine running. The limits are listed in [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}#indications-and-limits).
 
 ### Limit markings
 
-A **red bar** across both torque tapes, and another across both TGT tapes, marks the maximum:
+A red bar across both torque tapes, and another across both TGT tapes, marks the maximum:
 
 | | Dual engine (DE) | Single engine (SE) |
 |---|---|---|
-| **Torque** | 115% | 125% |
-| **TGT** | 949 °C | 949 °C |
+| Torque | 115% | 125% |
+| TGT | 949 °C | 949 °C |
 
-The bars move when the limits do:
+The markings change with the operating condition:
 
-- They switch to the single engine maximum when the aircraft counts as single engine: when one engine's torque falls below about half of the other's.
-- With low rotor speed, torque is limited further. Below 90% Nr the red bar is at 70%, and below 50% Nr at 30%, with no time-limited range.
+- They change to the single engine maximum when the aircraft is operating single engine, that is, when one engine's torque falls below approximately half of the other's.
+- At low rotor speed, torque is further limited: below 90% Nr the red bar is at 70%, and below 50% Nr at 30%, with no time-limited range.
 
-How long each range allows is on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.
-
-### Timers
+### Count-down timers
 
 {% include fig.html id="mpd-eng-limits" %}
 
-A white timer counts down the time left in a time-limited range, in minutes and seconds.
+A white count-down timer displays the time remaining in a time-limited range, in minutes and seconds.
 
-- **Torque, TGT and Ng** have one timer each.
-  - With one engine in a timed range, the timer takes the place of that engine's number under its column.
-  - With both engines in one, a single timer sits centred between the two columns and shows the shorter time.
-- **Np** has a timer for each engine, in place of its number.
+- Torque, TGT and Ng each have one timer. With one engine in a time-limited range, the timer replaces that engine's digital readout; with both engines in one, a single timer is centred between the columns and displays the shorter time.
+- Np has a timer for each engine, in place of its digital readout.
 
-When a timer reaches **0:00**, the allowance is used up and the engine or drive train starts taking damage. A range with no allowance shows 0:00 as soon as you enter it.
+When a timer reaches 0:00, the allowance is exhausted and the engine or drive train begins to incur damage. A range with no allowance displays 0:00 on entry. Each range has its own allowance, which resets to full each time the range is entered.
 
-Each range has its own allowance. It starts again from full each time you enter the range, so climbing into the next range and coming back resets it.
-
-## Emergency format
+## Emergency format {#emergency-format}
 
 {% include fig.html id="mpd-eng-emergency" %}
 
-When a warning with an emergency procedure is active, the lower half of the page shows that warning's immediate action steps. The title is black on white; the steps are white and numbered, with conditions and continuations indented under the step they belong to.
+When a warning with a procedure is active, the lower half of the page displays that warning's immediate action steps. The title is displayed black on white; the steps are white and numbered.
 
-| Warning | Procedure |
+| Warning | Procedure displayed |
 |---|---|
-| `ENGINE 1 FIRE`{: .mpd} or `ENGINE 2 FIRE`{: .mpd} | Engine fire in flight, or on the ground. |
-| `APU FIRE`{: .mpd} | APU fire in flight, or on the ground. |
-| `AFT DECK FIRE`{: .mpd} | Aft deck fire. |
-| `ENGINE 1 OUT`{: .mpd} or `ENGINE 2 OUT`{: .mpd} | Single engine failure, with one engine out. |
-| `LOW ROTOR RPM`{: .mpd} | Low rotor RPM, Np failed low. |
-| `ENG1 OVSP`{: .mpd} or `ENG2 OVSP`{: .mpd} | Engine overspeed, Np failed high. |
-| `HYD FAILURE`{: .mpd} | Hydraulic failure. |
-| `TAIL ROTOR HYD`{: .mpd} | Tail rotor hydraulic failure. |
+| ENGINE 1 FIRE / ENGINE 2 FIRE | Engine fire, in flight or on the ground |
+| APU FIRE | APU fire, in flight or on the ground |
+| AFT DECK FIRE | Aft deck fire |
+| ENGINE 1 OUT / ENGINE 2 OUT | Single engine failure |
+| LOW ROTOR RPM | Low rotor RPM |
+| ENG1 OVSP / ENG2 OVSP | Engine overspeed |
+| HYD FAILURE | Hydraulic failure |
+| TAIL ROTOR HYD | Tail rotor hydraulic failure |
 
-`HIGH ROTOR RPM`{: .mpd} has no procedure, and neither do both engines out together, so these show in the WCA list instead.
+HIGH ROTOR RPM and dual engine failure have no displayed procedure and are listed as active warnings in the in-flight format. With more than one warning active, the highest priority is displayed: fires, then engine failures, low rotor RPM, overspeed and hydraulics.
 
-With more than one warning active, the page shows the most urgent: fires first, then engine failures, low rotor RPM, overspeed and hydraulics.
-
-The full procedures, and what to do after the immediate actions, are on the [Emergency procedures]({{ '/flying/emergency/' | relative_url }}) page.
+The complete warning, caution and advisory list, with corrective actions, is on [Emergency procedures]({{ '/flying/emergency/' | relative_url }}).

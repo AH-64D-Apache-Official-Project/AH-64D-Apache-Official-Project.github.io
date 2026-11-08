@@ -1,6 +1,6 @@
 title: UTIL page
 kind: mpd
-caption: Aircraft UTIL page with every FMC channel on.
+caption: 'A/C UTIL page with all FMC controls on.'
 state:
   page: ACUTIL
   u:
@@ -14,8 +14,8 @@ callouts:
   x: 90
   y: 222
   side: l
-  label: FMC channels
-  text: Pitch, roll, yaw, collective and trim. A filled circle is on; press the button to toggle.
+  label: FMC controls
+  text: 'PITCH, ROLL, YAW, COLL and TRIM On/Off pushbuttons. A filled dot indicates on.'
 - n: 2
   x: 500
   y: 270
@@ -30,11 +30,11 @@ callouts:
   x: 890
   y: 600
   side: r
-  label: Anti-ice
-  text: Shown, not simulated.
+  label: ANTI ICE
+  text: 'Displayed; not simulated.'
 - n: 5
   x: 560
   y: 950
   side: b
-  label: Bleed air and ECS
-  text: Shown, not simulated.
+  label: BLEED AIR and ECS
+  text: 'Displayed; not simulated.'

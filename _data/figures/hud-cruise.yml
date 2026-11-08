@@ -5,7 +5,7 @@ crop:
 - -30
 - 640
 - 510
-caption: Pilot's cruise symbology at 128 kt in a 15° right bank, with attitude and altitude hold engaged.
+caption: 'Pilot cruise mode symbology: 128 kt, 15° right bank, attitude hold and altitude hold engaged.'
 model:
   hd: false
   tv: false
@@ -77,35 +77,35 @@ callouts:
   x: 208
   y: 138
   side: l
-  label: Pitch ladder
-  text: Solid above the horizon, dashed below, at half scale.
+  label: Attitude indicator
+  text: 'Pitch ladder, solid above the horizon line and dashed below; 5° tic marks are not presented in cruise mode.'
 - n: 2
   x: 266
   y: 50
   side: r
-  label: Bank triangle
-  text: Bank angle, read against the lubber line.
+  label: Bank angle
+  text: 'Bank angle triangle, presented without the tic mark scale in cruise mode; read against the lubber line.'
 - n: 3
   x: 52
   y: 225
   side: l
   label: Attitude hold
-  text: Box around the airspeed while attitude hold is on.
+  text: 'Status window around the airspeed digital readout while attitude hold is engaged.'
 - n: 4
   x: 585
   y: 225
   side: b
   label: Altitude hold
-  text: On the vertical speed scale while altitude hold is on.
+  text: 'Home plate symbol at the zero rate of climb position while altitude hold is engaged.'
 - n: 5
   x: 570
   y: 112
   side: r
   label: Barometric altitude
-  text: Feet, in cruise only.
+  text: 'Barometric altitude, feet; cruise mode only.'
 - n: 6
   x: 305
   y: 240
   side: l
   label: LOS reticle
-  text: Drawn bold in cruise.
+  text: 'Bold cross-hair in cruise mode.'

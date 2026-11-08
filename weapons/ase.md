@@ -1,11 +1,11 @@
 ---
-title: Survivability (ASE)
-lead: What warns you that you are being targeted, and what you can do about it. The equipment depends on whether the aircraft carries US or British mission equipment.
+title: Aircraft survivability equipment (ASE)
+lead: The radar and laser warning receivers, missile warning system, chaff, flares and IR jammer, by mission equipment fit.
 keywords: [ase, survivability, rlwr, radar warning, laser warning, missile warning, mws, chaff, flares, ir jammer, countermeasures, sam, aaa, threats]
 seats: [PLT, CPG]
 ---
 
-## What each aircraft has
+## Equipment
 
 | | US equipment | British equipment |
 |---|---|---|
@@ -15,56 +15,51 @@ seats: [PLT, CPG]
 | Flares | | Yes |
 | Missile warning system (MWS) | | Yes |
 
-Choose the equipment in the editor or the [mission planner]({{ '/mission/planner/' | relative_url }}); see [Variants and customisation]({{ '/aircraft/variants/' | relative_url }}). Everything here needs DC power.
+The equipment fit is selected in the editor or the [mission planner]({{ '/mission/planner/' | relative_url }}); see [Variants and configuration]({{ '/aircraft/variants/' | relative_url }}). All ASE requires DC power.
 
-## Turning it on
+## Activation
 
 After start-up, on the [ASE page]({{ '/displays/mpd/ase/' | relative_url }}):
 
-1. `R6`{: .vab} **RLWR** on. You hear a tone as it comes on.
-2. `T1`{: .vab} **CHAFF** (or **CMS**) to **ARM**.
-3. `R1`{: .vab} **IRJAM** (US) or **MWS** (British) on.
-4. Pick an **autopage** level, so the ASE page comes up by itself when it matters.
+1. `R6`{: .vab} RLWR – On. A tone sounds when the receivers come on.
+2. `T1`{: .vab} CHAFF (US) or CMS (British) – ARM.
+3. `R1`{: .vab} IRJAM (US) or MWS (British) – On.
+4. Autopage – Select the threat level.
 {: .steps}
 
-## Warnings
+## Warning receivers
 
 ### Radar warning
 
-The RLWR hears radars. Within about 8 km, each radar is placed on the ASE page (and on the TSD, if shown there) at its bearing, and called out by voice: what it is, its clock direction, and what it is doing.
+The RLWR detects radar emitters within approximately 8 km. Each emitter is displayed on the ASE page (and the TSD, when selected) at its bearing, and announced by voice with its type, clock position and state.
 
-| State | Meaning | Heard |
+| State | Meaning | Voice |
 |---|---|---|
-| **Searching** | Its radar is sweeping the sky. | Once, when it first appears |
-| **Acquisition** | It has picked you out. | When it moves up to acquisition |
-| **Tracking** | It is tracking you and can fire. | When it moves up to tracking |
-| **Launch** | A radar-guided missile is on its way. | "Missile launch", with the direction |
+| Search | The radar is searching. | Once, on first detection |
+| Acquisition | The radar has acquired the aircraft. | On transition to acquisition |
+| Track | The radar is tracking the aircraft and can fire. | On transition to track |
+| Launch | A radar-guided missile has been launched. | "Missile launch", with direction |
 
-What the RLWR calls a threat depends on the vehicle's config. Vehicles from the mods the Apache has [compatibility]({{ '/mission/compatibility/' | relative_url }}) for are named by type, such as SA-6 or ZSU-23. Anything else with a radar shows as a generic search radar.
+Threat identification depends on the vehicle's configuration. Vehicles from mods with [compatibility]({{ '/mission/compatibility/' | relative_url }}) support are identified by type (for example SA-6, ZSU-23); any other vehicle with a radar is identified as a generic search radar.
 
 ### Laser warning
 
-The RLWR also warns when a laser designator or rangefinder is aimed at your aircraft, with the voice message and the direction.
+The RLWR also warns when a laser designator or rangefinder illuminates the aircraft, with a voice message and direction.
 
 ### Missile warning
 
-British equipment only, with **MWS** on: the MWS sees any missile or rocket coming at you from within 3 km, whatever guides it, and calls "missile" with its direction. This is the only warning of an IR missile.
-
-Aircraft with US equipment get no warning of an IR missile. The IR jammer has to deal with it without being told.
+With British equipment and the MWS on, the MWS detects any missile or rocket approaching the aircraft within 3 km, regardless of guidance, and announces "missile" with its direction. The MWS is the only warning of an IR-guided missile. Aircraft with US equipment receive no warning of an IR-guided missile; the IR jammer operates without cueing.
 
 ## Countermeasures
 
-| Countermeasure | Defeats | Fire it with |
+| Countermeasure | Effective against | Release |
 |---|---|---|
-| **Chaff** | Radar-guided missiles | Arma's **Countermeasures** binding. Needs chaff at **ARM**. |
-| **Flares** (British) | IR-guided missiles | {% include key.html id="fza_ah64_flare" %}. Needs the MWS on. |
-| **IR jammer** (US) | IR-guided missiles | Nothing: once it reads **OPER**, it works continuously. |
+| Chaff | Radar-guided missiles | Arma **Countermeasures** binding, with chaff at ARM |
+| Flares (British) | IR-guided missiles | {% include key.html id="fza_ah64_flare" %}, with the MWS on |
+| IR jammer (US) | IR-guided missiles | Continuous once the jammer displays OPER |
 
-Full, the ASE page counts 30 chaff and, with British equipment, 60 flares. Rearming refills them. See [Rearm and refuel]({{ '/mission/rearm/' | relative_url }}).
+Chaff is not effective against IR-guided missiles, and flares are not effective against radar-guided missiles. A launch call from the RLWR indicates a radar-guided missile; a missile call from the MWS without a preceding launch call indicates a probable IR-guided missile.
 
-> Chaff does nothing against an IR missile and flares nothing against a radar missile. Use the RLWR's call to tell them apart: a **launch** call is a radar missile, so dispense chaff. A **missile** call from the MWS with no launch call before it is probably IR.
-{: .tip}
+A full load is 30 chaff and, with British equipment, 60 flares, displayed on the ASE page. Rearming refills them; see [Rearm and refuel]({{ '/mission/rearm/' | relative_url }}).
 
-## Volume
-
-The RLWR's voice messages have their own volume, **RLWR volume Knob**, in [Addon settings]({{ '/getting-started/settings/' | relative_url }}).
+The RLWR voice volume is set with **RLWR volume Knob** in [Addon settings]({{ '/getting-started/settings/' | relative_url }}).

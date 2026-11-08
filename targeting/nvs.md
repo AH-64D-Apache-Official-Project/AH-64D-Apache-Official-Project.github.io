@@ -1,50 +1,50 @@
 ---
 title: Night vision (PNVS)
-lead: At night each crew member flies on a thermal picture in their monocle. It comes from the PNVS turret on top of the nose, or from the TADS FLIR.
-keywords: [nvs, pnvs, night vision, flir, thermal, nvs mode, norm, fixed, nvs select, monocle, night flying]
+lead: The night vision system displays FLIR video on the HDU beneath the flight symbology, from the PNVS or the TADS FLIR. The NVS MODE switch and sensor selection.
+keywords: [nvs, pnvs, night vision, flir, thermal, nvs mode, norm, fixed, nvs select, hdu, night flying]
 seats: [PLT, CPG]
 ---
 
-The night vision system (NVS) puts a FLIR picture in your helmet display unit, under the flight symbology, so you can fly at night without night vision goggles. It moves with your head.
+The night vision system (NVS) displays FLIR video on the helmet display unit beneath the flight symbology, for flight at night without night vision goggles. The sensor follows the crewmember's head.
 
-## The NVS MODE switch
+## NVS MODE switch
 
-Each crew station has its own **NVS MODE** switch, on the left console. It steps **OFF → NORM → FIXED → OFF**.
+Each crew station has an NVS MODE switch on the left console, with positions OFF, NORM and FIXED.
 
-| Position | Picture |
+| Position | Video |
 |---|---|
-| **OFF** | None. |
-| **NORM** | The sensor follows your head. |
-| **FIXED** | The sensor looks straight ahead, 4.9° below the aircraft's nose, whatever your head does. The HAD shows `NVS FIXED`{: .mpd}. |
+| OFF | None |
+| NORM | The sensor follows the crewmember's head |
+| FIXED | The sensor is fixed forward, 4.9° below the aircraft's nose; the HAD displays `NVS FIXED`{: .mpd} |
 
-Stepping the switch can also be bound, in **AH-64D Official Project: Cockpit Controls**.
+The switch can also be bound in **AH-64D Official Project: Cockpit Controls**.
 
-NORM needs the IHADSS helmet to follow your head. The monocle must be down to see the picture: see [IHADSS]({{ '/displays/ihadss/' | relative_url }}).
+NORM requires the IHADSS helmet for head tracking, and the HDU fitted for the video; see [IHADSS]({{ '/displays/ihadss/' | relative_url }}).
 
-## Which sensor
+## Sensor selection
 
-Two sensors can give a night picture, and each crew station uses one of them:
+Two sensors provide night vision video, and each crew station uses one of them:
 
 | Sensor | Field of regard | Notes |
 |---|---|---|
-| **PNVS** | 90° left and right, 20° up, 45° down | The pilot's normal sensor. |
-| **TADS FLIR** | 120° left and right, 30° up, 60° down | Held in the wide field of view while used this way. |
+| PNVS | 90° left and right, 20° up, 45° down | The pilot's normal sensor |
+| TADS FLIR | 120° left and right, 30° up, 60° down | Held in the wide field of view when used as a night vision sensor |
 
-By default the CPG has the TADS and the pilot the PNVS. Either crew member can swap:
+By default the CPG uses the TADS and the pilot the PNVS. Either crewmember can exchange them:
 
 | Binding | Effect |
 |---|---|
-| {% include key.html id="fza_ah64_nvsSelectPnvs" %} | You take the PNVS; the other crew station gets the TADS. |
-| {% include key.html id="fza_ah64_nvsSelectTads" %} | You take the TADS; the other crew station gets the PNVS. |
+| {% include key.html id="fza_ah64_nvsSelectPnvs" %} | This crew station takes the PNVS; the other crew station takes the TADS |
+| {% include key.html id="fza_ah64_nvsSelectTads" %} | This crew station takes the TADS; the other crew station takes the PNVS |
 
-The last selection made by either seat holds.
+The last selection by either crew station applies.
 
-While the TADS is someone's night vision sensor with their switch on, it is not a sight. The TADS sight, link, field of view, sensor and LMC keys do nothing, and the TADS stays on FLIR wide. When the pilot has the TADS, the CPG's HAD shows `PLT TADS`{: .mpd}.
+While the TADS is a crewmember's night vision sensor with the NVS MODE switch on, it is not available as a sight: the TADS sight, link, field of view, sensor and LMC bindings have no effect, and the TADS remains on FLIR wide.
 
-Looking past a sensor's limits makes the reticle flash and shows `LIMITS`{: .mpd} on the HAD. A damaged PNVS shows `NVS FAIL`{: .mpd} to the pilot.
+At a sensor's limit of travel the reticle flashes and the HAD displays `LIMITS`{: .mpd}. A damaged PNVS displays `NVS FAIL`{: .mpd} to the pilot.
 
-## Tips
+## Operating notes
 
-- Use FIXED when you need a steady forward view, for example on a long approach, or when your head is busy looking elsewhere.
-- The FLIR sees heat, not light. Cold terrain and water can look flat; use the radar altimeter and the TPM radar mode ([Fire control radar]({{ '/targeting/fcr/' | relative_url }})) as well.
-- The other crew member can watch your sensor's picture on their VIDEO page: see [VIDEO]({{ '/displays/mpd/video/' | relative_url }}).
+- FIXED provides a stable forward view, for example on a long approach.
+- The FLIR displays temperature differences, not visible light; cold terrain and water can appear without contrast. The radar altimeter and the FCR TPM mode ([Fire control radar]({{ '/targeting/fcr/' | relative_url }})) supplement the FLIR.
+- The other crewmember can monitor the sensor video on the [VIDEO page]({{ '/displays/mpd/video/' | relative_url }}).

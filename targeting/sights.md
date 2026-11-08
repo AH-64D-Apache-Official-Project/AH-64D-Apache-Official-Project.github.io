@@ -1,6 +1,6 @@
 ---
 title: Sights and acquisition
-lead: Your sight is what your weapons are aimed with. Your acquisition source is where your sight is cued to look. Both are chosen per crew station.
+lead: The selected sight aims the crew station's weapons; the acquisition source is the line of sight the sight is cued to. Both are crewstation independent. Link, slave, range sources and target storage.
 keywords: [sight, hmd, tads, fcr, link, acquisition, acq, slave, cue, cueing dots, range, store, target point]
 seats: [PLT, CPG]
 redirect_from:
@@ -9,53 +9,49 @@ redirect_from:
 
 ## Sights
 
-Each crew station selects one sight. The weapons that crew station fires are aimed with it.
+Each crew station selects one sight, which aims the weapons that crew station fires.
 
-| Sight | Binding | Who | Aims with |
+| Sight | Binding | Crew station | Aimed by |
 |---|---|---|---|
-| **HMD** | {% include key.html id="fza_ah64_v30_sightSelectHMD" %} | Both | Your head, through the helmet. |
-| **TADS** | {% include key.html id="fza_ah64_v30_sightSelectTADS" %} | CPG only | The TADS turret under the nose. See [TADS]({{ '/targeting/tads/' | relative_url }}). |
-| **FCR** | {% include key.html id="fza_ah64_v30_sightSelectFCR" %} | Both, with the radar fitted | The radar's next-to-shoot target. See [Fire control radar]({{ '/targeting/fcr/' | relative_url }}). |
+| HMD | {% include key.html id="fza_ah64_v30_sightSelectHMD" %} | Both | The crewmember's head, through the helmet |
+| TADS | {% include key.html id="fza_ah64_v30_sightSelectTADS" %} | CPG only | The TADS turret. See [TADS]({{ '/targeting/tads/' | relative_url }}) |
+| FCR | {% include key.html id="fza_ah64_v30_sightSelectFCR" %} | Both, with the radar installed | The radar's next-to-shoot target. See [Fire control radar]({{ '/targeting/fcr/' | relative_url }}) |
 
-The selected sight shows on the left of the [HAD]({{ '/displays/ihadss/' | relative_url }}) at the bottom of your helmet symbology, with a `P-` or `C-` prefix for the HMD and FCR (`P-HMD`{: .mpd}, `C-FCR`{: .mpd}), and on the [WPN page]({{ '/displays/mpd/wpn/' | relative_url }}).
+The selected sight is displayed on the left of the [HAD]({{ '/displays/ihadss/' | relative_url }}), with a `P-` or `C-` prefix for HMD and FCR (`P-HMD`{: .mpd}, `C-FCR`{: .mpd}), and on the [WPN page]({{ '/displays/mpd/wpn/' | relative_url }}).
 
-The HMD needs the IHADSS helmet. Without it there is no head tracking, and head-aimed sights look along the aircraft's nose instead.
-
-Without AC power every sight is fixed straight ahead.
+The HMD requires the IHADSS helmet; without it there is no head tracking, and head-aimed sights are fixed along the aircraft's nose. Without AC power, every sight is fixed forward.
 
 ### Link
 
-{% include key.html id="fza_ah64_v30_sightSelectLink" %} is the CPG's, and needs the radar fitted with TADS or FCR as the sight. It ties the two sensors together:
+{% include key.html id="fza_ah64_v30_sightSelectLink" %} is a CPG control and requires the radar installed, with TADS or FCR as the sight. It links the two sensors:
 
-| Sight | Linked | What changes |
+| Sight | Linked | Effect |
 |---|---|---|
-| TADS | **TADS-L** (`TADSL`{: .mpd} on the HAD) | The CPG also owns the radar, and its centreline follows the TADS line of sight. |
-| FCR | **FCR-L** (`C-FCRL`{: .mpd}) | Slaving moves the TADS onto the radar's next-to-shoot target. |
+| TADS | TADS-L (`TADSL`{: .mpd} on the HAD) | The CPG also owns the radar, and its centreline follows the TADS line of sight. |
+| FCR | FCR-L (`C-FCRL`{: .mpd}) | Slave moves the TADS onto the radar's next-to-shoot target. |
 
-Pressing Link again, selecting any sight, or the pilot taking the FCR unlinks. Selecting TADS again while you are in TADS-L does nothing; only Link unlinks it.
+Link is cleared by selecting Link again, by selecting any sight, or by the pilot taking the FCR. Selecting TADS while in TADS-L has no effect; only Link clears it.
 
 ## Acquisition source {#acq}
 
-The acquisition source (ACQ) is a second line of sight your sight can be pointed at. It drives the **cueing dots** around your helmet reticle, which point from where you are looking towards the source, and it is what your sight follows when slaved.
+The acquisition source (ACQ) is a second line of sight to which the sight can be cued. It drives the cueing dots around the helmet reticle, which point from the crewmember's line of sight toward the source, and it is the line of sight the sight follows when slaved.
 
-Open the list with `R6`{: .vab} **ACQ** on the FLT, ENG, TSD or WPN page. The list takes over the buttons until you press one:
+The list is opened with `R6`{: .vab} ACQ on the FLT, ENG, TSD or WPN page, and occupies the buttons until a selection is made:
 
-| Button | Source | Points at |
+| Button | Source | Line of sight |
 |---|---|---|
-| `R1`{: .vab} | **PHS** | The pilot's helmet line of sight. |
-| `R2`{: .vab} | **GHS** | The CPG's helmet line of sight. |
-| `R5`{: .vab} | **FCR** | The radar's next-to-shoot target. |
-| `R6`{: .vab} | **FXD** | Fixed, straight ahead along the aircraft's nose. |
-| `B5`{: .vab} | *point* | Your stored coordinate point, set on the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord). |
-| `B6`{: .vab} | **TADS** | The TADS line of sight. |
+| `R1`{: .vab} | PHS | Pilot helmet sight |
+| `R2`{: .vab} | GHS | CPG (gunner) helmet sight |
+| `R5`{: .vab} | FCR | The radar's next-to-shoot target |
+| `R6`{: .vab} | FXD | Fixed forward, along the aircraft's nose |
+| `B5`{: .vab} | point | The stored coordinate point, set on the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord) |
+| `B6`{: .vab} | TADS | The TADS line of sight |
 
-You can also pick a point or radar target off the TSD map with the MPD cursor, using [CAQ]({{ '/displays/mpd/tsd/' | relative_url }}#caq).
+A point or FCR target can also be selected from the TSD map with the MPD cursor, using [CAQ]({{ '/displays/mpd/tsd/' | relative_url }}#caq).
 
-**SKR** and **RFI** are listed but cannot be selected. Any other button closes the list without changing anything.
+SKR and RFI are listed but not selectable. Any other button closes the list without a change.
 
-Only sources that make sense for your seat and sight are accepted:
-
-| Source | Pilot can select | CPG can select |
+| Source | Pilot | CPG |
 |---|---|---|
 | PHS | With FCR as sight | Yes |
 | GHS | Yes | With TADS or FCR as sight |
@@ -63,55 +59,55 @@ Only sources that make sense for your seat and sight are accepted:
 | TADS | Yes | Unless TADS is the sight |
 | FXD, point | Yes | Yes |
 
-The radar must be fitted and working for FCR, and the TADS powered and working for TADS. A crew station needs to be occupied for its helmet to be a source. If the source you chose becomes unavailable, FXD is used until it comes back.
+FCR requires the radar installed and operative; TADS requires the TADS powered and operative. A helmet source requires that crew station to be occupied. If the selected source becomes unavailable, FXD is used until it is restored.
 
-The defaults are **TADS** for the pilot and **PHS** for the CPG.
+The defaults are TADS for the pilot and PHS for the CPG.
 
-For the pilot, choosing a new source while owning the radar stops its scan and points the radar's centreline along the new source. Choosing a coordinate point also makes that point your navigation range source.
+For the pilot, selecting a new source while owning the radar stops its scan and points the radar centreline along the new source. Selecting a coordinate point also makes that point the navigation range source.
 
 ## Slave
 
-{% include key.html id="fza_ah64_sightSlave" %} is the CPG's. It toggles **slaved**:
+{% include key.html id="fza_ah64_sightSlave" %} is a CPG control. It toggles slave:
 
-- With TADS as the sight, the TADS turns to the acquisition source and follows it. Slew it by hand again by pressing Slave once more.
-- With FCR as the sight, the radar's centreline is pointed along the acquisition source.
-- In FCR-L, the TADS follows the radar's next-to-shoot target, jumping to each new one.
+- With TADS as the sight, the TADS slews to the acquisition source and follows it. Slave again returns manual control.
+- With FCR as the sight, the radar centreline is pointed along the acquisition source.
+- In FCR-L, the TADS follows the radar's next-to-shoot target, moving to each new target.
 
-Choosing a new acquisition source releases the slave. Pressing Slave while the CPG owns the radar stops its scan.
+Selecting a new acquisition source releases the slave. Slave with the radar owned by the CPG stops its scan.
 
-The CPG's cueing dots show while slaved, or when the acquisition source is a point and the sight is the TADS. The pilot's cueing dots always show.
+The CPG's cueing dots are displayed while slaved, or with the acquisition source a point and the TADS as the sight. The pilot's cueing dots are always displayed.
 
-When the CPG seat is empty or held by the AI, the pilot's acquisition source points the TADS.
+With the CPG crew station empty or occupied by AI, the pilot's acquisition source points the TADS.
 
 ## Range {#range}
 
-Ballistics and the displays need a range to the target. Each crew station has a range source, shown on the HAD with a letter in front of the range in kilometres:
+Ballistics and the displays require a range to the target. Each crew station has a range source, displayed on the HAD as a letter before the range:
 
-| Shown as | Source | Used with | Where it comes from |
+| Display | Source | Used with | Origin |
 |---|---|---|---|
-| `*3420`{: .mpd} | Laser | TADS | Lasing with the [LRFD]({{ '/targeting/laser/' | relative_url }}), 500 to 9,999 m, in metres. After you stop lasing the last range stays, shown without the `*`. |
-| `R2.4`{: .mpd} | Radar | FCR | The radar's next-to-shoot target. `R??`{: .mpd} with no target. |
-| `N4.6`{: .mpd} | Navigation | HMD, TADS | A point chosen as the acquisition source, up to 32 km. |
-| `M1.5`{: .mpd} | Manual | Any | Entered on the KU with `B6`{: .vab} **MANRNG>** on the WPN page: 100 to 50,000 m. |
-| `A2.1`{: .mpd} | Automatic | Any | Where your sight line meets the ground, from radar altitude. Needs the line at least 1° below the horizon; otherwise 50 km. |
+| `*3420`{: .mpd} | Laser | TADS | Lasing with the [LRFD]({{ '/targeting/laser/' | relative_url }}), 500 to 9,999 m, in metres. After lasing stops the last range is retained, displayed without the `*`. |
+| `R2.4`{: .mpd} | Radar | FCR | The radar's next-to-shoot target. |
+| `N4.6`{: .mpd} | Navigation | HMD, TADS | A point selected as acquisition source, to 32 km |
+| `M1.5`{: .mpd} | Manual | Any | Entered on the KU with `B6`{: .vab} MANRNG> on the WPN page: 100 to 50,000 m |
+| `A2.1`{: .mpd} | Automatic | Any | Intersection of the line of sight with the ground, from radar altitude. Requires the line of sight at least 1° below the horizon; otherwise 50 km. |
 
-Enter `A` at the **MANRNG** prompt to select automatic range. Some actions change the source for you:
+`A` entered at the MANRNG prompt selects automatic range. The range source also changes automatically:
 
-- Lasing selects laser range, for the crew station whose laser it is.
+- Lasing selects laser range for the crew station whose laser fires.
 - A new radar next-to-shoot target selects radar range, with FCR as the sight.
-- A point as the acquisition source selects navigation range: for the pilot when choosing it, for the CPG when slaving to it.
-- Actioning the rockets selects your last manual range, or the default if you have not entered one.
+- A point as acquisition source selects navigation range: for the pilot on selection, for the CPG when slaved to it.
+- Actioning rockets selects the last manual range, or the default.
 
-If the source does not fit your sight, or has nothing to give, the default range is used: **1.5 km** for the pilot, **3.0 km** for the CPG.
+If the source does not suit the sight, or has no value, the default range is used: 1.5 km for the pilot, 3.0 km for the CPG.
 
-When rockets are fired cooperatively, the pilot uses the CPG's range and range source.
+In a cooperative rocket engagement, the pilot uses the CPG's range and range source.
 
-## Storing a target
+## Target storage
 
-{% include key.html id="fza_ah64_cpgStoreUpdate" %} is the CPG's. It stores a target point along your sight's line of sight (TADS, HMD or FCR) at the range shown, as the next free point from `T01`{: .mpd} to `T50`{: .mpd}. When all 50 are used it overwrites from `T01`{: .mpd}. The point's name shows on your HAD for three seconds.
+{% include key.html id="fza_ah64_cpgStoreUpdate" %} is a CPG control. It stores a target point along the sight's line of sight (TADS, HMD or FCR) at the displayed range, as the next free point from `T01`{: .mpd} to `T50`{: .mpd}; when all 50 are used, it overwrites from `T01`{: .mpd}. The point identifier is displayed on the HAD for three seconds.
 
-Stored points appear on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}) and can be chosen as an acquisition source. See [Points and routes]({{ '/mission/points/' | relative_url }}).
+Stored points are displayed on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}) and are selectable as acquisition source. See [Points and routes]({{ '/mission/points/' | relative_url }}).
 
 ## Radial menu
 
-The [radial menu]({{ '/targeting/radial/' | relative_url }}) offers sight select, link and the TADS and FCR settings on one binding, without remembering the individual keys.
+The [radial menu]({{ '/targeting/radial/' | relative_url }}) provides sight select, link and the TADS and FCR selections on one binding.

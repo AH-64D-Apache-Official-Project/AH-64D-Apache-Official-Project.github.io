@@ -1,100 +1,96 @@
 ---
-title: WPN page
-lead: The weapons page. What each crew station's sight and acquisition source are, the state of every weapon, and the settings for the cannon, rockets and Hellfires.
+title: Weapons (WPN) page
+lead: Sight, acquisition source and range for the crew station, the status of every weapon, and the gun, rocket and missile settings.
 keywords: [wpn, weapons, gun, cannon, burst, rocket, salvo, quantity, missile, hellfire, sal, rf, trajectory, lobl, loal, mode, channel, laser code, manual range, lrfd]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-wpn.html
 ---
 
-Open it with the **WPN** button. Each crew station sees its own sight, acquisition source and range on the page. The weapon settings are the aircraft's, shared by both.
+The WPN page is selected with the WPN fixed action button. The sight, acquisition source and range displayed are those of the crew station; weapon settings are aircraft common, except where stated as crewstation independent.
 
 {% include fig.html id="mpd-wpn" %}
 
-## Status window
+## Status windows
 
-The top of the page always shows:
-
-| Item | Shows |
+| Item | Display |
 |---|---|
-| **SIGHT** | Your selected sight: HMD, TADS or FCR. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}). |
-| **ACQ** | Your acquisition source. |
-| **LST** / **LRFD** | The codes the laser spot tracker and the laser rangefinder/designator are set to. See [COM pages]({{ '/displays/mpd/com/' | relative_url }}). |
-| **SAFE** / **ARMED** | The aircraft's arm state, from the **A/S** button. See [Weapon action switch]({{ '/weapons/was/' | relative_url }}). |
-| **CHAFF** | Chaff remaining, armed or safe. With British equipment, flares as well. |
+| SIGHT | SIGHT select status window: the selected sight, HMD, TADS or FCR. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}). |
+| ACQ | ACQ select status window: the selected acquisition source |
+| LST / LRFD | LST and LRFD status windows: the LST and LRFD code selections. See [Laser codes]({{ '/displays/mpd/code/' | relative_url }}). |
+| SAFE / ARM | ARM/SAFE status window: the aircraft status, from the A/S button. See [Weapon action switch]({{ '/weapons/was/' | relative_url }}). |
+| CHAFF | CHAFF status: the chaff cartridges remaining and the dispenser status, SAFE or ARM; with British equipment, flares also. |
 
-Below them, the aircraft diagram shows the cannon, rounds remaining and each wing station's load. A failed cannon or pylon is marked on the diagram. The cannon fails without utility hydraulics, AC and DC power, or with its turret damaged. The pylons cannot move without utility hydraulics.
+Below the status windows, the gun icon displays the rounds counter, and the missile and rocket launcher icons display each wing station's load. A failed gun or pylon displays the FAIL indicator. The gun fails without utility hydraulics, without AC and DC power, or with the turret damaged. The pylons cannot articulate without utility hydraulics.
 
 ## Buttons on every format
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `T1`{: .vab} | `CHAN`{: .mpd} | Opens the [CHAN page]({{ '/displays/mpd/com/' | relative_url }}#chan). |
-| `T2`{: .vab} | `ASE`{: .mpd} | Opens the [ASE page]({{ '/displays/mpd/ase/' | relative_url }}). |
-| `T4`{: .vab} | `CODE`{: .mpd} | Opens the [CODE page]({{ '/displays/mpd/com/' | relative_url }}#code). |
-| `T5`{: .vab} | `COORD`{: .mpd} | Opens the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord). |
-| `R5`{: .vab} | `LRFD`{: .mpd} | Fires the laser, or stops it if it is firing. See [Laser]({{ '/targeting/laser/' | relative_url }}). |
-| `R6`{: .vab} | `ACQ`{: .mpd} | Opens the [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list. |
-| `B1`{: .vab} | | MENU. |
-| `B2`{: .vab} | `GUN`{: .mpd} | Shows the gun format. |
-| `B3`{: .vab} | `MSL`{: .mpd} | Shows the missile format. |
-| `B5`{: .vab} | `RKT`{: .mpd} | Shows the rocket format. |
-| `B6`{: .vab} | `MANRNG>`{: .mpd} | Sets a manual range on the KU: a range in metres from 100 to 50,000, or `A` for automatic range. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}#range). |
+| `T1`{: .vab} | `CHAN`{: .mpd} | [CHAN page]({{ '/displays/mpd/code/' | relative_url }}#chan) |
+| `T2`{: .vab} | `ASE`{: .mpd} | [ASE page]({{ '/displays/mpd/ase/' | relative_url }}) |
+| `T4`{: .vab} | `CODE`{: .mpd} | [CODE page]({{ '/displays/mpd/code/' | relative_url }}#code) |
+| `T5`{: .vab} | `COORD`{: .mpd} | [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord) |
+| `R5`{: .vab} | `LRFD`{: .mpd} | Fires the laser, or stops it if firing. See [Laser]({{ '/targeting/laser/' | relative_url }}). |
+| `R6`{: .vab} | `ACQ`{: .mpd} | [Acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list |
+| `B1`{: .vab} | | MENU page |
+| `B2`{: .vab} | `GUN`{: .mpd} | Gun format |
+| `B3`{: .vab} | `MSL`{: .mpd} | Missile format |
+| `B5`{: .vab} | `RKT`{: .mpd} | Rocket format |
+| `B6`{: .vab} | `MANRNG>`{: .mpd} | Manual range on the KU: 100 to 50,000 m, or `A` for automatic range. See [Range]({{ '/targeting/sights/' | relative_url }}#range). |
 
-`B2`{: .vab}, `B3`{: .vab} and `B5`{: .vab} only work while no weapon is actioned. Once a crew member actions a weapon, the page shows that weapon's format by itself, and returns when it is de-actioned.
+`B2`{: .vab}, `B3`{: .vab} and `B5`{: .vab} operate only with no weapon actioned. When a weapon is actioned, the page displays that weapon's format, and returns when the weapon is de-actioned.
 
-**UTIL**, **BORESIGHT**, **GRAYSCALE**, **TRAIN** and **HARMONIZE** are not simulated.
+UTIL, BORESIGHT, GRAYSCALE, TRAIN and HARMONIZE are not simulated.
 
 ## GUN
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `L1`{: .vab}–`L5`{: .vab} | `10` `20` `50` `100` `ALL` | **Burst limit**: how many rounds one trigger pull fires. |
-| `R2`{: .vab} | `MODE`{: .mpd} | **NORM**: the gun follows your sight. **FXD**: the gun is fixed straight ahead along the aircraft centreline. Each crew station has its own. |
+| `L1`{: .vab}–`L5`{: .vab} | `10` `20` `50` `100` `ALL` | BURST LIMIT: rounds per trigger pull |
+| `R2`{: .vab} | `MODE`{: .mpd} | NORM: the gun follows the selected sight. FXD: the gun is fixed to the centreline of the aircraft. Crewstation independent. |
 
-See [M230 cannon]({{ '/weapons/cannon/' | relative_url }}).
+See [M230 chain gun]({{ '/weapons/cannon/' | relative_url }}).
 
 ## RKT
 
-The left side lists the rocket types loaded, up to five, with how many of each. The pods on the diagram show which type is where.
+The INVENTORY buttons on the left list the rocket types loaded, up to five, with the quantity of each. The rocket launcher icons show the location of each type.
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `L1`{: .vab}–`L5`{: .vab} | rocket types | Selects the rocket type to fire. With another player in the CPG seat, only the CPG can change it. |
-| `R1`{: .vab} | `QTY`{: .mpd} | Opens the quantity choices, how many rockets one trigger pull fires: `R1`{: .vab} 1, `R2`{: .vab} 2, `R3`{: .vab} 4, `R4`{: .vab} 8, `R5`{: .vab} 12, `R6`{: .vab} 24, `B6`{: .vab} ALL. |
+| `L1`{: .vab}–`L5`{: .vab} | INVENTORY | Selects the rocket warhead and type to be fired. With a player in the CPG crew station, only the CPG can change it. |
+| `R1`{: .vab} | `QTY`{: .mpd} | Rockets per trigger pull: `R1`{: .vab} 1, `R2`{: .vab} 2, `R3`{: .vab} 4, `R4`{: .vab} 8, `R5`{: .vab} 12, `R6`{: .vab} 24, `B6`{: .vab} ALL |
 
-**TOTAL ROCKETS** shows how many of the selected type are left. See [Hydra 70 rockets]({{ '/weapons/rockets/' | relative_url }}).
+The TOTAL ROCKETS status window displays the quantity of the selected type remaining. See [Hydra 70 rockets]({{ '/weapons/rockets/' | relative_url }}).
 
 ## MSL
 
-The missile format changes with the type of Hellfire selected. `R1`{: .vab} **TYPE** switches between **SAL** (laser-guided) and **RF** (radar-guided, the AGM-114L). It does not work while your sight is the FCR, which always selects RF missiles.
+The MSL format changes with the missile TYPE selected. `R1`{: .vab} TYPE selects SAL (laser-guided) or RF (radar-guided, AGM-114L). TYPE is inhibited with FCR as the sight, which selects RF missiles.
 
-These are on both formats:
-
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `R1`{: .vab} | `TYPE`{: .mpd} | SAL or RF. |
-| `R2`{: .vab} | `MODE`{: .mpd} | Opens your crew station's missile mode: `R1`{: .vab} **NORM**, `R2`{: .vab} **MAN** or `R3`{: .vab} **RIPL**. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#modes). |
+| `R1`{: .vab} | `TYPE`{: .mpd} | SAL or RF |
+| `R2`{: .vab} | `MODE`{: .mpd} | Missile mode for the crew station: `R1`{: .vab} NORM, `R2`{: .vab} MAN, `R3`{: .vab} RIPL. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#modes). |
 
-### SAL missiles
+### SAL missiles {#sal-missiles}
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `L1`{: .vab} | `PRI`{: .mpd} | Opens the channel list on `L1`{: .vab}–`L5`{: .vab}: choose **CHAN 1**–**CHAN 4** for the primary laser code, or **NONE**. |
-| `L2`{: .vab} | `ALT`{: .mpd} | The same for the alternate code. Needs a primary first. |
-| `L3`{: .vab} | `SAL SEL`{: .mpd} | Steps through the SAL Hellfire types loaded. The label reads **SAL2** for the K, K2A and N, and **SAL1** for the FA. |
-| `R3`{: .vab} | `TRAJ`{: .mpd} | Opens the trajectory choices: `R1`{: .vab} **HI**, `R2`{: .vab} **LO**, `R3`{: .vab} **DIR**. |
+| `L1`{: .vab} | `PRI`{: .mpd} | Channel options on `L1`{: .vab}–`L5`{: .vab}: CHAN 1–4 for the priority channel, or NONE |
+| `L2`{: .vab} | `ALT`{: .mpd} | As PRI, for the alternate channel; requires a priority channel |
+| `L3`{: .vab} | `SAL SEL`{: .mpd} | Steps through the SAL Hellfire types loaded: SAL2 for the K, K2A and N; SAL1 for the FA |
+| `R3`{: .vab} | `TRAJ`{: .mpd} | Trajectory: `R1`{: .vab} HI, `R2`{: .vab} LO, `R3`{: .vab} DIR |
 
-The **CHANNELS** row along the bottom shows the four laser codes the channels hold. The missile symbol on the diagram reads the primary code and, below it, **T** when the seeker sees laser energy on that code, or **R** when it does not.
+The SAL missile status window displays the code held by each of the four missile channels. The SAL missile icon of the next missile displays the priority channel code and, below it, **T** when the missile seeker is in track mode, or **R** when it is not.
 
-**HFMSN**, **DEICE** and **MSL CCM** are not simulated.
+HFMSN, DEICE and MSL CCM are not simulated.
 
 ### RF missiles
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `L1`{: .vab}–`L3`{: .vab} | `ALL` `AUTO` `NONE` | **MSL PWR**: which radar missiles are powered. **AUTO** powers the ones about to be fired. A missile needs some seconds after power-up before it can take a target. |
+| `L1`{: .vab}–`L3`{: .vab} | `ALL` `AUTO` `NONE` | MSL PWR: the method of RF missile power management. ALL commands power to all RF missiles, AUTO powers the missiles next to be launched, and NONE removes power. A missile requires several seconds after power-up before it is ready to receive a target. |
 
-The selected missile shows **S** while it is aligning, **R** when ready, and **T** when it has a target it can lock before launch.
+The RF missile icon of the next missile displays **S** while powered but not yet aligned, **R** when ready to receive a target, and **T** when the missile seeker is in track mode.
 
-**LOBL INHIBIT** and **2ND TARGET INHIBIT** are not simulated. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#rf).
+LOBL INHIBIT and 2ND TARGET INHIBIT are not simulated. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#rf).

@@ -1,6 +1,6 @@
 title: COORD page
 kind: mpd
-caption: COORD listing the stored waypoints and hazards.
+caption: 'WPTHZ page listing the stored waypoints and hazards.'
 state:
   page: COORD
   u:
@@ -18,31 +18,31 @@ callouts:
   x: 210
   y: 35
   side: t
-  label: List
-  text: The list shown, boxed. CTRLM, COORD and SHOT pick the others.
+  label: WPTHZ button
+  text: 'The page presented, boxed. CTRLM, COORD and SHOT select the others.'
 - n: 2
   x: 726
   y: 112
   side: r
   label: Title
-  text: What the list holds.
+  text: 'Contents of the list.'
 - n: 3
   x: 62
   y: 353
   side: l
   label: Point
-  text: Its number, ident and free text, then the datum and grid.
+  text: 'Point type and number, identifier and free text, then the datum and grid.'
 - n: 4
   x: 947
   y: 353
   side: r
   label: Altitude
-  text: In feet, read like your barometric altitude.
+  text: Altitude of the point, feet MSL.
   snap: false
 - n: 5
   x: 390
   y: 987
   side: b
   label: Page
-  text: This page and how many there are.
+  text: 'Page number and total pages.'
   snap: false

@@ -1,55 +1,64 @@
 ---
 title: Fuel system
-lead: Two main cells feed the engines, and optional tanks top them up. How fuel moves around the aircraft, and what happens when a cell is hit.
-keywords: [fuel, cells, forward, aft, crossfeed, transfer, xfer, auto, iafs, external tanks, aux, refuel, leak, jettison, capacity, weight]
+lead: The forward and aft fuel cells, the internal auxiliary fuel system and the external tanks, how fuel is fed and transferred, and the warnings, cautions and advisories presented to the crew.
+keywords: [fuel, cells, forward, aft, crossfeed, transfer, xfer, auto, boost, iafs, robbie, external tanks, aux, refuel, leak, jettison, capacity, weight]
 seats: [PLT, CPG]
 ---
 
-The [FUEL page]({{ '/displays/mpd/fuel/' | relative_url }}) shows all of this and holds the switches. This page explains what is going on behind it.
+## Description
 
-## Tanks
+The fuel system consists of the forward fuel cell, the aft fuel cell, the internal auxiliary fuel system (IAFS, also known as the "Robbie") and up to four external tanks. The FUEL page displays the system and contains its controls; see [FUEL page]({{ '/displays/mpd/fuel/' | relative_url }}).
 
-| Tank | Capacity | Feeds | Fitted |
+| Tank | Capacity | Feeds | Installed |
 |---|---|---|---|
-| **Forward cell** | 1,043 lb | Engine 1 | Always |
-| **Aft cell** | 1,474 lb | Engine 2, and the APU | Always |
-| **IAFS** (internal auxiliary fuel system) | 663 lb | Both main cells | When the IAFS is in the ammunition bay ([Variants]({{ '/aircraft/variants/' | relative_url }})) |
-| **External tanks**, stations 1–4 | 1,541 lb each | Left side into the forward cell, right side into the aft cell | When hung on a wing station |
+| Forward fuel cell | 1,043 lb | Engine 1 | Always |
+| Aft fuel cell | 1,474 lb | Engine 2 and the APU | Always |
+| IAFS | 663 lb | Forward and aft fuel cells | In the ammunition bay; reduces the 30 mm load to 300 rounds ([Variants]({{ '/aircraft/variants/' | relative_url }})) |
+| External tanks, stations 1–4 | 1,541 lb each | Left side to the forward cell, right side to the aft cell | When loaded on a wing station |
 
-That makes 2,517 lb in the main cells, 3,180 lb with the IAFS, and over 9,000 lb with four external tanks. Full external tanks are heavy, so check the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}) or the [mission planner]({{ '/mission/planner/' | relative_url }}) before loading them.
+When the fuel level in the forward fuel cell goes below 240 lb, a master caution is presented to the crew. When the fuel level in the aft fuel cell goes below 260 lb, a master caution is also presented. There is no low fuel caution for the IAFS. With both low fuel cautions displayed, the fuel remaining is 500 lb; at a fuel burn of approximately 1,100 lb per hour, the helicopter has approximately 27 minutes of fuel remaining.
 
-## Feeding the engines
+## Fuel feed and crossfeed
 
-With crossfeed in **NORM**, each engine draws from its own cell. **FWD** or **AFT** feeds both engines from one cell. Use it to balance the cells, or to keep both engines running when one cell is damaged or empty. Turning the **boost pump** on sets crossfeed to AFT and locks it there until the pump is off.
+With crossfeed at NORM, engine 1 draws fuel from the forward cell and engine 2 from the aft cell. Crossfeed FWD feeds both engines from the forward cell; crossfeed AFT feeds both engines from the aft cell. Selecting the boost pump on sets crossfeed to AFT, and crossfeed cannot be changed while the boost pump is on.
 
-The APU always draws from the aft cell, at 175 lb/h.
+The APU draws fuel from the aft cell only, at approximately 175 lb per hour.
 
-## Transfer pump
+## Fuel transfer
 
-The transfer pump moves fuel between the main cells at about 50 lb/min.
+The transfer pump moves fuel between the forward and aft cells at approximately 50 lb per minute.
 
-| Mode | What it does |
-|---|---|
-| **FWD** / **AFT** | Pumps into the named cell until it is full or the other is empty. |
-| **AUTO** | Keeps the cells in balance. When a cell falls below about 810 lb and the other holds noticeably more, fuel is moved into the lighter one. Moving fuel *out* of the forward cell needs both engines running, so after a single-engine failure the system cannot strand fuel away from the working engine. |
-| **OFF** | No transfer. |
+- **FWD** / **AFT**: fuel is transferred into the selected cell until it is full or the other cell is empty.
+- **AUTO**: the cells are kept in balance. When a cell falls below approximately 810 lb and the other cell holds more, fuel is transferred to the lighter cell. Transfer out of the forward cell requires both engines running.
+- **OFF**: no transfer.
 
-AUTO needs pneumatic air to run the pump: the APU, or an engine running.
+AUTO transfer requires pneumatic air from the APU or an operating engine.
 
 ## Auxiliary tanks
 
-**L AUX** and **R AUX** on the FUEL page turn each side's external tanks on. Once on, a side's tanks empty into their main cell at about 50 lb/min each, as long as the cell has room. On each side the inboard tank feeds first. An outboard tank only feeds with the inboard tank fitted, because it is pressurised through it. A side's switch turns itself off when its tanks are empty, and an empty tank shows the `EXT1 EMPTY`{: .mpd} (to `EXT4 EMPTY`{: .mpd}) advisory until you look at the FUEL page.
+L AUX and R AUX on the FUEL page select transfer from the external tanks on each side. With transfer selected, each side's tanks feed their main cell at approximately 50 lb per minute while the cell has room. The inboard tank feeds first; an outboard tank feeds only with the inboard tank installed, since it is pressurised through the inboard tank. Each side's transfer is deselected automatically when its tanks are empty, and an empty tank is indicated by the EXT1 EMPTY to EXT4 EMPTY advisory.
 
-**C AUX** turns on the IAFS. It drains into both main cells, but only once any external tanks that are switched on have run dry.
+C AUX selects transfer from the IAFS into both main cells. The IAFS transfers only after any selected external tanks are empty.
 
 ## Damage
 
-A cell hit hard enough starts to leak, up to about 130 lb/h per cell, and faster the worse the damage. The IAFS shares its hitpoint with the ammunition bay. A leaking cell needs a repair to stop it. Move fuel out of a leaking cell with the transfer pump and crossfeed, or burn it first.
+A fuel cell that is damaged leaks, at up to approximately 130 lb per hour per cell; the rate increases with the severity of the damage. The IAFS shares its damage with the ammunition bay. A leaking cell continues to leak until the aircraft is repaired.
 
-An external tank whose pylon is hit hard explodes and is gone from the wing. The fuller the tank, the bigger the explosion. A tank with less than about 200 lb left does not explode.
+An external tank whose pylon is heavily damaged explodes and is lost from the wing; the explosion increases with the fuel in the tank. A tank with less than approximately 200 lb of fuel does not explode.
 
-## Refuelling and defuelling
+## Refuelling and jettison
 
-- **ACE refuelling** from a fuel truck or a fuel source fills the aircraft as Arma does. The fuel is shared out across the tanks.
-- The **[mission planner]({{ '/mission/planner/' | relative_url }})** sets the fuel load precisely, with or without a fuel source nearby depending on the server settings.
-- **Emergency jettison**, bound in **AH-64D Official Project**, drops everything on all four wing stations, external tanks included. It needs battery power.
+- ACE refuelling from a fuel vehicle or fuel source distributes fuel across the tanks.
+- The [mission planner]({{ '/mission/planner/' | relative_url }}) sets the fuel load directly; whether a fuel source is required depends on the server settings.
+- Emergency jettison, bound in **AH-64D Official Project**, releases all four wing stations, external tanks included. It requires battery power.
+
+The following table provides a list of Warnings, Cautions and Advisories:
+
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| NONE | NONE | NONE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| AFT FUEL LO | AFT FUEL LOW | LAND AS SOON AS PRACTICABLE |
+| FWD FUEL LO | FORWARD FUEL LOW | LAND AS SOON AS PRACTICABLE |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| EXT1 EMPTY – EXT4 EMPTY | EXTERNAL 1–4 EMPTY | |

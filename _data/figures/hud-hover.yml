@@ -5,7 +5,7 @@ crop:
 - -30
 - 640
 - 510
-caption: Pilot's hover symbology at 40 ft with attitude hold engaged, drifting forward and right and accelerating.
+caption: 'Pilot hover mode symbology: 40 ft, attitude hold engaged, drifting forward and right and accelerating.'
 model:
   hd: false
   tv: false
@@ -68,28 +68,28 @@ callouts:
   y: 193
   side: l
   label: Velocity vector
-  text: Drift over the ground. The top of the lubber line is 6 kt.
+  text: 'Magnitude and direction of the aircraft velocity relative to the nose. Full scale represents 6 kt ground speed in hover mode.'
 - n: 2
   x: 405
   y: 126.5
   side: r
   label: Acceleration cue
-  text: The aircraft's acceleration, from the tip of the velocity vector. Keep it on the reticle to stay still.
+  text: 'Magnitude and direction of the aircraft''s acceleration; referenced to the outer end of the velocity vector below full scale.'
 - n: 3
   x: 352
   y: 26
   side: r
   label: Command heading
-  text: Still the bearing to the next waypoint.
+  text: 'Chevron: the heading to the next navigation waypoint.'
 - n: 4
   x: 52
   y: 225
   side: l
   label: Attitude hold
-  text: Attitude hold is on.
+  text: 'Status window around the airspeed digital readout: attitude hold engaged.'
 - n: 5
   x: 608
   y: 330
   side: r
-  label: Radar altitude scale
-  text: Height above the ground, under 200 ft.
+  label: Radar altitude vertical scale
+  text: 'Presented below 200 ft AGL.'

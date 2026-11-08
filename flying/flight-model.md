@@ -1,123 +1,99 @@
 ---
 title: HeliSim flight model
-lead: The Apache does not use Arma's helicopter physics. HeliSim simulates the rotor, the engines and the aircraft's systems, and that changes how you fly and what you can break.
-keywords: [helisim, flight model, physics, torque, limits, vrs, ground effect, etl, weight, performance, overtorque]
+lead: The HeliSim flight dynamics model, the performance and environment simulation, and the aerodynamic effects the crew must manage — translational lift, ground effect, translating tendency, vortex ring state, settling with power, mushing and autorotation.
+keywords: [helisim, flight model, physics, torque, performance, environment, etl, ground effect, translating tendency, vrs, vortex ring state, settling with power, swp, mushing, autorotation, weight]
 redirect_from:
   - /flight-model-helisim.html
 ---
 
-HeliSim is a separate mod, [**HeliSim Core**](https://steamcommunity.com/workshop/filedetails/?id=3806917476), by BradMick. The Apache supplies its aircraft data: weights, rotor, engines, transmission, fuel, hydraulics and electrics.
+## HeliSim
 
-## What it simulates
+HeliSim is a complete replacement of the Arma 3 Advanced Flight Model (AFM). It is a separate mod, [**HeliSim Core**](https://steamcommunity.com/workshop/filedetails/?id=3806917476), which must be loaded. HeliSim provides a helicopter flight dynamics model that simulates airframe drag and rotor thrust, and expands the SFM+ stabilator system. It simulates main rotor torque, translational lift, ground effect, translating tendency, vortex ring state and autorotation. The AH-64D supplies its own aircraft data to HeliSim: weights, rotor, engines, transmission, fuel, hydraulics and electrical system.
 
-- **Rotor and airframe.** Lift, drag and power required come from the rotor and the fuselage, wings and stabilator. Weight, altitude and temperature change the power you need. Ground effect, translational lift and vortex ring state come from the rotor model.
-- **Engines.** Two turboshaft engines with a gas generator (Ng), a free power turbine (Np) and a turbine temperature (TGT), governed to keep the rotor at 101%. They start, run and fail as engines do: see [Engines and rotor]({{ '/aircraft/engines/' | relative_url }}).
-- **Transmission and gearboxes.** Engine torque passes through a nose gearbox on each side into the main transmission. Too much torque damages them.
-- **Systems.** Battery, generators and TRUs, the APU, primary and utility hydraulics with an accumulator, the fuel cells and pumps, and the flight management computer.
-- **Weight and balance.** Fuel, ammunition, missiles, rockets, external tanks, the radar and the crew all add mass and move the centre of gravity. As you burn fuel and fire weapons the aircraft gets lighter.
+Engine, drive train and rotor limits are given in [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}#indications-and-limits). Exceeding a limit beyond its time allowance damages the engine or drive train.
 
-## Limits
+## Limits {#limits}
 
-Exceeding a limit is not just a warning. HeliSim times each time-limited range, and damages the engine or drive train when its allowance runs out.
+All operating limits — oil, Ng, Np, TGT, Nr and torque, dual and single engine — and the TGT limiters are listed in [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}#indications-and-limits).
 
-Each range starts just above the top of the one below it and includes its own top figure. In dual engine torque, 100% is still normal, 101% to 115% is the 6-second transient range, and anything above 115% is over the maximum. The figures are as the ENG page reads them.
+## Performance simulation
 
-On the ENG page, the torque, TGT, Np and Ng readings are green in a normal range, yellow in a time-limited range, and red past a maximum or below a minimum.
+The performance simulation models the helicopter's performance from 0 to 8,000 ft pressure altitude and from −40 to +40 °C.
 
-### Torque
+Gaining altitude decreases available power. A heavier helicopter requires more torque to hover: more weight requires more torque. As the helicopter gains altitude, the air becomes less dense and the rotor system produces less thrust; the pilot must increase collective to generate the same lift as at a lower altitude.
 
-| Dual engine (DE) | Range | Allowed |
-|---|---|---|
-| 0–100% | Normal | Continuous |
-| 101–115% | Transient | 6 seconds |
-| Above 115% | Over the maximum | None: damage at once |
+Altitude and temperature also affect the maximum torque the engines can produce. Higher altitudes and higher temperatures reduce engine power. When the maximum torque available is reached, the rotor begins to slow down (droop), since the engines can no longer supply the power to hold Nr at 101%. This results in a loss of lift.
 
-| Single engine (SE) | Range | Allowed |
-|---|---|---|
-| 0–110% | Normal; 110% is single engine maximum continuous power | Continuous |
-| 111–122% | Single engine contingency | 2.5 minutes |
-| 123–125% | Transient | 6 seconds |
-| Above 125% | Over the maximum | None: damage at once |
+To recover from a low rotor RPM condition, the pilot **MUST** lower the collective to restore Nr. Nr can take several seconds to recover; close to the ground, there may not be sufficient height to recover before ground contact.
 
-The aircraft counts as single engine when one engine's torque falls below about half of the other's. Over-torquing dual engine damages the main transmission; over-torquing single engine damages that engine's nose gearbox.
-
-### Rotor speed
-
-| Nr | |
-|---|---|
-| 0–94% | Below normal. In the air, `LOW RTR`{: .mpd} warning. |
-| 95–105% | Normal |
-| 106–110% | Transient. `HIGH RTR`{: .mpd} warning from 106%. |
-| Above 110% | Over the maximum |
-
-### Temperature
-
-The DEC limits TGT to 867 °C dual engine, or 896 °C single engine. TGT above 810 °C, maximum continuous power, is time-limited; keep it there only as long as you need the power. During a start, TGT must stay at or below 851 °C. See [Hot starts]({{ '/aircraft/engines/' | relative_url }}#hot-starts).
-
-| TGT, dual engine | Range | Allowed |
-|---|---|---|
-| 0–810 °C | Normal, up to maximum continuous power | Continuous |
-| 811–870 °C | Intermediate rated power | 30 minutes |
-| 871–878 °C | Intermediate rated power | 10 minutes |
-| Above 878 °C | Over the maximum | None: damage at once |
-
-| TGT, single engine | Range | Allowed |
-|---|---|---|
-| 0–810 °C | Normal, up to maximum continuous power | Continuous |
-| 811–870 °C | Intermediate rated power | 30 minutes |
-| 871–878 °C | Intermediate rated power | 10 minutes |
-| 879–896 °C | Single engine contingency | 2.5 minutes |
-| 897–949 °C | Single engine transient | 12 seconds |
-| Above 949 °C | Over the maximum | None: damage at once |
-
-### Engine speeds
-
-| Each engine | Range | Allowed |
-|---|---|---|
-| Ng below 63%, running | Below the minimum: `ENG1 OUT`{: .mpd} with the power lever at FLY | |
-| Ng 63–102.2% | Normal | Continuous |
-| Ng 102.3–105.1% | Transient | 12 seconds |
-| Ng above 105.1% | Over the maximum | None: damage at once |
-| Np 0–105% | Normal | Continuous |
-| Np 106–121% | Transient. `ENG1 OVSP`{: .mpd} from 115%. | 12 seconds |
-| Np above 121% | Over the maximum | None: damage at once |
-
-The engines' overspeed protection shuts an engine down at 110% Ng or 119.6% Np. See [Engine protection]({{ '/aircraft/engines/' | relative_url }}#engine-protection).
-
-### Oil pressure
-
-| Engine oil | |
-|---|---|
-| Below 23 psi | Below the minimum: `ENG1 OIL PSI`{: .mpd} |
-| 23–120 psi | Normal |
-| Above 120 psi | Over the maximum |
-
-Each range's allowance starts again from full whenever you enter it. The [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#timers) shows the time left.
+Maximum torque available, hover torque required and maximum gross weight for the current conditions are displayed on the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}).
 
 ## Weight
 
 | | |
 |---|---|
-| Empty, without the radar | 13,920 lb (6,314 kg) |
-| Empty, with the radar | 14,570 lb (6,609 kg) |
-| Maximum gross | 23,000 lb (10,433 kg) |
+| Empty, without the radar | 13,920 lb |
+| Empty, with the radar | 14,570 lb |
+| Maximum gross weight for combat | 20,260 lb |
 
-A full load of Hellfires, rockets, 1,200 rounds and full fuel is heavy. On a hot day or at altitude you may not be able to hover out of ground effect. The [PERF page]({{ '/displays/mpd/perf/' | relative_url }}) tells you what you can do at your weight in the conditions; the [mission planner]({{ '/mission/planner/' | relative_url }}) does the same before you load the aircraft.
+## Environment simulation
 
-> If you cannot get airborne, or can only hover in ground effect, take fuel or weapons off. The flight model is not broken: the aircraft is too heavy for the day.
-{: .tip}
+The environment model sets the base pressure altitude and temperature the helicopter operates at. As the helicopter climbs, temperature decreases at a lapse rate of 2 °C per 1,000 ft. Each preset represents the average altitude and temperature of a region where common Arma maps are set. The preset is selected in **Aircraft Environmental Settings** ([Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim)).
 
-## Environment
+| Environment | Base pressure altitude | Base temperature |
+|---|---|---|
+| Standard Day (ISA) | 0 ft | 15 °C |
+| Europe – Summer (default) | 800 ft | 20 °C |
+| Europe – Winter | 800 ft | 0 °C |
+| Middle East | 1,800 ft | 30 °C |
+| Central Asia – Summer | 5,000 ft | 30 °C |
+| Central Asia – Winter | 5,000 ft | −5 °C |
+| Asia | 3,100 ft | 25 °C |
 
-The engines and rotor see the base altitude and temperature set in **Aircraft Environmental Settings** ([Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim)). The **Middle East** and **Central Asia - Summer** settings in particular cost a lot of power. Wind from the mission's weather is included unless a tester has turned it off.
+Wind from the mission weather is included.
 
-## Vortex ring state
+## Main rotor torque effect
 
-Descending faster than 300 ft/min, slower than effective translational lift (ETL, about 24 kt), with power applied makes the helicopter susceptible to vortex ring state (VRS).
+When collective is applied, torque increases and is transferred into the helicopter, turning the nose to the right. The pilot applies left pedal to counteract the rotation. This effect can be disabled in Addon Options for users without rudder pedals or a twist-grip joystick.
 
-As the rate of descent increases, the air flowing up through the rotor reduces its induced flow. The inboard part of each blade turns slower and makes less lift, so the change in induced flow there takes it towards its critical stall angle, and it sheds an inboard set of vortices. Together with the vortices at the blade tips, these stall the whole main rotor. Lift falls away, and adding collective makes it worse.
+## Effective translational lift (ETL)
 
-- **To avoid it**, keep the rate of descent under 300 ft/min below ETL, or keep your airspeed above ETL when you need to descend steeply.
-- **To recover**, move the aircraft out of its own downwash with forward or sideways cyclic, then add collective once the rotor has clean air again.
+As the helicopter transitions through 16 to 24 knots, a small vertical vibration develops as the helicopter outruns its own rotor downwash and begins operating in cleaner air.
 
-Turn on **Enable VRS Warning** in the HeliSim settings for an on-screen warning. Below ETL it comes in three stages as the descent builds: entering VRS from 2,000 ft/min, developing from about 2,900 ft/min, and fully developed VRS imminent from about 3,900 ft/min. The aircraft is susceptible long before the first one.
+## Ground effect
+
+The helicopter is in ground effect (IGE) when hovering within one rotor diameter of the ground: 48 ft above ground level for the AH-64D. Hovering IGE reduces the power required, since the induced flow (downwash) of the rotor cannot fully develop. As the helicopter gains height this effect is lost, and additional power is required to hover out of ground effect (OGE).
+
+## Translating tendency
+
+The main rotor rotates counter-clockwise. When collective is increased, the nose of the helicopter turns to the right; tail rotor thrust, directed to the right, opposes this. As a result, the helicopter drifts in the direction of tail rotor thrust. The pilot counters the drift with left cyclic, which results in an approximately 3° left roll at a hover.
+
+## Vortex ring state (VRS) {#vortex-ring-state}
+
+Vortex ring state is an aerodynamic stall of the main rotor that develops as the result of an excessive vertical rate of descent. For the helicopter to enter VRS, the following three conditions **MUST EXIST SIMULTANEOUSLY**; if any one condition does not exist, the helicopter cannot enter VRS:
+
+1. A vertical or near-vertical rate of descent greater than 300 fpm.
+2. Power applied, 20 to 100% of power available, with insufficient power to arrest the descent.
+3. Little or no forward airspeed, generally less than ETL.
+
+The helicopter enters fully developed VRS at approximately 4,800 fpm. Before entering VRS, the aircraft begins to shake, with the shaking increasing in severity as the rotor system approaches the stall. Before this point, recovery by applying collective is possible provided engine power is available; depending on conditions, the pilot is likely to overtorque and droop the rotor, which increases the rate of descent. The helicopter can be flown out of VRS by gaining directional airspeed (forward, aft, left or right).
+
+Rates of descent must not be allowed to build at low airspeed, particularly in high or hot conditions.
+
+**Enable VRS Warning** in the HeliSim settings provides an on-screen warning below ETL in three stages: entering VRS from 2,000 fpm, developing from approximately 2,900 fpm, and fully developed VRS imminent from approximately 3,900 fpm.
+
+## Settling with power (SWP) {#settling-with-power}
+
+Settling with power is a condition in which a rate of descent is allowed to build that cannot be arrested with the engine power available. **It is not the same as VRS.** The most likely situation for SWP is a termination to an OGE hover from high-speed flight.
+
+For example, with 95% torque required to hover OGE and a continuous torque limit of 100%, the power margin is 5%. For the AH-64D, arresting a 100 fpm rate of descent requires approximately 2% torque above IGE hover torque. A 5% margin therefore permits a rate of descent of **no more than 250 fpm** (5% ÷ 2% × 100 fpm) without exceeding 100% and potentially overtorquing the helicopter. The margin decreases as weight, pressure altitude and temperature increase.
+
+SWP results from operating without knowledge of the helicopter's performance capability. The pilot must know the power margin available throughout the flight; see [PERF page]({{ '/displays/mpd/perf/' | relative_url }}).
+
+## Mushing
+
+Mushing is a temporary stall condition that can occur during aggressive, high-speed dive recoveries. The momentum of the helicopter overcomes the thrust of the rotor system, and the helicopter continues along its original flight path until the rotor recovers. If mushing occurs, and altitude and terrain allow, the pilot applies forward cyclic to reduce the severity of the manoeuvre and restore normal rotor thrust; continuing to apply aft cyclic aggravates the condition.
+
+## Autorotation
+
+To perform a power-on autorotation, establish an airspeed between 77 and 107 knots and reduce collective until torque is less than 10% with both engines operating. 77 knots is the minimum rate of descent true airspeed and 107 knots the maximum glide true airspeed. Autorotation cannot be performed safely above 145 knots true airspeed.

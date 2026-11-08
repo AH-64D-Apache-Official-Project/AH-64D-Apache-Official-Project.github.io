@@ -1,6 +1,6 @@
 ---
-title: UTIL page
-lead: The aircraft UTIL page switches the flight management computer's channels.
+title: Aircraft utility (A/C UTIL) page
+lead: The A/C UTIL page displays the controls for the flight management computer (FMC) axes and force trim.
 keywords: [util, fmc, channels, pitch, roll, yaw, collective, trim, anti-ice]
 seats: [PLT, CPG]
 redirect_from:
@@ -11,19 +11,16 @@ redirect_from:
 
 ## Buttons
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `L1`{: .vab} | `PITCH`{: .mpd} | FMC pitch channel on or off. |
-| `L2`{: .vab} | `ROLL`{: .mpd} | FMC roll channel on or off. |
-| `L3`{: .vab} | `YAW`{: .mpd} | FMC yaw channel on or off. |
-| `L4`{: .vab} | `COLL`{: .mpd} | FMC collective channel on or off. |
-| `L5`{: .vab} | `TRIM`{: .mpd} | Force trim on or off. |
-| `T2`{: .vab}–`T4`{: .vab} | | FLT, FUEL, PERF. `T6`{: .vab} (the boxed UTIL tab) returns to ENG. |
-| `B1`{: .vab} | | MENU. |
+| `L1`{: .vab} | `PITCH`{: .mpd} | FMC pitch axis on or off |
+| `L2`{: .vab} | `ROLL`{: .mpd} | FMC roll axis on or off |
+| `L3`{: .vab} | `YAW`{: .mpd} | FMC yaw axis on or off |
+| `L4`{: .vab} | `COLL`{: .mpd} | FMC collective axis on or off |
+| `L5`{: .vab} | `TRIM`{: .mpd} | Force trim on or off |
+| `T2`{: .vab}–`T4`{: .vab} | | FLT, FUEL, PERF; `T6`{: .vab} (the boxed UTIL page button) returns to the ENG page |
+| `B1`{: .vab} | | MENU page |
 
-A filled circle next to a channel means it is on. Turning any of the four FMC channels off disables the [stability augmentation and hold modes]({{ '/flying/flight-control/' | relative_url }}) on that axis and raises the `FMC DISENG`{: .mpd} caution.
+A filled dot beside an axis indicates it is on. Selecting any FMC axis off removes [stability augmentation and the hold modes]({{ '/flying/flight-control/' | relative_url }}) in that axis and raises the `FMC DISENG`{: .mpd} caution. All axes are normally on; an axis is selected off only for degraded-mode flight or testing.
 
-> Leave every channel on. Turning one off is for flying a degraded aircraft on purpose, or for testing.
-{: .note}
-
-**NOE/A**, the **ANTI ICE** switches, **BLEED AIR**, **ECS**, **TEMP** and **GND**, and the temperature readouts, are drawn but not simulated.
+NOE/A, the ANTI ICE selections, BLEED AIR, ECS, TEMP, GND and the temperature readouts are displayed but not simulated.

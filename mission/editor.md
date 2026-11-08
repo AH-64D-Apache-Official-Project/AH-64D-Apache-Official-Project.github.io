@@ -1,6 +1,6 @@
 ---
-title: For mission makers
-lead: How to set up Apache missions in the editor. Navigation points, the aircraft's own options, crews and the server settings that matter.
+title: Mission editor
+lead: Setting up AH-64D missions in the editor — navigation points, aircraft options, crews and server settings.
 keywords: [mission, editor, eden, zeus, logic entity, dms, waypoint, hazard, control measure, target, threat, point index, ident, free text, server, settings, crew]
 redirect_from:
   - /logicentities.html
@@ -8,66 +8,66 @@ redirect_from:
 
 ## Navigation points {#points}
 
-The aircraft's DMS points (waypoints, hazards, control measures and targets) can be placed in the editor as logic entities. In Eden open **Systems** (<kbd>F5</kbd>) → **Logic Entities** → **AH-64D DMS**:
+The aircraft's DMS points (waypoints, hazards, control measures and targets) are placed in the editor as logic entities, under **Systems** (<kbd>F5</kbd>) → **Logic Entities** → **AH-64D DMS**:
 
 | Entity | Point type | Point Index |
 |---|---|---|
-| **DMS Waypoint / Hazard** | Waypoint or hazard, by ident | 1 to 50 |
-| **DMS Control Measure** | Control measure | 51 to 99 |
-| **DMS Target / Threat** | Target or threat | 1 to 50 |
+| DMS Waypoint / Hazard | Waypoint or hazard, by ident | 1 to 50 |
+| DMS Control Measure | Control measure | 51 to 99 |
+| DMS Target / Threat | Target or threat | 1 to 50 |
 
-Each has three attributes:
+Each entity has three attributes:
 
 | Attribute | |
 |---|---|
-| **Point Index** | The point's number. A new entity takes the next free number of its type. Waypoints and hazards share the numbers 1 to 50. Two entities of the same type with the same number clash: only one is kept. A number outside its type's range is rejected with an `Invalid index` error. |
-| **Point Ident** | The two-letter code that sets the icon, chosen from a list with each icon shown. The list holds only idents that suit the entity: see [Idents]({{ '/mission/points/' | relative_url }}#idents). |
-| **Point Free Text** | Up to three characters drawn beside the icon, such as `HLD` or a callsign. |
+| Point Index | The point number. A new entity takes the next free number of its type. Waypoints and hazards share the numbers 1 to 50. Two entities of the same type with the same number conflict; only one is kept. A number outside the type's range is rejected with an `Invalid index` error. |
+| Point Ident | The two-letter code that sets the symbol, selected from a list showing each symbol. The list contains only idents valid for the entity; see [Idents]({{ '/mission/points/' | relative_url }}#idents). |
+| Point Free Text | Up to three characters displayed beside the symbol, such as `HLD` or a callsign. |
 
 The point takes the entity's position and height.
 
-The points are mission data, not loaded into any aircraft automatically. Crews load them with **MASTER LOAD** on the [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu), which replaces whatever the aircraft held. Tell your players to do it, or brief them on the point numbers so they can build their routes.
+The points are mission data and are not loaded into an aircraft automatically. The crew loads them with MASTER LOAD on the [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu), which replaces the points the aircraft holds.
 
-Lines, engagement areas, zones and routes cannot be placed in the editor. Crews build those as a [DTC]({{ '/mission/planner/' | relative_url }}#dtc) in the mission planner, which MASTER LOAD loads on top of your points. A DTC pushed to the mission from the planner's DTC manager is there for every crew to open.
+Lines, engagement areas, zones and routes cannot be placed in the editor. They are built as a [DTC]({{ '/mission/planner/' | relative_url }}#dtc) in the mission planner, and MASTER LOAD loads the DTC over the mission points. A DTC pushed to the mission from the planner's DTC manager is available to every crew.
 
-> Number your waypoints in the order you want them flown. Players build routes by typing point numbers on the KU, so W01, W02, W03 is far quicker than a scattered list.
-{: .tip}
+> Waypoints numbered in the order they are to be flown (W01, W02, W03) allow routes to be built quickly on the KU.
+{: .note}
 
-## The aircraft
+## Aircraft
 
-Place the **AH-64D BLOCK I** from **BLUFOR → AH-64D Official Project → Helicopters**. Its options are covered on [Variants and customisation]({{ '/aircraft/variants/' | relative_url }}):
+The **AH-64D BLOCK I** is placed from **BLUFOR → AH-64D Official Project → Helicopters**. Its options are described in [Variants and configuration]({{ '/aircraft/variants/' | relative_url }}):
 
 - **Appearance**: livery, radar, British mission equipment, IAFS or 1,200-round magazine.
-- **Attributes**: tail number, a loadout from the [mission planner]({{ '/mission/planner/' | relative_url }}) as JSON, and the pylons with their presets.
+- **Attributes**: tail number, a loadout from the [mission planner]({{ '/mission/planner/' | relative_url }}) in JSON, and the pylons with their presets.
 
-The aircraft always starts cold and dark: battery off, rotor stopped. Allow your crews time to [start up]({{ '/flying/startup/' | relative_url }}), a few minutes with practice.
+The aircraft starts cold: battery off, rotor stopped. The mission allows time for [start-up]({{ '/flying/startup/' | relative_url }}).
 
 ## Crews
 
-Use the **AH-64D Pilot** unit (**BLUFOR → AH-64D Official Project → Men**), or give your own pilots the **IHADSS** helmet. Without it the crew has no helmet display and no head-aimed sights. See [Crew stations]({{ '/aircraft/crew/' | relative_url }}).
+Crews use the **AH-64D Pilot** unit (**BLUFOR → AH-64D Official Project → Men**), or other units with the **IHADSS** helmet. Without it there is no HMD symbology and no HMD sight. See [Crew stations]({{ '/aircraft/crew/' | relative_url }}).
 
-The aircraft is built for two players. With an AI or empty CPG seat, the TADS is pointed by the pilot's acquisition source and the pilot fires the weapons.
+The aircraft is designed for two players. With the CPG crew station empty or AI, the pilot's acquisition source points the TADS and the pilot fires the weapons.
 
 ## Rearming and refuelling
 
-Set up a way for crews to change loadouts: an ACE ammo source, a fuel source, or the mission planner's settings. See [Rearm and refuel]({{ '/mission/rearm/' | relative_url }}).
+Loadout changes require an ACE ammunition source, a fuel source, or the mission planner settings. See [Rearm and refuel]({{ '/mission/rearm/' | relative_url }}).
 
 ## Server settings
 
-Set these in **Addon Options → Server** (or the mission's settings) so every player gets the same:
+Set in **Addon Options → Server** (or the mission settings) so that every player has the same values:
 
 | Setting | Effect |
 |---|---|
-| **Mission Planner → Rearm Mode** | How long applying a planner loadout takes: instant, 30 seconds, or ACE's rearm times. |
-| **Mission Planner → No Ammo Source Required** / **No Fuel Source Required** | Whether the planner needs an ammo truck or fuel source nearby. Turn both off for a realistic FARP. |
-| **Animations → Air Data Probe** and **Rotor Swashplate** | Cosmetic. Turn off on busy servers if needed. |
+| Mission Planner → Rearm Mode | Time to apply a planner loadout: instant, 30 seconds, or ACE rearm times |
+| Mission Planner → No Ammo Source Required / No Fuel Source Required | Whether the planner requires an ammunition or fuel source nearby. Both off requires a FARP. |
+| Animations → Air Data Probe and Rotor Swashplate | Cosmetic; can be disabled on busy servers |
 
-HeliSim's flight-model options are client settings; players choose their own. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}).
+The HeliSim flight model options are client settings. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}).
 
 ## Zeus
 
-With [Zeus Enhanced](https://steamcommunity.com/workshop/filedetails/?id=1779063631) a Zeus can change the Apache's pylons and loadout from the Zeus interface.
+With [Zeus Enhanced](https://steamcommunity.com/workshop/filedetails/?id=1779063631), Zeus can change the aircraft's pylons and loadout from the Zeus interface.
 
 ## Other mods
 
-Units from RHS, CUP, Pook's SAM Pack and PRACS are recognised by the radar and the warning receivers. See [Compatibility]({{ '/mission/compatibility/' | relative_url }}).
+Units from RHS, CUP, Pook's SAM Pack and PRACS are classified by the radar and the warning receivers. See [Compatibility]({{ '/mission/compatibility/' | relative_url }}).

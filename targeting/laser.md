@@ -1,65 +1,65 @@
 ---
 title: Laser
-lead: The TADS carries a laser rangefinder/designator, to measure range and guide laser Hellfires, and a laser spot tracker, to find a spot someone else is lasing.
+lead: The laser rangefinder/designator (LRFD), which measures range and designates for laser-guided Hellfires, and the laser spot tracker (LST), which acquires a spot designated by another unit.
 keywords: [laser, lrfd, designator, rangefinder, lase, lst, spot tracker, auto, manual, code, remote, buddy lase]
 seats: [PLT, CPG]
 ---
 
-Both are part of the TADS turret, so they point wherever the TADS points. Their codes are set on the [COM pages]({{ '/displays/mpd/com/' | relative_url }}).
+The LRFD and LST are part of the TADS and point along the TADS line of sight. Their codes are set on the [laser code pages]({{ '/displays/mpd/code/' | relative_url }}).
 
 ## Laser rangefinder/designator (LRFD)
 
-Hold {% include key.html id="fza_ah64_laserDesig" %} to fire the laser. It stops when you let go.
+{% include key.html id="fza_ah64_laserDesig" %} fires the laser while held.
 
-It fires only when:
+The laser fires only when:
 
-- the aircraft is **armed** (ARM/SAFE at ARM, see [Weapon action switch]({{ '/weapons/was/' | relative_url }})),
-- there is AC power,
-- the laser spot tracker is **off**, and
+- the aircraft is armed (A/S at ARM; see [Weapon action switch]({{ '/weapons/was/' | relative_url }}));
+- AC power is available;
+- the laser spot tracker is off; and
 - for the CPG, the TADS is the selected sight.
 
-The pilot can also fire it, wherever the TADS is pointing.
+The pilot can also fire the laser, along the TADS line of sight.
 
-While you lase, the laser becomes your [range source]({{ '/targeting/sights/' | relative_url }}#range): the HAD shows the range with a `*` in front, for example `*3420`{: .mpd}. Ranges under 500 m are not shown. After you stop, the last range stays.
+While lasing, the laser is the crew station's [range source]({{ '/targeting/sights/' | relative_url }}#range): the HAD displays the range preceded by `*`, for example `*3420`{: .mpd}. Ranges below 500 m are not displayed. When lasing stops, the last range is retained.
 
-The laser fires on the **LRFD code**. It designates for any ACE laser-guided weapon on that code, yours or another aircraft's.
+The laser fires on the LRFD code, and designates for any ACE laser-guided weapon on that code, from this or another aircraft.
 
-> The laser is a designator, not just a rangefinder: anyone with a weapon on your code can guide on your spot. Lase only what you want hit.
+> The LRFD is a designator: any weapon on the LRFD code guides on the spot.
 {: .warning}
 
 ## Laser spot tracker (LST)
 
-The LST is the CPG's. It looks for a laser spot on the **LST code** made by someone else, such as a ground team or another aircraft, and turns the TADS onto it.
+The LST is a CPG function. It searches for a laser spot on the LST code from another designator, such as a ground team or another aircraft, and slews the TADS onto it.
 
 | Binding | Mode |
 |---|---|
-| {% include key.html id="fza_ah64_lstAuto" %} | **AUTO**: searches, and if there is no spot in view, scans the TADS for one. |
-| {% include key.html id="fza_ah64_lstManual" %} | **MAN**: searches only where you point the TADS. |
-| {% include key.html id="fza_ah64_lstOff" %} | **OFF**: gives the TADS back. |
+| {% include key.html id="fza_ah64_lstAuto" %} | AUTO: searches and, with no spot in view, scans the TADS for one |
+| {% include key.html id="fza_ah64_lstManual" %} | MAN: searches along the TADS line of sight only |
+| {% include key.html id="fza_ah64_lstOff" %} | OFF: returns control of the TADS |
 
-How it works:
+Operation:
 
-- It searches a 5° cone around the TADS line of sight, out to 8 km, ten times a second.
-- When it finds a spot it **tracks** it, driving the TADS onto it. It loses a spot that has not been seen for a second and goes back to searching.
-- In AUTO with no spot, it scans the TADS 30° either side of the nose in four bars, 10° apart, from 5° above the horizon down.
-- It ignores your own aircraft's laser.
+- The LST searches a 5° cone about the TADS line of sight, to 8 km, ten times per second.
+- On detecting a spot, it tracks it and drives the TADS onto it. A spot not detected for one second is dropped, and the LST resumes searching.
+- In AUTO with no spot, it scans the TADS 30° either side of the nose in four bars, 10° apart, from 5° above the horizon downward.
+- The LST ignores the aircraft's own laser.
 
-Arming the LST, in either mode, stops your own laser: the two cannot work at once.
+With the LST armed in either mode, the aircraft's own laser is inhibited; the two cannot operate together.
 
-The tracker's status shows in the centre of your helmet symbology, just above the HAD lines: `LST SEARCH`{: .mpd}, `LST AUTO SEARCH`{: .mpd}, `LST TRACK`{: .mpd}. `LST FAIL`{: .mpd} means it is armed but the TADS turret or day TV is damaged. It does not work without AC power, or while the TADS is a night vision sensor.
+The LST does not operate without AC power, with the TADS turret or DTV damaged, or while the TADS is a night vision sensor.
 
 ## Messages
 
 | HAD | Meaning |
 |---|---|
-| `RFDCODE?`{: .mpd} | The LRFD is set to a letter with no code. |
-| `LSTCODE?`{: .mpd} | The LST is set to a letter with no code. |
-| `REMOTE`{: .mpd} | Missiles are actioned and the primary channel's code differs from your LRFD code: your Hellfire will guide on someone else's laser. |
-| `LASE nn TRGT`{: .mpd} | A laser Hellfire fired lock-on after launch needs the target lased now, with *nn* seconds to impact. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}). |
+| `LRFD CODE ?`{: .mpd} | LRFD set to a code letter with no code |
+| `LST CODE ?`{: .mpd} | LST set to a code letter with no code |
+| `REMOTE`{: .mpd} | Missiles actioned with the priority missile channel code different from the LRFD code: the missile guides on another designator |
+| `LASE nn TRGT`{: .mpd} | A SAL Hellfire fired LOAL requires the target lased now, with *nn* seconds to impact. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}) |
 
-## Working with other units
+## Coordination with other units
 
-- **Lasing for someone else**: set your LRFD code to the code their weapon uses.
-- **Firing on someone else's laser**: set your Hellfire's primary channel to their code. To have the TADS find their spot, set the LST code to it too and arm the LST.
+- **Designating for another unit**: the LRFD code is set to the code of that unit's weapon.
+- **Engaging on another unit's designation**: the Hellfire priority channel is set to that unit's code. For the TADS to acquire the spot, the LST code is set to it and the LST armed.
 
-The defaults put your LRFD and primary missile channel on the same code (1111), so out of the box you lase for your own missiles.
+With the default codes, the LRFD and the priority missile channel are both 1111, and the aircraft designates for its own missiles.

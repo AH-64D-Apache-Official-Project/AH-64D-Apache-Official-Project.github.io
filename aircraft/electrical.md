@@ -1,137 +1,100 @@
 ---
 title: Electrical, APU and hydraulics
-lead: Where the aircraft's power comes from, what each system needs, and what you lose when part of it fails.
-keywords: [electrical, battery, apu, generator, transformer rectifier, tru, rectifier, ac, dc, bus, hydraulics, primary, utility, accumulator, emer hyd, emergency hydraulics, pneumatic, bleed air, accessory section, transmission, power]
+lead: How electrical, hydraulic and pneumatic power is provided to the helicopter, what is lost when it fails, and the warnings, cautions and advisories presented to the crew.
+keywords: [electrical, battery, battery bus, apu, generator, transformer rectifier, tru, ac, dc, hydraulics, primary, utility, accumulator, emer hyd, emergency hydraulics, pneumatic, ipas, accessory section, transmission]
 seats: [PLT]
 ---
 
-## How power flows
+## Accessory section
 
-The generators and hydraulic pumps are all mounted on the **accessory section of the main transmission**. Whatever turns the accessory section powers the aircraft.
+The generators and hydraulic pumps are mounted on the accessory section of the main transmission. Under normal operating conditions, with one or both engines running, the accessory section is driven by the primary and secondary drives.
 
-- **During start**, the APU turns the accessory section through the **APU drive shaft** (the No. 7 drive shaft).
-- **With one or both engines running**, the engines turn it through the nose gearboxes and the main transmission. As the power levers are advanced to FLY, the APU disengages at about **95% Nr** and the engines take over the accessory section.
-- **With both engines out**, the rotor keeps turning the transmission in an autorotation, and the accessory section with it, for as long as Nr holds up.
+During start, the accessory section is driven by the No. 7 drive shaft, which is connected to the APU. As the power levers are advanced to FLY, the APU is disengaged between 94 and 96% Nr, and the engines take over driving the accessory section.
 
-In short:
+Electrical power is lost at approximately 85% Nr, because the generators are no longer turning fast enough to provide electrical power. This results in a loss of primary AC and DC power. Systems on the battery bus continue to operate for approximately 12 minutes, after which all electrical power is lost.
 
-- **APU** (start) or **main transmission** (engines, rotor) → **accessory section**
-  - above 45% Nr → **hydraulic pumps** → primary and utility hydraulics
-  - above 85% Nr → **AC generators** → **AC** → **transformer rectifier units (TRUs)** → **DC**
-- **AC** → recharges the **battery** → battery bus
-- **APU**, or an engine at FLY → **pneumatic air** → **engine starters**
+Hydraulic power is lost at approximately 45% Nr, because the hydraulic pumps are no longer turning fast enough to provide hydraulic pressure. This results in a loss of aircraft control, as the flight controls are no longer able to affect the main and tail rotors.
 
-### Low rotor speed
+## Auxiliary power unit (APU)
 
-Because the pumps need much less shaft speed than the generators, a low rotor speed costs you the electrics before it costs you the flight controls.
+The APU provides hydraulic pressure and electrical power to the helicopter by turning the No. 7 drive shaft, which is connected to the accessory section of the main transmission. It also provides pressurised air to start the engines.
 
-| Nr | What is lost |
-|---|---|
-| Below about **85%** | The generators are no longer turning fast enough to make power. Primary AC and DC are lost. Battery bus systems keep working for about 12 minutes, then all electrical power is lost. |
-| Below about **45%** | The hydraulic pumps are no longer turning fast enough to make pressure. The flight controls can no longer move the main and tail rotors: control of the aircraft is lost. |
+The APU is started by the utility hydraulic accumulator and requires a minimum of 2600 psi in the accumulator. The APU requires battery power to start. The APU takes approximately 5 seconds to start from the time the APU button is pressed. During this time the crew will see the APU START and APU PWR ON advisories in the UFD, and the ACCUM PSI advisory, indicating that the accumulator has discharged its available pressure to start the APU. The ACCUM PSI advisory clears during the start, when the accumulator has been recharged to 3000 psi. Once the APU is on, the APU button is illuminated ON and the UFD displays APU ON in the advisory column.
 
-## Battery
+The APU provides all low pressure and high pressure air, via the load control valve, until a single engine is started. From that point the operating engine provides all high pressure air and the APU continues to provide low pressure air. After both engines are at FLY and the APU is turned off, the engines provide low pressure air to the IPAS. The APU continues to provide electrical and hydraulic power until approximately 95% Nr, after which the engines turn the accessory section.
 
-The **MSTR IGN** switch, on the pilot's power lever quadrant, puts the battery on its bus. On the battery alone you get the UFD, the fire panel, **ARM/SAFE**, **GND ORIDE**, the master warning and caution buttons, the floodlights and the searchlight. The MPDs stay dark until there is AC.
+The APU is shut down by the APU button on the pilot's power lever quadrant, by the APU FIRE button on the fire panel, or by fuel starvation. APU STOP is displayed in the UFD after the APU is selected off. The APU draws fuel from the aft fuel cell only, and burns approximately 175 pounds of fuel per hour.
 
-The battery lasts about **12 minutes** without a generator, and below a quarter of its charge it cannot hold the bus up. It recharges from AC. A damaged battery shows the `BATTERY`{: .mpd} advisory.
+The following table provides a list of Warnings, Cautions and Advisories:
 
-## APU
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| — | APU FIRE | 1. Illuminated APU FIRE button – Press and RDY light illuminates<br>2. FIRE DISCH button(s) – Press<br>3. LAND AS SOON AS POSSIBLE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| APU ON | APU ON | Turn off APU |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| APU FAIL | APU FAIL | Repair the APU |
+| APU ON | APU ON | |
+| APU PWR ON | APU POWER ON | |
+| APU START | APU START | |
+| APU STOP | APU STOP | |
 
-The APU starts the engines, and powers the aircraft on the ground through the accessory section. It is started by the **utility hydraulic accumulator**, and needs:
+## Electrical system
 
-- the **APU** pushbutton, on the pilot's power lever quadrant, pressed;
-- **battery** power;
-- at least **2,600 psi** in the accumulator;
-- fuel in the **aft** cell. The APU draws fuel from the aft cell only, at 175 lb/h.
+The electrical system consists of two AC generators, two transformer rectifier units (TRUs) and the battery. The generators are mounted on the accessory section of the transmission and provide power above 85% Nr. Each generator provides AC power to its respective TRU for conversion to DC power; each TRU requires its respective generator to function. AC power flows from the generators through the high power switching modules (HPSMs, not simulated) into the TRUs, and returns to the HPSMs as DC power.
 
-### APU start
+There are three buses: the AC bus, powered by the generators; the DC bus, powered by the TRUs; and the battery bus, powered by the battery.
 
-1. Press the **APU** pushbutton. The UFD shows `APU START`{: .mpd}, then `APU PWR ON`{: .mpd}.
-2. `ACCUM PSI`{: .mpd} appears: the accumulator has discharged all its available pressure to turn the APU over.
-3. `ACCUM PSI`{: .mpd} clears during the start: the APU is turning the hydraulic pumps, and they have recharged the accumulator to 3,000 psi.
-4. `APU ON`{: .mpd} shows once the APU is up to speed, about five seconds after the button was pressed.
-{: .steps}
+On a loss of a single generator, the other generator powers the AC bus. A loss of both generators results in a loss of all systems on the AC bus and all systems on the DC bus, since the TRUs require the generators to operate. On a loss of a single TRU, the other TRU powers the DC bus. A loss of both TRUs results in a loss of all systems on the DC bus.
 
-### What the APU provides
+The battery bus is powered only when BOTH generators are off or have been destroyed; in the simulation, this is whenever the engines and APU are off, since nothing is turning the accessory section. The battery bus provides approximately 12 minutes of power, after which the battery must be recharged. **There is NO indication of the battery's charge level in the aircraft.** The battery is recharged automatically once the generators are online.
 
-Through the accessory section, the APU provides electrical and hydraulic power. It also provides all the aircraft's pneumatic air, which turns the engine starters. It keeps providing electrical and hydraulic power until about **95% Nr**, when the engines are turning the accessory section.
+The following table provides a list of Warnings, Cautions and Advisories:
 
-> The mod has one pneumatic supply: the APU, or any engine with its power lever at FLY. An engine at FLY can start the other with its bleed air. The separate high- and low-pressure air sources of the real aircraft, and the integrated pressurized air system (IPAS) they feed, are not simulated.
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| NONE | NONE | NONE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| GEN1 FAIL | GENERATOR 1 FAIL | LAND AS SOON AS PRACTICABLE |
+| GEN2 FAIL | GENERATOR 2 FAIL | LAND AS SOON AS PRACTICABLE |
+| Both GEN1 FAIL and GEN2 FAIL | | LAND AS SOON AS POSSIBLE |
+| RECT1 FAIL | RECTIFIER 1 FAIL | LAND AS SOON AS PRACTICABLE |
+| RECT2 FAIL | RECTIFIER 2 FAIL | LAND AS SOON AS PRACTICABLE |
+| Both RECT1 FAIL and RECT2 FAIL | | LAND AS SOON AS POSSIBLE |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| BATTERY | BATTERY | Repair the battery |
+
+## Hydraulic system
+
+The hydraulic system consists of the primary and utility pumps, the primary and utility reservoirs, the utility hydraulic accumulator, and the four flight control servos. Both pumps are mounted on the accessory section of the transmission, and each pump services its respective system. A loss of a single pump does not result in a loss of helicopter control, since the other pump continues to provide pressure to its side of the four flight control servos.
+
+The primary system powers the primary side of the flight controls, the SCAS and the BUCS (not simulated). The utility reservoir supplies the utility hydraulic accumulator, the 30 mm ammunition handling system, the 30 mm azimuth and elevation motors, the pylon articulation servos, the tail wheel unlock actuator (not simulated) and the utility side of the flight controls. If the utility reservoir is damaged and loses all its fluid, all of these systems are lost except the pitch, roll and collective servos.
+
+The primary and utility reservoirs can leak when damaged; the severity of the damage determines how quickly the reservoir leaks.
+
+On a loss of primary hydraulic pressure together with a utility reservoir level low condition, the tail rotor (yaw) servo is lost. The tail rotor remains fixed in the last commanded position, and the pilot is unable to control the heading of the helicopter with the pedals.
+
+A loss of **both** primary and utility hydraulic pumps results in a complete loss of aircraft control until the crew presses the EMER HYD button. The crew **MUST** immediately press the EMER HYD button and land the aircraft without delay.
+
+The utility hydraulic accumulator provides pressurised hydraulic fluid to the APU start motor, the rotor brake and emergency hydraulics. Emergency hydraulic power is available when the EMER HYD button is pressed in either crew station with primary and utility hydraulic pressure below 1260 psi, and provides control for approximately 60 seconds. Accumulator (ACC) pressure remaining is displayed on the ENG page. When the accumulator reaches 1650 psi, ALL hydraulic power is lost, the accumulator reads 0, and the pilot is no longer able to control the helicopter.
+
+> The emergency hydraulic duration is adjusted in the simulation for gameplay and does not represent the aircraft's exact figure.
 {: .note}
 
-### APU shutdown
+The following table provides a list of Warnings, Cautions and Advisories:
 
-The APU stops when:
-
-- the **APU** pushbutton is pressed again: `APU STOP`{: .mpd} shows on the UFD;
-- the **APU FIRE pushbutton** on the fire panel is pressed, which shuts off its fuel;
-- the aft cell runs dry (fuel starvation);
-- it loses battery power.
-
-If it stops for any reason but the APU pushbutton, the pushbutton pops out. Press it again to restart. Left running in flight, the APU raises the `APU ON`{: .mpd} caution.
-
-## Generators and TRUs
-
-The aircraft has two **AC generators** and two **transformer rectifier units (TRUs)**. The generators are on the accessory section and provide power once it is turning above **85% Nr**.
-
-AC flows from the generators, through the high power switching modules (HPSMs, not simulated), into the TRUs, and returns to the HPSMs as DC. A single generator and a single TRU can power the whole aircraft.
-
-The UFD tells you when one of these components fails:
-
-| UFD | Cause | Result |
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
 |---|---|---|
-| `GEN1 FAIL`{: .mpd} / `GEN2 FAIL`{: .mpd} | That generator has failed. | The other generator carries the whole AC load. With **both** failed there is no AC, and so no DC either: only the battery bus is left, for about 12 minutes. |
-| `RECT1 FAIL`{: .mpd} / `RECT2 FAIL`{: .mpd} | That TRU has failed. | The other TRU carries the whole DC load. With **both** failed there is no DC. AC systems keep working, and the battery keeps charging. |
-| `BATTERY`{: .mpd} | The battery is damaged. | See [Damage and failures]({{ '/aircraft/damage/' | relative_url }}). |
-
-### What needs what
-
-| Needs | Systems |
-|---|---|
-| Battery bus | UFD, fire detection and extinguishing, armament and caution pushbuttons, emergency jettison, floodlights, searchlight. |
-| AC | MPDs and the VIDEO page, the TADS as a sensor, the laser. |
-| AC and DC | IHADSS symbology, PNVS, fire control radar, cannon, anti-collision lights. |
-| DC | Chaff, flares, IR jammer, radar and laser warning receivers, and the FIRE pushbuttons' fuel shut-off. |
-
-## Hydraulics
-
-The aircraft has two independent hydraulic systems, **primary** and **utility**. Each has its own pump on the accessory section of the main transmission, at 3,000 psi.
-
-| System | Powers |
-|---|---|
-| **Primary** | The primary side of the flight control servos, and with it the FMC, which can only move the controls on the primary side. BUCS is not simulated beyond its caution. |
-| **Utility** | The utility side of the flight control servos, the area weapon system (AWS) turret and ammunition carrier drive, pylon articulation, and the accumulator. The tail wheel unlock is not simulated. |
-
-The [ENG page]({{ '/displays/mpd/eng/' | relative_url }}) shows both pressures and the accumulator.
-
-### Loss of one system
-
-- **Primary**: the utility system keeps the flight controls. The FMC is lost: `BUCS FAIL`{: .mpd} and `FMC DISENG`{: .mpd}.
-- **Utility**: the primary system keeps the flight controls. The AWS and pylon articulation are lost.
-- A damaged **reservoir** leaks. A light hit weeps, a heavy one empties it in about two minutes. When the fluid goes, the pump loses its prime and the pressure follows: `PRI HYD LVL`{: .mpd} / `UTIL HYD LVL`{: .mpd}, then `PRI HYD PSI`{: .mpd} / `UTIL HYD PSI`{: .mpd}.
-- Hits on the gun turret or the pylons also drain the utility system.
-
-### Tail rotor hydraulic failure
-
-With **primary hydraulic pressure low** and **utility hydraulic level low** at the same time, the crew gets the `TAIL RTR`{: .mpd} warning. The tail rotor stays fixed in its last commanded position, and does not respond to pedal input.
-
-### Hydraulic failure
-
-A loss of **both** primary and utility hydraulics is a loss of all control of the aircraft. The crew gets the hydraulic failure voice warning and `HYD FAIL`{: .mpd} on the UFD.
-
-The crew **must immediately** press **EMER HYD** and land the aircraft without delay. See [Emergency hydraulics](#emergency-hydraulics).
-
-## Accumulator
-
-The utility hydraulic accumulator stores utility pressure, 3,000 psi when charged. It provides:
-
-1. **APU start power.** A start needs at least 2,600 psi, and discharges the accumulator down to its 1,650 psi precharge. Once the APU is turning the pumps, they recharge it in a few seconds. At 1,650 psi or below the `ACCUM PSI`{: .mpd} advisory shows, and the APU will not start.
-2. <span id="emergency-hydraulics"></span>**Emergency hydraulic power.** With primary and utility pressure both below 1,260 psi, pressing **EMER HYD** in either crew station routes the accumulator's pressure to the utility side of the flight control servos. It gives about **60 seconds** of control. When the accumulator reaches 1,650 psi, all hydraulic power is lost and the accumulator reads 0. Press **EMER HYD** again to turn it off.
-
-> A failed APU start can leave the accumulator discharged with nothing to recharge it. Repairing the aircraft (ACE, Zeus or a script) recharges it.
-{: .tip}
-
-## Repairs
-
-Any repair to the airframe tops up the stores: fluid in the reservoirs, the accumulator and the battery. It also clears engine chips, oil and failure faults on a repaired engine. See [Damage and failures]({{ '/aircraft/damage/' | relative_url }}).
+| HYD FAIL | HYD FAILURE | 1. EMER HYD button – Press ON<br>2. LAND WITHOUT DELAY |
+| TAIL RTR | TAIL ROTOR HYD | LAND AS SOON AS POSSIBLE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| FMC DISENG | FMC DISENGAGED | |
+| BUCS FAIL | BUCS FAIL | LAND AS SOON AS POSSIBLE |
+| PRI HYD PSI | PRI HYD PSI LOW | LAND AS SOON AS POSSIBLE |
+| UTIL HYD PSI | UTIL HYD PSI LOW | LAND AS SOON AS POSSIBLE |
+| Both PRI HYD PSI and UTIL HYD PSI | | See HYD FAIL |
+| PRI HYD LVL | PRI HYD LEVEL LOW | LAND AS SOON AS PRACTICABLE |
+| UTIL HYD LVL | UTIL HYD LEVEL LOW | LAND AS SOON AS PRACTICABLE |
+| Both PRI HYD LVL and UTIL HYD LVL | | Be prepared for HYD FAIL |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| ACCUM PSI | ACCUM OIL PRES LO | Information System Status |

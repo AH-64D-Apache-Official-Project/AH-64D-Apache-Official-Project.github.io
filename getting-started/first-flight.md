@@ -1,50 +1,66 @@
 ---
-title: Your first flight
-lead: Start up, hover, fly a circuit and land. About fifteen minutes, single player, no weapons.
+title: Introductory flight
+lead: An introductory flight in single player — start-up, hover, traffic pattern and landing — without weapons.
 keywords: [first flight, tutorial, hover, takeoff, landing, beginner, quick start]
 ---
 
-## Set up
+## Setup
 
-1. Bind the cockpit cursor, the flight controls and the collective. See [Controls and bindings]({{ '/getting-started/controls/' | relative_url }}).
-2. Choose your control scheme under **Addon Options → BradMick's HeliSim**. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim). On a keyboard, start with **Casual**; **Keyboard Auto Pedal** is on by default. With a stick and pedals, choose **Realistic** and turn Keyboard Auto Pedal off.
-3. In the editor, place an **AH-64D BLOCK I** on an open field or an airfield in daylight, put an **AH-64D Pilot** in the pilot seat (the rear seat), make it playable and press **Play Scenario**.
+1. Bindings – Set the cockpit cursor, flight controls and collective. See [Controls and bindings]({{ '/getting-started/controls/' | relative_url }}).
+2. Control scheme – Select under **Addon Options → BradMick's HeliSim**. See [Addon settings]({{ '/getting-started/settings/' | relative_url }}#helisim). Keyboard: **Casual** (**Keyboard Auto Pedal** is on by default). Stick and pedals: **Realistic**, with Keyboard Auto Pedal off.
+3. Editor – Place an **AH-64D BLOCK I** on an open area or airfield in daylight, with an **AH-64D Pilot** in the pilot crew station (rear), set playable; **Play Scenario**.
 {: .steps}
 
-## Start the aircraft
+## Start-up
 
-Follow the [start-up checklist]({{ '/flying/startup/' | relative_url }}). In short: rotor brake off, battery on, fit the monocle, APU on, start each engine (power lever to IDLE above 23% Ng), both levers to FLY, APU off.
+Perform the [start-up checks]({{ '/flying/startup/' | relative_url }}), from the interior check through the before takeoff check.
 
-When Nr reaches 101% and the UFD shows no warnings or cautions, you are ready.
+The aircraft is ready for flight with Nr at 101% and no warnings or cautions on the UFD.
 
 ## Hover
 
-1. Press {% include key.html id="fza_ah64_symbologySelectDown" %} for **hover** symbology on your monocle. The velocity vector now shows drift at 6 kt full scale.
-2. Raise the collective slowly. The aircraft gets light, then lifts. Keep the nose straight with the pedals.
-3. Settle at about 10 ft on the radar altimeter. Keep the velocity vector inside the reticle: no drift.
-4. Below 5 kt ground speed, the flight computer's attitude hold sits in **position hold** and holds the aircraft over the ground. If you drift more than about 50 ft from where it engaged, the `HOVER DRIFT`{: .mpd} advisory shows.
+With hover symbology selected ({% include key.html id="fza_ah64_symbologySelectDown" %}), press and hold the force trim interrupt. Apply collective while applying left pedal and left cyclic as required to maintain heading and position. At approximately 20% below hover power the aircraft becomes "light on the wheels". Continue increasing collective until the aircraft settles at 5 ft. Once stabilised at 5 ft, release the force trim and engage the attitude and altitude holds as desired.
+
+Below 5 kt ground speed, attitude hold operates in position hold and holds the aircraft over the ground. A drift of approximately 50 ft from the hold point displays the `HOVER DRIFT`{: .mpd} advisory.
+
+## Traffic pattern
+
+### Takeoff and climb
+
+With transition symbology selected ({% include key.html id="fza_ah64_symbologySelectUp" %}), press and hold the force trim interrupt. Increase the collective a minimum of 10% above hover power, not to exceed maximum torque available or 100%, whichever is lower. Apply pedal as necessary to maintain ground track alignment below 50 ft, or commensurate with obstacles, and apply forward cyclic as necessary to achieve 50 kt by 50 ft.
+
+Once above 50 ft, place the aircraft in aerodynamic trim, ball centred. Maintain a 500 ft per minute rate of climb, ±200 fpm. Within 10% of the rate of climb (approximately 50 ft) of the desired cruise altitude, apply forward cyclic to accelerate to the desired cruise speed and level the VSI at the desired cruise altitude. Once stable, release the force trim and engage the attitude and altitude holds as desired.
+
+### Downwind
+
+On downwind, complete the before landing check:
+
+1. Weapons – Safe; ground override – Off; nothing actioned in the high action display.
+2. ASE – Safe.
+3. Tail wheel – Locked; TAIL WHEEL button light off (not currently simulated).
+4. Parking brake – Released, handle in (not currently simulated).
+5. Power – Sufficient for the approach.
 {: .steps}
 
-> Small inputs. The Apache is heavy and responds late, then too much; wait for each correction to take effect before adding another.
-{: .tip}
+### Base to final
 
-## Fly a circuit
+Prior to turning base, press and hold the force trim interrupt and reduce the collective approximately 20% below cruise. Apply aft cyclic as necessary to maintain a 500 fpm ±200 fpm rate of descent while decelerating to approximately 20 kt below cruise speed. Perform a smooth, continuous turn to final. Once at the desired altitude, adjust the collective to arrest the rate of descent and maintain the desired airspeed until the desired approach angle is reached.
 
-1. Press {% include key.html id="fza_ah64_symbologySelectUp" %} for **transition** symbology.
-2. Lower the nose a little and raise the collective to keep your height as you accelerate. Watch torque on the monocle; keep it at or below 100%.
-3. Climb to about 500 ft and settle at 100 kt.
-4. Turn with the cyclic, using pedal to keep the trim ball centred.
-5. Fly back towards your take-off point, slowing to about 40 kt on the final approach, and descend.
-6. Below 40 kt and 50 ft, switch back to **hover** symbology, come to a hover, then lower the collective gently until you are on the ground.
-7. Collective fully down.
-{: .steps}
+Maintain a constant approach angle by keeping the flight path vector slightly above the intended point of landing. Control the flight path vector vertically with a combination of fore/aft cyclic and collective, and laterally with cyclic. Maintain the aircraft in aerodynamic trim until 50 ft, then apply pedal to align the velocity vector with the lubber line.
 
-> Once you are slower than about 24 kt, keep the descent under 300 ft/min. Descending faster than that, slow and with power applied, risks [vortex ring state]({{ '/flying/flight-model/' | relative_url }}#vortex-ring-state).
+### Landing
+
+Expect to lose sight of the intended point of landing at approximately 100 to 150 ft AGL. Select reference points to the left and right of the aircraft to assist in maintaining a constant approach angle. At approximately 30 ft, apply aft cyclic and increase the collective to effect a smooth touchdown, or terminate to a 5 ft hover.
+
+> Transition symbology is maintained until the flight path vector disappears, to assist in maintaining orientation during the landing.
+{: .note}
+
+> During the approach, the rate of descent must be controlled within the power available. A rate of descent allowed to build at low airspeed places the aircraft behind the power curve, where the helicopter settles with insufficient power applied to arrest the weight of the aircraft: settling with power. Arresting each 100 fpm of descent requires approximately 2% torque above IGE hover torque; the rate of descent must not exceed what the remaining power margin can arrest. See [Settling with power]({{ '/flying/flight-model/' | relative_url }}#settling-with-power).
 {: .caution}
 
-## Next steps
+## Further reading
 
-- [Flight control modes]({{ '/flying/flight-control/' | relative_url }}): force trim and the hold modes make the Apache much easier to fly.
-- [IHADSS]({{ '/displays/ihadss/' | relative_url }}): what every symbol on the monocle means.
-- [Using the MPDs]({{ '/displays/mpd/' | relative_url }}) and the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}) for navigation.
-- When you are comfortable, add a CPG and work through [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}) and [Weapons]({{ '/weapons/was/' | relative_url }}).
+- [Flight control modes]({{ '/flying/flight-control/' | relative_url }}): force trim and the hold modes.
+- [IHADSS]({{ '/displays/ihadss/' | relative_url }}): the flight and weapon symbology formats.
+- [MPDs]({{ '/displays/mpd/' | relative_url }}) and the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}) for navigation.
+- With a CPG: [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}) and [Weapons]({{ '/weapons/was/' | relative_url }}).

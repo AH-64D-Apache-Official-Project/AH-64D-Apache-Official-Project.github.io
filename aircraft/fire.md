@@ -1,43 +1,42 @@
 ---
 title: Fire protection
-lead: Fire detection for both engines and the APU, two extinguisher bottles, and a test switch. What starts a fire, and how to put one out.
-keywords: [fire, engine fire, apu fire, extinguisher, bottle, primary, reserve, fire pushbutton, fire handle, fire test, discharge]
+lead: Fire detection for both engines and the APU, the two extinguisher bottles and the fire test, and the warnings and corrective actions for a fire.
+keywords: [fire, engine fire, apu fire, extinguisher, bottle, primary, reserve, fire button, rdy, fire disch, fire test]
 seats: [PLT, CPG]
 ---
 
-Both crew stations have the same fire panel on the glareshield, and either can work it. It needs battery power.
+## Description
 
-| Control | What it does |
+Both crew stations have a fire detection and extinguishing panel on the glareshield, and either crew station can operate it. The panel requires battery power.
+
+| Control | Function |
 |---|---|
-| **ENG 1**, **APU**, **ENG 2** FIRE pushbuttons | Light red when a fire is detected there. Press to **arm** that pushbutton: it shuts off fuel to the engine or APU (while there is DC power), the pushbutton's armed light comes on, and that fire's voice warning and MASTER WARNING stop. Press again to disarm it. |
-| **PRI** and **RES** | Discharge the primary or reserve extinguisher bottle into whichever area is armed. Each bottle fires once, and its light shows when it has been used. |
-| **TEST** switch | **TEST 1** lights every fire and armed light, plays each fire warning, lights MASTER WARNING and shows `DECK FIRE`{: .mpd}. **TEST 2** also lights both bottles' discharge lights. Return it to the centre to end the test. |
+| ENG 1, APU and ENG 2 FIRE buttons | Illuminate red when a fire is detected in that area. Pressing the illuminated button arms it: the RDY light illuminates, fuel to that engine or the APU is shut off (with DC power available), and that fire's voice message and the MSTR WARN lighted button stop. Pressing it again disarms it. |
+| FIRE DISCH buttons, PRI and RES | Discharge the primary or reserve extinguisher bottle into the armed area. Each bottle discharges once; its light illuminates when it has been used. |
+| TEST switch | TEST 1 illuminates every FIRE button and RDY light, plays each fire voice message, illuminates the MSTR WARN lighted button and displays DECK FIRE. TEST 2 also illuminates both bottle discharge lights. The switch is returned to the centre to end the test. |
 
-## What starts a fire
+## Fire
 
-- **Battle damage.** A heavy hit on a running engine or a running APU can set it alight. Most hits do not.
-- **Oil starvation.** An engine that fails after losing all its oil pressure catches fire more often than not. See [Engines and rotor]({{ '/aircraft/engines/' | relative_url }}#how-an-engine-fails).
+A fire can be started by:
 
-A fire shows as `ENGINE 1 FIRE`{: .mpd}, `ENGINE 2 FIRE`{: .mpd} or `APU FIRE`{: .mpd}, with a voice warning, MASTER WARNING, the FIRE pushbutton lit red, and smoke and flame from that side of the aircraft. Every second it burns, it damages the engine or APU further.
+- **Battle damage**: heavy damage to a running engine or a running APU.
+- **Oil starvation**: an engine that fails after losing all oil pressure catches fire in most cases. See [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}).
 
-## Putting it out
+A fire is indicated by ENGINE 1 FIRE, ENGINE 2 FIRE or APU FIRE on the MPD, the voice message, the MSTR WARN lighted button, the FIRE button illuminated red, and smoke and flame from the affected side of the aircraft. A fire damages the engine or APU for as long as it burns.
 
-1. **Arm** the FIRE pushbutton for the burning engine or APU. This also shuts off its fuel.
-2. Press **PRI** to discharge the primary bottle.
-3. If the fire is still burning, press **RES**.
-{: .steps}
+An extinguisher bottle reaches a fire only if that fire's FIRE button is **armed before** the bottle is discharged. A bottle discharged before the button is armed, or with a different button armed, is lost. A bottle that reaches the fire extinguishes it unless the bottle fails; each bottle has a one-in-four chance of failing, which is the purpose of the reserve bottle. With the engine or APU shut down, a fire that is not extinguished burns out in approximately 30 seconds, and continues to cause damage until it does.
 
-A bottle only reaches a fire if that fire's FIRE pushbutton is **already armed** when the bottle is discharged. Arm first, then discharge: a bottle fired before the pushbutton is armed, or with only another pushbutton armed, is wasted. A bottle that reaches the fire puts it out, unless it fails: each one has a one-in-four chance of failing, which is what the reserve is for.
+While a fire warning is active, the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#emergency-format) displays the immediate action steps. Discharged bottles are refilled when the aircraft is repaired.
 
-With the engine or APU shut down, a fire that is not extinguished usually burns itself out within half a minute or so, still doing damage until it does.
+The following table provides a list of Warnings, Cautions and Advisories:
 
-While a fire warning is active, the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}#emergency-format) shows the immediate action steps.
-
-> Arm the FIRE pushbutton for the **burning** side. Arming the wrong one shuts down a good engine. Check the lit pushbutton, or the WCA page, before you press.
-{: .warning}
-
-The full procedure, including what to do next with one engine, is in [Emergency procedures]({{ '/flying/emergency/' | relative_url }}#fire).
-
-## Recharging the bottles
-
-Discharged bottles are refilled when the aircraft is repaired.
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
+|---|---|---|
+| — | ENGINE 1 FIRE | 1. EMER ENG SHUTDOWN (affected engine) – When conditions permit<br>2. Illuminated ENG FIRE button – Press and RDY light illuminates<br>3. FIRE DISCH button(s) – Press<br>4. LAND AS SOON AS POSSIBLE |
+| — | ENGINE 2 FIRE | 1. EMER ENG SHUTDOWN (affected engine) – When conditions permit<br>2. Illuminated ENG FIRE button – Press and RDY light illuminates<br>3. FIRE DISCH button(s) – Press<br>4. LAND AS SOON AS POSSIBLE |
+| — | APU FIRE | 1. Illuminated APU FIRE button – Press and RDY light illuminates<br>2. FIRE DISCH button(s) – Press<br>3. LAND AS SOON AS POSSIBLE |
+| DECK FIRE | AFT DECK FIRE | Displayed by the fire test only (not simulated as a fire). |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| NONE | NONE | NONE |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| NONE | NONE | NONE |

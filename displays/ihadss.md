@@ -1,98 +1,98 @@
 ---
 title: IHADSS
-lead: The helmet display. Flight symbology to fly by, weapon symbology to aim with, and the high action display along the bottom, wherever you look.
-keywords: [ihadss, hmd, hdu, helmet, monocle, symbology, transition, cruise, hover, bob-up, bobup, velocity vector, flight path vector, fly-to, head tracker, pitch ladder, had, high action display, constraints box, rocket steering cursor, cueing dots, field of regard]
+lead: The integrated helmet and display sight system — the HDU, flight and weapon symbology formats, and the high action display.
+keywords: [ihadss, hmd, hdu, helmet, symbology, transition, cruise, hover, bob-up, bobup, velocity vector, acceleration cue, flight path vector, fly-to cue, head tracker, attitude indicator, pitch ladder, horizon line, los reticle, had, high action display, missile constraints box, rocket steering cursor, cueing dots, field of regard]
 seats: [PLT, CPG]
 redirect_from:
   - /ui-headtracking.html
 ---
 
-## The monocle {#monocle}
+## Helmet display unit (HDU) {#hdu}
 
-The symbology is drawn on the helmet display unit (HDU), a monocle in front of your right eye. To use it:
+Symbology is displayed on the helmet display unit (HDU) in front of the crewmember's right eye.
 
+1. IHADSS helmet – Worn. Without it the HDU cannot be fitted and head tracking is not available.
+2. HDU stowage – Select to fit the HDU (see [Cockpit]({{ '/aircraft/cockpit/' | relative_url }}#hdu)); select again to stow it.
+3. Power – Applied. The symbology requires both the AC and DC buses.
 {: .steps}
-1. Wear the **IHADSS** helmet. Without it the monocle cannot come down, and nothing follows your head.
-2. In the cockpit, click **HDU stowage** to bring the monocle down (see the [cockpit tour]({{ '/aircraft/cockpit/' | relative_url }}#hdu)). Click it again to stow it.
-3. Turn on power. The symbology needs both the AC and DC buses.
 
-The monocle is stowed each time you get in. It is also stowed if you take the helmet off, or turn on Arma's own night vision outside the optics view.
+The HDU is stowed on each entry to the aircraft, when the helmet is removed, and when Arma night vision is selected outside the optics view.
 
-On the helmet the symbology shows in the first person view only. Behind it, the monocle can show a picture: your [night vision]({{ '/targeting/nvs/' | relative_url }}) sensor, or for the CPG [the TADS]({{ '/targeting/tads/' | relative_url }}).
+On the HMD, symbology is displayed in the first-person view only. Behind the symbology the HDU can display video: the crewmember's [night vision]({{ '/targeting/nvs/' | relative_url }}) sensor or, for the CPG, [the TADS]({{ '/targeting/tads/' | relative_url }}).
 
-## Which symbology you get {#formats}
+## Symbology formats {#formats}
 
-There are two formats: **flight** and **weapon**.
+There are two formats, flight and weapon.
 
 <div class="table-wrap" markdown="1">
 
 | | Pilot | CPG |
 |---|---|---|
-| **Flight** | Always. | With the HMD as your sight, with your NVS switch on, or with the radar in TPM. |
-| **Weapon** | Never. | In the TADS optics view, and on the helmet with TADS or FCR as your sight and your NVS switch off. |
+| Flight | Always | With HMD as sight, with the NVS MODE switch on, or with the FCR in TPM |
+| Weapon | Never | In the TADS optics view, and on the HMD with TADS or FCR as sight and the NVS MODE switch off |
 
 </div>
 
-On the helmet the symbology is green and spread out to fill the monocle. In the CPG's TADS optics view (heads down) it is white and compact. The [VIDEO page]({{ '/displays/mpd/video/' | relative_url }}) can show either crew station's symbology on an MPD.
+On the HMD the symbology is green and scaled to the HDU. In the CPG's TADS optics view (heads down) it is white and compact. The [VIDEO page]({{ '/displays/mpd/video/' | relative_url }}) can display either crew station's symbology on an MPD.
 
 ## Flight symbology {#flight}
 
-Flight symbology has four modes. The mode belongs to the aircraft, so both crew stations see the same one. It starts in transition.
+Flight symbology has four modes. The mode is aircraft common; both crew stations display the same mode. The default mode is transition.
 
-| Binding | Action |
+| Binding | Function |
 |---|---|
-| {% include key.html id="fza_ah64_symbologySelectUp" %} | Transition, or cruise if you are already in transition. |
-| {% include key.html id="fza_ah64_symbologySelectDown" %} | Hover, or bob-up if you are already in hover. Selecting bob-up stores where you are and your heading. |
-| {% include key.html id="fza_ah64_symbologySelectPress" %} | Opens the [FLT page]({{ '/displays/mpd/flt/' | relative_url }}) on your left MPD. |
+| {% include key.html id="fza_ah64_symbologySelectUp" %} | Transition; cruise if already in transition. |
+| {% include key.html id="fza_ah64_symbologySelectDown" %} | Hover; bob-up if already in hover. Selecting bob-up stores the present position and heading. |
+| {% include key.html id="fza_ah64_symbologySelectPress" %} | FLT page on the left MPD. |
 
-The [radial menu]({{ '/targeting/radial/' | relative_url }}) has the same choices under **HMD**.
+The [radial menu]({{ '/targeting/radial/' | relative_url }}) provides the same selections under HMD.
 
-| Mode | Shows |
+| Mode | Displays |
 |---|---|
-| **Transition** | Velocity vector to 60 kt, horizon line, waypoint data. |
-| **Cruise** | Pitch ladder, bank, barometric altitude, waypoint data. No velocity vector. |
-| **Hover** | Velocity vector to 6 kt. No attitude, no waypoint data. |
-| **Bob-up** | Hover, plus a box over the stored position. |
+| Transition | Velocity vector to 60 kt, horizon line, navigation data |
+| Cruise | Attitude indicator, bank angle, barometric altitude, navigation data; no velocity vector |
+| Hover | Velocity vector to 6 kt; no attitude indicator, no navigation data |
+| Bob-up | Hover mode symbology, plus the bob-up box and bob-up heading |
 
 ### Transition {#transition}
 
 {% include fig.html id="hud-transition" %}
 
-The **velocity vector** grows from the reticle in the direction you are moving over the ground. Its full length, to the top of the lubber line under the heading tape, is 60 kt. The **acceleration cue**, the circle, shows the aircraft's acceleration, which way and how hard. In transition it is always drawn from the tip of the velocity vector.
+The **velocity vector** indicates the magnitude and direction of the aircraft velocity relative to the nose of the aircraft. Its origin is the centre of the LOS reticle, and in transition mode full scale represents 60 kt ground speed. The **acceleration cue** (circle) indicates the magnitude and direction of the aircraft's acceleration; in transition mode it is referenced to the tip of the velocity vector.
 
-The **horizon line** banks with the aircraft and moves a quarter as far as the real horizon in pitch, stopping at 30°. It sits a little below the reticle in level flight.
+The **horizon line** is an artificial horizon relative to the LOS reticle. It moves one quarter of the true pitch angle, limited at ±30° in pitch, and is presented slightly below the LOS reticle in level flight.
 
 ### Cruise {#cruise}
 
 {% include fig.html id="hud-cruise" %}
 
-The **pitch ladder** moves half as far as the real horizon: rungs every 10° to 30°, then 45° and 60°, solid above the horizon and dashed below. `CLIMB`{: .mpd} and `DIVE`{: .mpd} mark straight up and straight down. The **bank triangle** turns about the reticle; read it against the lubber line. The reticle is drawn thicker.
+The **attitude indicator** pitch ladder moves one half of the true pitch angle, with rungs every 10° to 30°, then 45° and 60°; solid above the horizon line and dashed below. 5° tic marks are not presented in cruise mode. `CLIMB`{: .mpd} and `DIVE`{: .mpd} mark the vertical. The **bank angle** triangle is presented without its tic mark scale and is read against the lubber line. The **LOS reticle** is a bold cross-hair.
 
 ### Hover {#hover}
 
 {% include fig.html id="hud-hover" %}
 
-In hover the velocity vector's full length is 6 kt, so it shows small drift. The acceleration cue starts at the vector's tip up to 6 kt, and at the reticle above that. Hold the vector and the cue on the reticle to stay over one spot.
+In hover mode, full scale of the velocity vector represents 6 kt ground speed. The acceleration cue originates at the outer end of the velocity vector when the vector is less than full scale, and at the centre of the LOS reticle when the vector is at or greater than full scale. With the velocity vector and the acceleration cue held on the LOS reticle, the aircraft remains over one position.
 
 ### Bob-up {#bobup}
 
 {% include fig.html id="hud-bobup" %}
 
-Bob-up adds an octagon, the bob-up box, 12 ft across, over the position stored when you selected it. The edge of the display is 40 ft away; further than that, the box waits at the edge. The command heading caret shows the stored heading instead of the next waypoint.
+Bob-up mode adds the **bob-up box**, an octagon representing an area approximately 12 ft square on the ground. The box initialises at the centre of the LOS reticle on selection of bob-up mode and moves to indicate the position of the helicopter relative to that point. Maximum displacement to the edge of the format represents approximately 40 ft laterally or longitudinally; beyond that the box remains at the edge. The **bob-up heading** chevron presents the heading of the helicopter at the initiation of bob-up mode, in place of the command heading.
 
-To re-establish the aircraft over the stored position, place the acceleration cue inside the bob-up box.
+The aircraft is returned over the bob-up position by placing the acceleration cue inside the bob-up box.
 
-### Symbols in the world {#world}
+### Symbols conformal to the outside world {#world}
 
-Three symbols sit on things outside the aircraft, so they move as you turn your head. They show only on the helmet, with flight symbology.
+The following symbols are positioned on objects outside the aircraft and move with head movement. They are displayed on the HMD with flight symbology only.
 
 <div class="table-wrap" markdown="1">
 
-| Symbol | Where it is | When |
+| Symbol | Position | Displayed |
 |---|---|---|
-| **Head tracker** (four chevrons) | Straight ahead of the aircraft's nose. | Every mode. |
-| **Flight path vector** (circle with wings) | Where the aircraft is going. At the edge of the display it stops and flashes. | Transition and cruise, over 5 kt ground speed. |
-| **Fly-to cue** | On the next waypoint, at its altitude if it has one. | Transition and cruise. |
+| Head tracker (four chevrons) | The nose of the helicopter; indicates the head position relative to it | All modes |
+| Flight path vector (circle with tic marks) | The projected flight path: the point towards which the helicopter is flying. Flashes when edge limited | Transition and cruise, above 5 kt ground speed |
+| Navigation fly-to cue (diamond) | The active next navigation waypoint, at its altitude if defined; used with the flight path vector | Transition and cruise |
 
 </div>
 
@@ -100,124 +100,121 @@ Three symbols sit on things outside the aircraft, so they move as you turn your 
 
 <div class="table-wrap" markdown="1">
 
-| Item | Detail |
+| Item | Description |
 |---|---|
-| **Torque** | The higher engine's torque. Boxed at 98% and over; flashes when the two engines are more than 12% apart. |
-| **TGT** | Turbine gas temperature in °C, under the torque: in the last two minutes of an engine temperature time limit, and throughout single engine running above 878 °C. |
-| **NVS** | `FLIR`{: .mpd} above the torque while your NVS switch is on. |
-| **Airspeed** | True airspeed in knots. Boxed at VNE. |
-| **G** | Under the airspeed above 2 G, for at least 2 seconds. |
-| **Radar altitude** | Feet above the ground, up to 1,428 ft: to the foot below 50 ft, to 10 ft above. `HI`{: .mpd} over 200 ft, `LO`{: .mpd} under 33 ft. Under 200 ft there is also a bar on the scale beside it. |
-| **Vertical speed** | The pointer, with 1,000 ft/min at each end of the scale. A descent of 1,000 ft/min or more is also shown in figures under the scale. |
-| **Barometric altitude** | Cruise only. |
-| **Holds** | A box around the airspeed while attitude hold is on; a symbol on the vertical speed scale while altitude hold is on. A hold that drops out flashes for 3 seconds, then goes. |
-| **Waypoint data** | Transition and cruise: the next waypoint and its distance; ground speed and time to go. Time to go is in minutes and seconds under 5 minutes, hours and minutes above, and blank at 15 kt or less. |
-| **Trim ball** | Centre it with the pedals. |
+| Engine torque | Higher of the two engine torques. Boxed at 98% and above; flashes with a torque split greater than 12%. |
+| TGT | Turbine gas temperature, °C, below the engine torque: during the last two minutes of a TGT time limit, and throughout single engine operation above 878 °C. |
+| Selected PNVS sensor | `FLIR`{: .mpd} above the engine torque with the NVS MODE switch on. |
+| Airspeed | True airspeed, knots. Boxed at VNE. |
+| G status | Load factor digital readout below the airspeed above 2 g; presented for a minimum of 2 seconds. |
+| Radar altitude | Digital readout, feet AGL, to 1,428 ft: 1 ft increments below 50 ft, 10 ft above. Radar altitude `HI`{: .mpd} indication above 200 ft, `LO`{: .mpd} indication below 33 ft. Below 200 ft the radar altitude vertical scale is also presented. |
+| Rate of climb | Rate of climb scale with a filled triangle pointer; the ends of the scale are 1,000 fpm. A rate of descent greater than 1,000 fpm is also presented as a digital readout. |
+| Barometric altitude | Cruise mode only. |
+| Hold modes | Attitude hold: a status window around the airspeed digital readout. Altitude hold: a home plate symbol at the zero rate of climb position. A hold mode that disengages flashes for 3 seconds and is removed. |
+| Navigation data | Transition and cruise modes: destination point, distance to go, ground speed and time to go. The seconds digits of the time to go are presented only below 5 minutes; time to go is not presented at a ground speed of 15 kt or less. |
+| Skid/slip ball | Indicates side acceleration and how well a turn is coordinated. |
 
 </div>
 
-## Symbols in every format {#common}
+## Common symbols {#common}
 
-**Heading tape.** The aircraft's heading, 105° each side. Under it:
+**Heading scale.** Magnetic heading, 105° either side, with the lubber line. Along the bottom of the heading scale:
 
-- the **command heading** caret: the next waypoint in flight symbology, the stored heading in bob-up, and the TADS azimuth in weapon symbology;
-- a filled triangle for the **other crew station's sight**: their head with the HMD, or the TADS. It needs someone in the other seat; a pilot with an AI CPG sees the TADS;
-- with the radar fitted, a pair of marks on the [FCR centreline]({{ '/targeting/fcr/' | relative_url }}#centerline).
+- the command heading chevron: the heading to the next navigation waypoint; in bob-up mode, the bob-up heading; in weapon symbology, the CPG LOS bearing (the TADS line of sight);
+- the alternate sensor bearing, a filled triangle: the line of sight azimuth of the other crewmember's selected sight (the other crewmember's HMD, or the TADS); with an AI CPG, the pilot sees the TADS;
+- with the radar installed, the [FCR centerline bearing]({{ '/targeting/fcr/' | relative_url }}#centerline).
 
-**Reticle.** Your line of sight. It flashes when your sight or night vision sensor is at its limit, and when the gun has failed with the gun actioned.
+**LOS reticle.** The line of sight of the crewmember's selected sight. It flashes when the line of sight is invalid or the selected sensor is at its limit, and when the gun is the selected weapon and the gun system has failed.
 
-**Cueing dots.** A dot on the side of the reticle towards your [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq), on each axis where it is more than 4° away. Follow them with your head, or with the TADS when it is your sight.
+**Cueing dots.** Presented at the outer tips of the LOS reticle to indicate the quadrant containing the selected [acquisition source]({{ '/targeting/sights/' | relative_url }}#acq): at the upper or lower tip when a change in elevation is required, and at the left or right tip when a change in azimuth is required. They are not presented when the acquisition source is within 4° of the line of sight. They are followed with the head, or with the TADS when the TADS is the selected sight.
 
-**Cued LOS reticle.** A dashed cross on the acquisition source itself, when it is in view.
+**Cued LOS reticle.** A dashed cross-hair representing the selected acquisition source, when it is within the display.
 
-**Field of regard.** The box under the reticle. Its outline is the sensor's reach: the PNVS's for the pilot, the TADS's for the CPG. The small box inside is where you are looking; for a CPG whose sight is not the HMD, where the TADS points. The dot is the acquisition source. With the radar fitted, a solid line is its centreline, and a dashed line where the last scan looked.
+**Field of regard (FOR).** The box at the bottom of the format; its edges mark the limits of the sensor: the PNVS for the pilot, the TADS for the CPG. The field of view box represents the crewmember's HMD, or the TADS for a CPG whose selected sight is TADS or FCR. The cued LOS dot represents the active acquisition source. With the radar installed, the FCR current centerline (solid line) and the FCR last scan centerline (dashed line) are presented.
 
 ## Weapon symbology {#weapon}
 
 {% include fig.html id="hud-tads" %}
 
-The CPG's weapon symbology is built around the TADS:
+The CPG's weapon symbology is based on the TADS:
 
-- **TADS reticle**, with longer arms than the helmet reticle.
-- **Sensor** in use, top left: `DTV`{: .mpd}, `FLIR`{: .mpd} or `DVO`{: .mpd}.
-- **Field of view brackets**: the corners of what the next narrower field of view will show.
-- **LMC marks** at the ends of the reticle arms while the [linear motion compensator]({{ '/targeting/tads/' | relative_url }}#lmc) is on.
-- **Lasing marks**: four diagonals around the reticle while the laser fires.
-- **Airspeed** and **radar altitude** either side of the field of regard.
+- TADS LOS reticle: the TADS line of sight, with longer lines than the HMD LOS reticle.
+- TADS selected sensor, top left: `DTV`{: .mpd}, `FLIR`{: .mpd} or `DVO`{: .mpd}.
+- TADS FOV brackets: the imagery that will be displayed in the next narrower field of view.
+- LMC on indicator: four short end-cap lines at the ends of the TADS LOS reticle while the [linear motion compensator]({{ '/targeting/tads/' | relative_url }}#lmc) is on.
+- Laser firing indicator: a large X with the TADS LOS reticle while the LRFD is lasing.
+- Airspeed and radar altitude, either side of the field of regard.
 
-The brackets, LMC and lasing marks show in the TADS optics view, and on the helmet with the TADS picture.
+The TADS FOV brackets, the LMC on indicator and the laser firing indicator are presented in the TADS optics view, and on the HMD with TADS video.
 
 ## Weapon symbols {#weapon-symbols}
 
-These appear in either format.
+The following symbols are displayed in either format.
 
 ### Missile constraints box {#constraints}
 
-With missiles actioned, a box shows whether the Hellfire is within its launch constraints. It is placed so that the reticle is inside it exactly when it is.
+With missiles actioned, the missile constraints box indicates the delivery mode and the direction to orient the aircraft for the Hellfire launch. It is positioned so that the LOS reticle is inside the box exactly when the missile is in constraints.
 
 | Box | Meaning |
 |---|---|
-| **Solid** | Within constraints. |
-| **Dashed** | Outside them. |
-| **Large** | The missile can lock on before launch: a laser missile sees a matching laser spot, or a radar missile has a target it can take. |
-| **Small** | It cannot. |
+| Solid | In constraints |
+| Dashed | Out of constraints |
+| Large (LOBL) | A SAL missile is tracking a matching laser spot, or an RF missile has a target |
+| Small (LOAL) | The missile is not tracking |
 
-The constraint is 7.5° from the line of sight, 20° with a lock or for a radar missile, and 5° for a radar missile tracking a target inside 1 km. A radar missile shows no box until one is powered and aligned. For laser missiles on LO or HI, the box is measured to your **B5** coordinate point; with no point there it sits on the reticle, dashed. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}).
+The constraint is 7.5° from the line of sight; 20° with a lock or for an RF missile; and 5° for an RF missile tracking a target within 1 km. For an RF missile, no box is displayed until a missile is powered and aligned. For SAL missiles on LO or HI trajectory, the box is referenced to the B5 coordinate point; with no point stored, it is displayed dashed on the reticle. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}).
 
 ### Rocket steering cursor {#rocket-cursor}
 
 {% include fig.html id="hud-rockets" %}
 
-With rockets actioned, an I-beam shows where the rockets will go. Across, it is the direction of the rocket solution from the nose: turn the aircraft until it is centred on the reticle. Up and down it shows the pylons: with the reticle inside its height, the pylons can reach. It is dashed while the rockets are inhibited. See [Hydra 70 rockets]({{ '/weapons/rockets/' | relative_url }}).
+With rockets actioned, the rocket steering cursor, a dynamic I-beam, indicates how to point the aircraft for rocket delivery. Its lateral position is the azimuth of the solution relative to the nose; the aircraft is turned to align it with the LOS reticle. Its vertical extent indicates the pylon elevation range: with the LOS reticle within it, the pylons can reach the solution. The cursor is dashed while a safety or performance inhibit is in force. See [Hydra 70 rockets]({{ '/weapons/rockets/' | relative_url }}).
 
 ### Fixed gun {#gun-fxd}
 
-With the gun in **FXD**, the cued LOS reticle marks where the fixed gun will hit at the range in use. It moves down the display as the range grows. See [M230 cannon]({{ '/weapons/cannon/' | relative_url }}).
+With the gun actioned in the fixed mode (FXD), the fixed gun aiming reticle, graphically the same as the cued LOS reticle, represents the impact point for the selected range, moving down the display as range increases. See [M230 chain gun]({{ '/weapons/cannon/' | relative_url }}).
 
 ### Radar targets {#cscope}
 
-With **C SCP** on, the radar's targets are drawn where they are, with the next-to-shoot and alternate marks; in TPM, the obstacles. See [FCR]({{ '/targeting/fcr/' | relative_url }}#on-the-helmet).
+With C SCP selected, FCR target symbols are presented in the C-scope format at their azimuth and elevation, with the NTS and ANTS symbols; in TPM, terrain profile lines and obstacle symbols are presented. See [FCR]({{ '/targeting/fcr/' | relative_url }}#on-the-helmet).
 
-## High action display {#had}
+## High action display (HAD) {#had}
 
-The HAD is the text along the bottom of every format.
+The high action display (HAD) is located along the bottom of the flight and weapon symbology formats. It is subdivided into status message fields and provides information independently by crew station.
 
 <div class="table-wrap" markdown="1">
 
-| Where | Shows | More |
-|---|---|---|
-| Top line, left | Your sight: `P-HMD`{: .mpd} or `C-HMD`{: .mpd}, `TADS`{: .mpd}, `P-FCR`{: .mpd} or `C-FCR`{: .mpd}. Linked sights end in L: `TADSL`{: .mpd}, `C-FCRL`{: .mpd}. | [Sights]({{ '/targeting/sights/' | relative_url }}) |
-| Top line, after the sight | Range and its source, such as `*3420`{: .mpd} or `M3.0`{: .mpd}. | [Range]({{ '/targeting/sights/' | relative_url }}#range) |
-| Top line, right of centre | The actioned weapon: `PGUN`{: .mpd}, `CRKT`{: .mpd}, `COOP`{: .mpd}, `CMSL`{: .mpd} and so on. The first letter is the crew station in control. | [Weapon action switch]({{ '/weapons/was/' | relative_url }}) |
-| Top line, right | Acquisition source. | [Acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) |
-| Bottom line, left | [Sight status](#sight-status). | |
-| Bottom line, right of centre | Weapon status. | [Weapon status]({{ '/weapons/was/' | relative_url }}#weapon-status) |
-| Centre, above the lines | Inhibits, `ALT LAUNCH`{: .mpd}, and for 3 seconds the number of a target you just stored. | [Inhibits]({{ '/weapons/was/' | relative_url }}#before-it-fires-inhibits) |
-| Centre, above that | CPG: the laser spot tracker's status. | [Laser]({{ '/targeting/laser/' | relative_url }}) |
+| Field | Location | Content | Reference |
+|---|---|---|---|
+| Sight select status | Top line, left | Selected sight: `P-HMD`{: .mpd} or `C-HMD`{: .mpd}, `TADS`{: .mpd}, `P-FCR`{: .mpd} or `C-FCR`{: .mpd}. Linked sights end in L: `TADSL`{: .mpd}, `C-FCRL`{: .mpd}. | [Sights]({{ '/targeting/sights/' | relative_url }}) |
+| Range and range source status | Top line, after the sight | Range and range source, for example `*3420`{: .mpd} or `M3.0`{: .mpd}. | [Range]({{ '/targeting/sights/' | relative_url }}#range) |
+| Weapon control status | Top line, right of centre | Actioned weapon: `PGUN`{: .mpd}, `CRKT`{: .mpd}, `COOP`{: .mpd}, `CMSL`{: .mpd} and so on; the first letter is the crew station in control. | [Weapon action switch]({{ '/weapons/was/' | relative_url }}) |
+| Acquisition select status | Top line, right | Selected acquisition source. | [Acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) |
+| Sight status | Bottom line, left | [Sight status](#sight-status) messages. | |
+| Weapon status | Bottom line, right of centre | Weapon status messages. | [Weapon status]({{ '/weapons/was/' | relative_url }}#weapon-status) |
+| Weapon inhibit status | Centre, above the lines | Safety and performance inhibits, `ALT LAUNCH`{: .mpd}, and for 3 seconds the number of a target just stored. | [Inhibits]({{ '/weapons/was/' | relative_url }}#inhibits) |
 
 </div>
 
 ### Sight status {#sight-status}
 
-One message shows at a time; the highest in this list wins.
+One message is displayed at a time; the highest in the list takes priority.
 
 <div class="table-wrap" markdown="1">
 
-| Message | Seat | Meaning |
+| Message | Crew station | Meaning |
 |---|---|---|
-| `TADS FAIL`{: .mpd} | CPG | The TADS FLIR and day TV have both failed. |
-| `TV FAIL`{: .mpd} | CPG | The day TV has failed. The FLIR and DVO still work. |
-| `NVS FAIL`{: .mpd} | Pilot | The PNVS has failed. |
-| `FCR FAIL`{: .mpd} | Both | The radar has a fault. |
-| `LIMITS`{: .mpd} | Both | Your sight or night vision sensor is at the limit of its travel. |
-| `NVS FIXED`{: .mpd} | Both | Your NVS switch is in FIXED. |
-| `LSTCODE?`{: .mpd} | CPG | The LST is set to a letter with no code. |
-| `RFDCODE?`{: .mpd} | CPG | The LRFD is set to a letter with no code. |
-| `FCR XMIT`{: .mpd} | Both | The radar is scanning. |
-| `REMOTE`{: .mpd} | CPG | Missiles are actioned and the primary channel's code differs from your LRFD code: your Hellfire will guide on someone else's laser. |
-| `PLT TADS`{: .mpd} | CPG | The pilot has the TADS as their night vision sensor. |
-| `CSCOPE`{: .mpd} | Both | C SCP is on. |
+| `TADS FAIL`{: .mpd} | CPG | TADS FLIR and DTV both failed |
+| `NVS FAIL`{: .mpd} | Pilot | PNVS failed |
+| `FCR FAIL`{: .mpd} | Both | Radar fault |
+| `TARGET DATA?`{: .mpd} | Both | No target data for the actioned weapon: FCR as sight with no next-to-shoot target, or RF missiles with TADS as sight and no target handed over. The launch is inhibited. |
+| `LIMITS`{: .mpd} | Both | Sight or night vision sensor at its limit of travel |
+| `NVS FIXED`{: .mpd} | Both | NVS MODE switch at FIXED |
+| `LST CODE ?`{: .mpd} | CPG | LST set to a code letter with no code |
+| `LRFD CODE ?`{: .mpd} | CPG | LRFD set to a code letter with no code |
+| `FCR XMIT`{: .mpd} | Both | Radar transmitting |
+| `REMOTE`{: .mpd} | CPG | Missiles actioned with the priority missile channel code different from the LRFD code: the missile guides on another designator |
 
 </div>
 
-Laser codes are set on the [COM pages]({{ '/displays/mpd/com/' | relative_url }}); see [Laser]({{ '/targeting/laser/' | relative_url }}).
+Laser codes are set on the [laser code pages]({{ '/displays/mpd/code/' | relative_url }}); see [Laser]({{ '/targeting/laser/' | relative_url }}).

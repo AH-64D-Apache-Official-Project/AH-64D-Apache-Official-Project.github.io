@@ -1,131 +1,130 @@
 ---
-title: Engines and rotor
-lead: Two turboshaft engines drive the rotors through nose gearboxes and the main transmission. How they start, how they are governed, and how they fail.
-keywords: [engine, turboshaft, t700, 701c, ng, np, nr, tgt, torque, oil, power lever, idle, fly, dec, governor, start, hot start, abort, overspeed, tgt limiter, droop, chips, transmission, gearbox, nose gearbox, rotor brake, drive train]
+title: Engines, drive train and rotor
+lead: The T700-GE-701C engines, their operating limits and performance, the drive train from the engines to the rotors, and the rotor brake.
+keywords: [engine, turboshaft, t700, 701c, ng, np, nr, tgt, torque, oil, limits, tgt limiter, overspeed, performance, drive train, nose gearbox, transmission, gearbox, rotor brake]
 seats: [PLT]
 ---
 
-## The engines
+## Engines
 
-The AH-64D is powered by two General Electric **T700-GE-701C** turboshaft engines. Each engine has four sections:
+The AH-64D is powered by two General Electric T700-GE-701C turboshaft engines, which provide power to the main and tail rotors through the drive train. Each engine provides 50% of the power required by the rotor. In the event of an engine failure, a single engine can sustain flight provided the helicopter remains above the calculated velocity safe single engine (VSSE) for the given conditions.
 
-| Section | Contains |
-|---|---|
-| **Cold** | The inlet and the compressor. |
-| **Hot** | The combustion section. |
-| **Power turbine** | The turbine that turns the energy from the hot section into shaft power, which turns the rotor. |
-| **Accessory** | The engine's support components: oil and fuel pumps, air turbine starter, hydromechanical unit (HMU), alternator and others. |
+Each engine is comprised of the following sections:
 
-## The numbers you watch
+- **Cold**: contains the inlet and compressor.
+- **Hot**: contains the combustion section.
+- **Power turbine**: converts energy from the hot section to shaft power, which in turn drives the rotor.
+- **Accessory**: contains the support modules for the engine, i.e. oil and fuel pumps, air turbine starter, hydromechanical unit, alternator and others.
 
-| Reading | What it is | Normal in flight |
+## Indications and limits
+
+All engine outputs are colour coded. **Green** indicates the value is within its normal operating range. **Yellow** indicates a cautionary range and typically has a timer associated with it; exceeding the timer incurs damage. **Red** indicates a value that has been exceeded or is below the minimum required for operation. Any time a value is red, it can be assumed that damage has been incurred.
+
+The normal limits for the helicopter are:
+
+**Oil (psi)**
+- 23: minimum, power lever at IDLE (< 23 red)
+- 23 to 120: normal operation (green)
+- 120: maximum (> 120 red with box)
+
+**Ng (%)**
+- 63: minimum; engine out warning annunciated (red with box)
+- 63.1 to 102.2: normal operation (green)
+- 102.3 to 105.1: transient for 12 seconds (yellow)
+- 105.1: maximum (> 105.1 red)
+
+Both engines have mechanical Ng overspeed protection that trips between 108 and 112%. Reaching this value causes the engine to shut down.
+
+**Np (%)**
+- 0 to 105: normal operation (green)
+- 106 to 121: transient for 12 seconds (yellow, boxed at 107)
+- 115: engine overspeed annunciated
+- 121: maximum (> 121 red with box)
+
+Both engines have electrical Np overspeed protection that trips at 119.6%. Reaching this value causes the engine to shut down.
+
+**TGT (°C)**
+- 0 to 810: normal operation (green)
+- 810: maximum continuous power
+- 811 to 870: intermediate rated power, 30 minute limit (yellow)
+- 851: maximum during start
+- 871 to 878: intermediate rated power, 10 minute limit (yellow)
+- 879 to 896: single engine contingency, 2.5 minute limit (yellow)
+- 897 to 949: single engine transient, 12 seconds (yellow)
+- 949: maximum (> 949 red)
+
+**Nr (%)**
+- 0 to 94: transient operation (red)
+- 95 to 105: normal operation (green)
+- 106: high rotor annunciated
+- 106 to 110: transient operation (yellow)
+- 110: maximum (> 110 red)
+
+**Torque, dual engine (DE) (%)**
+- 0 to 100: normal operation (green)
+- 101 to 115: transient for 6 seconds (yellow)
+- 115: maximum (> 115 red)
+
+**Torque, single engine (SE) (%)**
+- 0 to 110: normal operation (green)
+- 110: single engine maximum continuous power (green)
+- 111 to 122: single engine contingency for 2.5 minutes (yellow)
+- 123 to 125: transient for 6 seconds (yellow)
+- 125: maximum (> 125 red)
+
+## TGT limiter and engine performance
+
+Each engine features a solid-state TGT limiter. The dual engine TGT limiter is 867 °C and the single engine TGT limiter is 896 °C. These values correspond to the maximum torque available dual engine and single engine respectively. When the limit is reached, TGT no longer increases and the engine restricts fuel flow; no additional power is provided to the rotor, and Nr begins to slow down, or droop.
+
+The combined effects of altitude and temperature on engine performance are simulated. As the helicopter climbs, or as temperature increases, engine performance decreases, and the maximum torque limit can be reached earlier. Maximum torque available dual engine and single engine, by free air temperature and pressure altitude, is shown on the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}).
+
+The following table provides a list of Warnings, Cautions and Advisories:
+
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
 |---|---|---|
-| **Ng** | Gas generator speed: how hard the engine core is working. | Rises and falls with power. About 68% at idle. |
-| **TGT** | Turbine gas temperature. | Below 810 °C. |
-| **Np** | Power turbine speed: the shaft that drives the rotor. | 101% |
-| **Nr** | Main rotor speed. | 101% |
-| **TQ** | Torque from each engine, percent. | Matched between engines, below 100%. |
-| **Oil** | Engine oil pressure, psi. | 23 to 120 psi. |
-
-All are on the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}), oil pressure only in its ground format. Torque is also on the FLT page and the IHADSS.
-
-The torque, TGT, Np and Ng readings are colour coded:
-
-- **Green**: within the normal operating range.
-- **Yellow**: a cautionary, time-limited range. A timer counts down the time allowed; when it runs out, the engine or drive train starts taking damage.
-- **Red**: past the maximum, or below the minimum needed to operate. Red above a maximum means damage is being done.
-
-The limits themselves, and how long each range allows, are on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.
-
-## Power levers
-
-Each engine has its own power lever, on the pilot's power lever quadrant, with three detents: **OFF**, **IDLE** and **FLY**. At **FLY** the engine's digital electronic control (DEC) governs Np, and therefore the rotor, at 101%: raise the collective and it adds fuel to hold the speed, lower it and it takes fuel away. Moving a lever from IDLE to FLY takes about eight seconds of travel; the rotor follows.
-
-With both engines at IDLE, moving either lever to **FLY** moves both. To bring one engine up on its own, the other must be OFF or already at FLY. The levers cannot go to FLY while the rotor brake is on.
-
-## Starting
-
-The starters are air turbines. They need pneumatic air from the APU, or bleed air from the other engine once its lever is at FLY.
-
-1. Set the start switch to **START**. The `ENG1 START`{: .mpd} advisory shows and Ng begins to climb.
-2. Above **23% Ng**, move the power lever to **IDLE**. Fuel is introduced and the engine lights off.
-3. At **52% Ng** the starter drops out, and the engine accelerates on its own to idle, about 68%.
-{: .steps}
-
-The [start-up checklist]({{ '/flying/startup/' | relative_url }}) puts it all in order.
-
-### Hot starts
-
-Watch TGT during the start. Above **851 °C** while starting is a hot start, and it damages the engine for as long as it lasts. The usual cause is **restarting a hot engine**: heat left in the engine from its last run makes the next start peak hotter. Before moving the lever to IDLE, let TGT come down below about 80 °C. Holding the start switch at **IGN ORIDE** with the lever at OFF turns the engine on the starter without fuel, which cools it faster.
-
-Moving the lever to IDLE before 23% Ng does no harm: fuel is only introduced at 23%, which the starter reaches on its own.
-
-To **abort** a start, set the start switch to **IGN ORIDE**, or click it again while the engine is starting, and bring the power lever back to OFF. IGN ORIDE stays where you put it and keeps the starter turning the engine, cooling it. Return the switch to OFF before trying again.
-
-## Limits and damage
-
-Running outside a limit is counted, not just shown. The aircraft allows a set time in each range, then damages the engine, the nose gearboxes or the transmission. The ranges are on the [HeliSim flight model]({{ '/flying/flight-model/' | relative_url }}#limits) page.
-
-| Exceeded | Damages |
-|---|---|
-| TGT, Ng, Np | That engine |
-| Torque, dual engine | The main transmission |
-| Torque, single engine | That engine's nose gearbox |
-
-### Engine protection
-
-- **TGT limiter.** The DEC stops feeding the engine more fuel at **867 °C** dual engine, or **896 °C** single engine. At the limit TGT stops rising, but no more power reaches the rotor either: pull more collective and the rotor slows down, or "droops".
-- **Ng overspeed.** A mechanical overspeed protection shuts the engine down at **110% Ng**.
-- **Np overspeed.** An electrical overspeed protection shuts the engine down at **119.6% Np**. `ENG1 OVSP`{: .mpd} / `ENG2 OVSP`{: .mpd} warns of Np at 115% or more, before it trips.
-
-An engine shut down by its overspeed protection cannot be restarted until the aircraft is repaired.
-
-### How an engine fails
-
-Engine damage gets worse in steps, whether it comes from enemy fire or from exceeding limits:
-
-| Engine damage | What you see |
-|---|---|
-| Light | Nothing yet. Past a quarter, the damage slowly worsens by itself while the engine runs. |
-| Half | `ENG1 CHIPS`{: .mpd}: metal in the oil. |
-| Heavier | Oil pressure starts to fall, then falls faster: `ENG1 OIL PSI`{: .mpd}. |
-| Severe | No oil pressure. The engine starves, and wears out faster the harder you run it. |
-| Destroyed | The engine fails: `ENG1 OUT`{: .mpd}. An engine that fails from oil starvation may catch fire. |
-
-Once you see chips or low oil pressure, the engine is on borrowed time. Reduce power on it, plan to land, and see [Emergency procedures]({{ '/flying/emergency/' | relative_url }}).
+| ENG1 OUT | ENGINE 1 OUT | LAND AS SOON AS PRACTICABLE |
+| ENG2 OUT | ENGINE 2 OUT | LAND AS SOON AS PRACTICABLE |
+| — | ENGINE 1 FIRE | 1. EMER ENG SHUTDOWN (affected engine) – When conditions permit<br>2. Illuminated ENG FIRE button – Press and RDY light illuminates<br>3. FIRE DISCH button(s) – Press<br>4. LAND AS SOON AS POSSIBLE |
+| — | ENGINE 2 FIRE | 1. EMER ENG SHUTDOWN (affected engine) – When conditions permit<br>2. Illuminated ENG FIRE button – Press and RDY light illuminates<br>3. FIRE DISCH button(s) – Press<br>4. LAND AS SOON AS POSSIBLE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| NONE | NONE | NONE |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| ENG1 START | ENGINE 1 START | |
+| ENG2 START | ENGINE 2 START | |
 
 ## Drive train
 
-| Part | Carries | When damaged |
+The drive train consists of the main transmission, two nose gearboxes, and the intermediate and tail rotor gearboxes.
+
+Each engine is connected to a nose gearbox, which reduces the engine output RPM and changes the output direction 90 degrees to connect to the main transmission. When operating single engine, the nose gearboxes alert the crew to impending failure if their limits are exceeded: GRBX1 or GRBX2 OIL PSI, then GRBX1 or GRBX2 CHIPS, each indicating increasing severity. When a nose gearbox fails, the engine it is connected to loses its load, accelerates to maximum power, trips either the Np or Ng overspeed protection and shuts down. The pilot must then execute an autorotation.
+
+The main transmission further reduces the input RPM from the nose gearboxes for the main rotor, turns the generators and hydraulic pumps when the APU is off, and outputs to the intermediate gearbox to turn the tail rotor. When operating dual engine, the main transmission alerts the crew to impending failure if its limits are exceeded: XMSN1 OIL PSI, XMSN2 OIL PSI, then XMSN CHIPS, each indicating increasing severity. When the main transmission fails, the rotor seizes and all hydraulic and electrical power, the main rotor and the tail rotor are lost. This is a catastrophic event.
+
+The intermediate and tail rotor gearboxes change the direction of output and reduce the RPM from the transmission to the tail rotor. An impending failure or critical damage to either gearbox results in the GRBX VIB caution. When this message is displayed, the pilot must accelerate the helicopter above 100 kt, be prepared for a loss of tail rotor thrust, and remain above this airspeed all the way to touchdown to prevent the helicopter from spinning about its yaw axis. If either gearbox is destroyed, an immediate loss of tail rotor thrust takes place and the pilot is unable to control the heading of the helicopter with the pedals.
+
+The following table provides a list of Warnings, Cautions and Advisories:
+
+| UFD WARNING | MPD WARNING | CORRECTIVE ACTION |
 |---|---|---|
-| **Nose gearboxes** (one per engine) | Each engine's torque into the main transmission. | `GRBX1 OIL PSI`{: .mpd}, then `GRBX1 CHIPS`{: .mpd}. A damaged one slips, so its engine's torque jumps about. |
-| **Main transmission** | Both engines to the main rotor, the tail rotor drive and the accessory section. | `XMSN1 OIL PSI`{: .mpd}, `XMSN2 OIL PSI`{: .mpd}, then `XMSN CHIPS`{: .mpd}. |
-| **Intermediate** and **tail rotor gearboxes** | The tail rotor. | `GRBX VIB`{: .mpd}. |
-
-Each message in these sequences means more severe damage than the one before it.
-
-### Main transmission
-
-Torque limits are exceeded on the main transmission when operating **dual engine**. As it is damaged, the transmission warns of its impending failure with `XMSN1 OIL PSI`{: .mpd}, then `XMSN2 OIL PSI`{: .mpd}, then `XMSN CHIPS`{: .mpd}. Once `XMSN CHIPS`{: .mpd} shows, land immediately, before the transmission fails.
-
-A transmission failure is catastrophic: all hydraulic and electrical power, the main rotor and the tail rotor are lost.
-
-### Nose gearboxes
-
-Torque limits are exceeded on a nose gearbox when operating **single engine**. As it is damaged, the gearbox warns of its impending failure with `GRBX1 OIL PSI`{: .mpd}, then `GRBX1 CHIPS`{: .mpd} (or gearbox 2). Once `GRBX1 CHIPS`{: .mpd} shows, land immediately, before the gearbox fails.
-
-When a nose gearbox fails, its engine loses its load. The engine accelerates to maximum power, trips its Np or Ng overspeed protection and shuts down. On one engine that leaves you with none: enter an [autorotation]({{ '/flying/emergency/' | relative_url }}#dual-engine-failure).
-
-### Tail rotor gearboxes
-
-The tail rotor has two gearboxes: the **intermediate** gearbox and the **tail rotor gearbox** itself. Critical damage to either shows the `GRBX VIB`{: .mpd} caution, warning of an impending failure. If either fails, the tail rotor stops turning and its thrust is lost. See [Gearbox vibration]({{ '/flying/emergency/' | relative_url }}#gearbox-vibration).
+| NONE | NONE | NONE |
+| **UFD CAUTION** | **MPD CAUTION** | **CORRECTIVE ACTION** |
+| GRBX VIB | GEARBOX VIBRATION | LAND AS SOON AS POSSIBLE |
+| GRBX1 OIL PSI | GRBX 1 OIL PSI LOW |  |
+| GRBX2 OIL PSI | GRBX 2 OIL PSI LOW |  |
+| GRBX1 CHIPS | GEARBOX 1 CHIPS | LAND AS SOON AS PRACTICABLE |
+| GRBX2 CHIPS | GEARBOX 2 CHIPS | LAND AS SOON AS PRACTICABLE |
+| XMSN1 OIL PSI | XMSN 1 OIL PSI LOW |  |
+| XMSN2 OIL PSI | XMSN 2 OIL PSI LOW |  |
+| XMSN CHIPS | MAIN XMSN CHIPS | LAND AS SOON AS POSSIBLE |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| NONE | NONE | NONE |
 
 ## Rotor brake
 
-The rotor brake slows the rotor to a stop after shutdown, and locks it, for example in high winds. It starts in the OFF position. The rotor brake switch steps **OFF → BRK → LOCK → OFF**.
+The aircraft is provided with a rotor brake. The rotor brake slows the rotor to a stop, or locks the rotor during high winds. Its default state is OFF. The RTR BRK switch on the power lever quadrant is a 3-position switch: OFF, BRK and LOCK. With the rotor brake in the LOCK position, a rotor lock start may be performed; with the rotor brake in LOCK, there is no increase in Np or Nr.
 
-- **BRK** slows the rotor to a stop, in well under a minute, but only once Nr is below 50%.
-- **LOCK** holds the stopped rotor.
-- With the brake on, the power levers will not go to FLY, and moving one off OFF raises the `RTR BRK ON/LK`{: .mpd} caution. With both levers at OFF it is only the `RTR BRK ON`{: .mpd} advisory.
-
-You can start the engines with the rotor locked, to warm them up without turning the rotor. Release the brake before going to FLY. See [Start-up]({{ '/flying/startup/' | relative_url }}#locked-rotor-start).
+| UFD CAUTION | MPD CAUTION | CORRECTIVE ACTION |
+|---|---|---|
+| RTR BRK ON/LK | ROTOR BRAKE ON/LK |  |
+| **UFD ADVISORY** | **DMS ADVISORY** | **CORRECTIVE ACTION** |
+| RTR BRK ON | ROTOR BRAKE ON | |

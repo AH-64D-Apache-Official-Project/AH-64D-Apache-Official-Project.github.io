@@ -1,13 +1,13 @@
 ---
-title: Up-front display
-lead: The small display above the right MPD. Warnings, cautions and advisories at a glance, with the radios, total fuel and the clock.
-keywords: [ufd, eufd, up-front display, warnings, cautions, advisories, radios, fuel, clock, acre]
+title: Up-front display (UFD)
+lead: The UFD provides warning, caution, advisory, communications, fuel and time information within the crew's instantaneous field of view.
+keywords: [ufd, up-front display, warnings, cautions, advisories, radios, fuel, clock, acre]
 seats: [PLT, CPG]
 redirect_from:
   - /ufd.html
 ---
 
-Each crew station has its own UFD. It works on battery power alone, so it is the first display to come on at start-up and the last to go off.
+The UFD provides warning, caution, advisory, communications, fuel and other information within the instantaneous field of view of the crew. Each crew station has its own UFD. The UFD operates on battery power.
 
 <div class="ufd" role="img" aria-label="Example UFD with a caution, two advisories, the radio lines, fuel and clock">
 <pre>         |FWD FUEL LO  |ATT HOLD
@@ -24,17 +24,17 @@ Each crew station has its own UFD. It works on battery power alone, so it is the
 
 ## Warnings, cautions and advisories
 
-The top five lines have three columns: **warnings** on the left, **cautions** in the middle and **advisories** on the right, in their short form. The [WCA page]({{ '/displays/mpd/wca/' | relative_url }}) lists every message with its full text and what it means.
+The first five lines are divided into warning (left), caution (centre) and advisory (right) areas. A total of 5 warnings/cautions/advisories may be displayed. The full text of each message, and its corrective action, is listed on the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}) and on [Emergency procedures]({{ '/flying/emergency/' | relative_url }}).
 
-When a new warning or caution appears, one of your MPDs switches to the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}) so you can see what is wrong: the left one, or the right one if the left is showing FLT. Nothing switches if either MPD already shows ENG.
+When a new warning or caution is displayed, one MPD in each crew station changes to the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}): the left MPD, or the right MPD if the left is displaying the FLT page. No MPD changes if either MPD is already displaying the ENG page.
 
 ## Radios
 
-The next four lines are the radios, **VH**, **UH**, **F1** and **F2**.
+The next four lines present radio status: VHF (VH), UHF (UH), FM1 (F1) and FM2 (F2).
 
-- **Without ACRE**, they stand for Arma's chat channels: VH is Global, UH Side, F1 Command and F2 Group. The arrow marks the channel you are on. The frequencies are for show.
-- **With ACRE**, they show the aircraft's own racked radios: each radio's frequency, preset channel and label, and which of your push-to-talk keys transmits on it.
+- **Without ACRE**, the radios represent the Arma chat channels: VH Global, UH Side, F1 Command and F2 Group. The arrow marks the active channel. The displayed frequencies are static.
+- **With ACRE**, the lines display the aircraft's racked radios: each radio's frequency, preset channel and label, and the push-to-talk key assigned to it.
 
 ## Bottom line
 
-**Total fuel** in pounds on the left, internal and external together. The transponder text in the middle is for show. On the right is the clock, in local time.
+Total fuel quantity in pounds, internal and external, is displayed on the left. The transponder (XP) status in the centre is static. Local time is displayed on the right.

@@ -5,7 +5,7 @@ crop:
 - -30
 - 640
 - 510
-caption: 'Pilot''s bob-up symbology: the aircraft has drifted about 10 ft right and 20 ft back from the stored position and yawed 6° right of the stored heading. The acceleration cue is inside the bob-up box, taking the aircraft back over the position.'
+caption: 'Pilot bob-up mode symbology: the aircraft is approximately 10 ft right of and 20 ft aft of the bob-up position and 6° right of the bob-up heading. The acceleration cue is inside the bob-up box.'
 model:
   hd: false
   tv: false
@@ -71,22 +71,22 @@ callouts:
   y: 126
   side: l
   label: Bob-up box
-  text: The stored hover position. Place the acceleration cue inside it to move back over the position.
+  text: 'Octagon indicating the position of the helicopter relative to the point at which the box was initialised; it represents an area approximately 12 ft square on the ground.'
 - n: 2
   x: 312
   y: 26
   side: l
-  label: Stored heading
-  text: The heading when bob-up was selected.
+  label: Bob-up heading
+  text: 'Chevron: the heading of the helicopter at the initiation of bob-up mode.'
 - n: 3
   x: 297
   y: 194
   side: l
   label: Velocity vector
-  text: Moving back towards the position.
+  text: 'Velocity towards the bob-up position.'
 - n: 4
   x: 271
   y: 143
   side: r
   label: Acceleration cue
-  text: Inside the box.
+  text: 'Inside the bob-up box.'

@@ -1,42 +1,42 @@
 ---
-title: DMS pages
-lead: The data management pages. Load the mission's points into the aircraft, check the mod's files, and get to the WCA page and the games.
+title: Data management (DMS) pages
+lead: The DTU page, which loads mission data into the aircraft, and the VERS page, which verifies the mod's software versions.
 keywords: [dms, dtu, data transfer, load, mission points, ver, version, pbo, mismatch, software]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-dms.html
 ---
 
-Open DMS from the MENU. Its pages share the top row: `T1`{: .vab} **DTU**, `T3`{: .vab} **IBIT** (the [MPD games]({{ '/displays/mpd/games/' | relative_url }})), `T5`{: .vab} **VERS**, and `B6`{: .vab} **WCA** for the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}). `B1`{: .vab} returns to MENU.
+DMS is selected from the MENU page. The DMS pages have the same page buttons: `T1`{: .vab} DTU, `T3`{: .vab} IBIT (the [MPD games]({{ '/displays/mpd/games/' | relative_url }}), a mod feature), `T5`{: .vab} VERS, and `B6`{: .vab} WCA for the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}). `B1`{: .vab} returns to the MENU page.
 
-The DMS page itself has nothing else on it yet: its **FAULTS** and **ADVISORIES** lists, and **FAULT** and **UTIL**, are not simulated.
+The DMS FAULTS and ADVISORIES lists, FAULT and UTIL are not simulated.
 
 ## DTU {#dtu}
 
-The data transfer unit page. The right MPD shows it when the aircraft powers up.
+The data transfer unit page. The right MPD displays it at power-up.
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `L1`{: .vab} | `MASTER LOAD`{: .mpd} | Loads the mission data, and any DTC, into the aircraft. The page shows the load in progress, then complete, after about four seconds. Press `L1`{: .vab} again to return. |
+| `L1`{: .vab} | `MASTER LOAD`{: .mpd} | Loads the mission data, and any DTC, into the aircraft. The page displays the load in progress, then complete after approximately four seconds. `L1`{: .vab} again returns. |
 
-**MASTER LOAD** does two things, in order:
+MASTER LOAD performs the following, in order:
 
-1. It copies every waypoint, hazard, control measure and target the mission maker placed in the editor ([For mission makers]({{ '/mission/editor/' | relative_url }}#points)) into this aircraft, replacing what it held.
-2. If a DTC has been uploaded to the aircraft from the [mission planner]({{ '/mission/planner/' | relative_url }}#dtc), for this map, it loads that on top: its lines, areas and zones, and its points and routes. A DTC with no points of a type, or no routes, leaves the mission's in place.
+1. Copies every waypoint, hazard, control measure and target placed in the editor ([Mission editor]({{ '/mission/editor/' | relative_url }}#points)) into the aircraft, replacing the points held.
+2. If a DTC has been uploaded to the aircraft from the [mission planner]({{ '/mission/planner/' | relative_url }}#dtc) for the current map, loads it over the mission data: its lines, areas and zones, and its points and routes. A DTC with no points of a type, or no routes, leaves the mission's data in place.
 {: .steps}
 
-The points then appear on the TSD and can be used in routes.
+The points are then displayed on the TSD and available for routes.
 
-> Load the mission data before you build your routes. A master load replaces the aircraft's points, including any you added yourself.
-{: .caution}
+> MASTER LOAD replaces the aircraft's points, including points added in the cockpit. Mission data is loaded before routes are built.
+{: .note}
 
-The other DTU options (**DATA**, **WEAPONS/SIGHTS**, the right-hand list, **WP**, **SP** and **DP**) are not simulated.
+DATA, WEAPONS/SIGHTS, the right-hand list, WP, SP and DP are not simulated.
 
-## VER {#ver}
+## VERS {#ver}
 
-The software versions page lists every PBO of the mod, with the build each one comes from.
+The version page (mod feature) lists every PBO of the mod with its build.
 
-- A PBO from the same build as the rest is shown normally.
-- A PBO from a different build, or one that is missing, is highlighted, and missing ones show `????????` in place of the build.
+- A PBO from the same build as the rest is displayed normally.
+- A PBO from a different build, or a missing PBO, is highlighted; a missing PBO displays `????????` in place of the build.
 
-Any difference raises the `VERS MISM`{: .mpd} advisory when the aircraft spawns. Opening this page clears it. A mismatch means the mod did not install or update cleanly: verify the files in Steam, or reinstall the release. `B2`{: .vab} and `B3`{: .vab} page through the list.
+Any difference raises the `VERS MISM`{: .mpd} advisory when the aircraft is spawned; selecting this page clears it. A mismatch indicates the mod is not installed or updated correctly: the files are verified in Steam, or the release is reinstalled. `B2`{: .vab} and `B3`{: .vab} page through the list.

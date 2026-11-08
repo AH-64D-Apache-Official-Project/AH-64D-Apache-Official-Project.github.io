@@ -1,6 +1,6 @@
 title: TSD page, NAV phase
 kind: mpd
-caption: TSD in the NAV phase at the 10 km scale, flying the route from W01 to W02 with the CPG's TADS on a target. ENEMY UNITS and PLANNED TGT/THRT are turned on in SHOW.
+caption: 'TSD page in the NAV phase at the 10 km map scale, on the route from W01 to W02, with TADS as the CPG''s selected sight. ENEMY UNITS and PLANNED TGT/THRT are selected on the SHOW page.'
 state:
   page: TSD
   src:
@@ -81,63 +81,63 @@ callouts:
   x: 310
   y: 276
   side: l
-  label: Threat
+  label: THRT/TGT icon
   text: 'A planned threat: ZU, a ZSU-23 gun.'
 - n: 2
   x: 531
   y: 461
   side: l
-  label: Next waypoint
-  text: W02, the point being flown to.
+  label: Destination point
+  text: 'W02, the point being flown to.'
 - n: 3
   x: 369
   y: 556
   side: l
-  label: TADS line of sight
-  text: The CPG's TADS, out to its range.
+  label: TADS footprint symbol
+  text: 'The TADS LOS, out to its range.'
   snap: false
 - n: 4
   x: 143
   y: 745
   side: l
-  label: Waypoint data
-  text: Next point and its distance; ground speed and time to go.
+  label: Next waypoint status window
+  text: 'Destination point, distance to go, ground speed and time to go.'
 - n: 5
   x: 795
   y: 294
   side: r
-  label: Enemy unit
-  text: Enemy armour, with its free text.
+  label: CTRLM icon, enemy unit
+  text: 'Enemy armour, with its free text.'
   snap: false
 - n: 6
   x: 505
   y: 412
   side: r
-  label: Route
-  text: The current route, joining its points.
+  label: Route line
+  text: 'Connects the points in the current route.'
 - n: 7
   x: 728
   y: 510
   side: r
-  label: Hazard
-  text: A tower over 1,000 ft, point 04.
+  label: WPTHZ icon, hazard
+  text: 'Tower over 1,000 ft, point 04.'
   snap: false
 - n: 8
   x: 748
   y: 625
   side: r
-  label: Control measure
-  text: A checkpoint, point C53.
+  label: CTRLM icon
+  text: 'A checkpoint, point C53.'
   snap: false
 - n: 9
   x: 851
   y: 752
   side: r
-  label: Endurance
-  text: Hours and minutes of fuel left.
+  label: Endurance status window
+  text: 'Hours and minutes of fuel remaining.'
 - n: 10
   x: 740
   y: 840
   side: b
-  label: Wind
-  text: Direction it blows from, and speed in knots.
+  label: Wind direction/velocity status window
+  text: 'Direction from which the wind is coming, and speed in knots.'

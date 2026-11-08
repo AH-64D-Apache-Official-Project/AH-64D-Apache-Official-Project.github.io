@@ -1,124 +1,122 @@
 ---
 title: Mission planner
-lead: A planning screen for the aircraft on the ground. Build a loadout, set the fuel, see what the aircraft will weigh and how it will perform, then apply it.
-keywords: [mission planner, loadout, planning, fuel, weight, performance, rearm, apply, save, pylons, fcr, iafs]
+lead: The ground planning screen — loadout, fuel, weight and performance, application, saved loadouts, and the data transfer cartridge (DTC).
+keywords: [mission planner, loadout, planning, fuel, weight, performance, rearm, apply, save, pylons, fcr, iafs, dtc]
 seats: [PLT, CPG]
 ---
 
-## Opening it
+## Access
 
-Use ACE interaction:
+The planner is opened with ACE interaction, with the aircraft on the ground and stationary:
 
-- standing within 15 m of the aircraft: **Interact → Mission Planner**, or
-- sitting in the aircraft: **Self-interact → Mission Planner**.
+- within 15 m of the aircraft: **Interact → Mission Planner**; or
+- in the aircraft: **Self-interact → Mission Planner**.
 
-The aircraft must be on the ground and stopped.
+## Configuration tab
 
-## The configuration tab
+The planner opens on **Configuration**, for the aircraft's loadout. The **Waypoint/Hazards**, **Control Measures**, **Target/Threats**, **Areas/Zones**, **Lines** and **Routes** tabs build a [DTC](#dtc). **Communications** is not yet implemented.
 
-The planner opens on **Configuration**, for the aircraft's loadout. The **Waypoint/Hazards**, **Control Measures**, **Target/Threats**, **Areas/Zones**, **Lines** and **Routes** tabs build a [DTC](#dtc). **Communications** is a placeholder for later.
+The Hatchet cockpit cursor is paused while the planner is open.
 
-While the planner is open, the Hatchet cockpit cursor is paused.
-
-| Section | What you set |
+| Section | Selection |
 |---|---|
-| **Mission equipment** | **US Army** or **UK Army** equipment. See [Variants and customisation]({{ '/aircraft/variants/' | relative_url }}). |
-| **FCR** | Radar fitted or not. |
-| **IAFS / Magazine** | The internal auxiliary fuel tank with 300 cannon rounds, or the 1,200-round magazine. |
-| **Pylons 1–4** | For each wing station: nothing, an **M-261** rocket pod with a rocket type in each zone, an **M-299** Hellfire launcher with a missile type on each rail, or a 230-gallon external tank. |
-| **Cannon** | Rounds, up to 300 or 1,200. |
-| **Fuel** | Gallons in the forward (155), aft (220), centre (100, with the IAFS) and external tanks. |
-| **Tail number** | The number painted on the tail. |
+| Mission equipment | **US Army** or **UK Army** equipment. See [Variants and configuration]({{ '/aircraft/variants/' | relative_url }}). |
+| FCR | Radar installed or not |
+| IAFS / Magazine | The IAFS with 300 gun rounds, or the 1,200-round magazine |
+| Pylons 1–4 | For each wing station: empty, an **M-261** rocket launcher with a rocket type in each zone, an **M-299** Hellfire launcher with a missile type on each rail, or a 230-gallon external tank |
+| Cannon | Rounds, up to 300 or 1,200 |
+| Fuel | Gallons in the forward (155), aft (220), centre (100, with the IAFS) and external tanks |
+| Tail number | The number painted on the tail |
 
-Changing the radar or swapping the IAFS and magazine is marked with a warning: it is a long job, about 300 seconds with ACE timings.
+Changing the radar, or exchanging the IAFS and magazine, is marked with a warning: it requires approximately 300 seconds with ACE timings.
 
 ## Weight and performance
 
-As you build the loadout the planner works out, for the pressure altitude and temperature where you are:
+For the pressure altitude and temperature at the aircraft's location, the planner calculates:
 
-- **Weights**: empty, ammunition, the current and maximum gross weight, and how much you could jettison, with the torque that would save: 1% for every 200 lb.
-- **Torque**: maximum torque available dual engine (DE) and single engine (SE), continuous DE torque, and the torque to hover in ground effect (IGE) and out of it (OGE). The DE power margin is the continuous torque left over in an OGE hover; the maximum rate of descent OGE is worked out from it.
-- **Airspeeds and fuel**: the maximum endurance and maximum range airspeeds, in knots true airspeed, each with its fuel flow; how long the fuel loaded lasts at the maximum range fuel flow; and VSSE, velocity safe single engine, now and after a jettison.
+- **Weights**: empty, ammunition, current and maximum gross weight, and the weight that can be jettisoned, with the corresponding torque saving of 1% per 200 lb.
+- **Torque**: maximum torque available dual engine (DE) and single engine (SE), continuous DE torque, and the torque to hover in ground effect (IGE) and out of ground effect (OGE). The DE power margin is the continuous torque remaining in an OGE hover; the maximum rate of descent OGE is derived from it.
+- **Airspeeds and fuel**: maximum endurance and maximum range true airspeeds, each with its fuel flow; endurance of the fuel loaded at the maximum range fuel flow; and VSSE, current and after a jettison.
 
-These come from the same aircraft data as the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}). If the loadout leaves no power margin, take something off before you fly.
+These values use the same aircraft data as the [PERF page]({{ '/displays/mpd/perf/' | relative_url }}). A loadout with no power margin is reduced before flight.
 
-## Applying it
+## Applying a configuration
 
-**Apply Config** loads the aircraft with what you planned. How long it takes depends on the server's **Rearm Mode** setting ([Addon settings]({{ '/getting-started/settings/' | relative_url }})):
+**Apply Config** loads the aircraft with the planned configuration. The time required depends on the server's **Rearm Mode** setting ([Addon settings]({{ '/getting-started/settings/' | relative_url }})):
 
 | Mode | Time |
 |---|---|
-| **Instant** | None. |
-| **30 Seconds** | 30 seconds for the whole change. |
-| **ACE Settings** | ACE's rearm times for each store; 300 seconds for the radar or the IAFS swap. |
+| Instant | None |
+| 30 Seconds | 30 seconds for the complete change |
+| ACE Settings | ACE rearm times per store; 300 seconds for the radar or the IAFS exchange |
 
-Unless the server allows otherwise, you need supplies close by:
+Unless the server allows otherwise, supplies are required nearby:
 
-- **Ammunition, pylons and the cannon**: an ACE ammo source within ACE's pylon search distance (15 m by default). Its supply is used up as you load.
-- **Fuel**: an ACE fuel source within hose reach (12 m by default). Fuel added is taken from it.
+- **Ammunition, pylons and gun**: an ACE ammunition source within the ACE pylon search distance (15 m by default); its supply is consumed.
+- **Fuel**: an ACE fuel source within hose reach (12 m by default); the fuel added is taken from it.
 
-**FARP Status** on the screen shows whether a source is in reach. **Close Without Applying** discards your changes.
+**FARP Status** indicates whether a source is in reach. **Close Without Applying** discards the changes.
 
-## Saving loadouts
+## Saved loadouts
 
-Give a loadout a name and **Save** it. Saved loadouts are kept in your Arma profile, so they are there next time, on any mission. **Load** puts one back on the screen; **Delete** removes it.
+A loadout is named and saved with **Save**. Saved loadouts are kept in the player's Arma profile and are available in any mission. **Load** restores one; **Delete** removes it.
 
-**Push to Mission** saves the loadout under the mission instead of your profile, for everyone in the mission to load. It lasts until the mission ends, and only the player who pushed it can delete it.
+**Push to Mission** saves the loadout to the mission instead of the profile, for every player in the mission. It remains until the mission ends, and only the player who pushed it can delete it.
 
-## The DTC {#dtc}
+## Data transfer cartridge (DTC) {#dtc}
 
-A **DTC**, data transfer cartridge, carries your mission data into the aircraft: points, routes, lines, engagement areas and priority fire and no fire zones. You build it on the planner's DTC tabs, upload it to the aircraft, and load it in the cockpit with **MASTER LOAD** on the [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu).
+The DTC carries mission data into the aircraft: points, routes, lines, engagement areas, and priority fire and no fire zones. It is built on the planner's DTC tabs, uploaded to the aircraft, and loaded in the cockpit with MASTER LOAD on the [DTU page]({{ '/displays/mpd/dms/' | relative_url }}#dtu).
 
-### The tabs
+### Tabs
 
-| Tab | Holds |
+| Tab | Contents |
 |---|---|
-| **Waypoint/Hazards** | `W01`–`W50`. |
-| **Control Measures** | `C51`–`C99`. |
-| **Target/Threats** | `T01`–`T50`. |
-| **Areas/Zones** | 12 engagement areas, 8 priority fire zones and 8 no fire zones. **NF ACTIVE** sets MULTI or SINGLE, as on the [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn). |
-| **Lines** | 15 lines: phase (PL), boundary (BL), FLOT, FLET and FSCL. |
-| **Routes** | Routes 1 to 10. |
+| Waypoint/Hazards | `W01`–`W50` |
+| Control Measures | `C51`–`C99` |
+| Target/Threats | `T01`–`T50` |
+| Areas/Zones | 12 engagement areas, 8 priority fire zones and 8 no fire zones. NF ACTIVE sets MULTI or SINGLE, as on the [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn). |
+| Lines | 15 lines: phase (PL), boundary (BL), FLOT, FLET and FSCL |
+| Routes | Routes 1 to 10 |
 
-Each tab has its list on the left and an Arma map on the right. In the lists you set each point's ident, free text (three characters) and height above the ground, move it up or down, or delete it. A line's ident is its kind and up to five characters in all.
+Each tab has its list on the left and an Arma map on the right. The list sets each point's ident, free text (three characters), height above ground and order, or deletes it. A line's ident is its type, up to five characters in total.
 
-### The map
+### Map
 
-| Do | To |
+| Action | Result |
 |---|---|
-| Right-click an empty spot | Add a waypoint, hazard, control measure, target or threat there (choosing its ident), a line (choosing its kind), or an area, PF zone or NF zone. A new line is 2 km long east to west, an area or zone a box 1 km square. |
-| Right-click a point | Change its ident, add it to a route (a route with points is starred), or delete it. |
-| Right-click a line, area or zone | Change a line's kind, insert a point into a line of fewer than four, or delete it. |
-| Drag a list row onto the map | Place that point or shape there. |
-| Drag a point or a corner | Move it. A point let go next to another snaps onto it. |
-| Drag a line's middle handle | Add a corner there. |
-| Drag the map, wheel, <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> | Pan and zoom. |
-| <kbd>Esc</kbd> | Close a menu, or stop what you are doing. |
+| Right-click on an empty position | Adds a waypoint, hazard, control measure, target or threat (with its ident), a line (with its type), or an area, PF zone or NF zone. A new line is 2 km long east–west; an area or zone is a 1 km square. |
+| Right-click on a point | Changes its ident, adds it to a route (a route with points is marked with a star), or deletes it |
+| Right-click on a line, area or zone | Changes a line's type, inserts a point into a line of fewer than four points, or deletes it |
+| Drag a list row onto the map | Places that point or shape |
+| Drag a point or a corner | Moves it; a point released next to another snaps to it |
+| Drag a line's centre handle | Adds a corner |
+| Drag, wheel, <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> | Pan and zoom |
+| <kbd>Esc</kbd> | Closes a menu or cancels the current action |
 
-A corner that would make an area's or zone's sides cross is refused.
+A corner that would make an area's or zone's sides cross is rejected.
 
-On the **Routes** tab, pick a route, press **Add Points** and click points on the map to add them, up to 50. **Remove Last** and **Clear** take them off again.
+On the **Routes** tab, a route is selected, **Add Points** pressed, and points selected on the map, up to 50. **Remove Last** and **Clear** remove them.
 
-> The aircraft flies **route 1**. The other routes are carried on the DTC, but the TSD cannot select them yet.
+> The aircraft flies route 1. The other routes are carried on the DTC but cannot yet be selected on the TSD.
 {: .note}
 
-### The DTC box
+### DTC controls
 
-| Button | Does |
+| Button | Function |
 |---|---|
-| **Name** | Up to eight letters or numbers. |
-| **OPEN DTC** / **SAVE DTC** | Opens a saved DTC, or saves this one to your profile. |
-| **Upload to Acft** | Puts the DTC in the aircraft, ready for MASTER LOAD. |
-| **Download from Acft** | Opens what the aircraft holds now, to edit or save. |
-| **DTC MANAGER** | Your saved DTCs and the mission's. **Push to Mission** shares one with everyone in the mission; **Delete** removes one; **Export** and **Import** copy a DTC as text, to pass on outside the game. |
-| **Clear DTC** | Starts a new, empty DTC. |
+| Name | Up to eight letters or numbers |
+| OPEN DTC / SAVE DTC | Opens a saved DTC, or saves the current DTC to the profile |
+| Upload to Acft | Uploads the DTC to the aircraft, ready for MASTER LOAD |
+| Download from Acft | Opens the data the aircraft holds, to edit or save |
+| DTC MANAGER | Saved and mission DTCs. **Push to Mission** shares a DTC with the mission; **Delete** removes one; **Export** and **Import** transfer a DTC as text |
+| Clear DTC | Starts a new, empty DTC |
 
-DTCs are saved per map: saving under a name already used on this map replaces that save, while the same name on another map is a separate DTC. A DTC only loads into an aircraft on the map it was made for.
+DTCs are saved per map: a save under a name already used on the map replaces it, while the same name on another map is a separate DTC. A DTC loads only into an aircraft on the map it was made for.
 
-### Loading it
+### Loading
 
-1. Build the DTC and press **Upload to Acft**.
-2. In the cockpit, press **MASTER LOAD** on the DTU page.
+1. Build the DTC; **Upload to Acft**.
+2. DTU page – MASTER LOAD.
 {: .steps}
 
-MASTER LOAD loads the mission's points first, then the DTC over them. A DTC with no points of a type, or no routes, leaves the mission's in place.
+MASTER LOAD loads the mission points first, then the DTC over them. A DTC with no points of a type, or no routes, leaves the mission's data in place.

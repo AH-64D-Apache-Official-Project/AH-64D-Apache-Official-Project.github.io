@@ -1,62 +1,59 @@
 ---
 title: FUEL page
-lead: Fuel quantity, flow and endurance, and the controls for the transfer pump, boost pump, crossfeed and external tanks.
+lead: Fuel quantity, flow and endurance, and the controls for the transfer pump, boost pump, crossfeed, auxiliary tanks and fuel check.
 keywords: [fuel, crossfeed, boost, transfer, xfer, aux, tanks, endurance, sfr, check]
 seats: [PLT, CPG]
 redirect_from:
   - /mpd-fuel.html
 ---
 
-Open it from the MENU (`B1`{: .vab} then **FUEL**) or from the top row of any other aircraft page. Both crew stations share the same fuel system, so a change made on one seat's FUEL page shows on the other's.
+The FUEL page is selected from the MENU page (`B1`{: .vab}, then FUEL) or with the FUEL page button on any aircraft page. The fuel system is aircraft common; a selection made on one crew station's FUEL page is displayed on the other's. The system is described in [Fuel system]({{ '/aircraft/fuel/' | relative_url }}).
 
 {% include fig.html id="mpd-fuel" %}
 
 ## Buttons
 
-| Button | Label | Action |
+| Button | Label | Function |
 |---|---|---|
-| `T2`{: .vab} | `FLT`{: .mpd} | Opens the FLT page. |
-| `T3`{: .vab} | `FUEL`{: .mpd .box} | This page. |
-| `T4`{: .vab} | `PERF`{: .mpd} | Opens the PERF page. |
-| `T6`{: .vab} | `UTIL`{: .mpd} | Opens the aircraft UTIL page. |
-| `L1`{: .vab} | `L AUX`{: .mpd} | Left external tanks on or off. Shown with tanks on station 1 or 2. Can only be turned on while one of them holds fuel. |
-| `L2`{: .vab} | `C AUX`{: .mpd} | Internal auxiliary tank transfer on or off. Shown with the tank fitted. |
-| `L4`{: .vab} | `XFER`{: .mpd} | Opens the transfer pump menu on `L1`{: .vab} to `L4`{: .vab}: **FWD**, **OFF**, **AFT**, **AUTO**. |
-| `R1`{: .vab} | `R AUX`{: .mpd} | Right external tanks on or off (stations 3 and 4). |
-| `R2`{: .vab} | `BOOST`{: .mpd} | Boost pump on or off. Turning it on also sets crossfeed to **AFT**; turning it off returns crossfeed to **NORM**. |
-| `R3`{: .vab}–`R5`{: .vab} | `FWD`{: .mpd} `NORM`{: .mpd} `AFT`{: .mpd} | Crossfeed mode. Locked while the boost pump is on. |
-| `B1`{: .vab} | | MENU. |
-| `B6`{: .vab} | `CHECK`{: .mpd} | Opens or closes the fuel check. |
+| `T2`{: .vab} | `FLT`{: .mpd} | FLT page |
+| `T3`{: .vab} | `FUEL`{: .mpd .box} | This page |
+| `T4`{: .vab} | `PERF`{: .mpd} | PERF page |
+| `T6`{: .vab} | `UTIL`{: .mpd} | UTIL page |
+| `L1`{: .vab} | `L AUX`{: .mpd} | L AUX fuel transfer on or off, from the left external tanks. Displayed with tanks on station 1 or 2; selectable only while one of them contains fuel. |
+| `L2`{: .vab} | `C AUX`{: .mpd} | C AUX fuel transfer on or off, from the internal auxiliary fuel cell. Displayed with the IAFS installed. |
+| `L4`{: .vab} | `XFER`{: .mpd} | Fuel transfer option buttons on `L1`{: .vab}–`L4`{: .vab}: FWD, OFF, AFT, AUTO |
+| `R1`{: .vab} | `R AUX`{: .mpd} | R AUX fuel transfer on or off, from the right external tanks (stations 3 and 4) |
+| `R2`{: .vab} | `BOOST`{: .mpd} | Boost pump on or off. On sets crossfeed to AFT; off returns crossfeed to NORM. |
+| `R3`{: .vab}–`R5`{: .vab} | `FWD`{: .mpd} `NORM`{: .mpd} `AFT`{: .mpd} | CROSSFEED buttons. Inhibited while the boost pump is on. |
+| `B1`{: .vab} | | MENU page |
+| `B6`{: .vab} | `CHECK`{: .mpd} | CHECK format, present or remove |
 
 ## Fuel cells and feed
 
-The aircraft carries fuel in a forward and an aft cell. With crossfeed in **NORM**, engine 1 draws from the forward cell and engine 2 from the aft cell, and the feed lines are drawn bold while fuel is flowing.
+With CROSSFEED NORM, engine 1 feeds from the forward fuel cell and engine 2 from the aft fuel cell; the fuel lines are a graphic representation of fuel routing, displayed bold while fuel flows. CROSSFEED FWD or AFT feeds both engines from that cell.
 
-**FWD** and **AFT** crossfeed feed both engines from one cell. Use them to balance the cells, or to keep an engine running from the other cell after damage.
+A fuel cell quantity is displayed yellow below 240 lb (forward) or 260 lb (aft), and is replaced by a white **E** indicator when the cell is empty. Low fuel also raises the `FWD FUEL LO`{: .mpd} or `AFT FUEL LO`{: .mpd} caution.
 
-> A cell quantity turns yellow below 240 lb (forward) or 260 lb (aft), and is replaced by a white **E** when the cell is empty. Low fuel also raises the `FWD FUEL LO`{: .mpd} or `AFT FUEL LO`{: .mpd} caution.
-{: .caution}
+## Fuel transfer
 
-## Transfer pump
+`L4`{: .vab} XFER replaces the left-side labels with the fuel transfer option buttons; selecting an option removes them.
 
-`L4`{: .vab} replaces the left-side labels with the transfer menu. Pick a mode to close it:
+- FWD transfers fuel from the aft fuel cell to the forward fuel cell, and AFT from the forward to the aft; the fuel transfer line is displayed and marquees to indicate the direction of transfer.
+- AUTO selects automatic fuel levelling between the fuel cells, transferring toward the lighter cell.
+- OFF stops fuel transfer.
 
-- **FWD** and **AFT** pump fuel from one cell into the other. The line between the cells animates in the direction of flow.
-- **AUTO** keeps the two cells balanced, moving fuel towards whichever cell is lighter.
-- **OFF** stops transfer.
+## Auxiliary tanks
 
-## External and auxiliary tanks
+External tanks are installed on the wing stations from the pylon loadout (see [Rearm and refuel]({{ '/mission/rearm/' | relative_url }})). With tanks installed, the page displays tank icons on the aircraft icon, adds the L AUX and R AUX buttons, and displays the total (TOT) fuel quantity and total endurance (ENDR TOT) status. A side's transfer is deselected automatically when its tanks are empty.
 
-External tanks are fitted to the wing stations from the pylon loadout (see [Rearm and refuel]({{ '/mission/rearm/' | relative_url }})). When any are fitted the page draws them on the wings, adds the `L AUX`{: .mpd} and `R AUX`{: .mpd} switches and shows a **TOT** line for total fuel and total endurance. A side's switch turns itself off when its tanks run dry.
+## Fuel check {#fuel-check}
 
-## Fuel check
+`B6`{: .vab} CHECK presents the CHECK format, which calculates burnout, VFR reserve and IFR reserve times, based on the fuel quantity change during the selected interval.
 
-`B6`{: .vab} **CHECK** opens the fuel check. It measures your real burn rate over a set time and works out when you will run out.
-
-1. Choose the length of the check: `R2`{: .vab} 15, `R3`{: .vab} 20 or `R4`{: .vab} 30 minutes.
-2. Press `R5`{: .vab} **START**. The start time is recorded in local time.
-3. Close the check with `B6`{: .vab} if you need the page. A running check carries on in the background.
-4. When the time is up, or when you press `R5`{: .vab} **STOP**, the page shows the elapsed time, burn rate in pounds per hour, the burnout time, and the times by which you must land to keep a 20 minute (VFR) or 30 minute (IFR) reserve. If neither crew station has the check open when it finishes, a `FUEL CHECK`{: .mpd} advisory tells you the results are ready.
+1. MINUTES – Select: `R2`{: .vab} 15, `R3`{: .vab} 20 or `R4`{: .vab} 30 minutes.
+2. `R5`{: .vab} START – Press. The start time is recorded in local time.
+3. `B6`{: .vab} – Press to remove the CHECK format if the page is required; the check continues in the background.
+4. At the end of the interval, or on `R5`{: .vab} STOP, the status windows display the START time, RUN time and burn RATE, in pounds per hour, and the calculated BURNOUT, VFR RES (20 minute reserve) and IFR RES (30 minute reserve) times. If neither crewmember is viewing the CHECK format at the conclusion of the check, the `FUEL CHECK`{: .mpd} advisory is displayed.
 {: .steps}
 
 Starting a new check clears the previous results.

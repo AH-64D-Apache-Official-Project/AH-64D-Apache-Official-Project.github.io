@@ -5,7 +5,7 @@ crop:
 - 20
 - 610
 - 490
-caption: 'The CPG looking through the TADS (picture removed): FLIR medium field of view, LMC on, lasing, and a laser Hellfire within constraints that can lock on before launch.'
+caption: 'CPG weapon symbology format, TADS video removed: FLIR medium field of view, LMC on, laser firing, SAL Hellfire in constraints with a LOBL constraints box.'
 model:
   hd: true
   tv: false
@@ -65,7 +65,7 @@ model:
   - CMSL
   - PHS
   - ''
-  - DIR-NORM
+  - DIR NORM
   - ''
   - ''
 callouts:
@@ -73,89 +73,89 @@ callouts:
   x: 120
   y: 108
   side: l
-  label: Sensor
-  text: The TADS sensor in view.
+  label: TADS selected sensor
+  text: 'Name of the selected TADS sensor: DVO, DTV or FLIR.'
 - n: 2
   x: 225
   y: 172
   side: l
-  label: FOV brackets
-  text: What the next narrower field of view will show.
+  label: TADS FOV brackets
+  text: 'The imagery that will be displayed in the next narrower field of view.'
 - n: 3
   x: 299
   y: 84
   side: l
-  label: Other sight
-  text: Where the pilot's sight points.
+  label: Alternate sensor bearing
+  text: 'Triangle: the line of sight azimuth of the pilot''s selected sight.'
 - n: 4
   x: 279
   y: 199
   side: l
-  label: Lasing
-  text: Shown while the laser fires.
+  label: Laser firing indicator
+  text: 'Presented while the LRFD is lasing.'
 - n: 5
   x: 262
   y: 240
   side: l
   label: Cueing dots
-  text: Slew this way to find the acquisition source.
+  text: 'Indicate the quadrant containing the selected acquisition source.'
 - n: 6
   x: 240
   y: 425
   side: l
   label: Airspeed
-  text: True airspeed in knots.
+  text: 'True airspeed, knots.'
 - n: 7
   x: 110
   y: 445
   side: l
-  label: Sight
-  text: TADS selected.
+  label: Sight select status
+  text: 'HAD sight select status field: TADS.'
 - n: 8
   x: 338
   y: 85
   side: r
-  label: TADS azimuth
-  text: The caret shows where the TADS points.
+  label: CPG LOS bearing
+  text: 'Chevron along the bottom of the heading scale: the LOS direction of the TADS, in place of the command heading.'
 - n: 9
   x: 350
   y: 240
   side: r
-  label: TADS reticle
-  text: The short marks at the ends show LMC is on.
+  label: TADS LOS reticle
+  text: 'The TADS line of sight. The four short end-cap lines are the LMC on indicator.'
 - n: 10
   x: 400
   y: 280
   side: r
-  label: Constraints box
-  text: 'Missile constraints: solid when the reticle is inside, large when a missile can lock on before launch.'
+  label: Missile constraints box
+  text: 'Solid: the missile is in constraints. Large (LOBL) box: the missile is tracking.'
 - n: 11
   x: 425
   y: 425
   side: r
   label: Radar altitude
-  text: Height above the ground in feet.
+  text: 'Digital readout, feet AGL.'
 - n: 12
   x: 535
   y: 445
   side: r
-  label: Acquisition source
-  text: 'PHS: the pilot''s helmet sight.'
+  label: Acquisition select status
+  text: 'HAD acquisition select status field. PHS: pilot helmet sight.'
 - n: 13
   x: 460
   y: 466
   side: r
-  label: Weapon
-  text: 'CMSL: the CPG has missiles. Below: trajectory and missile mode.'
+  label: Weapon control and weapon status
+  text: 'HAD weapon control status field: CMSL, CPG missiles actioned. Weapon status field: trajectory and missile mode.'
 - n: 14
   x: 237
   y: 448
   side: b
-  label: Range
-  text: Laser range in metres, marked with a star.
+  label: Range and range source
+  text: 'HAD range and range source status field: laser range in metres, marked with *.'
 - n: 15
   x: 300
   y: 474
   side: b
-  label: Field of regard
-  text: The box is the TADS within its limits; the dot is the acquisition source.
+  label: TADS field of regard
+  text: 'The field of view box represents the TADS within its limits; the cued LOS dot represents the acquisition source.'

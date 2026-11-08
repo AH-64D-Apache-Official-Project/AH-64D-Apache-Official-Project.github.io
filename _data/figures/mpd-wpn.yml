@@ -1,6 +1,6 @@
 title: WPN page, missile format
 kind: mpd
-caption: WPN page with Hellfires actioned and the aircraft armed. SAL missiles on the inboard stations, rocket pods outboard.
+caption: 'WPN page, weapon actioned format: Hellfires actioned and the aircraft status ARM. SAL missiles on the inboard stations, rocket launchers outboard.'
 state:
   page: WPN
   src: { heading: 312 }
@@ -36,12 +36,12 @@ state:
     MFD_TEXT_IND_WPN_MSL_IMAGE_LINE_1: A
     MFD_TEXT_IND_WPN_MSL_IMAGE_LINE_2: R
 callouts:
-- { n: 1, x: 315, y: 112, side: t, label: Sight, text: "Your selected sight." }
-- { n: 2, x: 500, y: 130, side: t, label: Arm state, text: "**SAFE**, or **ARM** in yellow when the aircraft is armed." }
-- { n: 3, x: 685, y: 112, side: t, label: Acquisition source, text: "Your acquisition source." }
-- { n: 4, x: 305, y: 285, side: l, label: LST and LRFD codes, text: "The letters the spot tracker and the laser are set to." }
-- { n: 5, x: 500, y: 405, side: r, label: Cannon, text: "Rounds remaining." }
-- { n: 6, x: 345, y: 430, side: l, label: Selected missile, text: "The next missile to fire: its primary code letter, and **T** or **R** for whether its seeker sees that code." }
-- { n: 7, x: 267, y: 520, side: l, label: Rocket pod, text: "With the rocket type loaded." }
-- { n: 8, x: 560, y: 660, side: r, label: Chaff, text: "Chaff remaining, and ARM or SAFE." }
-- { n: 9, x: 335, y: 904, side: b, label: Missile channels, text: "The letter each channel holds. **PRI** and **ALT** mark the primary and alternate." }
+- { n: 1, x: 315, y: 112, side: t, label: SIGHT select status window, text: 'Selected sight of the crew station.' }
+- { n: 2, x: 500, y: 130, side: t, label: ARM/SAFE status window, text: 'Aircraft status: **SAFE**, or **ARM** in yellow.' }
+- { n: 3, x: 685, y: 112, side: t, label: ACQ select status window, text: 'Selected acquisition source of the crew station.' }
+- { n: 4, x: 305, y: 285, side: l, label: LST and LRFD status windows, text: 'The LST and LRFD code selections.' }
+- { n: 5, x: 500, y: 405, side: r, label: Gun icon and rounds counter, text: 'Rounds remaining.' }
+- { n: 6, x: 345, y: 430, side: l, label: SAL missile icon, text: 'The next missile to be launched: its priority channel code, and **T** when the missile seeker is in track mode or **R** when it is not.' }
+- { n: 7, x: 267, y: 520, side: l, label: Rocket launcher icon, text: 'With the rocket type loaded.' }
+- { n: 8, x: 560, y: 660, side: r, label: CHAFF status, text: 'Chaff cartridges remaining, and the dispenser status: SAFE or ARM.' }
+- { n: 9, x: 335, y: 904, side: b, label: SAL missile status window, text: 'The code each missile channel holds. **PRI** and **ALT** mark the priority and alternate channels.' }

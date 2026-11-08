@@ -1,6 +1,6 @@
 title: TSD ZN page
 kind: mpd
-caption: 'ZN page drawing PF zones with OPT AUTO: one box cut into four strips, PF1 active and assigned to the ownship. NF1 is active to the right.'
+caption: 'ZN page, TYPE PF, OPT AUTO: one box divided into four zones, PF1 active and assigned to the ownship. NF1 is active to the right.'
 state:
   page: TSD
   src:
@@ -40,13 +40,13 @@ state:
     - { ident: TSD_ZONE_LABEL_YELLOW, text: NF1, at: [3250, 2200] }
 callouts:
 - { n: 1, x: 56, y: 248, side: l, label: TYPE, text: PF or NF zones. }
-- { n: 2, x: 60, y: 361, side: l, label: OPT, text: 'AUTO: one zone, cut into strips.' }
+- { n: 2, x: 60, y: 361, side: l, label: OPT, text: 'AUTO: one zone, divided into strips.' }
 - { n: 3, x: 56, y: 474, side: l, label: ACT, text: The active PF zone. }
 - { n: 4, x: 60, y: 567, side: l, label: DEL, text: Deletes the PF zones. }
-- { n: 5, x: 46, y: 700, side: l, label: '#Z', text: How many strips AUTO makes. }
+- { n: 5, x: 46, y: 700, side: l, label: '#Z', text: 'Number of zones AUTO divides the zone into.'}
 - { n: 6, x: 56, y: 815, side: l, label: DR, text: 'BX: a box from two corners.' }
-- { n: 7, x: 570, y: 46, side: t, label: ASN, text: Assigns a PF zone to you. }
-- { n: 8, x: 377, y: 520, side: l, label: Active PF zone, text: 'PF1, active and yours: alternating dashes, labelled OWN.', snap: false }
+- { n: 7, x: 570, y: 46, side: t, label: ASN, text: Assigns a PF zone to the ownship. }
+- { n: 8, x: 377, y: 520, side: l, label: Active PF zone, text: 'PF1, active and assigned to the ownship: alternating dashes, labelled OWN.', snap: false }
 - { n: 9, x: 623, y: 425, side: r, label: PF zones, text: 'PF2 to PF4, dashed.', snap: false }
 - { n: 10, x: 740, y: 610, side: r, label: NF zone, text: 'NF1, active, in yellow.', snap: false }
-- { n: 11, x: 512, y: 743, side: r, label: Ownship, text: 'Frozen in white where the map froze; the live aircraft in cyan.' }
+- { n: 11, x: 512, y: 743, side: r, label: Ownship symbols, text: 'Frozen ownship symbol in white; dynamic ownship symbol in cyan.' }

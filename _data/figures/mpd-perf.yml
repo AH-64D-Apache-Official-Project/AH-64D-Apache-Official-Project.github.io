@@ -1,6 +1,6 @@
 title: PERF page
 kind: mpd
-caption: PERF page for the current gross weight, pressure altitude and temperature.
+caption: 'PERF page in the CUR perf mode: current gross weight, pressure altitude and free air temperature.'
 state:
   page: PERF
   t:
@@ -27,38 +27,38 @@ callouts:
   x: 60
   y: 245
   side: l
-  label: Pressure altitude
-  text: Feet.
+  label: PA
+  text: 'Pressure altitude, feet.'
 - n: 2
   x: 50
   y: 360
   side: l
-  label: Free air temperature
-  text: Degrees C.
+  label: FAT
+  text: 'Free air temperature, °C.'
 - n: 3
   x: 80
   y: 475
   side: l
-  label: Gross weight
-  text: Pounds, as loaded now.
+  label: GWT
+  text: 'Gross weight, pounds.'
 - n: 4
   x: 360
   y: 250
   side: t
-  label: Hover torque
-  text: 'Required torque to hover IGE and OGE, and the go/no-go torque: a 5 ft hover at the maximum dual engine gross weight. The boxed value is the indicated torque, the higher engine now.'
+  label: Hover Q
+  text: 'REQUIRED torque to hover IGE and OGE, and the GO-NO/GO torque, calculated at a 5 ft hover. INDICATED is the torque of the higher engine.'
 - n: 5
   x: 360
   y: 575
   side: l
-  label: Max gross weight
-  text: Maximum gross weight to hover IGE and OGE, dual engine (DE) and single engine (SE).
+  label: Max GWT
+  text: 'Maximum allowable gross weight for an IGE and OGE hover, dual engine (DE) and single engine (SE).'
 - n: 6
   x: 190
   y: 830
   side: l
-  label: Max torque
-  text: Maximum torque available per engine, DE at the 30-minute limit and SE at the 2.5-minute limit.
+  label: Max Q
+  text: 'Maximum torque available per engine, DE at the 30-minute limit and SE at the 2.5-minute limit.'
 - n: 7
   x: 780
   y: 250
@@ -69,7 +69,7 @@ callouts:
   x: 800
   y: 520
   side: r
-  label: Speeds
+  label: TAS
   text: 'True airspeeds: VNE, velocity never exceed; VSSE, velocity safe single engine; maximum range (RNG) and maximum endurance (END).'
 - n: 9
   x: 900
@@ -81,5 +81,5 @@ callouts:
   x: 600
   y: 825
   side: r
-  label: Centre of gravity
-  text: Inches aft of datum, against the forward and aft limits.
+  label: CG
+  text: 'The actual CG, with a vertical bar between the forward and aft CG limits.'

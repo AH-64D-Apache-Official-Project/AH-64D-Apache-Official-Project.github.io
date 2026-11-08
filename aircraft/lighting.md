@@ -1,17 +1,17 @@
 ---
 title: Lighting
-lead: The aircraft's exterior and cockpit lights, and what powers each of them.
+lead: The exterior and cockpit lights, their controls and their power sources.
 keywords: [lights, lighting, flood, floodlight, anti-collision, strobe, position lights, nav lights, searchlight, landing light, map light, ace map]
 seats: [PLT, CPG]
 ---
 
 | Light | Control | Power |
 |---|---|---|
-| **Cockpit floodlight** | The **floodlight knob** in each crew station, on the left console. Each seat has its own. | Battery |
-| **Anti-collision strobes** (red) | The pilot's **anti-collision switch** on the left console. | AC and DC |
-| **Searchlight** | Arma's **Lights** binding. | Battery |
-| **Position lights** (red left, green right, white tail) | None: always on. | |
+| Cockpit floodlight | Floodlight knob on the left console of each crew station; each crew station has its own. | Battery |
+| Anti-collision strobes | Pilot's anti-collision light switch, left console. | AC and DC |
+| Searchlight | Arma **Lights** binding. | Battery |
+| Position lights (red left, green right, white tail) | None; always on (not switchable in the simulation). | |
 
-The floodlight casts a green light over your instrument panel and consoles. With ACE loaded it also lights your map, as ACE's map lighting from a vehicle does: green, and only while your own seat's floodlight is on.
+The floodlight illuminates the instrument panel and consoles in green. With ACE loaded, it also illuminates the map as ACE vehicle map lighting, in green, while that crew station's floodlight is on.
 
-Each light remembers its setting when power is lost, and comes back on when power returns.
+Each light retains its setting when power is lost and returns to that setting when power is restored.
