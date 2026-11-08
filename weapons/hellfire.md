@@ -12,11 +12,11 @@ redirect_from:
 
 | Missile | Guidance | Warhead |
 |---|---|---|
-| AGM-114K | Laser (SAL2) | Anti-armour |
-| AGM-114K2A | Laser (SAL2) | Anti-armour, with a blast-fragmentation sleeve for personnel and soft targets |
+| AGM-114K | Laser (SAL2) | Anti-armor |
+| AGM-114K2A | Laser (SAL2) | Anti-armor, with a blast-fragmentation sleeve for personnel and soft targets |
 | AGM-114N | Laser (SAL2) | Blast, for structures and bunkers |
 | AGM-114FA | Laser (SAL1) | Earlier seeker, with a blast-fragmentation sleeve |
-| AGM-114L | Radar (RF) | Anti-armour, fire-and-forget; requires the [fire control radar]({{ '/targeting/fcr/' | relative_url }}) or a TADS handover |
+| AGM-114L | Radar (RF) | Anti-armor, fire-and-forget; requires the [fire control radar]({{ '/targeting/fcr/' | relative_url }}) or a TADS handover |
 
 Missiles are carried on four-rail M299 launchers. The missile type is selected with `R1`{: .vab} TYPE (SAL or RF) and, for laser missiles, `L3`{: .vab} SAL SEL on the [WPN page]({{ '/displays/mpd/wpn/' | relative_url }}).
 

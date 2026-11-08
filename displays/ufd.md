@@ -24,7 +24,7 @@ The UFD provides warning, caution, advisory, communications, fuel and other info
 
 ## Warnings, cautions and advisories
 
-The first five lines are divided into warning (left), caution (centre) and advisory (right) areas. A total of 5 warnings/cautions/advisories may be displayed. The full text of each message, and its corrective action, is listed on the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}) and on [Emergency procedures]({{ '/flying/emergency/' | relative_url }}).
+The first five lines are divided into warning (left), caution (center) and advisory (right) areas. A total of 5 warnings/cautions/advisories may be displayed. The full text of each message, and its corrective action, is listed on the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}) and on [Emergency procedures]({{ '/flying/emergency/' | relative_url }}).
 
 When a new warning or caution is displayed, one MPD in each crew station changes to the [ENG page]({{ '/displays/mpd/eng/' | relative_url }}): the left MPD, or the right MPD if the left is displaying the FLT page. No MPD changes if either MPD is already displaying the ENG page.
 
@@ -37,4 +37,4 @@ The next four lines present radio status: VHF (VH), UHF (UH), FM1 (F1) and FM2 (
 
 ## Bottom line
 
-Total fuel quantity in pounds, internal and external, is displayed on the left. The transponder (XP) status in the centre is static. Local time is displayed on the right.
+Total fuel quantity in pounds, internal and external, is displayed on the left. The transponder (XP) status in the center is static. Local time is displayed on the right.

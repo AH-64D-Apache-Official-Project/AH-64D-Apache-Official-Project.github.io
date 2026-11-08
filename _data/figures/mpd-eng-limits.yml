@@ -1,6 +1,6 @@
 title: ENG page, limits and timers
 kind: mpd
-caption: 'Both engines in a time-limited torque and TGT range, and engine 1 above its Ng limit. Engine torque and TGT each present one count-down timer, centred, with the shorter time; the Ng timer is below engine 1 only.'
+caption: 'Both engines in a time-limited torque and TGT range, and engine 1 above its Ng limit. Engine torque and TGT each present one count-down timer, centered, with the shorter time; the Ng timer is below engine 1 only.'
 state:
   page: ENG
   u:

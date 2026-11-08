@@ -24,14 +24,14 @@ Force trim sets the control position the aircraft returns to with the controls r
 1. Force trim interrupt – Press and hold.
 2. Flight control – Position in the desired position.
 3. Force trim interrupt – Release.
-4. Flight control – Re-centre (Center Trim Mode only).
+4. Flight control – Re-center (Center Trim Mode only).
 {: .steps}
 
 On release, the hold modes take the new attitude, position or heading as their reference.
 
-**Force Trim Reset** zeroes the trim and recentres the controls.
+**Force Trim Reset** zeroes the trim and recenters the controls.
 
-With **Cyclic Center Trim Mode** or **Pedal Center Trim Mode** selected in the HeliSim settings, the control has no effect after a trim release until it is returned to centre; this prevents a control jump on release. Springless and force-feedback sticks use **Springless Cyclic** and **Springless Pedals**, which disable force trim for that control.
+With **Cyclic Center Trim Mode** or **Pedal Center Trim Mode** selected in the HeliSim settings, the control has no effect after a trim release until it is returned to center; this prevents a control jump on release. Springless and force-feedback sticks use **Springless Cyclic** and **Springless Pedals**, which disable force trim for that control.
 
 ## Attitude hold
 
@@ -43,7 +43,7 @@ Attitude hold is engaged with **Attitude Hold**. The sub-mode depends on ground 
 | Above 5 kt, accelerating, up to 40 kt | Velocity hold | Ground speed and track |
 | Above 40 kt (down to 30 kt when decelerating) | Attitude hold | Pitch and roll attitude |
 
-A cyclic input beyond a small breakout releases the hold in that axis while the input is held; the hold re-engages when the cyclic is returned to centre. Force trim sets a new reference.
+A cyclic input beyond a small breakout releases the hold in that axis while the input is held; the hold re-engages when the cyclic is returned to center. Force trim sets a new reference.
 
 `ATT HOLD`{: .mpd} is displayed on the UFD while attitude hold is engaged. In position hold, a drift of approximately 50 ft from the hold point displays the `HOVER DRIFT`{: .mpd} advisory.
 
@@ -60,7 +60,7 @@ A collective input beyond a small breakout disengages altitude hold.
 
 ## Heading hold
 
-Heading hold uses the pedals. Below 5 kt ground speed it holds heading; above that it blends into turn coordination, keeping the skid/slip ball centred so that turns are flown with cyclic alone. A pedal input overrides heading hold; a force trim release sets the new heading.
+Heading hold uses the pedals. Below 5 kt ground speed it holds heading; above that it blends into turn coordination, keeping the skid/slip ball centered so that turns are flown with cyclic alone. A pedal input overrides heading hold; a force trim release sets the new heading.
 
 **Springless Pedals** disables heading hold together with pedal force trim, and **Keyboard Auto Pedal** replaces it.
 

@@ -7,7 +7,7 @@ redirect_from:
   - /mpd-tsd.html
 ---
 
-The TSD is selected with the TSD button on either MPD. It is the primary means of interacting with the helicopter's navigation system: waypoints, hazards, control measures, targets and threats are added, edited and deleted on the TSD with the KU. The map is heading up, with the ownship symbol near the bottom of the page (or in the centre with CTR).
+The TSD is selected with the TSD button on either MPD. It is the primary means of interacting with the helicopter's navigation system: waypoints, hazards, control measures, targets and threats are added, edited and deleted on the TSD with the KU. The map is heading up, with the ownship symbol near the bottom of the page (or in the center with CTR).
 
 The TSD has no terrain map; it displays points, lines and symbols on a black background at the selected map scale. The Arma map provides terrain.
 
@@ -50,7 +50,7 @@ The TSD has two phases, NAV and ATK, which provide decluttering options. The def
 | `L6`{: .vab} | `SHOW`{: .mpd} | [SHOW](#show) |
 | `R1`{: .vab} | `ZOOM`{: .mpd} | Magnifies the map scale by 20% about the ownship symbol, or returns; boxed while on |
 | `R2`{: .vab} | `SC`{: .mpd} | Map scale: `R1`{: .vab} 50 km, `R2`{: .vab} 25 km, `R3`{: .vab} 10 km, `R4`{: .vab} 5 km |
-| `R3`{: .vab} | `CTR`{: .mpd} | Ownship symbol at the bottom of the page or in the centre |
+| `R3`{: .vab} | `CTR`{: .mpd} | Ownship symbol at the bottom of the page or in the center |
 | `R4`{: .vab} | `CAQ`{: .mpd} | Cursor acquisition; see [CAQ](#caq) |
 | `R5`{: .vab} | `FRZ`{: .mpd} | Freezes the map; see [FRZ](#frz) |
 | `R6`{: .vab} | `ACQ`{: .mpd} | [Acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) list |
@@ -74,7 +74,7 @@ Over the map, the [MPD cursor]({{ '/displays/mpd/' | relative_url }}#cursor) is 
 | WPT or THRT ADD | Adds a point of the selected type at the cursor, at ground level: ident `WP`, `TU`, `CP` or `TG` |
 | RTE ADD | Selects the waypoint, hazard or control measure to insert |
 | RTE DIR | Direct-to the point |
-| PAN | Centres the map on the cursor position |
+| PAN | Centers the map on the cursor position |
 | ZN | Places a zone corner; see [ZN](#zn) |
 | Any page with a GRID prompt on the KU | Enters the cursor's grid |
 
@@ -145,7 +145,7 @@ Active zones are always displayed. RFI THREATS and OBSTACLES are not simulated.
 
 ## Data entry
 
-Data entry pushbuttons, labelled with `>` (`POINT>`{: .mpd}, `IDENT>`{: .mpd}), enter data on the [keyboard unit]({{ '/displays/ku/' | relative_url }}). An invalid entry displays an error, which is cleared with Enter before the value is re-entered.
+Data entry pushbuttons, labeled with `>` (`POINT>`{: .mpd}, `IDENT>`{: .mpd}), enter data on the [keyboard unit]({{ '/displays/ku/' | relative_url }}). An invalid entry displays an error, which is cleared with Enter before the value is re-entered.
 
 Points are identified by a letter and a number: **W01**–**W50** waypoints and hazards, **C51**–**C99** control measures, **T01**–**T50** targets and threats.
 
@@ -213,7 +213,7 @@ When flying to a route point, the route sequences to the next point automaticall
 
 ## ZN {#zn}
 
-`B3`{: .vab} ZN draws priority fire (PF) and no fire (NF) zones with the [MPD cursor](#cursor) on a frozen map. The radar uses the zones to prioritise targets; see [Zones]({{ '/targeting/fcr/' | relative_url }}#zones). ZN again returns to the TSD; PAN is available.
+`B3`{: .vab} ZN draws priority fire (PF) and no fire (NF) zones with the [MPD cursor](#cursor) on a frozen map. The radar uses the zones to prioritize targets; see [Zones]({{ '/targeting/fcr/' | relative_url }}#zones). ZN again returns to the TSD; PAN is available.
 
 {% include fig.html id="mpd-tsd-zn" %}
 
@@ -263,10 +263,10 @@ SEND, XMIT BOTH and the PF page OWN are not simulated (no datalink).
 
 | Item | Display |
 |---|---|
-| PF zone | White, dashed; the active zone has alternating dashes. Labelled PF1 to PF8, the assigned zone OWN |
-| NF zone | Yellow, dashed, labelled NF1 to NF8; active zones have alternating dashes |
+| PF zone | White, dashed; the active zone has alternating dashes. Labeled PF1 to PF8, the assigned zone OWN |
+| NF zone | Yellow, dashed, labeled NF1 to NF8; active zones have alternating dashes |
 | LINE icon | By ident: FLOT blue, FLET red, FSCL white, boundary (BL) and phase (PL) lines green; a phase line has its ident at both ends |
-| AREA icon | Red, labelled EA01 to EA12 |
+| AREA icon | Red, labeled EA01 to EA12 |
 
 Active zones are always displayed; inactive zones, lines and areas follow [SHOW](#show). Lines and areas are loaded from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc) and cannot be drawn in the cockpit.
 

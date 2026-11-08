@@ -29,7 +29,7 @@ Cockpit controls are operated through the Hatchet Interaction Framework; these b
 | Mouse Cursor (Toggle) | unbound | As above, toggled |
 | Previous / Next Setting | mouse side buttons | Steps a multi-position switch or knob back or forward |
 
-With head tracking, the cursor follows the centre of the view; a control is operated by looking at it and pressing **Interact**. Hatchet's options (cursor shape, colour, labels, and a detached cursor for TrackIR users) are in **Addon Options → Hatchet Interaction Framework**.
+With head tracking, the cursor follows the center of the view; a control is operated by looking at it and pressing **Interact**. Hatchet's options (cursor shape, color, labels, and a detached cursor for TrackIR users) are in **Addon Options → Hatchet Interaction Framework**.
 
 > The control label is displayed with the cursor over a control. **Show labels** in the Hatchet options also displays the binding for each control.
 {: .note}
@@ -42,13 +42,13 @@ HeliSim replaces the Arma helicopter controls. The bindings are in **HeliSim Fli
 |---|---|---|
 | Cyclic Forward / Backward / Left / Right | <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd> | Stick axes |
 | Pedal Left / Right | <kbd>Q</kbd> <kbd>E</kbd> | Rudder pedals or a twist axis |
-| Collective Up / Down | unbound | Analogue: the throttle axis, one direction per binding |
+| Collective Up / Down | unbound | Analog: the throttle axis, one direction per binding |
 | Keyboard Collective Up / Down | <kbd>Left Shift</kbd> <kbd>Left Ctrl</kbd> | Keys: the collective moves while held |
-| Force Trim | unbound | Held to fly through the holds; released to set new trim references. Bound on a spring-centred stick |
-| Force Trim Reset | unbound | Zeroes the trim references and recentres the controls |
+| Force Trim | unbound | Held to fly through the holds; released to set new trim references. Bound on a spring-centered stick |
+| Force Trim Reset | unbound | Zeroes the trim references and recenters the controls |
 | Attitude Hold / Altitude Hold / Hold Modes Off | unbound | See [Flight control modes]({{ '/flying/flight-control/' | relative_url }}) |
 | Sticky Control Interrupt | <kbd>Space</kbd> | Keyboard only: stops sticky cyclic and pedal inputs accumulating while held |
-| Control Input Visualiser: Toggle | <kbd>Ctrl</kbd>+<kbd>I</kbd> | Overlay showing control positions |
+| Control Input Visualizer: Toggle | <kbd>Ctrl</kbd>+<kbd>I</kbd> | Overlay showing control positions |
 
 The FD (flight director) bindings have no function in the AH-64D.
 

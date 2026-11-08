@@ -13,7 +13,7 @@ The ASE page is selected from the TSD (`T2`{: .vab} ASE), the WPN page or the ME
 
 ## Threat indications
 
-The ownship icon is in the centre of the ASE footprint, the circular area in the centre of the page, nose up. Each RLWR threat indication is displayed on the ASE footprint at its bearing relative to the ownship, with a symbol that identifies the threat and indicates its mode:
+The ownship icon is in the center of the ASE footprint, the circular area in the center of the page, nose up. Each RLWR threat indication is displayed on the ASE footprint at its bearing relative to the ownship, with a symbol that identifies the threat and indicates its mode:
 
 | Mode | Meaning |
 |---|---|

@@ -42,9 +42,9 @@ SYS and ETF are not simulated.
 
 ## Indications
 
-Engine torque and turbine gas temperature (TGT) are displayed as a vertical tape for each engine, with a digital readout above. In the centre, the two power turbine speed (Np) tapes are displayed either side of the main rotor speed (Nr) tape, a chevron, which rests at 101% in flight. Gas generator speed (Ng) is displayed as a digital readout on the right. Hydraulic pressure for the primary (PRI), utility (UTIL) and accumulator (ACC) systems is displayed as digital readouts in the HYD PSI status window.
+Engine torque and turbine gas temperature (TGT) are displayed as a vertical tape for each engine, with a digital readout above. In the center, the two power turbine speed (Np) tapes are displayed either side of the main rotor speed (Nr) tape, a chevron, which rests at 101% in flight. Gas generator speed (Ng) is displayed as a digital readout on the right. Hydraulic pressure for the primary (PRI), utility (UTIL) and accumulator (ACC) systems is displayed as digital readouts in the HYD PSI status window.
 
-The torque, TGT, Np and Ng indications are colour coded: **green** in the normal range, **yellow** in a time-limited range, **red** beyond a maximum or below a minimum. The torque and TGT tapes widen as they rise: torque above 100% and above 115%, TGT above 810 °C. Ng is also displayed red below 63% with the engine running. The limits are listed in [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}#indications-and-limits).
+The torque, TGT, Np and Ng indications are color coded: **green** in the normal range, **yellow** in a time-limited range, **red** beyond a maximum or below a minimum. The torque and TGT tapes widen as they rise: torque above 100% and above 115%, TGT above 810 °C. Ng is also displayed red below 63% with the engine running. The limits are listed in [Engines, drive train and rotor]({{ '/aircraft/engines/' | relative_url }}#indications-and-limits).
 
 ### Limit markings
 
@@ -66,7 +66,7 @@ The markings change with the operating condition:
 
 A white count-down timer displays the time remaining in a time-limited range, in minutes and seconds.
 
-- Torque, TGT and Ng each have one timer. With one engine in a time-limited range, the timer replaces that engine's digital readout; with both engines in one, a single timer is centred between the columns and displays the shorter time.
+- Torque, TGT and Ng each have one timer. With one engine in a time-limited range, the timer replaces that engine's digital readout; with both engines in one, a single timer is centered between the columns and displays the shorter time.
 - Np has a timer for each engine, in place of its digital readout.
 
 When a timer reaches 0:00, the allowance is exhausted and the engine or drive train begins to incur damage. A range with no allowance displays 0:00 on entry. Each range has its own allowance, which resets to full each time the range is entered.

@@ -67,7 +67,7 @@ callouts:
   y: 420
   side: t
   label: Main rotor speed (Nr) tape
-  text: 'The chevron in the centre.'
+  text: 'The chevron in the center.'
 - n: 7
   x: 915
   y: 418

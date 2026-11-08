@@ -79,7 +79,7 @@ callouts:
   y: -6
   side: t
   label: Heading scale
-  text: 'Magnetic heading scale; the current magnetic heading is presented in the centre.'
+  text: 'Magnetic heading scale; the current magnetic heading is presented in the center.'
 - n: 2
   x: 329
   y: 26
@@ -121,7 +121,7 @@ callouts:
   y: 176
   side: r
   label: Flight path vector
-  text: 'Projected flight path: the point towards which the helicopter is flying. Presented above 5 kt ground speed.'
+  text: 'Projected flight path: the point toward which the helicopter is flying. Presented above 5 kt ground speed.'
 - n: 9
   x: 470
   y: 232

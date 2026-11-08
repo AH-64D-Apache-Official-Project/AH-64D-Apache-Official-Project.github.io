@@ -36,7 +36,7 @@ AUTO transfer requires pneumatic air from the APU or an operating engine.
 
 ## Auxiliary tanks
 
-L AUX and R AUX on the FUEL page select transfer from the external tanks on each side. With transfer selected, each side's tanks feed their main cell at approximately 50 lb per minute while the cell has room. The inboard tank feeds first; an outboard tank feeds only with the inboard tank installed, since it is pressurised through the inboard tank. Each side's transfer is deselected automatically when its tanks are empty, and an empty tank is indicated by the EXT1 EMPTY to EXT4 EMPTY advisory.
+L AUX and R AUX on the FUEL page select transfer from the external tanks on each side. With transfer selected, each side's tanks feed their main cell at approximately 50 lb per minute while the cell has room. The inboard tank feeds first; an outboard tank feeds only with the inboard tank installed, since it is pressurized through the inboard tank. Each side's transfer is deselected automatically when its tanks are empty, and an empty tank is indicated by the EXT1 EMPTY to EXT4 EMPTY advisory.
 
 C AUX selects transfer from the IAFS into both main cells. The IAFS transfers only after any selected external tanks are empty.
 
@@ -46,9 +46,9 @@ A fuel cell that is damaged leaks, at up to approximately 130 lb per hour per ce
 
 An external tank whose pylon is heavily damaged explodes and is lost from the wing; the explosion increases with the fuel in the tank. A tank with less than approximately 200 lb of fuel does not explode.
 
-## Refuelling and jettison
+## Refueling and jettison
 
-- ACE refuelling from a fuel vehicle or fuel source distributes fuel across the tanks.
+- ACE refueling from a fuel vehicle or fuel source distributes fuel across the tanks.
 - The [mission planner]({{ '/mission/planner/' | relative_url }}) sets the fuel load directly; whether a fuel source is required depends on the server settings.
 - Emergency jettison, bound in **AH-64D Official Project**, releases all four wing stations, external tanks included. It requires battery power.
 

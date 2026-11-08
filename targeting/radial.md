@@ -5,7 +5,7 @@ keywords: [radial menu, radial, wheel, sight select, quick menu, dwell, gamepad]
 seats: [PLT, CPG]
 ---
 
-The radial menu is bound with {% include key.html id="fza_ah64_radialMenu" %} in **AH-64D Official Project**. It opens around the centre of the screen.
+The radial menu is bound with {% include key.html id="fza_ah64_radialMenu" %} in **AH-64D Official Project**. It opens around the center of the screen.
 
 ## Selection
 
@@ -18,7 +18,7 @@ The radial menu is bound with {% include key.html id="fza_ah64_radialMenu" %} in
 
 Only the direction bindings select by holding. The aim input and head tracking do not select, so the view can be moved with the menu open.
 
-The hub in the centre displays the current selection; selecting it returns, or closes the top menu. Selected items are green; items not currently available are grey.
+The hub in the center displays the current selection; selecting it returns, or closes the top menu. Selected items are green; items not currently available are gray.
 
 The menu closes after a selection unless **Keep open after selecting** is on in [Addon settings]({{ '/getting-started/settings/' | relative_url }}).
 
@@ -29,7 +29,7 @@ Each item operates the same binding as the corresponding control; the [sights]({
 | Position | Items |
 |---|---|
 | Top two thirds | The sights available to the crew station, left to right: TADSL, TADS, HMD, FCR, FCRL. Selecting one also sets or clears Link as required, then opens that sight's menu. |
-| Bottom third | NVS TADS or NVS PNVS: exchanges the night vision sensor. Grey with the NVS MODE switch OFF. |
+| Bottom third | NVS TADS or NVS PNVS: exchanges the night vision sensor. Gray with the NVS MODE switch OFF. |
 
 The pilot's menu contains HMD and, with the radar installed, FCR.
 
@@ -42,7 +42,7 @@ The pilot's menu contains HMD and, with the radar installed, FCR.
 | HMD | TRANS or CRUS (the other of the two) | HVR or BOB (the other of the two) |
 | LST (CPG) | AUTO, or OFF when in AUTO | MANUAL, or OFF when in MAN |
 
-The TADS and FCR menus list only the options that can be changed to; the current sensor, mode or size is omitted. FCR options require ownership of the radar. TADS options are grey while the TADS is a night vision sensor, and the sensor options are grey under the A3 Thermal Improvement FLIR.
+The TADS and FCR menus list only the options that can be changed to; the current sensor, mode or size is omitted. FCR options require ownership of the radar. TADS options are gray while the TADS is a night vision sensor, and the sensor options are gray under the A3 Thermal Improvement FLIR.
 
-> The radial menu can share a binding with the Hatchet cockpit cursor, for example a mouse side button. With both bound to the same input, the radial menu opens and the cursor is restored afterwards.
+> The radial menu can share a binding with the Hatchet cockpit cursor, for example a mouse side button. With both bound to the same input, the radial menu opens and the cursor is restored afterward.
 {: .note}

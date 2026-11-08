@@ -1,6 +1,6 @@
 ---
 title: Fire control radar
-lead: Operation of the fire control radar — radar ownership, scanning, modes, scan size, detection, target priority, zones, the centreline and use with the TADS.
+lead: Operation of the fire control radar — radar ownership, scanning, modes, scan size, detection, target priority, zones, the centerline and use with the TADS.
 keywords: [fcr, radar, longbow, scan, single scan, continuous, gtm, atm, rmap, tpm, scan size, nts, ants, centerline, owner, link, slave, detection, zone, priority fire zone, no fire zone, tgt, cursor]
 seats: [PLT, CPG]
 redirect_from:
@@ -18,7 +18,7 @@ The radar is aircraft common, and is controlled by one crew station at a time, t
 - Taking the radar from the other crew station stops its scan.
 - Selecting a different sight releases the radar and stops the scan.
 
-Only the owner can scan, change the mode or scan size, slew the centreline and step the next-to-shoot target. The other crew station's radar bindings have no effect.
+Only the owner can scan, change the mode or scan size, slew the centerline and step the next-to-shoot target. The other crew station's radar bindings have no effect.
 
 ## Requirements
 
@@ -71,7 +71,7 @@ TPM selects its own width: 180° below 45 kt, 90° above 55 kt.
 - Range 500 m to 8 km, with line of sight required.
 - Stationary ground targets are displayed to 6 km; moving targets and aircraft to 8 km.
 - GTM and RMAP ignore targets more than 25° above the antenna. ATM displays only moving aircraft and helicopters, down to 22.5° below the antenna.
-- Targets are classified as tracked, wheeled, helicopter, aircraft or air defence; any other target is unknown.
+- Targets are classified as tracked, wheeled, helicopter, aircraft or air defense; any other target is unknown.
 
 Detection is probabilistic. In each scanburst a target may be displayed in full intensity, in partial intensity, or not at all:
 
@@ -81,7 +81,7 @@ Detection is probabilistic. In each scanburst a target may be displayed in full 
 
 ## Target priority and next-to-shoot
 
-Targets are ranked: full intensity before partial intensity, then air defence, wheeled, tracked, helicopter, flyer, unknown. The FCR page, the HMD and the TSD NAV phase display the top 16; the TSD ATK phase displays all.
+Targets are ranked: full intensity before partial intensity, then air defense, wheeled, tracked, helicopter, flyer, unknown. The FCR page, the HMD and the TSD NAV phase display the top 16; the TSD ATK phase displays all.
 
 The highest-priority target is the next-to-shoot (NTS), and the next is the alternate (ANTS). The owner steps the NTS through the top 16 with `L1`{: .vab} NTS on the FCR page or {% include key.html id="vehLockTargets" %}, with FCR as the sight. The NTS remains on its target while that target remains in the top 16.
 
@@ -98,18 +98,18 @@ Priority fire (PF) and no fire (NF) zones, drawn on the TSD [ZN page]({{ '/displ
 
 Zones take effect from the next scan. The active zones are drawn on the GTM and ATM pages.
 
-## Centreline {#centerline}
+## Centerline {#centerline}
 
-The centreline is the centre of the scan sector.
+The centerline is the center of the scan sector.
 
 - `L2`{: .vab} and `R2`{: .vab} on the FCR page slew it: 90° per press in Wide, 22.5° in Medium, 15° in Narrow, 7.5° in Zoom. Slewing stops a scan in progress.
-- A slewed centreline holds its bearing as the aircraft turns. Slewed back to the nose, it follows the nose.
+- A slewed centerline holds its bearing as the aircraft turns. Slewed back to the nose, it follows the nose.
 - It cannot be slewed in TPM or in ATM Wide.
 
-Some sight configurations point the centreline automatically:
+Some sight configurations point the centerline automatically:
 
-- **Pilot**: the centreline can be slewed only with FXD as the acquisition source. Otherwise it follows the acquisition source (the pilot's head with PHS), updating at most four times per second and not during a scan. Selecting FCR as the sight points it along the acquisition source.
-- **CPG**: the centreline cannot be slewed while slaved or in TADS-L. Slaved with FCR as the sight, it points along the acquisition source; in TADS-L it follows the TADS.
+- **Pilot**: the centerline can be slewed only with FXD as the acquisition source. Otherwise it follows the acquisition source (the pilot's head with PHS), updating at most four times per second and not during a scan. Selecting FCR as the sight points it along the acquisition source.
+- **CPG**: the centerline cannot be slewed while slaved or in TADS-L. Slaved with FCR as the sight, it points along the acquisition source; in TADS-L it follows the TADS.
 
 ## C-scope {#on-the-helmet}
 

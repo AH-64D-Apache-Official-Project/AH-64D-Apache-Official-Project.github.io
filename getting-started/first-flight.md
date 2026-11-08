@@ -19,7 +19,7 @@ The aircraft is ready for flight with Nr at 101% and no warnings or cautions on 
 
 ## Hover
 
-With hover symbology selected ({% include key.html id="fza_ah64_symbologySelectDown" %}), press and hold the force trim interrupt. Apply collective while applying left pedal and left cyclic as required to maintain heading and position. At approximately 20% below hover power the aircraft becomes "light on the wheels". Continue increasing collective until the aircraft settles at 5 ft. Once stabilised at 5 ft, release the force trim and engage the attitude and altitude holds as desired.
+With hover symbology selected ({% include key.html id="fza_ah64_symbologySelectDown" %}), press and hold the force trim interrupt. Apply collective while applying left pedal and left cyclic as required to maintain heading and position. At approximately 20% below hover power the aircraft becomes "light on the wheels". Continue increasing collective until the aircraft settles at 5 ft. Once stabilized at 5 ft, release the force trim and engage the attitude and altitude holds as desired.
 
 Below 5 kt ground speed, attitude hold operates in position hold and holds the aircraft over the ground. A drift of approximately 50 ft from the hold point displays the `HOVER DRIFT`{: .mpd} advisory.
 
@@ -29,7 +29,7 @@ Below 5 kt ground speed, attitude hold operates in position hold and holds the a
 
 With transition symbology selected ({% include key.html id="fza_ah64_symbologySelectUp" %}), press and hold the force trim interrupt. Increase the collective a minimum of 10% above hover power, not to exceed maximum torque available or 100%, whichever is lower. Apply pedal as necessary to maintain ground track alignment below 50 ft, or commensurate with obstacles, and apply forward cyclic as necessary to achieve 50 kt by 50 ft.
 
-Once above 50 ft, place the aircraft in aerodynamic trim, ball centred. Maintain a 500 ft per minute rate of climb, ±200 fpm. Within 10% of the rate of climb (approximately 50 ft) of the desired cruise altitude, apply forward cyclic to accelerate to the desired cruise speed and level the VSI at the desired cruise altitude. Once stable, release the force trim and engage the attitude and altitude holds as desired.
+Once above 50 ft, place the aircraft in aerodynamic trim, ball centered. Maintain a 500 ft per minute rate of climb, ±200 fpm. Within 10% of the rate of climb (approximately 50 ft) of the desired cruise altitude, apply forward cyclic to accelerate to the desired cruise speed and level the VSI at the desired cruise altitude. Once stable, release the force trim and engage the attitude and altitude holds as desired.
 
 ### Downwind
 

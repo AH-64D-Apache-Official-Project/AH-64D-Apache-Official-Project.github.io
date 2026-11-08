@@ -61,7 +61,7 @@ These came in the 2.2.9, 2.2.91 and 2.3 pre-releases:
 - Radar Hellfires can be fired with a **TADS handoff**, without the radar. See [AGM-114 Hellfire]({{ '/weapons/hellfire/' | relative_url }}#rf).
 - **Shot-at** markers on the TSD and FCR pages, and the TSD's [COORD]({{ '/displays/mpd/tsd/' | relative_url }}#coord) page for reviewing stored data.
 - The **VERS** page, which checks the mod's files are intact. See [DMS]({{ '/displays/mpd/dms/' | relative_url }}).
-- Air defence classification for **PRACS** and **PRACS SLA**. See [Compatibility]({{ '/mission/compatibility/' | relative_url }}).
+- Air defense classification for **PRACS** and **PRACS SLA**. See [Compatibility]({{ '/mission/compatibility/' | relative_url }}).
 - Stores loaded onto the wrong crew station or mixed on one station are corrected. See [Rearm and refuel]({{ '/mission/rearm/' | relative_url }}#pylon-rules).
 - Translations of the mod's text, apart from the MPDs, into more languages.
 

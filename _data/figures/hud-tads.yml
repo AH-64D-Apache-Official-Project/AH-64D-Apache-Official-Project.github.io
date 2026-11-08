@@ -152,7 +152,7 @@ callouts:
   y: 448
   side: b
   label: Range and range source
-  text: 'HAD range and range source status field: laser range in metres, marked with *.'
+  text: 'HAD range and range source status field: laser range in meters, marked with *.'
 - n: 15
   x: 300
   y: 474

@@ -5,7 +5,7 @@ keywords: [ku, keyboard unit, keyboard, input, type, prompt, enter, scratchpad]
 seats: [PLT, CPG]
 ---
 
-The KU provides data entry when adding waypoints, hazards, control measures, targets and threats, and for laser codes. When data entry is required, the KU illuminates to indicate it is ready to accept input. Data entry pushbuttons are labelled with a `>`, such as `POINT>`{: .mpd} or `IDENT>`{: .mpd}.
+The KU provides data entry when adding waypoints, hazards, control measures, targets and threats, and for laser codes. When data entry is required, the KU illuminates to indicate it is ready to accept input. Data entry pushbuttons are labeled with a `>`, such as `POINT>`{: .mpd} or `IDENT>`{: .mpd}.
 
 > While the KU is active it captures the physical keyboard until data entry is complete. Mouse and keyboard users place the aircraft in a stable condition before entering data.
 {: .caution}

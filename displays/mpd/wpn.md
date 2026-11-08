@@ -48,7 +48,7 @@ UTIL, BORESIGHT, GRAYSCALE, TRAIN and HARMONIZE are not simulated.
 | Button | Label | Function |
 |---|---|---|
 | `L1`{: .vab}–`L5`{: .vab} | `10` `20` `50` `100` `ALL` | BURST LIMIT: rounds per trigger pull |
-| `R2`{: .vab} | `MODE`{: .mpd} | NORM: the gun follows the selected sight. FXD: the gun is fixed to the centreline of the aircraft. Crewstation independent. |
+| `R2`{: .vab} | `MODE`{: .mpd} | NORM: the gun follows the selected sight. FXD: the gun is fixed to the centerline of the aircraft. Crewstation independent. |
 
 See [M230 chain gun]({{ '/weapons/cannon/' | relative_url }}).
 

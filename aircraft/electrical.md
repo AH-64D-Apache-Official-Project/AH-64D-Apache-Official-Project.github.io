@@ -17,7 +17,7 @@ Hydraulic power is lost at approximately 45% Nr, because the hydraulic pumps are
 
 ## Auxiliary power unit (APU)
 
-The APU provides hydraulic pressure and electrical power to the helicopter by turning the No. 7 drive shaft, which is connected to the accessory section of the main transmission. It also provides pressurised air to start the engines.
+The APU provides hydraulic pressure and electrical power to the helicopter by turning the No. 7 drive shaft, which is connected to the accessory section of the main transmission. It also provides pressurized air to start the engines.
 
 The APU is started by the utility hydraulic accumulator and requires a minimum of 2600 psi in the accumulator. The APU requires battery power to start. The APU takes approximately 5 seconds to start from the time the APU button is pressed. During this time the crew will see the APU START and APU PWR ON advisories in the UFD, and the ACCUM PSI advisory, indicating that the accumulator has discharged its available pressure to start the APU. The ACCUM PSI advisory clears during the start, when the accumulator has been recharged to 3000 psi. Once the APU is on, the APU button is illuminated ON and the UFD displays APU ON in the advisory column.
 
@@ -76,7 +76,7 @@ On a loss of primary hydraulic pressure together with a utility reservoir level 
 
 A loss of **both** primary and utility hydraulic pumps results in a complete loss of aircraft control until the crew presses the EMER HYD button. The crew **MUST** immediately press the EMER HYD button and land the aircraft without delay.
 
-The utility hydraulic accumulator provides pressurised hydraulic fluid to the APU start motor, the rotor brake and emergency hydraulics. Emergency hydraulic power is available when the EMER HYD button is pressed in either crew station with primary and utility hydraulic pressure below 1260 psi, and provides control for approximately 60 seconds. Accumulator (ACC) pressure remaining is displayed on the ENG page. When the accumulator reaches 1650 psi, ALL hydraulic power is lost, the accumulator reads 0, and the pilot is no longer able to control the helicopter.
+The utility hydraulic accumulator provides pressurized hydraulic fluid to the APU start motor, the rotor brake and emergency hydraulics. Emergency hydraulic power is available when the EMER HYD button is pressed in either crew station with primary and utility hydraulic pressure below 1260 psi, and provides control for approximately 60 seconds. Accumulator (ACC) pressure remaining is displayed on the ENG page. When the accumulator reaches 1650 psi, ALL hydraulic power is lost, the accumulator reads 0, and the pilot is no longer able to control the helicopter.
 
 > The emergency hydraulic duration is adjusted in the simulation for gameplay and does not represent the aircraft's exact figure.
 {: .note}

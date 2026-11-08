@@ -37,7 +37,7 @@ The BRT and VID controls and the DAY/NIGHT/MONO knob are not simulated.
 | Filled or open dot beside the label | On/Off pushbutton: filled is on, open is off |
 | Box around the label | Selected option. On the aircraft pages, the boxed page pushbutton is the page presented, and pressing it returns to the ENG page. |
 
-Green indicates normal and advisory conditions; yellow, cautions and hazards; red, warnings and enemy threats; white, attention, such as an empty fuel cell; cyan, friendlies and the sky of the attitude indicator; brown, the ground of the attitude indicator. Partial intensity de-emphasises normal conditions.
+Green indicates normal and advisory conditions; yellow, cautions and hazards; red, warnings and enemy threats; white, attention, such as an empty fuel cell; cyan, friendlies and the sky of the attitude indicator; brown, the ground of the attitude indicator. Partial intensity de-emphasizes normal conditions.
 
 ## MPD cursor {#cursor}
 
@@ -47,7 +47,7 @@ Each crew station has its own MPD cursor, a green ring with four spokes, which m
 |---|---|
 | MPD Cursor: Up / Down / Left / Right | Moves the cursor; speed increases with stick deflection and with time held. |
 | MPD Cursor: Enter | Presses the button whose label is under the cursor, or acts on the symbol under it. |
-| MPD Cursor: Display Select | Moves the cursor to the centre of the other MPD. |
+| MPD Cursor: Display Select | Moves the cursor to the center of the other MPD. |
 
 - **Buttons**: with the cursor on a label, the label is displayed bold; Enter presses the button, and holding Enter holds it. A button without a label can be pressed at its position on the MPD edge.
 - **Pages**: over the TSD map or the FCR scan area the cursor is displayed as a white X. The function of Enter there is described on the [TSD]({{ '/displays/mpd/tsd/' | relative_url }}#cursor) and [FCR]({{ '/displays/mpd/fcr/' | relative_url }}#cursor) pages.

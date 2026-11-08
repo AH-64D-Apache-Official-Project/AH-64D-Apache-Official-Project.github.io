@@ -16,7 +16,7 @@ The rocket system fires unguided 2.75 inch Hydra 70 rockets from 19-tube M261 la
 |---|---|---|---|
 | M151 HEDP | `6PD`{: .mpd} | 10 lb high explosive, pre-fragmented | Light vehicles, personnel |
 | M255A1 FLEC | `6FL`{: .mpd} | Flechettes | Personnel in the open |
-| M261 MPSM | `6MP`{: .mpd} | Nine parachute-retarded submunitions | Personnel and light armour over an area |
+| M261 MPSM | `6MP`{: .mpd} | Nine parachute-retarded submunitions | Personnel and light armor over an area |
 | M257 IL | `6IL`{: .mpd} | Parachute flare, visible light | Illuminates approximately 1 km² for approximately 100 s, deployed approximately 3.5 km from launch |
 | M278 IR IL | `6IR`{: .mpd} | Parachute flare, infrared | As M257; visible through night vision and thermal sensors only |
 
@@ -28,7 +28,7 @@ Each launcher holds 19 rockets in three zones, and each zone can be loaded with 
 |---|---|
 | A / C | 12 |
 | B / D | 4 |
-| E (centre) | 3 |
+| E (center) | 3 |
 
 The pylon loadout sets the rocket type in each zone; see [Rearm and refuel]({{ '/mission/rearm/' | relative_url }}). The [WPN page]({{ '/displays/mpd/wpn/' | relative_url }}) lists up to five rocket types loaded, with the quantity of each.
 

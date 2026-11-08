@@ -41,7 +41,7 @@ callouts:
   y: 150
   side: t
   label: Heading scale
-  text: Moving magnetic heading scale; current magnetic heading is presented in the centre as a 3-digit data field.
+  text: Moving magnetic heading scale; current magnetic heading is presented in the center as a 3-digit data field.
 - n: 3
   x: 549
   y: 188
@@ -59,7 +59,7 @@ callouts:
   y: 240
   side: l
   label: Bank angle
-  text: Analogue indication of the current bank angle; the bank angle triangle moves with the roll of the attitude indicator.
+  text: Analog indication of the current bank angle; the bank angle triangle moves with the roll of the attitude indicator.
 - n: 6
   x: 140
   y: 522
@@ -83,7 +83,7 @@ callouts:
   y: 470
   side: l
   label: Flight path vector
-  text: The projected flight path; the point towards which the helicopter is flying.
+  text: The projected flight path; the point toward which the helicopter is flying.
 - n: 10
   x: 700
   y: 540

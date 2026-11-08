@@ -191,7 +191,7 @@ fza_ah64_mpdCursorEnter:
 fza_ah64_mpdCursorDisplaySelect:
   name: "MPD Cursor: Display Select"
   group: MPD cursor
-  desc: Moves your MPD cursor to the centre of your other MPD.
+  desc: Moves your MPD cursor to the center of your other MPD.
 fza_ah64_wasGun:
   name: WAS Gun
   group: Weapons

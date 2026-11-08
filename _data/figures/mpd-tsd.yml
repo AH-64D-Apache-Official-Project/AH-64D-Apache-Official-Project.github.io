@@ -107,7 +107,7 @@ callouts:
   y: 294
   side: r
   label: CTRLM icon, enemy unit
-  text: 'Enemy armour, with its free text.'
+  text: 'Enemy armor, with its free text.'
   snap: false
 - n: 6
   x: 505

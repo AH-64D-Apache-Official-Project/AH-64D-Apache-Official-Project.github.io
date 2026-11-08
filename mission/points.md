@@ -7,11 +7,11 @@ seats: [PLT, CPG]
 
 ## Point types
 
-| Type | Numbers | Colour | Use |
+| Type | Numbers | Color | Use |
 |---|---|---|---|
 | Waypoint/Hazard | `W01`{: .mpd}–`W50`{: .mpd} | Green (waypoint), yellow (hazard) | Navigation points: start, release and passage points, landing zones; towers and wires |
 | Control measure | `C51`{: .mpd}–`C99`{: .mpd} | Green, blue (friendly) or red (enemy) | Battlefield graphics: assembly areas, battle positions, FARPs, units |
-| Target/Threat | `T01`{: .mpd}–`T50`{: .mpd} | Red | Known targets and air defences |
+| Target/Threat | `T01`{: .mpd}–`T50`{: .mpd} | Red | Known targets and air defenses |
 
 A point is identified on the KU by its letter and two digits: `W03`, `C51`, `T12`.
 
@@ -34,7 +34,7 @@ Points may be shown or hidden by category on the [TSD > SHOW]({{ '/displays/mpd/
 
 ## Lines, areas and zones
 
-In addition to points, the aircraft holds up to 15 lines (phase and boundary lines, FLOT, FLET and FSCL), 12 engagement areas, 8 priority fire zones and 8 no fire zones. Lines and areas are loaded only from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc); zones can also be drawn on the TSD [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn). The TSD displays them, the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord) lists lines and areas, and the radar uses the zones to [prioritise targets]({{ '/targeting/fcr/' | relative_url }}#zones).
+In addition to points, the aircraft holds up to 15 lines (phase and boundary lines, FLOT, FLET and FSCL), 12 engagement areas, 8 priority fire zones and 8 no fire zones. Lines and areas are loaded only from a [DTC]({{ '/mission/planner/' | relative_url }}#dtc); zones can also be drawn on the TSD [ZN page]({{ '/displays/mpd/tsd/' | relative_url }}#zn). The TSD displays them, the [COORD page]({{ '/displays/mpd/tsd/' | relative_url }}#coord) lists lines and areas, and the radar uses the zones to [prioritize targets]({{ '/targeting/fcr/' | relative_url }}#zones).
 
 ## Route sequencing
 
@@ -90,15 +90,15 @@ Each symbol is shown as it is drawn on the TSD. The point numbers and the free t
 | {{ i }}GL.png" alt=""> | `GL` | Ground light / small town |
 | {{ i }}HA.png" alt=""> | `HA` | Holding area |
 | {{ i }}ID.png" alt=""> | `ID` | IDM subscriber |
-| {{ i }}AM.png" alt=""> | `AM` | Friendly armour |
+| {{ i }}AM.png" alt=""> | `AM` | Friendly armor |
 | {{ i }}FL.png" alt=""> | `FL` | Friendly artillery |
 | {{ i }}FI.png" alt=""> | `FI` | Friendly infantry |
-| {{ i }}MI.png" alt=""> | `MI` | Friendly mechanised infantry |
+| {{ i }}MI.png" alt=""> | `MI` | Friendly mechanized infantry |
 | {{ i }}FU.png" alt=""> | `FU` | Friendly unit |
-| {{ i }}AE.png" alt=""> | `AE` | Enemy armour |
+| {{ i }}AE.png" alt=""> | `AE` | Enemy armor |
 | {{ i }}EF.png" alt=""> | `EF` | Enemy artillery |
 | {{ i }}EI.png" alt=""> | `EI` | Enemy infantry |
-| {{ i }}EM.png" alt=""> | `EM` | Enemy mechanised infantry |
+| {{ i }}EM.png" alt=""> | `EM` | Enemy mechanized infantry |
 | {{ i }}EU.png" alt=""> | `EU` | Enemy unit |
 
 ### Targets and threats (TG)
@@ -106,7 +106,7 @@ Each symbol is shown as it is drawn on the TSD. The point numbers and the free t
 | Symbol | Ident | Description |
 |---|---|---|
 | {{ i }}TG.png" alt=""> | `TG` | Target point |
-| {{ i }}GU.png" alt=""> | `GU` | Generic air defence unit (ADU) |
+| {{ i }}GU.png" alt=""> | `GU` | Generic air defense unit (ADU) |
 | {{ i }}ZU.png" alt=""> | `ZU` | ZSU-23-4 ADU |
 | {{ i }}S6.png" alt=""> | `S6` | 2S6 / SA-13 ADU |
 | {{ i }}1.png" alt=""> | `1` | SA-1 ADU |

@@ -6,16 +6,16 @@ keywords: [compatibility, rhs, cup, pook, pracs, sam, acre, radio, doom, a3ti, z
 
 The compatibility patches are built into the mod. Each is activated when its mod is loaded and has no effect otherwise; no additional installation is required.
 
-## Air defence classification
+## Air defense classification
 
-The [warning receivers]({{ '/weapons/ase/' | relative_url }}) and the radar classify air defence vehicles by type, to display the correct threat symbol. The mod classifies the Arma vehicles and the air defence vehicles of the following mods:
+The [warning receivers]({{ '/weapons/ase/' | relative_url }}) and the radar classify air defense vehicles by type, to display the correct threat symbol. The mod classifies the Arma vehicles and the air defense vehicles of the following mods:
 
 | Mod | Vehicles classified |
 |---|---|
 | RHS | ZSU-23-4 Shilka |
 | CUP | M6 Linebacker, M1097 Avenger, M163 Vulcan |
 | Pook's SAM Pack | The pack's SAM launchers, radars and guns: NASAMS, Patriot, HAWK, SA-2, SA-3, SA-8, SA-10/20, SA-11/17, SA-15, SA-19, SA-21, ZSU and C-RAM, with their search and tracking radars |
-| PRACS | MPQ-64 Sentinel, M163 PIVADS, HAWK and I-HAWK, M48 Chaparral and other US air defence |
+| PRACS | MPQ-64 Sentinel, M163 PIVADS, HAWK and I-HAWK, M48 Chaparral and other US air defense |
 | PRACS SLA | 1S91, P-37 radar, ZSU-23, SA-2, SA-6, SA-8, SA-9, SA-13, SA-17 and 2S6 Tunguska |
 
 Vehicles from other mods are valid targets; they are displayed without their specific threat symbol and class on the ASE page.

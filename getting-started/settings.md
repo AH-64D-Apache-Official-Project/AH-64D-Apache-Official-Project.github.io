@@ -76,11 +76,11 @@ These settings determine how the flight model responds to control inputs.
 | Setting | Default | Function |
 |---|---|---|
 | Aircraft Realism Settings | Casual | **Casual** adds keyboard assists; **Realistic** is the unassisted flight model. |
-| Cyclic Center Trim Mode | Off | After a force trim release, the cyclic has no effect until returned to centre. Prevents a control jump when the stick is not at the trim position. |
+| Cyclic Center Trim Mode | Off | After a force trim release, the cyclic has no effect until returned to center. Prevents a control jump when the stick is not at the trim position. |
 | Pedal Center Trim Mode | Off | As above, for the pedals. |
-| Springless Cyclic | Off | Disables cyclic force trim, for sticks without a centring spring. |
+| Springless Cyclic | Off | Disables cyclic force trim, for sticks without a centering spring. |
 | Springless Pedals | Off | Disables pedal force trim; also disables heading hold. |
-| Keyboard Sticky Pitch / Roll / Yaw | Off | Keyboard input accumulates while the key is held instead of returning to centre. Not used with a stick or gamepad. |
+| Keyboard Sticky Pitch / Roll / Yaw | Off | Keyboard input accumulates while the key is held instead of returning to center. Not used with a stick or gamepad. |
 | Keyboard Auto Pedal | On | Operates the pedals automatically, in either realism setting, in place of heading hold. Not compatible with Sticky Yaw. |
 | Keyboard Auto Pitch | On | Casual only. Holds the level-flight pitch attitude. |
 | Keyboard Auto Roll | Off | Casual only. The roll keys command a bank angle (up to 30°) and return to wings level when released. |
@@ -89,6 +89,6 @@ These settings determine how the flight model responds to control inputs.
 | Aircraft Environmental Settings | Europe - Summer | Base pressure altitude and temperature: Standard Day (sea level, 15 °C), Europe summer/winter (800 ft, 20 °C / 0 °C), Middle East (1,800 ft, 30 °C), Central Asia summer/winter (5,000 ft, 30 °C / −5 °C), Asia (3,100 ft, 25 °C). See [Environment simulation]({{ '/flying/flight-model/' | relative_url }}#environment-simulation). |
 | Enable VRS Warning | Off | On-screen warning as the aircraft approaches vortex ring state. See [Vortex ring state]({{ '/flying/flight-model/' | relative_url }}#vortex-ring-state). |
 | Rotor Model | Simple | **BET** is a higher-fidelity rotor model under development; Simple is used. |
-| Control Input Visualiser: Colour Scheme | Default | Colours for the control input overlay. |
+| Control Input Visualizer: Color Scheme | Default | Colors for the control input overlay. |
 
 The remaining HeliSim options (**Fixed Test Gross Weight**, **Disable Wind**, the debugging displays and the **Flight Log**) are for flight model testing and are left off for normal operation.

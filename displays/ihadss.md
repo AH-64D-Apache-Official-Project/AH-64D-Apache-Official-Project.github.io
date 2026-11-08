@@ -58,7 +58,7 @@ The [radial menu]({{ '/targeting/radial/' | relative_url }}) provides the same s
 
 {% include fig.html id="hud-transition" %}
 
-The **velocity vector** indicates the magnitude and direction of the aircraft velocity relative to the nose of the aircraft. Its origin is the centre of the LOS reticle, and in transition mode full scale represents 60 kt ground speed. The **acceleration cue** (circle) indicates the magnitude and direction of the aircraft's acceleration; in transition mode it is referenced to the tip of the velocity vector.
+The **velocity vector** indicates the magnitude and direction of the aircraft velocity relative to the nose of the aircraft. Its origin is the center of the LOS reticle, and in transition mode full scale represents 60 kt ground speed. The **acceleration cue** (circle) indicates the magnitude and direction of the aircraft's acceleration; in transition mode it is referenced to the tip of the velocity vector.
 
 The **horizon line** is an artificial horizon relative to the LOS reticle. It moves one quarter of the true pitch angle, limited at ±30° in pitch, and is presented slightly below the LOS reticle in level flight.
 
@@ -72,13 +72,13 @@ The **attitude indicator** pitch ladder moves one half of the true pitch angle, 
 
 {% include fig.html id="hud-hover" %}
 
-In hover mode, full scale of the velocity vector represents 6 kt ground speed. The acceleration cue originates at the outer end of the velocity vector when the vector is less than full scale, and at the centre of the LOS reticle when the vector is at or greater than full scale. With the velocity vector and the acceleration cue held on the LOS reticle, the aircraft remains over one position.
+In hover mode, full scale of the velocity vector represents 6 kt ground speed. The acceleration cue originates at the outer end of the velocity vector when the vector is less than full scale, and at the center of the LOS reticle when the vector is at or greater than full scale. With the velocity vector and the acceleration cue held on the LOS reticle, the aircraft remains over one position.
 
 ### Bob-up {#bobup}
 
 {% include fig.html id="hud-bobup" %}
 
-Bob-up mode adds the **bob-up box**, an octagon representing an area approximately 12 ft square on the ground. The box initialises at the centre of the LOS reticle on selection of bob-up mode and moves to indicate the position of the helicopter relative to that point. Maximum displacement to the edge of the format represents approximately 40 ft laterally or longitudinally; beyond that the box remains at the edge. The **bob-up heading** chevron presents the heading of the helicopter at the initiation of bob-up mode, in place of the command heading.
+Bob-up mode adds the **bob-up box**, an octagon representing an area approximately 12 ft square on the ground. The box initializes at the center of the LOS reticle on selection of bob-up mode and moves to indicate the position of the helicopter relative to that point. Maximum displacement to the edge of the format represents approximately 40 ft laterally or longitudinally; beyond that the box remains at the edge. The **bob-up heading** chevron presents the heading of the helicopter at the initiation of bob-up mode, in place of the command heading.
 
 The aircraft is returned over the bob-up position by placing the acceleration cue inside the bob-up box.
 
@@ -91,7 +91,7 @@ The following symbols are positioned on objects outside the aircraft and move wi
 | Symbol | Position | Displayed |
 |---|---|---|
 | Head tracker (four chevrons) | The nose of the helicopter; indicates the head position relative to it | All modes |
-| Flight path vector (circle with tic marks) | The projected flight path: the point towards which the helicopter is flying. Flashes when edge limited | Transition and cruise, above 5 kt ground speed |
+| Flight path vector (circle with tic marks) | The projected flight path: the point toward which the helicopter is flying. Flashes when edge limited | Transition and cruise, above 5 kt ground speed |
 | Navigation fly-to cue (diamond) | The active next navigation waypoint, at its altitude if defined; used with the flight path vector | Transition and cruise |
 
 </div>
@@ -188,11 +188,11 @@ The high action display (HAD) is located along the bottom of the flight and weap
 |---|---|---|---|
 | Sight select status | Top line, left | Selected sight: `P-HMD`{: .mpd} or `C-HMD`{: .mpd}, `TADS`{: .mpd}, `P-FCR`{: .mpd} or `C-FCR`{: .mpd}. Linked sights end in L: `TADSL`{: .mpd}, `C-FCRL`{: .mpd}. | [Sights]({{ '/targeting/sights/' | relative_url }}) |
 | Range and range source status | Top line, after the sight | Range and range source, for example `*3420`{: .mpd} or `M3.0`{: .mpd}. | [Range]({{ '/targeting/sights/' | relative_url }}#range) |
-| Weapon control status | Top line, right of centre | Actioned weapon: `PGUN`{: .mpd}, `CRKT`{: .mpd}, `COOP`{: .mpd}, `CMSL`{: .mpd} and so on; the first letter is the crew station in control. | [Weapon action switch]({{ '/weapons/was/' | relative_url }}) |
+| Weapon control status | Top line, right of center | Actioned weapon: `PGUN`{: .mpd}, `CRKT`{: .mpd}, `COOP`{: .mpd}, `CMSL`{: .mpd} and so on; the first letter is the crew station in control. | [Weapon action switch]({{ '/weapons/was/' | relative_url }}) |
 | Acquisition select status | Top line, right | Selected acquisition source. | [Acquisition source]({{ '/targeting/sights/' | relative_url }}#acq) |
 | Sight status | Bottom line, left | [Sight status](#sight-status) messages. | |
-| Weapon status | Bottom line, right of centre | Weapon status messages. | [Weapon status]({{ '/weapons/was/' | relative_url }}#weapon-status) |
-| Weapon inhibit status | Centre, above the lines | Safety and performance inhibits, `ALT LAUNCH`{: .mpd}, and for 3 seconds the number of a target just stored. | [Inhibits]({{ '/weapons/was/' | relative_url }}#inhibits) |
+| Weapon status | Bottom line, right of center | Weapon status messages. | [Weapon status]({{ '/weapons/was/' | relative_url }}#weapon-status) |
+| Weapon inhibit status | Center, above the lines | Safety and performance inhibits, `ALT LAUNCH`{: .mpd}, and for 3 seconds the number of a target just stored. | [Inhibits]({{ '/weapons/was/' | relative_url }}#inhibits) |
 
 </div>
 

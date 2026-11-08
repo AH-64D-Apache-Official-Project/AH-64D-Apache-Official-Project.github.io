@@ -25,7 +25,7 @@ At a travel limit, the reticle flashes and the HAD displays `LIMITS`{: .mpd}.
 |---|---|---|---|
 | FLIR | {% include key.html id="fza_ah64_SensorSelect_FLIR" %} | Thermal, white-hot or black-hot | W, M, N, Z |
 | DTV | {% include key.html id="fza_ah64_SensorSelect_DTV" %} | Day TV, monochrome | W, N, Z (M selects W) |
-| DVO | {% include key.html id="fza_ah64_SensorSelect_DVO" %} | Direct view optics, colour | W and N (M and Z select N) |
+| DVO | {% include key.html id="fza_ah64_SensorSelect_DVO" %} | Direct view optics, color | W and N (M and Z select N) |
 
 {% include key.html id="NightVision" %} cycles FLIR white-hot, FLIR black-hot, then DTV and DVO if the **NV Cycle Include DTV** and **NV Cycle Include DVO** settings are on, then FLIR. A damaged sensor is skipped. The selected sensor is displayed at the top left of the TADS symbology.
 

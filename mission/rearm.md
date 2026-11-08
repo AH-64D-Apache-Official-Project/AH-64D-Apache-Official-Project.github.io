@@ -28,7 +28,7 @@ The slots of a rocket station are the launcher zones; see [Hydra 70 rockets]({{ 
 
 ## Fuel
 
-The aircraft is refuelled from any ACE fuel source. The [FUEL page]({{ '/displays/mpd/fuel/' | relative_url }}) displays the quantity in each cell. External tanks are loaded on the wing stations as stores.
+The aircraft is refueled from any ACE fuel source. The [FUEL page]({{ '/displays/mpd/fuel/' | relative_url }}) displays the quantity in each cell. External tanks are loaded on the wing stations as stores.
 
 ## Countermeasures
 

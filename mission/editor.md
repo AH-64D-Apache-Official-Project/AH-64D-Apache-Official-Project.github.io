@@ -48,7 +48,7 @@ Crews use the **AH-64D Pilot** unit (**BLUFOR → AH-64D Official Project → Me
 
 The aircraft is designed for two players. With the CPG crew station empty or AI, the pilot's acquisition source points the TADS and the pilot fires the weapons.
 
-## Rearming and refuelling
+## Rearming and refueling
 
 Loadout changes require an ACE ammunition source, a fuel source, or the mission planner settings. See [Rearm and refuel]({{ '/mission/rearm/' | relative_url }}).
 

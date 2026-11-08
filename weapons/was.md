@@ -41,7 +41,7 @@ Each crew station actions a weapon with its own weapon action switch (WAS):
 | {% include key.html id="fza_ah64_wasRkt" %} | Hydra 70 rockets |
 | {% include key.html id="fza_ah64_wasMsl" %} | AGM-114 Hellfire |
 
-Selecting the same weapon again de-actions it. The actioned weapon is displayed on the top line of the [HAD]({{ '/displays/ihadss/' | relative_url }}#had), right of centre: `CGUN`{: .mpd} or `PGUN`{: .mpd}, `CRKT`{: .mpd} or `PRKT`{: .mpd}, `CMSL`{: .mpd} or `PMSL`{: .mpd}; the first letter identifies the crew station in control. The weapon is fired with the Arma **Fire** binding and aimed with the selected [sight]({{ '/targeting/sights/' | relative_url }}).
+Selecting the same weapon again de-actions it. The actioned weapon is displayed on the top line of the [HAD]({{ '/displays/ihadss/' | relative_url }}#had), right of center: `CGUN`{: .mpd} or `PGUN`{: .mpd}, `CRKT`{: .mpd} or `PRKT`{: .mpd}, `CMSL`{: .mpd} or `PMSL`{: .mpd}; the first letter identifies the crew station in control. The weapon is fired with the Arma **Fire** binding and aimed with the selected [sight]({{ '/targeting/sights/' | relative_url }}).
 
 ## Sharing between crew stations
 
@@ -55,7 +55,7 @@ When the pilot holds a weapon, or the CPG seat has no player, the pilot fires it
 
 ## Inhibits
 
-A condition that inhibits a weapon, or that may cause a miss, is displayed in the centre of the HAD above the bottom lines. Messages that inhibit launch or firing are shown in bold.
+A condition that inhibits a weapon, or that may cause a miss, is displayed in the center of the HAD above the bottom lines. Messages that inhibit launch or firing are shown in bold.
 
 | Message | Weapon | Condition |
 |---|---|---|
@@ -80,7 +80,7 @@ Pulling the trigger with no weapon actioned displays `WEAPON?`{: .mpd} momentari
 
 ## Weapon status
 
-The bottom line of the HAD, right of centre, displays the actioned weapon's status:
+The bottom line of the HAD, right of center, displays the actioned weapon's status:
 
 | Weapon | Status |
 |---|---|

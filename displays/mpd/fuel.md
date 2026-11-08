@@ -39,7 +39,7 @@ A fuel cell quantity is displayed yellow below 240 lb (forward) or 260 lb (aft),
 `L4`{: .vab} XFER replaces the left-side labels with the fuel transfer option buttons; selecting an option removes them.
 
 - FWD transfers fuel from the aft fuel cell to the forward fuel cell, and AFT from the forward to the aft; the fuel transfer line is displayed and marquees to indicate the direction of transfer.
-- AUTO selects automatic fuel levelling between the fuel cells, transferring toward the lighter cell.
+- AUTO selects automatic fuel leveling between the fuel cells, transferring toward the lighter cell.
 - OFF stops fuel transfer.
 
 ## Auxiliary tanks

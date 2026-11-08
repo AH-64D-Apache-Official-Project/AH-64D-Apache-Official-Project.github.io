@@ -71,7 +71,7 @@ callouts:
   y: 126
   side: l
   label: Bob-up box
-  text: 'Octagon indicating the position of the helicopter relative to the point at which the box was initialised; it represents an area approximately 12 ft square on the ground.'
+  text: 'Octagon indicating the position of the helicopter relative to the point at which the box was initialized; it represents an area approximately 12 ft square on the ground.'
 - n: 2
   x: 312
   y: 26
@@ -83,7 +83,7 @@ callouts:
   y: 194
   side: l
   label: Velocity vector
-  text: 'Velocity towards the bob-up position.'
+  text: 'Velocity toward the bob-up position.'
 - n: 4
   x: 271
   y: 143

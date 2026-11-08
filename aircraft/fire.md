@@ -13,7 +13,7 @@ Both crew stations have a fire detection and extinguishing panel on the glareshi
 |---|---|
 | ENG 1, APU and ENG 2 FIRE buttons | Illuminate red when a fire is detected in that area. Pressing the illuminated button arms it: the RDY light illuminates, fuel to that engine or the APU is shut off (with DC power available), and that fire's voice message and the MSTR WARN lighted button stop. Pressing it again disarms it. |
 | FIRE DISCH buttons, PRI and RES | Discharge the primary or reserve extinguisher bottle into the armed area. Each bottle discharges once; its light illuminates when it has been used. |
-| TEST switch | TEST 1 illuminates every FIRE button and RDY light, plays each fire voice message, illuminates the MSTR WARN lighted button and displays DECK FIRE. TEST 2 also illuminates both bottle discharge lights. The switch is returned to the centre to end the test. |
+| TEST switch | TEST 1 illuminates every FIRE button and RDY light, plays each fire voice message, illuminates the MSTR WARN lighted button and displays DECK FIRE. TEST 2 also illuminates both bottle discharge lights. The switch is returned to the center to end the test. |
 
 ## Fire
 

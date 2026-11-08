@@ -10,7 +10,7 @@ redirect_from:
 |---|---|
 | A/C | Aircraft. The fixed action button that selects the ENG and FLT pages. |
 | ACQ | Acquisition source: the line of sight to which the selected sight is cued and slaved. |
-| ADU | Air defence unit; an FCR target class. |
+| ADU | Air defense unit; an FCR target class. |
 | ANTS | Alternate next-to-shoot: the second priority FCR target. |
 | APU | Auxiliary power unit. Provides electrical, hydraulic and pneumatic power for engine start. |
 | ASE | Aircraft survivability equipment: warning receivers, chaff, flares and IR jammer. |
@@ -27,7 +27,7 @@ redirect_from:
 | DMS | Data management system: pages for data transfer, advisories, faults, warnings, cautions and software versions. |
 | DTC | Data transfer cartridge: mission data built in the mission planner and loaded with MASTER LOAD. |
 | DTV | Day TV: the TADS monochrome television sensor. |
-| DVO | Direct view optics: the TADS colour optical sight. |
+| DVO | Direct view optics: the TADS color optical sight. |
 | EA | Engagement area, displayed on the TSD as EA01 to EA12. |
 | EMER HYD | Emergency hydraulics: applies utility accumulator pressure to the flight controls on a loss of both hydraulic systems. |
 | ETL | Effective translational lift, 16 to 24 kt. |
@@ -77,7 +77,7 @@ redirect_from:
 | TADS | Target acquisition designation sight: the turret under the nose. |
 | TGT | Turbine gas temperature, °C. |
 | TPM | Terrain profile mode of the FCR. |
-| TRP | Target reference point: the centre of four PF zones made on the ZN page. |
+| TRP | Target reference point: the center of four PF zones made on the ZN page. |
 | TRU | Transformer rectifier unit: converts AC from the generators to DC. Two are installed. |
 | TSD | Tactical situation display. |
 | UFD | Up-front display. |

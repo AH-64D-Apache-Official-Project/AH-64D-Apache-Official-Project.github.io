@@ -18,7 +18,7 @@ Each engine is comprised of the following sections:
 
 ## Indications and limits
 
-All engine outputs are colour coded. **Green** indicates the value is within its normal operating range. **Yellow** indicates a cautionary range and typically has a timer associated with it; exceeding the timer incurs damage. **Red** indicates a value that has been exceeded or is below the minimum required for operation. Any time a value is red, it can be assumed that damage has been incurred.
+All engine outputs are color coded. **Green** indicates the value is within its normal operating range. **Yellow** indicates a cautionary range and typically has a timer associated with it; exceeding the timer incurs damage. **Red** indicates a value that has been exceeded or is below the minimum required for operation. Any time a value is red, it can be assumed that damage has been incurred.
 
 The normal limits for the helicopter are:
 

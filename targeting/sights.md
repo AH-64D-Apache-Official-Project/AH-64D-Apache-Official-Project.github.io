@@ -27,7 +27,7 @@ The HMD requires the IHADSS helmet; without it there is no head tracking, and he
 
 | Sight | Linked | Effect |
 |---|---|---|
-| TADS | TADS-L (`TADSL`{: .mpd} on the HAD) | The CPG also owns the radar, and its centreline follows the TADS line of sight. |
+| TADS | TADS-L (`TADSL`{: .mpd} on the HAD) | The CPG also owns the radar, and its centerline follows the TADS line of sight. |
 | FCR | FCR-L (`C-FCRL`{: .mpd}) | Slave moves the TADS onto the radar's next-to-shoot target. |
 
 Link is cleared by selecting Link again, by selecting any sight, or by the pilot taking the FCR. Selecting TADS while in TADS-L has no effect; only Link clears it.
@@ -63,14 +63,14 @@ FCR requires the radar installed and operative; TADS requires the TADS powered a
 
 The defaults are TADS for the pilot and PHS for the CPG.
 
-For the pilot, selecting a new source while owning the radar stops its scan and points the radar centreline along the new source. Selecting a coordinate point also makes that point the navigation range source.
+For the pilot, selecting a new source while owning the radar stops its scan and points the radar centerline along the new source. Selecting a coordinate point also makes that point the navigation range source.
 
 ## Slave
 
 {% include key.html id="fza_ah64_sightSlave" %} is a CPG control. It toggles slave:
 
 - With TADS as the sight, the TADS slews to the acquisition source and follows it. Slave again returns manual control.
-- With FCR as the sight, the radar centreline is pointed along the acquisition source.
+- With FCR as the sight, the radar centerline is pointed along the acquisition source.
 - In FCR-L, the TADS follows the radar's next-to-shoot target, moving to each new target.
 
 Selecting a new acquisition source releases the slave. Slave with the radar owned by the CPG stops its scan.
@@ -85,7 +85,7 @@ Ballistics and the displays require a range to the target. Each crew station has
 
 | Display | Source | Used with | Origin |
 |---|---|---|---|
-| `*3420`{: .mpd} | Laser | TADS | Lasing with the [LRFD]({{ '/targeting/laser/' | relative_url }}), 500 to 9,999 m, in metres. After lasing stops the last range is retained, displayed without the `*`. |
+| `*3420`{: .mpd} | Laser | TADS | Lasing with the [LRFD]({{ '/targeting/laser/' | relative_url }}), 500 to 9,999 m, in meters. After lasing stops the last range is retained, displayed without the `*`. |
 | `R2.4`{: .mpd} | Radar | FCR | The radar's next-to-shoot target. |
 | `N4.6`{: .mpd} | Navigation | HMD, TADS | A point selected as acquisition source, to 32 km |
 | `M1.5`{: .mpd} | Manual | Any | Entered on the KU with `B6`{: .vab} MANRNG> on the WPN page: 100 to 50,000 m |

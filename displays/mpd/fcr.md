@@ -22,9 +22,9 @@ The page follows the radar mode, which is selected with the mode bindings:
 
 ## Scope
 
-Ownship is at the bottom of the GTM scan sector, or the centre of the ATM scan sector. Range arcs are at 2, 4, 6 and 8 km. The scan sector symbol for the selected scan size is presented in full intensity; the wider scan sectors are presented in partial intensity. In ATM, the wide scan sector covers all azimuths except approximately 12° either side of the tail.
+Ownship is at the bottom of the GTM scan sector, or the center of the ATM scan sector. Range arcs are at 2, 4, 6 and 8 km. The scan sector symbol for the selected scan size is presented in full intensity; the wider scan sectors are presented in partial intensity. In ATM, the wide scan sector covers all azimuths except approximately 12° either side of the tail.
 
-The display is drawn about the radar centreline, not the nose: with the centreline slewed 30° right, the centre of the sector is 30° right of the nose.
+The display is drawn about the radar centerline, not the nose: with the centerline slewed 30° right, the center of the sector is 30° right of the nose.
 
 While the FCR is transmitting, the scan wiper symbol moves across the scan sector with the antenna: white during a single scanburst, green during continuous scan.
 
@@ -35,7 +35,7 @@ While the FCR is transmitting, the scan wiper symbol moves across the scan secto
 | Heading scale | Magnetic heading; along the bottom of the heading scale, the FCR centerline bearing (solid mark), the last scan direction, the command heading chevron and the alternate sensor bearing |
 | Total target count status window, top right | Total number of targets detected within the scanburst |
 | HAD sight select status and range and range source status fields, bottom left | Selected sight (such as `C-FCR`{: .mpd}, `P-HMD`{: .mpd}, `TADS`{: .mpd}, or `TADSL`{: .mpd} when linked) and the range with its source. See [Sights and acquisition]({{ '/targeting/sights/' | relative_url }}) |
-| FOR symbols, bottom centre | Field of regard, with the field of view box (TADS line of sight) and the cued LOS dot (acquisition source) |
+| FOR symbols, bottom center | Field of regard, with the field of view box (TADS line of sight) and the cued LOS dot (acquisition source) |
 | HAD weapon status field, bottom right | The actioned weapon: for the pilot, its status (rounds, rocket type and quantity, or missile trajectory and mode); for the CPG, `CGUN`{: .mpd}, `CRKT`{: .mpd} or `CMSL`{: .mpd}; `COOP`{: .mpd} in a cooperative rocket engagement |
 | Elevation scale, lower left | Antenna elevation pointer; fixed (ELEV is AUTO) |
 
@@ -45,7 +45,7 @@ While the FCR is transmitting, the scan wiper symbol moves across the scan secto
 |---|---|---|
 | `T1`{: .vab} | `C SCP`{: .mpd} | Presents the FCR target symbols in the C-scope format on that crew station's flight and weapon symbology formats, or in the TADS video when selected. Boxed when on. Crewstation independent. |
 | `L1`{: .vab} | `NTS`{: .mpd} | Steps the next-to-shoot to the next target; equivalent to the Arma **Lock target** binding |
-| `L2`{: .vab} / `R2`{: .vab} | arrows | Slews the scan centreline left or right. See [Fire control radar]({{ '/targeting/fcr/' | relative_url }}#centerline) |
+| `L2`{: .vab} / `R2`{: .vab} | arrows | Slews the scan centerline left or right. See [Fire control radar]({{ '/targeting/fcr/' | relative_url }}#centerline) |
 | `L4`{: .vab} | `TGT`{: .mpd} | Selects [TGT](#tgt), for storing radar targets as target points; boxed while selected |
 | `L5`{: .vab} | `ALL`{: .mpd} | With TGT selected: stores every target symbol on the page |
 | `R1`{: .vab} | `ZOOM`{: .mpd} | GTM only: [zoom](#zoom) on an area selected with the cursor, or return |
@@ -74,7 +74,7 @@ While TGT is selected:
 - a window at the top right displays the target point at which the next target will be stored, and below it the points stored since TGT was selected, latest last;
 - Cursor Enter on a target stores it;
 - `L5`{: .vab} ALL stores every target symbol on the page;
-- RF HO, ELEV, the centreline arrows and ACQ are removed.
+- RF HO, ELEV, the centerline arrows and ACQ are removed.
 
 Targets are stored at the next free number from `T01`{: .mpd} to `T50`{: .mpd}. A target already stored since TGT was selected is not stored again, even after a scan has moved it.
 
@@ -90,7 +90,7 @@ FCR target symbols indicate the target type and whether it is moving or stationa
 
 | Target | LOBL (stationary, within 1.5 km) | LOAL (stationary, beyond 1.5 km) | Moving |
 |---|---|---|---|
-| Air defence unit | <img class="sym" src="{{ '/assets/icons/fcr/mpd/aduLOBL.png' | relative_url }}" alt="Solid triangle"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/aduLOAL.png' | relative_url }}" alt="Outline triangle"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/aduMOVE.png' | relative_url }}" alt="Solid triangle with a dot"> |
+| Air defense unit | <img class="sym" src="{{ '/assets/icons/fcr/mpd/aduLOBL.png' | relative_url }}" alt="Solid triangle"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/aduLOAL.png' | relative_url }}" alt="Outline triangle"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/aduMOVE.png' | relative_url }}" alt="Solid triangle with a dot"> |
 | Tracked | <img class="sym" src="{{ '/assets/icons/fcr/mpd/trackLOBL.png' | relative_url }}" alt="Solid track symbol"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/trackLOAL.png' | relative_url }}" alt="Outline track symbol"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/trackMOVE.png' | relative_url }}" alt="Track symbol with a dot"> |
 | Wheeled | <img class="sym" src="{{ '/assets/icons/fcr/mpd/wheelLOBL.png' | relative_url }}" alt="Solid circle"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/wheelLOAL.png' | relative_url }}" alt="Outline circle"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/wheelMOVE.png' | relative_url }}" alt="Solid circle with a dot"> |
 | Helicopter | <img class="sym" src="{{ '/assets/icons/fcr/mpd/heliLOBL.png' | relative_url }}" alt="Solid bow tie"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/heliLOAL.png' | relative_url }}" alt="Outline bow tie"> | <img class="sym" src="{{ '/assets/icons/fcr/mpd/heliMOVE.png' | relative_url }}" alt="Bow tie with a dot"> |
@@ -127,9 +127,9 @@ The terrain profile mode supports low-level flight at night and in poor visibili
 | Shade | Terrain |
 |---|---|
 | Black | Below the clearance plane: clear |
-| Dark grey | Above the clearance plane, below the aircraft |
+| Dark gray | Above the clearance plane, below the aircraft |
 | White | At or above the aircraft's height |
-| Grey | Masked from the radar, or not measured |
+| Gray | Masked from the radar, or not measured |
 
 Up to four terrain profile lines indicate the greatest elevation detected at set ranges. Obstacle symbols mark towers and masts of 8 m or more, or any object of 13 m or more, and the total obstacle count status window at the top right presents their number.
 

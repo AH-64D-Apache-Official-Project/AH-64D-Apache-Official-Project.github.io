@@ -46,7 +46,7 @@ callouts:
 - { n: 5, x: 46, y: 700, side: l, label: '#Z', text: 'Number of zones AUTO divides the zone into.'}
 - { n: 6, x: 56, y: 815, side: l, label: DR, text: 'BX: a box from two corners.' }
 - { n: 7, x: 570, y: 46, side: t, label: ASN, text: Assigns a PF zone to the ownship. }
-- { n: 8, x: 377, y: 520, side: l, label: Active PF zone, text: 'PF1, active and assigned to the ownship: alternating dashes, labelled OWN.', snap: false }
+- { n: 8, x: 377, y: 520, side: l, label: Active PF zone, text: 'PF1, active and assigned to the ownship: alternating dashes, labeled OWN.', snap: false }
 - { n: 9, x: 623, y: 425, side: r, label: PF zones, text: 'PF2 to PF4, dashed.', snap: false }
 - { n: 10, x: 740, y: 610, side: r, label: NF zone, text: 'NF1, active, in yellow.', snap: false }
 - { n: 11, x: 512, y: 743, side: r, label: Ownship symbols, text: 'Frozen ownship symbol in white; dynamic ownship symbol in cyan.' }

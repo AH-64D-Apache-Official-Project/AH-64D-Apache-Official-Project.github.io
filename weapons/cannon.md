@@ -10,7 +10,7 @@ redirect_from:
 
 ## Description
 
-The M230 is a single-barrel 30 mm chain gun, mounted in a turret on the underside of the forward fuselage. Its bolt is cycled by an electrically driven chain, and it is fed linkless ammunition by the ammunition handling system. The turret is driven by the utility hydraulic system. The gun fires M789 high explosive dual purpose (HEDP) rounds, which are capable of engaging infantry, mechanised and motorised units, and lightly armoured targets.
+The M230 is a single-barrel 30 mm chain gun, mounted in a turret on the underside of the forward fuselage. Its bolt is cycled by an electrically driven chain, and it is fed linkless ammunition by the ammunition handling system. The turret is driven by the utility hydraulic system. The gun fires M789 high explosive dual purpose (HEDP) rounds, which are capable of engaging infantry, mechanized and motorized units, and lightly armored targets.
 
 When not in use, or on a loss of utility hydraulics, the gun moves to a stowed position of 11° up. It only moves from this position after being actioned by either crewmember.
 
@@ -21,7 +21,7 @@ The gun carries 300 rounds with the IAFS installed, or 1,200 rounds with the 1,2
 The gun is actioned with the weapon action switch (WAS), {% include key.html id="fza_ah64_wasGun" %}. On the WPN page gun format, the crewmember selects the burst limit (10, 20, 50, 100 or ALL rounds per trigger pull) and the gun mode:
 
 - **NORM**: the gun follows the selected sight.
-- **FXD**: the gun is fixed along the aircraft's centreline.
+- **FXD**: the gun is fixed along the aircraft's centerline.
 
 ## Engagement sequence
 

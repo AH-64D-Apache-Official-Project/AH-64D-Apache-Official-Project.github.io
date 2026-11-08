@@ -25,7 +25,7 @@ The **REQUIRED** IGE and OGE values are driven by the combination of PA, FAT and
 
 The **GO-NO/GO** IGE and OGE values are driven by PA, FAT and Max Q (using 100% when Max Q exceeds 100%), and are calculated at a 5 ft hover. They allow the crew to determine, before picking up to a hover, whether IGE and OGE hover power is available:
 
-- When the required IGE torque is greater than GO-NO/GO OGE, the helicopter **DOES NOT** have OGE hover power and cannot perform OGE manoeuvres.
+- When the required IGE torque is greater than GO-NO/GO OGE, the helicopter **DOES NOT** have OGE hover power and cannot perform OGE maneuvers.
 - When the required IGE torque is greater than GO-NO/GO IGE, the helicopter **DOES NOT** have IGE hover power, has likely exceeded the maximum gross weight for combat of 20,260 lb, and **DOES NOT** have OGE hover power.
 
 These values allow the crew to determine IGE and OGE hover power from a 5 ft hover, without climbing to 80 ft.
@@ -36,7 +36,7 @@ The **INDICATED** value is the torque currently being pulled, and should be with
 
 The Max GWT box provides the maximum allowable gross weight for the current PA and FAT. The values are measured at 5 ft and correspond to the GO-NO/GO IGE and OGE torque values respectively.
 
-- If GWT exceeds Max GWT OGE, the helicopter **DOES NOT** have OGE hover power and cannot perform OGE manoeuvres.
+- If GWT exceeds Max GWT OGE, the helicopter **DOES NOT** have OGE hover power and cannot perform OGE maneuvers.
 - If GWT exceeds Max GWT IGE, the helicopter **DOES NOT** have IGE or OGE hover power, and may have exceeded the maximum gross weight for combat of 20,260 lb.
 
 The Max GWT OGE value is used to determine the fuel and ammunition load.
@@ -60,7 +60,7 @@ The TAS box provides the true airspeeds for:
 
 ## CG
 
-The centre of gravity is displayed against the forward and aft limits.
+The center of gravity is displayed against the forward and aft limits.
 
 ## Buttons
 

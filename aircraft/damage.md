@@ -7,7 +7,7 @@ seats: [PLT, CPG]
 
 ## Description
 
-Each aircraft system is modelled as a separate component with its own damage state. Most components fail completely at heavy damage. The engines, gearboxes, main transmission and hydraulic reservoirs degrade in stages and present cautions before they fail. Damage is indicated on the UFD and the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}). Corrective actions are given on each system's page.
+Each aircraft system is modeled as a separate component with its own damage state. Most components fail completely at heavy damage. The engines, gearboxes, main transmission and hydraulic reservoirs degrade in stages and present cautions before they fail. Damage is indicated on the UFD and the [WCA page]({{ '/displays/mpd/wca/' | relative_url }}). Corrective actions are given on each system's page.
 
 ## Powerplant and drive train
 
@@ -57,7 +57,7 @@ See [Electrical, APU and hydraulics]({{ '/aircraft/electrical/' | relative_url }
 
 HeliSim provides stress damage. Overstressing the aircraft (over-g) results in component loss. Stress damage accumulates and is not recovered in flight.
 
-The components lost to overstress are the stabilator, the vertical fin, the tail rotor, the tail boom and the main rotor blades. Loss of the tail boom removes the vertical fin, stabilator and tail rotor with it, and moves the centre of gravity forward.
+The components lost to overstress are the stabilator, the vertical fin, the tail rotor, the tail boom and the main rotor blades. Loss of the tail boom removes the vertical fin, stabilator and tail rotor with it, and moves the center of gravity forward.
 
 Main rotor blade damage presents as a blade out of track, loss of a blade tip cap, a failed pitch change link, or blade separation. A separated blade leaves the main rotor out of balance; the resulting vibration damages the main transmission and leads to further blade loss and transmission failure.
 

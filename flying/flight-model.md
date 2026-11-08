@@ -92,7 +92,7 @@ SWP results from operating without knowledge of the helicopter's performance cap
 
 ## Mushing
 
-Mushing is a temporary stall condition that can occur during aggressive, high-speed dive recoveries. The momentum of the helicopter overcomes the thrust of the rotor system, and the helicopter continues along its original flight path until the rotor recovers. If mushing occurs, and altitude and terrain allow, the pilot applies forward cyclic to reduce the severity of the manoeuvre and restore normal rotor thrust; continuing to apply aft cyclic aggravates the condition.
+Mushing is a temporary stall condition that can occur during aggressive, high-speed dive recoveries. The momentum of the helicopter overcomes the thrust of the rotor system, and the helicopter continues along its original flight path until the rotor recovers. If mushing occurs, and altitude and terrain allow, the pilot applies forward cyclic to reduce the severity of the maneuver and restore normal rotor thrust; continuing to apply aft cyclic aggravates the condition.
 
 ## Autorotation
 

@@ -25,7 +25,7 @@ The Hatchet cockpit cursor is paused while the planner is open.
 | IAFS / Magazine | The IAFS with 300 gun rounds, or the 1,200-round magazine |
 | Pylons 1–4 | For each wing station: empty, an **M-261** rocket launcher with a rocket type in each zone, an **M-299** Hellfire launcher with a missile type on each rail, or a 230-gallon external tank |
 | Cannon | Rounds, up to 300 or 1,200 |
-| Fuel | Gallons in the forward (155), aft (220), centre (100, with the IAFS) and external tanks |
+| Fuel | Gallons in the forward (155), aft (220), center (100, with the IAFS) and external tanks |
 | Tail number | The number painted on the tail |
 
 Changing the radar, or exchanging the IAFS and magazine, is marked with a warning: it requires approximately 300 seconds with ACE timings.
@@ -89,7 +89,7 @@ Each tab has its list on the left and an Arma map on the right. The list sets ea
 | Right-click on a line, area or zone | Changes a line's type, inserts a point into a line of fewer than four points, or deletes it |
 | Drag a list row onto the map | Places that point or shape |
 | Drag a point or a corner | Moves it; a point released next to another snaps to it |
-| Drag a line's centre handle | Adds a corner |
+| Drag a line's center handle | Adds a corner |
 | Drag, wheel, <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> | Pan and zoom |
 | <kbd>Esc</kbd> | Closes a menu or cancels the current action |
 
